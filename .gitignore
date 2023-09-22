@@ -131,3 +131,6 @@ dist
 
 # 11ty output directory
 frontend/html
+
+# Mac filesystem
+.DS_Store
