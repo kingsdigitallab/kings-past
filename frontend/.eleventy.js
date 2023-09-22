@@ -1,5 +1,7 @@
 const kdlFilters = require("kdl-components/src/kdl/filters");
 const Nunjucks = require("nunjucks");
+const path = require("node:path");
+const sass = require("sass");
 
 const kdlComponentsPath = "../node_modules/kdl-components/src";
 
@@ -27,6 +29,23 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addFilter("toLocaleDate", kdlFilters.toLocaleDate);
   eleventyConfig.addFilter("filter", kdlFilters.filter);
   // KDL components configuration end
+
+  // https://www.11ty.dev/docs/languages/custom/#example-add-sass-support-to-eleventy
+  eleventyConfig.addTemplateFormats("scss");
+  eleventyConfig.addExtension("scss", {
+    outputFileExtension: "css",
+    style: "compressed",
+    compile: async function (inputContent, inputPath) {
+      const parsed = path.parse(inputPath);
+      const result = sass.compileString(inputContent, {
+        loadPaths: [parsed.dir || ".", this.config.dir.includes],
+      });
+
+      return (_) => {
+        return result.css;
+      };
+    },
+  });
 
   return {
     dir: {
