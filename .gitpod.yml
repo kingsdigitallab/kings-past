@@ -7,7 +7,7 @@ tasks:
     init: pip install -U djlint
 
   - name: "Set up and run frontend"
-    init: npm install
+    init: npm install && npx simple-git-hooks
     command: npm run frontend:dev
 
 ports:
