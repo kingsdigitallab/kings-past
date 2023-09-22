@@ -1,0 +1,16 @@
+{
+  "name": "@kings-past/frontend",
+  "version": "0.0.1",
+  "description": "King's Past project frontend app",
+  "author": "King's Digital Lab",
+  "license": "MPL-2.0",
+  "scripts": {
+    "build": "eleventy",
+    "dev": "eleventy --serve",
+    "debug": "DEBUG=Eleventy* npm run dev",
+    "index": "npx pagefind --source _site"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^2.0.1"
+  }
+}

@@ -25,7 +25,7 @@
     "simple-git-hooks": "^2.9.0"
   },
   "scripts": {
-    "lint": "eslint **/src **/tests",
+    "lint": "eslint **/src **/tests --no-error-on-unmatched-pattern",
     "lint:fix": "npm run lint -- --fix",
     "prettier": "prettier . --check",
     "prettier:fix": "npm run prettier -- --write",

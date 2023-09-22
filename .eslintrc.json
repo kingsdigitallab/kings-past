@@ -8,5 +8,6 @@
   "parser": "@babel/eslint-parser",
   "parserOptions": {
     "requireConfigFile": false
-  }
+  },
+  "root": true
 }
