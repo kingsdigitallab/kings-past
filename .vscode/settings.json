@@ -1,0 +1,5 @@
+{
+  "[nj][njk][nunjucks]": {
+    "editor.defaultFormatter": "monosans.djlint"
+  }
+}
