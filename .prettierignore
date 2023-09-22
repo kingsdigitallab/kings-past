@@ -1,4 +1,2 @@
-cms/snapshots/*.yaml
-coverage
-frontend/_site
+frontend/html
 node_modules
