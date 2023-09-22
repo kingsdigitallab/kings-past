@@ -11,6 +11,8 @@
     "index": "npx pagefind --source _site"
   },
   "devDependencies": {
-    "@11ty/eleventy": "^2.0.1"
+    "@11ty/eleventy": "^2.0.1",
+    "kdl-components": "github:kingsdigitallab/kdl-components",
+    "nunjucks": "^3.2.4"
   }
 }
