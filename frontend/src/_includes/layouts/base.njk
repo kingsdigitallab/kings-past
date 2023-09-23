@@ -1,0 +1,9 @@
+{% extends "kdl/base.njk" %}
+
+{% set mainClass = layout | replace("layouts/", "") | replace(".njk", "") %}
+{% set stylesheetsPath = config.paths.stylesheets %}
+
+{% block content %}
+  <h1>{{ title }}</h1>
+  <article>{{ content | safe }}</article>
+{% endblock content %}
