@@ -1,5 +1,5 @@
 ---
+layout: layouts/home.njk
+title: King's Past
 ogtype: website
 ---
-
-# King's Past
