@@ -1,7 +1,8 @@
-const eleventyNavigationPlugin = require("@11ty/eleventy-navigation");
 const kdlFilters = require("kdl-components/src/kdl/filters");
 const Nunjucks = require("nunjucks");
 const path = require("node:path");
+const pluginEleventyNavigation = require("@11ty/eleventy-navigation");
+const pluginSEO = require("eleventy-plugin-seo");
 const sass = require("sass");
 
 const kdlComponentsPath = "../node_modules/kdl-components/src";
@@ -32,7 +33,8 @@ module.exports = function (eleventyConfig) {
   // KDL components configuration end
 
   // plugins
-  eleventyConfig.addPlugin(eleventyNavigationPlugin);
+  eleventyConfig.addPlugin(pluginEleventyNavigation);
+  eleventyConfig.addPlugin(pluginSEO, require("./src/_data/config.js"));
 
   // https://www.11ty.dev/docs/languages/custom/#example-add-sass-support-to-eleventy
   eleventyConfig.addTemplateFormats("scss");

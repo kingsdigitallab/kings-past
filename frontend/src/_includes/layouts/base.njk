@@ -3,6 +3,10 @@
 {% set mainClass = layout | replace("layouts/", "") | replace(".njk", "") %}
 {% set stylesheetsPath = config.paths.stylesheets %}
 
+{% block headMeta %}
+  {% seo "" %}
+{% endblock headMeta %}
+
 {% block headerStart %}
   {{ config.title }}
 {% endblock headerStart %}
