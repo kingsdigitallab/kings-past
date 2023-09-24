@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Hosts
+Host: https://kingspast.kcl.ac.uk/
+
+# Sitemap
+Sitemap: https://kingspast.kcl.ac.uk/sitemap.xml
