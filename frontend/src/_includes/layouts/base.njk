@@ -3,6 +3,11 @@
 {% set mainClass = layout | replace("layouts/", "") | replace(".njk", "") %}
 {% set stylesheetsPath = config.paths.stylesheets %}
 
+{% block stylesheets %}
+  <link href="/pagefind/pagefind-ui.css" rel="stylesheet">
+  {{ super() }}
+{% endblock stylesheets %}
+
 {% block headMeta %}
   {% seo "" %}
 {% endblock headMeta %}
@@ -24,7 +29,20 @@
   -}}
 {% endblock menu %}
 
+{% block headerEnd %}
+  <div id="search"></div>
+{% endblock headerEnd %}
+
 {% block content %}
   <h1>{{ title }}</h1>
   <article>{{ content | safe }}</article>
 {% endblock content %}
+
+{% block bodyEnd %}
+  <script src="/pagefind/pagefind-ui.js"></script>
+  <script>
+    window.addEventListener('DOMContentLoaded', (event) => {
+        new PagefindUI({ element: "#search", showSubResults: true });
+    });
+  </script>
+{% endblock bodyEnd %}
