@@ -8,7 +8,7 @@
     "build": "eleventy",
     "dev": "eleventy --serve",
     "debug": "DEBUG=Eleventy* npm run dev",
-    "index": "npx pagefind --source _site"
+    "index": "npx pagefind --site html"
   },
   "devDependencies": {
     "@11ty/eleventy": "^2.0.1",
