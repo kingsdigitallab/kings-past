@@ -1,18 +1,5 @@
 ---
 layout: layouts/base.njk
-title: King's Past
 ---
 
-<section>
-  <h2>Moments</h2>
-  <ol>
-    {% for moment in collections.moment %}
-      <li>
-        <h3>
-          <a href="{{ moment.url }}">{{ moment.data.title }}</a>
-        </h3>
-        <p>{{ moment.data.description }}</p>
-      </li>
-    {% endfor %}
-  </ol>
-</section>
+{% include "partials/moments.njk" %}
