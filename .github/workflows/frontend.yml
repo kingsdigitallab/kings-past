@@ -1,0 +1,35 @@
+name: Build 11ty frontend
+
+on:
+  push:
+    branches:
+      - main
+      - develop
+
+jobs:
+  build:
+    runs-on: ubuntu-22.04
+
+    strategy:
+      matrix:
+        node-version: [18.x]
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node-version }}
+
+      - name: Install dependencies and build
+        run: |
+          npm ci -w frontend
+          npm run build -w frontend -- --pathprefix 'kings-past'
+          npm run index -w frontend
+
+      - name: Deploy to GitHub pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          publish_dir: ./frontend/html
+          github_token: ${{ secrets.GITHUB_TOKEN }}
