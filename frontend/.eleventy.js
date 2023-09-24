@@ -1,3 +1,4 @@
+const eleventyNavigationPlugin = require("@11ty/eleventy-navigation");
 const kdlFilters = require("kdl-components/src/kdl/filters");
 const Nunjucks = require("nunjucks");
 const path = require("node:path");
@@ -29,6 +30,9 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addFilter("toLocaleDate", kdlFilters.toLocaleDate);
   eleventyConfig.addFilter("filter", kdlFilters.filter);
   // KDL components configuration end
+
+  // plugins
+  eleventyConfig.addPlugin(eleventyNavigationPlugin);
 
   // https://www.11ty.dev/docs/languages/custom/#example-add-sass-support-to-eleventy
   eleventyConfig.addTemplateFormats("scss");

@@ -3,6 +3,19 @@
 {% set mainClass = layout | replace("layouts/", "") | replace(".njk", "") %}
 {% set stylesheetsPath = config.paths.stylesheets %}
 
+{% block menu %}
+  {{- navMacro({
+    title: "Menu",
+    pages: collections.all | eleventyNavigation,
+    currentUrl: page.url
+    }, {
+    class: "main",
+    nested: false,
+    ordered: false
+    }) 
+  -}}
+{% endblock menu %}
+
 {% block content %}
   <h1>{{ title }}</h1>
   <article>{{ content | safe }}</article>
