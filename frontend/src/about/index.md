@@ -1,4 +1,5 @@
 ---
+layout: layouts/base.njk
 title: About
 feature:
   image: ""
