@@ -2,4 +2,7 @@
 layout: layouts/base.njk
 ---
 
+{% if obj.url %}<a href="{{ obj.url }}">More information</a>{% endif %}
+{% if obj.alternateName %}<p>Also known as {{ obj.alternateName }}</p>{% endif %}
+
 {{ content | safe }}

@@ -1,0 +1,10 @@
+---
+layout: layouts/entity.njk
+---
+
+{% if obj.foundingDate %}
+    {{ obj.foundingDate }}–
+{%- endif -%}
+{% if obj.dissolutionDate %}{{ obj.dissolutionDate }}{% endif %}
+
+{{ content | safe }}
