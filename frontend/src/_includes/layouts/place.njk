@@ -3,3 +3,15 @@ layout: layouts/entity.njk
 ---
 
 {{ content | safe }}
+
+{% set people = collections.person | filter(obj.slug, 'data.birthPlace') %}
+{% if people %}
+  <h3>Birth place of</h3>
+  <ul>
+    {% for person in people %}
+      <li>
+        <a class="entity-ref person" href="{{ person.url }}">{{ person.data.title }}</a>
+      </li>
+    {% endfor %}
+  </ul>
+{% endif %}
