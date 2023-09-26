@@ -38,6 +38,35 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPlugin(eleventyNavigationPlugin);
   eleventyConfig.addPlugin(SEOPlugin, require("./src/_data/config.js"));
 
+  // shortcodes
+  eleventyConfig.addShortcode("org", function (slug, display) {
+    const org = `<span class="entity-ref org">${display}</span>`;
+
+    const found = this.ctx.environments.collections.organisation.find(
+      (org) => org.data.slug === slug,
+    );
+
+    if (found) {
+      return `<a href="${found.url}">${org}</a>`;
+    }
+
+    return org;
+  });
+
+  eleventyConfig.addShortcode("person", function (slug, display) {
+    const person = `<span class="entity-ref person">${display}</span>`;
+
+    const found = this.ctx.environments.collections.person.find(
+      (person) => person.data.slug === slug,
+    );
+
+    if (found) {
+      return `<a href="${found.url}">${person}</a>`;
+    }
+
+    return person;
+  });
+
   // https://www.11ty.dev/docs/languages/custom/#example-add-sass-support-to-eleventy
   eleventyConfig.addTemplateFormats("scss");
   eleventyConfig.addExtension("scss", {
