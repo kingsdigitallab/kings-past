@@ -1,5 +1,6 @@
 ---
 title: Trans-Atlantic Slave Trade
+slug: trans-atlantic-slave-trade
 tags:
   - theme
 feature:

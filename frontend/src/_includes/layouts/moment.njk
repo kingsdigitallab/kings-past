@@ -2,4 +2,13 @@
 layout: layouts/base.njk
 ---
 
+{% for themeSlug in obj.themes %}
+  {% set theme = collections.theme | filter(themeSlug, 'data.slug') | first %}
+  {% if theme %}
+    <a href="{{ theme.url }}"><span class="theme-ref">{{ theme.data.title }}</span></a>
+  {% else %}
+    <span class="theme-ref">{{ themeSlug }}</span>
+  {% endif %}
+{% endfor %}
+
 {{ content | safe }}
