@@ -1,0 +1,15 @@
+---
+layout: layouts/entities.njk
+title: People
+feature:
+  image: ""
+  description: ""
+---
+
+<ul>
+  {% for person in collections.person | sort(false, false, "data.title") %}
+    <li>
+      <a href="{{ person.url }}">{{ person.data.title }}</a>
+    </li>
+  {% endfor %}
+</ul>

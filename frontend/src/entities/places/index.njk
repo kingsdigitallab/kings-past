@@ -1,0 +1,15 @@
+---
+layout: layouts/entities.njk
+title: Places
+feature:
+  image: ""
+  description: ""
+---
+
+<ul>
+  {% for place in collections.place | sort(false, false, "data.title") %}
+    <li>
+      <a href="{{ place.url }}">{{ place.data.title }}</a>
+    </li>
+  {% endfor %}
+</ul>

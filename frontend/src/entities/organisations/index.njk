@@ -1,0 +1,15 @@
+---
+layout: layouts/entities.njk
+title: Organisations
+feature:
+  image: ""
+  description: ""
+---
+
+<ul>
+  {% for org in collections.organisation | sort(false, false, "data.title") %}
+    <li>
+      <a href="{{ org.url }}">{{ org.data.title }}</a>
+    </li>
+  {% endfor %}
+</ul>

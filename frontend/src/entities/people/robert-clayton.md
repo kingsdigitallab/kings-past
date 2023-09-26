@@ -2,8 +2,8 @@
 title: Robert Clayton
 slug: robert-clayton
 alternateName: ""
-birthDate: 1800
-deathDate: 1900
+birthDate: 1629
+deathDate: 1707
 url: ""
 tags:
   - person
@@ -14,4 +14,4 @@ memberOf: []
 type: person
 ---
 
-Robert Clayton description...
+Sir Robert Clayton (1629–1707) was a British merchant banker, politician and Lord Mayor of London...

@@ -15,6 +15,27 @@ const nunjucksEnvironment = new Nunjucks.Environment([
   new Nunjucks.FileSystemLoader("./src/_includes"),
 ]);
 
+/**
+ * Generates HTML markup for referencing an entity by its slug within a collection.
+ *
+ * @param {object} collections - An object containing all of 11ty collections.
+ * @param {string} collection - The name of the collection where the entity is located.
+ * @param {string} slug - The unique identifier (slug) of the entity within the collection.
+ * @param {string} display - The display text or label for the entity reference.
+ * @returns {string} - HTML markup for linking to the entity if found, or just the entity reference if not found.
+ */
+function getEntity(collections, collectionName, slug, display) {
+  const entityHtml = `<span class="entity-ref ${collectionName}">${display}</span>`;
+
+  const found = collections[collectionName].find(
+    (entity) => entity.data.slug === slug,
+  );
+
+  if (found) {
+    return `<a href="${found.url}">${entityHtml}</a>`;
+  }
+}
+
 module.exports = function (eleventyConfig) {
   // KDL components configuration start
   eleventyConfig.setLibrary("njk", nunjucksEnvironment);
@@ -40,31 +61,23 @@ module.exports = function (eleventyConfig) {
 
   // shortcodes
   eleventyConfig.addShortcode("org", function (slug, display) {
-    const org = `<span class="entity-ref org">${display}</span>`;
-
-    const found = this.ctx.environments.collections.organisation.find(
-      (org) => org.data.slug === slug,
+    return getEntity(
+      this.ctx.environments.collections,
+      "organisation",
+      slug,
+      display,
     );
-
-    if (found) {
-      return `<a href="${found.url}">${org}</a>`;
-    }
-
-    return org;
   });
-
   eleventyConfig.addShortcode("person", function (slug, display) {
-    const person = `<span class="entity-ref person">${display}</span>`;
-
-    const found = this.ctx.environments.collections.person.find(
-      (person) => person.data.slug === slug,
+    return getEntity(
+      this.ctx.environments.collections,
+      "person",
+      slug,
+      display,
     );
-
-    if (found) {
-      return `<a href="${found.url}">${person}</a>`;
-    }
-
-    return person;
+  });
+  eleventyConfig.addShortcode("place", function (slug, display) {
+    return getEntity(this.ctx.environments.collections, "place", slug, display);
   });
 
   // https://www.11ty.dev/docs/languages/custom/#example-add-sass-support-to-eleventy
