@@ -4,4 +4,5 @@ title: King's Past
 ogtype: website
 eleventyNavigation:
   key: Home
+  order: 1
 ---
