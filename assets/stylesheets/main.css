@@ -131,7 +131,11 @@
       <main class="base">
         
   <h1></h1>
-  <article>ol {
+  <article>body {
+  max-width: 800px;
+}
+
+ol {
   list-style-type: decimal-leading-zero;
 }
 
@@ -147,6 +151,11 @@
 }
 .entity-ref.place {
   color: darkblue;
+}
+
+.theme-ref {
+  color: white;
+  background-color: darkslategray;
 }</article>
 
       </main>
