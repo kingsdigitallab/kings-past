@@ -20,5 +20,6 @@
       "onAutoForward": "notify"
     }
   },
-  "postCreateCommand": "npm install"
+  "postCreateCommand": "npm install",
+  "postStartCommand": "npm run -w frontend dev"
 }
