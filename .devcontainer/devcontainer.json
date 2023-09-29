@@ -11,8 +11,7 @@
         "eliostruyf.vscode-front-matter",
         "esbenp.prettier-vscode",
         "eseom.nunjucks-template",
-        "monosans.djlint",
-        "vscodevim.vim"
+        "monosans.djlint"
       ]
     }
   },
