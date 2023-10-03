@@ -7,9 +7,67 @@
       "previewPath": null,
       "fields": [
         {
-          "title": "Title",
+          "title": "title",
           "name": "title",
           "type": "string"
+        },
+        {
+          "title": "excerpt",
+          "name": "excerpt",
+          "type": "string"
+        },
+        {
+          "title": "tags",
+          "name": "tags",
+          "type": "tags"
+        },
+        {
+          "title": "feature",
+          "name": "feature",
+          "type": "fields",
+          "fields": [
+            {
+              "title": "image",
+              "name": "image",
+              "type": "image"
+            },
+            {
+              "title": "title",
+              "name": "title",
+              "type": "string"
+            },
+            {
+              "title": "description",
+              "name": "description",
+              "type": "string"
+            }
+          ]
+        },
+        {
+          "title": "type",
+          "name": "type",
+          "type": "string"
+        }
+      ]
+    },
+    {
+      "name": "moment",
+      "pageBundle": false,
+      "fields": [
+        {
+          "title": "The moment title",
+          "name": "title",
+          "type": "string"
+        },
+        {
+          "title": "Excerpt for preview",
+          "name": "excerpt",
+          "type": "string"
+        },
+        {
+          "title": "Tags",
+          "name": "tags",
+          "type": "tags"
         },
         {
           "title": "Feature",
