@@ -1,0 +1,67 @@
+{
+  "$schema": "https://frontmatter.codes/frontmatter.schema.json",
+  "frontMatter.taxonomy.contentTypes": [
+    {
+      "name": "default",
+      "pageBundle": false,
+      "previewPath": null,
+      "fields": [
+        {
+          "title": "Title",
+          "name": "title",
+          "type": "string"
+        },
+        {
+          "title": "Feature",
+          "name": "feature",
+          "type": "fields",
+          "fields": [
+            {
+              "title": "Image",
+              "name": "image",
+              "type": "image"
+            },
+            {
+              "title": "Title",
+              "name": "title",
+              "type": "string"
+            },
+            {
+              "title": "Description",
+              "name": "description",
+              "type": "string"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "frontMatter.framework.id": "11ty",
+  "frontMatter.preview.host": "http://localhost:8080",
+  "frontMatter.content.pageFolders": [
+    {
+      "title": "src",
+      "path": "[[workspace]]/frontend/src",
+      "contentTypes": ["default"]
+    },
+    {
+      "title": "moments",
+      "path": "[[workspace]]/frontend/src/moments",
+      "contentTypes": ["moment"]
+    },
+    {
+      "title": "about",
+      "path": "[[workspace]]/frontend/src/about"
+    },
+    {
+      "title": "people",
+      "path": "[[workspace]]/frontend/src/entities/people",
+      "contentTypes": ["person"]
+    },
+    {
+      "title": "organisations",
+      "path": "[[workspace]]/frontend/src/entities/organisations",
+      "contentTypes": ["organisation"]
+    }
+  ]
+}
