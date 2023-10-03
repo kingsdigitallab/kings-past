@@ -3,6 +3,7 @@ layout: layouts/themes.njk
 title: Themes
 feature:
   image: ""
+  title: The image title
   description: ""
 eleventyNavigation:
   key: Themes

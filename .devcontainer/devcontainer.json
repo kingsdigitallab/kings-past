@@ -10,7 +10,8 @@
         "ecmel.vscode-html-css",
         "eliostruyf.vscode-front-matter",
         "esbenp.prettier-vscode",
-        "eseom.nunjucks-template"
+        "eseom.nunjucks-template",
+        "monosans.djlint"
       ]
     }
   },
@@ -20,5 +21,6 @@
       "onAutoForward": "notify"
     }
   },
-  "postCreateCommand": "npm install"
+  "postCreateCommand": "npm install",
+  "postStartCommand": "npm run -w frontend dev"
 }

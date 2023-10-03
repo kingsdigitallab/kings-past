@@ -5,6 +5,7 @@ tags:
 excerpt: ""
 feature:
   image: /assets/images/moments/placeholder.svg
+  title: The image title
   description: Placeholder image for moments
 type: moment
 ---

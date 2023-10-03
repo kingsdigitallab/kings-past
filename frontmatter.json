@@ -1,0 +1,125 @@
+{
+  "$schema": "https://frontmatter.codes/frontmatter.schema.json",
+  "frontMatter.taxonomy.contentTypes": [
+    {
+      "name": "default",
+      "pageBundle": false,
+      "previewPath": null,
+      "fields": [
+        {
+          "title": "title",
+          "name": "title",
+          "type": "string"
+        },
+        {
+          "title": "excerpt",
+          "name": "excerpt",
+          "type": "string"
+        },
+        {
+          "title": "tags",
+          "name": "tags",
+          "type": "tags"
+        },
+        {
+          "title": "feature",
+          "name": "feature",
+          "type": "fields",
+          "fields": [
+            {
+              "title": "image",
+              "name": "image",
+              "type": "image"
+            },
+            {
+              "title": "title",
+              "name": "title",
+              "type": "string"
+            },
+            {
+              "title": "description",
+              "name": "description",
+              "type": "string"
+            }
+          ]
+        },
+        {
+          "title": "type",
+          "name": "type",
+          "type": "string"
+        }
+      ]
+    },
+    {
+      "name": "moment",
+      "pageBundle": false,
+      "fields": [
+        {
+          "title": "The moment title",
+          "name": "title",
+          "type": "string"
+        },
+        {
+          "title": "Excerpt for preview",
+          "name": "excerpt",
+          "type": "string"
+        },
+        {
+          "title": "Tags",
+          "name": "tags",
+          "type": "tags"
+        },
+        {
+          "title": "Feature",
+          "name": "feature",
+          "type": "fields",
+          "fields": [
+            {
+              "title": "Image",
+              "name": "image",
+              "type": "image"
+            },
+            {
+              "title": "Title",
+              "name": "title",
+              "type": "string"
+            },
+            {
+              "title": "Description",
+              "name": "description",
+              "type": "string"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "frontMatter.framework.id": "11ty",
+  "frontMatter.preview.host": "http://localhost:8080",
+  "frontMatter.content.pageFolders": [
+    {
+      "title": "src",
+      "path": "[[workspace]]/frontend/src",
+      "contentTypes": ["default"]
+    },
+    {
+      "title": "moments",
+      "path": "[[workspace]]/frontend/src/moments",
+      "contentTypes": ["moment"]
+    },
+    {
+      "title": "about",
+      "path": "[[workspace]]/frontend/src/about"
+    },
+    {
+      "title": "people",
+      "path": "[[workspace]]/frontend/src/entities/people",
+      "contentTypes": ["person"]
+    },
+    {
+      "title": "organisations",
+      "path": "[[workspace]]/frontend/src/entities/organisations",
+      "contentTypes": ["organisation"]
+    }
+  ]
+}

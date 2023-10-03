@@ -1,18 +1,19 @@
 ---
-title: King's College
-slug: kings-college
-alternateName: KCL
-foundingDate: 1829
-dissolutionDate: null
-url: https://kcl.ac.uk/
+title: The organisation name
+slug: organisation-slug
+alternateName: ""
+foundingDate: 1800
+dissolutionDate: 1900
+url: ""
 tags:
   - organisation
 feature:
   image: /assets/images/organisations/placeholder.svg
   title: The image title
   description: Placeholder image for the organisation
+funder: []
 memberOf: []
 type: organisation
 ---
 
-King's College description...
+Organisation description...
