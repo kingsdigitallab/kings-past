@@ -9,6 +9,7 @@ tags:
   - organisation
 feature:
   image: /assets/images/organisations/placeholder.svg
+  title: The image title
   description: Placeholder image for the organisation
 memberOf: []
 type: organisation

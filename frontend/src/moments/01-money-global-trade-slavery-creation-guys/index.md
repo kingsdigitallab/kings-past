@@ -7,6 +7,7 @@ themes:
 excerpt: Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat.
 feature:
   image: /assets/images/moments/placeholder.svg
+  title: The image title
   description: Placeholder image for the moment
 type: moment
 ---

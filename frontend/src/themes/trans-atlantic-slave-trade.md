@@ -5,6 +5,7 @@ tags:
   - theme
 feature:
   image: ""
+  title: The image title
   description: ""
 ---
 
