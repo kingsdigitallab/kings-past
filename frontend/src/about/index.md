@@ -2,6 +2,7 @@
 title: About
 feature:
   image: ""
+  title: ""
   description: ""
 eleventyNavigation:
   key: About
