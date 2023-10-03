@@ -1,6 +1,22 @@
 # Changelog
 
-## Unreleased
+## [Unreleased](https://github.com/kingsdigitallab/kings-past/compare/0.1.0...HEAD)
+
+- merge with develop [`ad5a636`](https://github.com/kingsdigitallab/kings-past/commit/ad5a63661c09c74df2651b2cd7952ebee88b308e)
+- feat(frontmatter): add initial templates [`d63b272`](https://github.com/kingsdigitallab/kings-past/commit/d63b2720787f064cac9e56a3e70260e4cf5235e5)
+- feat(frontmatter): add initial frontmatter configuration [`ad8eddc`](https://github.com/kingsdigitallab/kings-past/commit/ad8eddcce82c7a2a6e58d7c92b41cc8df3561b92)
+- feat(frontmatter): add content type for moments [`390cb91`](https://github.com/kingsdigitallab/kings-past/commit/390cb916a97ff34e5144b0d8653625bea33de1ac)
+- docs(changelog): add changelog [`b5b72d1`](https://github.com/kingsdigitallab/kings-past/commit/b5b72d1180015f21f1ac7cdca363c6d6c6af9d4a)
+- style(vscode): add peacock settings [`d4f1875`](https://github.com/kingsdigitallab/kings-past/commit/d4f18752cccb9c2902e2d35cf048105727ccc37b)
+- feat(image): add title to feature image [`1fb15d9`](https://github.com/kingsdigitallab/kings-past/commit/1fb15d9f93f0ae99661ba641ec162d2d6e4aaafb)
+- build: add formatting settings [`25a840a`](https://github.com/kingsdigitallab/kings-past/commit/25a840ab7af2944d720acfb5fe4cc02cb219f4d1)
+- fix: add missing njk formatter [`eee20b8`](https://github.com/kingsdigitallab/kings-past/commit/eee20b8d6a8c97c4ccbea682ecfed57dc82ea7e6)
+- fix: remove vim package, it turns vim mode automatically [`f3cbdb6`](https://github.com/kingsdigitallab/kings-past/commit/f3cbdb679c152db42a9e4d35221eb6626d00ed6c)
+- build(github): run 11ty after codespaces start [`d75c789`](https://github.com/kingsdigitallab/kings-past/commit/d75c78918ea5adec90ce16c2d3431ae31753b79a)
+- feat(frontmatter): add frontmatter taxonomy [`25b2d5f`](https://github.com/kingsdigitallab/kings-past/commit/25b2d5f633b1fff5009f3155979302ba203445cf)
+- fix(about): add missing image title field [`6860f1e`](https://github.com/kingsdigitallab/kings-past/commit/6860f1ed3b26bf5235d2c829fe38b1d0255708fb)
+
+## 0.1.0 (2023-09-28)
 
 - build: add initial dependencies [`4e69e1b`](https://github.com/kingsdigitallab/kings-past/commit/4e69e1bd41536f414a53395fdebae813320c7587)
 - Initial commit [`1ee75f3`](https://github.com/kingsdigitallab/kings-past/commit/1ee75f3315391f7fb649d4ffdb9dd6d8604ddb17)
@@ -34,6 +50,7 @@
 - fix: add nav order to nav items [`8fedeef`](https://github.com/kingsdigitallab/kings-past/commit/8fedeef1ba08de982d804112cc422c0186e18cc1)
 - build: add djlint configuration for the formatting of njk files [`0146fc0`](https://github.com/kingsdigitallab/kings-past/commit/0146fc0da6ee1d0e458381a82a8733ddb102f492)
 - fix: ignore 11ty output directory [`1789ed6`](https://github.com/kingsdigitallab/kings-past/commit/1789ed6bbd1fe70b8c0a16531ab6c44ba9475ad7)
+- Release 0.1.0 [`025aeb5`](https://github.com/kingsdigitallab/kings-past/commit/025aeb5d32fa81a2c5562caf7eda88fef17731bf)
 - build(git): ignore .DS_Store files [`405e0a2`](https://github.com/kingsdigitallab/kings-past/commit/405e0a23a4f7135836448a7a57528db10ea86b78)
 - feat(base): add header section [`b6ff306`](https://github.com/kingsdigitallab/kings-past/commit/b6ff3068644106e5f0367c4563ab413d4a122ba8)
 - refactor(frontend): add layout and title frontmatter [`dfd6e62`](https://github.com/kingsdigitallab/kings-past/commit/dfd6e624de06d194b6b16ef6965e950b67552731)
