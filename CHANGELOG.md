@@ -1,7 +1,13 @@
 # Changelog
 
-## [Unreleased](https://github.com/kingsdigitallab/kings-past/compare/0.1.0...HEAD)
+## [Unreleased](https://github.com/kingsdigitallab/kings-past/compare/0.2.0...HEAD)
 
+- style(11ty): format code [`4f1efbb`](https://github.com/kingsdigitallab/kings-past/commit/4f1efbb5de3eeda0d9c51d4a488922981645b4d1)
+- feat(moment): display moment image [`82a773e`](https://github.com/kingsdigitallab/kings-past/commit/82a773e944395447585ffc8fb4855b3172f6ac11)
+
+## [0.2.0](https://github.com/kingsdigitallab/kings-past/compare/0.1.0...0.2.0) (2023-10-03)
+
+- Release 0.2.0 [`1e930f3`](https://github.com/kingsdigitallab/kings-past/commit/1e930f32c28343fd2025d0f49ce24bbfd1e3e5f7)
 - merge with develop [`ad5a636`](https://github.com/kingsdigitallab/kings-past/commit/ad5a63661c09c74df2651b2cd7952ebee88b308e)
 - feat(frontmatter): add initial templates [`d63b272`](https://github.com/kingsdigitallab/kings-past/commit/d63b2720787f064cac9e56a3e70260e4cf5235e5)
 - feat(frontmatter): add initial frontmatter configuration [`ad8eddc`](https://github.com/kingsdigitallab/kings-past/commit/ad8eddcce82c7a2a6e58d7c92b41cc8df3561b92)
