@@ -1,8 +1,11 @@
 # Changelog
 
-## [Unreleased](https://github.com/kingsdigitallab/kings-past/compare/0.2.0...HEAD)
+## [Unreleased](https://github.com/kingsdigitallab/kings-past/compare/0.3.0...HEAD)
+
+## [0.3.0](https://github.com/kingsdigitallab/kings-past/compare/0.2.0...0.3.0) (2023-10-04)
 
 - style(11ty): format code [`4f1efbb`](https://github.com/kingsdigitallab/kings-past/commit/4f1efbb5de3eeda0d9c51d4a488922981645b4d1)
+- Release 0.3.0 [`e3a5f25`](https://github.com/kingsdigitallab/kings-past/commit/e3a5f255bc11e3eb98ba1cd23ea8a91172098db9)
 - feat(moment): display moment image [`82a773e`](https://github.com/kingsdigitallab/kings-past/commit/82a773e944395447585ffc8fb4855b3172f6ac11)
 
 ## [0.2.0](https://github.com/kingsdigitallab/kings-past/compare/0.1.0...0.2.0) (2023-10-03)
