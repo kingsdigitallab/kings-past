@@ -2,7 +2,7 @@
   "$schema": "https://frontmatter.codes/frontmatter.schema.json",
   "frontMatter.taxonomy.fieldGroups": [
     {
-      "id": "FeatureFields",
+      "id": "FeatureImageFields",
       "fields": [
         {
           "title": "Image",
@@ -94,6 +94,28 @@
           "type": "string"
         }
       ]
+    },
+    {
+      "name": "theme",
+      "pageBundle": false,
+      "fields": [
+        {
+          "title": "title",
+          "name": "title",
+          "type": "string"
+        },
+        {
+          "title": "tags",
+          "name": "tags",
+          "type": "tags"
+        },
+        {
+          "title": "Feature",
+          "name": "feature",
+          "type": "fieldCollection",
+          "fieldGroup": "FeatureFields"
+        }
+      ]
     }
   ],
   "frontMatter.framework.id": "11ty",
@@ -122,6 +144,11 @@
       "title": "organisations",
       "path": "[[workspace]]/frontend/src/entities/organisations",
       "contentTypes": ["organisation"]
+    },
+    {
+      "title": "themes",
+      "path": "[[workspace]]/frontend/src/themes",
+      "contentTypes": ["theme"]
     }
   ]
 }
