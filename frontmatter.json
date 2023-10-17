@@ -90,6 +90,18 @@
               "type": "string"
             }
           ]
+        },
+        {
+          "title": "Themes",
+          "name": "themes",
+          "type": "contentRelationship",
+          "contentTypeName": "theme",
+          "contentTypeValue": "slug"
+        },
+        {
+          "title": "type",
+          "name": "type",
+          "type": "string"
         }
       ]
     }
