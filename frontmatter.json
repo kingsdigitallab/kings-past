@@ -47,7 +47,7 @@
           "title": "Feature",
           "name": "feature",
           "type": "fieldCollection",
-          "fieldGroup": "FeatureFields"
+          "fieldGroup": "FeatureImageFields"
         },
         {
           "title": "type",
@@ -79,7 +79,7 @@
           "title": "Feature",
           "name": "feature",
           "type": "fieldCollection",
-          "fieldGroup": "FeatureFields"
+          "fieldGroup": "FeatureImageFields"
         },
         {
           "title": "Themes",
@@ -113,7 +113,7 @@
           "title": "Feature",
           "name": "feature",
           "type": "fieldCollection",
-          "fieldGroup": "FeatureFields"
+          "fieldGroup": "FeatureImageFields"
         }
       ]
     }
