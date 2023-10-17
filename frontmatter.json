@@ -3,6 +3,7 @@
   "frontMatter.taxonomy.fieldGroups": [
     {
       "id": "FeatureImageFields",
+      "labelField": "title",
       "fields": [
         {
           "title": "Image",
@@ -17,6 +18,22 @@
         {
           "title": "Description",
           "name": "description",
+          "type": "string"
+        }
+      ]
+    },
+    {
+      "id": "URLFields",
+      "labelField": "name",
+      "fields": [
+        {
+          "title": "The name of the page",
+          "name": "name",
+          "type": "string"
+        },
+        {
+          "title": "URL",
+          "name": "url",
           "type": "string"
         }
       ]
@@ -46,7 +63,7 @@
         {
           "title": "Feature",
           "name": "feature",
-          "type": "fieldCollection",
+          "type": "block",
           "fieldGroup": "FeatureImageFields"
         },
         {
@@ -78,7 +95,7 @@
         {
           "title": "Feature",
           "name": "feature",
-          "type": "fieldCollection",
+          "type": "block",
           "fieldGroup": "FeatureImageFields"
         },
         {
@@ -100,7 +117,7 @@
       "pageBundle": false,
       "fields": [
         {
-          "title": "title",
+          "title": "The theme title",
           "name": "title",
           "type": "string"
         },
@@ -112,8 +129,68 @@
         {
           "title": "Feature",
           "name": "feature",
-          "type": "fieldCollection",
+          "type": "block",
           "fieldGroup": "FeatureImageFields"
+        }
+      ]
+    },
+    {
+      "name": "person",
+      "pageBundle": false,
+      "fields": [
+        {
+          "title": "The person name",
+          "name": "title",
+          "type": "string"
+        },
+        {
+          "title": "An alias for the person",
+          "name": "alternateName",
+          "type": "string"
+        },
+        {
+          "title": "Date of birth",
+          "name": "birthDate",
+          "type": "number"
+        },
+        {
+          "title": "Place of birth",
+          "name": "birthPlace",
+          "type": "string"
+        },
+        {
+          "title": "Date of death",
+          "name": "deathDate",
+          "type": "number"
+        },
+        {
+          "title": "URL",
+          "name": "url",
+          "type": "block",
+          "fieldGroup": ["URLFields"]
+        },
+        {
+          "title": "tags",
+          "name": "tags",
+          "type": "tags"
+        },
+        {
+          "title": "Feature",
+          "name": "feature",
+          "type": "block",
+          "fieldGroup": "FeatureImageFields",
+          "single": true
+        },
+        {
+          "title": "memberOf",
+          "name": "memberOf",
+          "type": "fields",
+          "fields": []
+        },
+        {
+          "title": "type",
+          "name": "type",
+          "type": "string"
         }
       ]
     }
