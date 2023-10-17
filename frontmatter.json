@@ -1,5 +1,27 @@
 {
   "$schema": "https://frontmatter.codes/frontmatter.schema.json",
+  "frontMatter.taxonomy.fieldGroups": [
+    {
+      "id": "FeatureFields",
+      "fields": [
+        {
+          "title": "Image",
+          "name": "image",
+          "type": "image"
+        },
+        {
+          "title": "Title",
+          "name": "title",
+          "type": "string"
+        },
+        {
+          "title": "Description",
+          "name": "description",
+          "type": "string"
+        }
+      ]
+    }
+  ],
   "frontMatter.taxonomy.contentTypes": [
     {
       "name": "default",
@@ -22,26 +44,10 @@
           "type": "tags"
         },
         {
-          "title": "feature",
+          "title": "Feature",
           "name": "feature",
-          "type": "fields",
-          "fields": [
-            {
-              "title": "image",
-              "name": "image",
-              "type": "image"
-            },
-            {
-              "title": "title",
-              "name": "title",
-              "type": "string"
-            },
-            {
-              "title": "description",
-              "name": "description",
-              "type": "string"
-            }
-          ]
+          "type": "fieldCollection",
+          "fieldGroup": "FeatureFields"
         },
         {
           "title": "type",
@@ -72,24 +78,8 @@
         {
           "title": "Feature",
           "name": "feature",
-          "type": "fields",
-          "fields": [
-            {
-              "title": "Image",
-              "name": "image",
-              "type": "image"
-            },
-            {
-              "title": "Title",
-              "name": "title",
-              "type": "string"
-            },
-            {
-              "title": "Description",
-              "name": "description",
-              "type": "string"
-            }
-          ]
+          "type": "fieldCollection",
+          "fieldGroup": "FeatureFields"
         },
         {
           "title": "Themes",
