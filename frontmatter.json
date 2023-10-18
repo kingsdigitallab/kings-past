@@ -264,10 +264,11 @@
           ]
         },
         {
-          "title": "memberOf",
+          "title": "Member of",
           "name": "memberOf",
-          "type": "fields",
-          "fields": []
+          "type": "contentRelationship",
+          "contentTypeName": "organisation",
+          "contentTypeValue": "slug"
         },
         {
           "title": "type",
@@ -306,8 +307,107 @@
         {
           "title": "Feature",
           "name": "feature",
-          "type": "fieldCollection",
-          "fieldGroup": "FeatureImageFields"
+          "type": "fields",
+          "fields": [
+            {
+              "title": "Image",
+              "name": "image",
+              "type": "image"
+            },
+            {
+              "title": "Title",
+              "name": "title",
+              "type": "string",
+              "single": true
+            },
+            {
+              "title": "Description",
+              "name": "description",
+              "type": "string"
+            }
+          ]
+        },
+        {
+          "title": "type",
+          "name": "type",
+          "type": "string"
+        }
+      ]
+    },
+    {
+      "name": "organisation",
+      "pageBundle": false,
+      "fields": [
+        {
+          "title": "The organisation name",
+          "name": "title",
+          "type": "string",
+          "single": true
+        },
+        {
+          "title": "An alias for the organisation",
+          "name": "alternateName",
+          "type": "string",
+          "single": true
+        },
+        {
+          "title": "foundingDate",
+          "name": "foundingDate",
+          "type": "number"
+        },
+        {
+          "title": "dissolutionDate",
+          "name": "dissolutionDate",
+          "type": "number"
+        },
+        {
+          "title": "URL",
+          "name": "url",
+          "type": "block",
+          "fieldGroup": ["URLFields"]
+        },
+        {
+          "title": "tags",
+          "name": "tags",
+          "type": "tags"
+        },
+        {
+          "title": "Feature",
+          "name": "feature",
+          "type": "fields",
+          "fields": [
+            {
+              "title": "Image",
+              "name": "image",
+              "type": "image"
+            },
+            {
+              "title": "Title",
+              "name": "title",
+              "type": "string",
+              "single": true
+            },
+            {
+              "title": "Description",
+              "name": "description",
+              "type": "string"
+            }
+          ]
+        },
+        {
+          "title": "Funder",
+          "name": "funder",
+          "type": "contentRelationship",
+          "contentTypeName": "person",
+          "contentTypeValue": "slug",
+          "multiple": true
+        },
+        {
+          "title": "Member of",
+          "name": "memberOf",
+          "type": "contentRelationship",
+          "contentTypeName": "organisation",
+          "contentTypeValue": "slug"
         },
         {
           "title": "type",
