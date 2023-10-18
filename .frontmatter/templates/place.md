@@ -10,4 +10,6 @@ feature:
   title: The image title
   description: Placeholder image for the place
 type: place
+geoCoordinates:
+  latitude: null
 ---
