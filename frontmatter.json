@@ -156,7 +156,8 @@
           "name": "themes",
           "type": "contentRelationship",
           "contentTypeName": "theme",
-          "contentTypeValue": "slug"
+          "contentTypeValue": "slug",
+          "multiple": true
         },
         {
           "title": "type",
