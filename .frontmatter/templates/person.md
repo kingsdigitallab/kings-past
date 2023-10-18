@@ -3,9 +3,9 @@ title: Person Name
 slug: person-name
 alternateName: ""
 birthDate: 1800
-birthPlace: place-name
+birthPlace: ""
 deathDate: 1900
-url: ""
+url: null
 tags:
   - person
 feature:

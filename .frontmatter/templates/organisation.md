@@ -1,10 +1,10 @@
 ---
-title: The organisation name
-slug: organisation-slug
-alternateName: ""
+title: The Organisation Name
+slug: organisation-name
+alternateName: null
 foundingDate: 1800
 dissolutionDate: 1900
-url: ""
+url: null
 tags:
   - organisation
 feature:

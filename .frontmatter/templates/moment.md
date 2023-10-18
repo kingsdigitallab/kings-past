@@ -1,5 +1,6 @@
 ---
 title: The moment title
+slug: moment-title
 excerpt: Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat.
 tags:
   - moment
@@ -8,7 +9,7 @@ feature:
   title: The image title
   description: Placeholder image for the moment
 themes:
-  - theme-slug-1
+  - trans-atlantic-slave-trade
 type: moment
 ---
 
