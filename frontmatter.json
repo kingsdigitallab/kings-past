@@ -30,6 +30,30 @@
       ]
     },
     {
+      "id": "GeoCoordinatesFields",
+      "fields": [
+        {
+          "title": "GeoCoordinates",
+          "name": "geoCoordinates",
+          "type": "fields",
+          "fields": [
+            {
+              "title": "Latitude",
+              "name": "latitude",
+              "type": "number",
+              "isDecimal": true
+            },
+            {
+              "title": "Longitude",
+              "name": "longitude",
+              "type": "number",
+              "isDecimal": true
+            }
+          ]
+        }
+      ]
+    },
+    {
       "id": "URLFields",
       "labelField": "name",
       "fields": [
@@ -364,6 +388,12 @@
           "name": "alternateName",
           "type": "string",
           "single": true
+        },
+        {
+          "title": "The geographic coordinates of the place",
+          "name": "geoCoordinates",
+          "type": "fieldCollection",
+          "fieldGroup": "GeoCoordinatesFields"
         },
         {
           "title": "URL",
