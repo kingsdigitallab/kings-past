@@ -151,7 +151,8 @@
         {
           "title": "The currency of the donation",
           "name": "priceCurrency",
-          "type": "string"
+          "type": "string",
+          "single": true
         },
         {
           "title": "Start date of the donation",
