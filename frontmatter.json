@@ -71,8 +71,25 @@
         {
           "title": "Feature",
           "name": "feature",
-          "type": "fieldCollection",
-          "fieldGroup": "FeatureImageFields"
+          "type": "fields",
+          "fields": [
+            {
+              "title": "Image",
+              "name": "image",
+              "type": "image"
+            },
+            {
+              "title": "Title",
+              "name": "title",
+              "type": "string",
+              "single": true
+            },
+            {
+              "title": "Description",
+              "name": "description",
+              "type": "string"
+            }
+          ]
         },
         {
           "title": "type",
@@ -103,8 +120,25 @@
         {
           "title": "Feature",
           "name": "feature",
-          "type": "fieldCollection",
-          "fieldGroup": "FeatureImageFields"
+          "type": "fields",
+          "fields": [
+            {
+              "title": "Image",
+              "name": "image",
+              "type": "image"
+            },
+            {
+              "title": "Title",
+              "name": "title",
+              "type": "string",
+              "single": true
+            },
+            {
+              "title": "Description",
+              "name": "description",
+              "type": "string"
+            }
+          ]
         },
         {
           "title": "Themes",
@@ -137,8 +171,25 @@
         {
           "title": "Feature",
           "name": "feature",
-          "type": "fieldCollection",
-          "fieldGroup": "FeatureImageFields"
+          "type": "fields",
+          "fields": [
+            {
+              "title": "Image",
+              "name": "image",
+              "type": "image"
+            },
+            {
+              "title": "Title",
+              "name": "title",
+              "type": "string",
+              "single": true
+            },
+            {
+              "title": "Description",
+              "name": "description",
+              "type": "string"
+            }
+          ]
         }
       ]
     },
@@ -185,14 +236,69 @@
         {
           "title": "Feature",
           "name": "feature",
-          "type": "fieldCollection",
-          "fieldGroup": "FeatureImageFields"
+          "type": "fields",
+          "fields": [
+            {
+              "title": "Image",
+              "name": "image",
+              "type": "image"
+            },
+            {
+              "title": "Title",
+              "name": "title",
+              "type": "string",
+              "single": true
+            },
+            {
+              "title": "Description",
+              "name": "description",
+              "type": "string"
+            }
+          ]
         },
         {
           "title": "memberOf",
           "name": "memberOf",
           "type": "fields",
           "fields": []
+        },
+        {
+          "title": "type",
+          "name": "type",
+          "type": "string"
+        }
+      ]
+    },
+    {
+      "name": "place",
+      "pageBundle": false,
+      "fields": [
+        {
+          "title": "The place name",
+          "name": "title",
+          "type": "string"
+        },
+        {
+          "title": "An alias for the place",
+          "name": "alternateName",
+          "type": "string"
+        },
+        {
+          "title": "URL",
+          "name": "url",
+          "type": "block",
+          "fieldGroup": ["URLFields"]
+        },
+        {
+          "title": "Tags",
+          "name": "tags",
+          "type": "tags"
+        },
+        {
+          "title": "Feature",
+          "name": "feature",
+          "type": "fieldCollection",
+          "fieldGroup": "FeatureImageFields"
         },
         {
           "title": "type",
