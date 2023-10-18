@@ -3,22 +3,29 @@
   "frontMatter.taxonomy.fieldGroups": [
     {
       "id": "FeatureImageFields",
-      "labelField": "title",
       "fields": [
         {
-          "title": "Image",
-          "name": "image",
-          "type": "image"
-        },
-        {
-          "title": "Title",
-          "name": "title",
-          "type": "string"
-        },
-        {
-          "title": "Description",
-          "name": "description",
-          "type": "string"
+          "title": "Feature",
+          "name": "feature",
+          "type": "fields",
+          "fields": [
+            {
+              "title": "Image",
+              "name": "image",
+              "type": "image"
+            },
+            {
+              "title": "Title",
+              "name": "title",
+              "type": "string",
+              "single": true
+            },
+            {
+              "title": "Description",
+              "name": "description",
+              "type": "string"
+            }
+          ]
         }
       ]
     },
@@ -29,7 +36,8 @@
         {
           "title": "The name of the page",
           "name": "name",
-          "type": "string"
+          "type": "string",
+          "single": true
         },
         {
           "title": "URL",
@@ -63,7 +71,7 @@
         {
           "title": "Feature",
           "name": "feature",
-          "type": "block",
+          "type": "fieldCollection",
           "fieldGroup": "FeatureImageFields"
         },
         {
@@ -95,7 +103,7 @@
         {
           "title": "Feature",
           "name": "feature",
-          "type": "block",
+          "type": "fieldCollection",
           "fieldGroup": "FeatureImageFields"
         },
         {
@@ -129,7 +137,7 @@
         {
           "title": "Feature",
           "name": "feature",
-          "type": "block",
+          "type": "fieldCollection",
           "fieldGroup": "FeatureImageFields"
         }
       ]
@@ -177,9 +185,8 @@
         {
           "title": "Feature",
           "name": "feature",
-          "type": "block",
-          "fieldGroup": "FeatureImageFields",
-          "single": true
+          "type": "fieldCollection",
+          "fieldGroup": "FeatureImageFields"
         },
         {
           "title": "memberOf",
