@@ -112,6 +112,13 @@
           "single": true
         },
         {
+          "title": "Slug",
+          "name": "slug",
+          "type": "slug",
+          "editable": true,
+          "default": "{{slug}}"
+        },
+        {
           "title": "Excerpt for preview",
           "name": "excerpt",
           "type": "string"
@@ -169,6 +176,13 @@
           "name": "title",
           "type": "string",
           "single": true
+        },
+        {
+          "title": "Slug",
+          "name": "slug",
+          "type": "slug",
+          "editable": true,
+          "default": "{{slug}}"
         },
         {
           "title": "An alias for the organisation",
@@ -253,6 +267,13 @@
           "name": "title",
           "type": "string",
           "single": true
+        },
+        {
+          "title": "Slug",
+          "name": "slug",
+          "type": "slug",
+          "editable": true,
+          "default": "{{slug}}"
         },
         {
           "title": "An alias for the person",
@@ -435,6 +456,7 @@
     }
   ],
   "frontMatter.framework.id": "11ty",
+  "frontMatter.generateSlug": true,
   "frontMatter.preview.host": "http://localhost:8080",
   "frontMatter.content.pageFolders": [
     {
