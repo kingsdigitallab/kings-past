@@ -220,7 +220,9 @@
         {
           "title": "Place of birth",
           "name": "birthPlace",
-          "type": "string"
+          "type": "contentRelationship",
+          "contentTypeName": "place",
+          "contentTypeValue": "slug"
         },
         {
           "title": "Date of death",
@@ -329,6 +331,11 @@
       "contentTypes": ["moment"]
     },
     {
+      "title": "organisations",
+      "path": "[[workspace]]/frontend/src/entities/organisations",
+      "contentTypes": ["organisation"]
+    },
+    {
       "title": "about",
       "path": "[[workspace]]/frontend/src/about"
     },
@@ -338,9 +345,9 @@
       "contentTypes": ["person"]
     },
     {
-      "title": "organisations",
-      "path": "[[workspace]]/frontend/src/entities/organisations",
-      "contentTypes": ["organisation"]
+      "title": "places",
+      "path": "[[workspace]]/frontend/src/entities/places",
+      "contentTypes": ["place"]
     },
     {
       "title": "themes",
