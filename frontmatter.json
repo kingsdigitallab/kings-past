@@ -56,7 +56,8 @@
         {
           "title": "title",
           "name": "title",
-          "type": "string"
+          "type": "string",
+          "single": true
         },
         {
           "title": "excerpt",
@@ -105,7 +106,8 @@
         {
           "title": "The moment title",
           "name": "title",
-          "type": "string"
+          "type": "string",
+          "single": true
         },
         {
           "title": "Excerpt for preview",
@@ -161,7 +163,8 @@
         {
           "title": "The theme title",
           "name": "title",
-          "type": "string"
+          "type": "string",
+          "single": true
         },
         {
           "title": "tags",
@@ -200,12 +203,14 @@
         {
           "title": "The person name",
           "name": "title",
-          "type": "string"
+          "type": "string",
+          "single": true
         },
         {
           "title": "An alias for the person",
           "name": "alternateName",
-          "type": "string"
+          "type": "string",
+          "single": true
         },
         {
           "title": "Date of birth",
@@ -276,12 +281,14 @@
         {
           "title": "The place name",
           "name": "title",
-          "type": "string"
+          "type": "string",
+          "single": true
         },
         {
           "title": "An alias for the place",
           "name": "alternateName",
-          "type": "string"
+          "type": "string",
+          "single": true
         },
         {
           "title": "URL",
