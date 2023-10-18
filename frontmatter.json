@@ -126,6 +126,46 @@
       ]
     },
     {
+      "name": "donation",
+      "pageBundle": false,
+      "fields": [
+        {
+          "title": "The receiver of the donation",
+          "name": "recipient",
+          "type": "contentRelationship",
+          "contentTypeName": "organisation",
+          "contentTypeValue": "slug"
+        },
+        {
+          "title": "The donor",
+          "name": "agent",
+          "type": "contentRelationship",
+          "contentTypeName": "person",
+          "contentTypeValue": "slug"
+        },
+        {
+          "title": "The value of the donation",
+          "name": "price",
+          "type": "number"
+        },
+        {
+          "title": "The currency of the donation",
+          "name": "priceCurrency",
+          "type": "string"
+        },
+        {
+          "title": "Start date of the donation",
+          "name": "startTime",
+          "type": "number"
+        },
+        {
+          "title": "End date of the donation",
+          "name": "endTime",
+          "type": "number"
+        }
+      ]
+    },
+    {
       "name": "moment",
       "pageBundle": false,
       "fields": [
@@ -390,10 +430,23 @@
           "single": true
         },
         {
-          "title": "The geographic coordinates of the place",
+          "title": "GeoCoordinates",
           "name": "geoCoordinates",
-          "type": "fieldCollection",
-          "fieldGroup": "GeoCoordinatesFields"
+          "type": "fields",
+          "fields": [
+            {
+              "title": "Latitude",
+              "name": "latitude",
+              "type": "number",
+              "isDecimal": true
+            },
+            {
+              "title": "Longitude",
+              "name": "longitude",
+              "type": "number",
+              "isDecimal": true
+            }
+          ]
         },
         {
           "title": "URL",
