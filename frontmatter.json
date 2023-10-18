@@ -161,14 +161,36 @@
       ]
     },
     {
-      "name": "theme",
+      "name": "organisation",
       "pageBundle": false,
       "fields": [
         {
-          "title": "The theme title",
+          "title": "The organisation name",
           "name": "title",
           "type": "string",
           "single": true
+        },
+        {
+          "title": "An alias for the organisation",
+          "name": "alternateName",
+          "type": "string",
+          "single": true
+        },
+        {
+          "title": "foundingDate",
+          "name": "foundingDate",
+          "type": "number"
+        },
+        {
+          "title": "dissolutionDate",
+          "name": "dissolutionDate",
+          "type": "number"
+        },
+        {
+          "title": "URL",
+          "name": "url",
+          "type": "block",
+          "fieldGroup": ["URLFields"]
         },
         {
           "title": "tags",
@@ -195,15 +217,30 @@
               "title": "Description",
               "name": "description",
               "type": "string"
-            },
-            {
-              "title": "type",
-              "name": "type",
-              "type": "string",
-              "default": "theme",
-              "single": true
             }
           ]
+        },
+        {
+          "title": "Funder",
+          "name": "funder",
+          "type": "contentRelationship",
+          "contentTypeName": "person",
+          "contentTypeValue": "slug",
+          "multiple": true
+        },
+        {
+          "title": "Member of",
+          "name": "memberOf",
+          "type": "contentRelationship",
+          "contentTypeName": "organisation",
+          "contentTypeValue": "slug"
+        },
+        {
+          "title": "type",
+          "name": "type",
+          "type": "string",
+          "default": "organisation",
+          "single": true
         }
       ]
     },
@@ -350,36 +387,14 @@
       ]
     },
     {
-      "name": "organisation",
+      "name": "theme",
       "pageBundle": false,
       "fields": [
         {
-          "title": "The organisation name",
+          "title": "The theme title",
           "name": "title",
           "type": "string",
           "single": true
-        },
-        {
-          "title": "An alias for the organisation",
-          "name": "alternateName",
-          "type": "string",
-          "single": true
-        },
-        {
-          "title": "foundingDate",
-          "name": "foundingDate",
-          "type": "number"
-        },
-        {
-          "title": "dissolutionDate",
-          "name": "dissolutionDate",
-          "type": "number"
-        },
-        {
-          "title": "URL",
-          "name": "url",
-          "type": "block",
-          "fieldGroup": ["URLFields"]
         },
         {
           "title": "tags",
@@ -406,30 +421,15 @@
               "title": "Description",
               "name": "description",
               "type": "string"
+            },
+            {
+              "title": "type",
+              "name": "type",
+              "type": "string",
+              "default": "theme",
+              "single": true
             }
           ]
-        },
-        {
-          "title": "Funder",
-          "name": "funder",
-          "type": "contentRelationship",
-          "contentTypeName": "person",
-          "contentTypeValue": "slug",
-          "multiple": true
-        },
-        {
-          "title": "Member of",
-          "name": "memberOf",
-          "type": "contentRelationship",
-          "contentTypeName": "organisation",
-          "contentTypeValue": "slug"
-        },
-        {
-          "title": "type",
-          "name": "type",
-          "type": "string",
-          "default": "organisation",
-          "single": true
         }
       ]
     }
@@ -443,6 +443,10 @@
       "contentTypes": ["default"]
     },
     {
+      "title": "about",
+      "path": "[[workspace]]/frontend/src/about"
+    },
+    {
       "title": "moments",
       "path": "[[workspace]]/frontend/src/moments",
       "contentTypes": ["moment"]
@@ -451,10 +455,6 @@
       "title": "organisations",
       "path": "[[workspace]]/frontend/src/entities/organisations",
       "contentTypes": ["organisation"]
-    },
-    {
-      "title": "about",
-      "path": "[[workspace]]/frontend/src/about"
     },
     {
       "title": "people",
