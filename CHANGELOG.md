@@ -1,6 +1,32 @@
 # Changelog
 
-## [Unreleased](https://github.com/kingsdigitallab/kings-past/compare/0.3.0...HEAD)
+## [Unreleased](https://github.com/kingsdigitallab/kings-past/compare/0.3.1...HEAD)
+
+- feat(frontmatter): add place content type [`acdbba0`](https://github.com/kingsdigitallab/kings-past/commit/acdbba075c5007d733cfc87dad15376a4f2d44c4)
+- style(frontmatter): re-organise content types [`044cb93`](https://github.com/kingsdigitallab/kings-past/commit/044cb937842bb8476f472689e117916d5bb6defe)
+- feat(frontmatter): add organisation content type [`1987510`](https://github.com/kingsdigitallab/kings-past/commit/1987510e6af023fbe3138a06ad1dcc6c20a578ef)
+- feat(frontmatter): add person content type [`2ca8f13`](https://github.com/kingsdigitallab/kings-past/commit/2ca8f13ad8236d534888d5b7377af1aed38284af)
+- feat(frontmatter): add fieldCollection for feature image fields [`285095b`](https://github.com/kingsdigitallab/kings-past/commit/285095b9de63abdd14aedaaf9953d4a8b3308bb6)
+- feat(frontmatter): add donation content type [`fc18e00`](https://github.com/kingsdigitallab/kings-past/commit/fc18e0068c81abe315394dc2b23659bd36a8962b)
+- fix(frontmatter): nest feature field group [`2b0c996`](https://github.com/kingsdigitallab/kings-past/commit/2b0c996b8373e44f555281e6062d4b697d5c9e99)
+- feat(frontmatter): add geo coordinates fields [`ca8eb95`](https://github.com/kingsdigitallab/kings-past/commit/ca8eb95159c7ff85b089cc847fdf7d61265f681b)
+- feat(frontmatter): add theme content type [`aeab309`](https://github.com/kingsdigitallab/kings-past/commit/aeab309df85656d3df7611c4f53bfb95de87420e)
+- feat(frontmatter): add default types [`016c914`](https://github.com/kingsdigitallab/kings-past/commit/016c914ec2d932573a14a6a297fc46aeed4e1e03)
+- feat(frontmatter): add explicit slug fields to entity types [`933b8b3`](https://github.com/kingsdigitallab/kings-past/commit/933b8b380dd442cfff348274e7a97f9d8749d7bd)
+- feat(frontmatter): render name fields as single line [`eaa3c89`](https://github.com/kingsdigitallab/kings-past/commit/eaa3c89ec2797ec22426b354755f110443952765)
+- feat(templates): update templates with content type changes [`244a398`](https://github.com/kingsdigitallab/kings-past/commit/244a398ff3c95e939c4c48a53c68c5846027429e)
+- feat(frontmatter): add places content folder [`e561f5a`](https://github.com/kingsdigitallab/kings-past/commit/e561f5ad509b014a0eef30c307a4aa82737769b2)
+- feat(templates): add donation template [`7ba3a2e`](https://github.com/kingsdigitallab/kings-past/commit/7ba3a2e091731676097587531dfe902a6392b6b6)
+- feat(frontmatter): add themes field to moment [`5eef908`](https://github.com/kingsdigitallab/kings-past/commit/5eef908bf1c8c25641736f4769af4b2ce5cacf5c)
+- fix(frontmatter): update field group for feature image [`940b32d`](https://github.com/kingsdigitallab/kings-past/commit/940b32d9eb0f5224fa9b51aa88fccbafe44d3737)
+- feat(templates): add themes field to moment template [`267bcce`](https://github.com/kingsdigitallab/kings-past/commit/267bcce6c94734bc92fbe2b998e9ccb8d134573a)
+- feat(frontmatter): enable moment to have multiple themes [`08b245d`](https://github.com/kingsdigitallab/kings-past/commit/08b245d6b751b9687be542c83254c784c1629a3f)
+- feat(templates): add geocoordinates to the place template [`459cf45`](https://github.com/kingsdigitallab/kings-past/commit/459cf45f3d91fb549c00c04b41d63856dd01f766)
+- refactor(themes): add type field [`c831fff`](https://github.com/kingsdigitallab/kings-past/commit/c831fffbd2ecbdf68dc53987438b5b61a2f2bede)
+
+## [0.3.1](https://github.com/kingsdigitallab/kings-past/compare/0.3.0...0.3.1) (2023-10-04)
+
+- Release 0.3.1 [`4c62fce`](https://github.com/kingsdigitallab/kings-past/commit/4c62fce8fc3d522b0418b88ab23ba4eab5b36d49)
 
 ## [0.3.0](https://github.com/kingsdigitallab/kings-past/compare/0.2.0...0.3.0) (2023-10-04)
 
