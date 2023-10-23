@@ -437,6 +437,14 @@
           ]
         },
         {
+          "title": "Knows",
+          "name": "knows",
+          "type": "contentRelationship",
+          "contentTypeName": "person",
+          "contentTypeValue": "slug",
+          "multiple": true
+        },
+        {
           "title": "Member of",
           "name": "memberOf",
           "type": "contentRelationship",
