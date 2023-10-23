@@ -317,6 +317,13 @@
           "type": "number"
         },
         {
+          "title": "The organisation location",
+          "name": "location",
+          "type": "contentRelationship",
+          "contentTypeName": "place",
+          "contentTypeValue": "slug"
+        },
+        {
           "title": "dissolutionDate",
           "name": "dissolutionDate",
           "type": "number"
