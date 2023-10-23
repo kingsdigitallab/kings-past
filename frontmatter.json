@@ -348,23 +348,6 @@
           "single": true
         },
         {
-          "title": "Date of birth",
-          "name": "birthDate",
-          "type": "number"
-        },
-        {
-          "title": "Place of birth",
-          "name": "birthPlace",
-          "type": "contentRelationship",
-          "contentTypeName": "place",
-          "contentTypeValue": "slug"
-        },
-        {
-          "title": "Date of death",
-          "name": "deathDate",
-          "type": "number"
-        },
-        {
           "title": "URL",
           "name": "url",
           "type": "block",
@@ -536,6 +519,61 @@
               "single": true
             }
           ]
+        }
+      ]
+    },
+    {
+      "name": "event",
+      "pageBundle": false,
+      "fields": [
+        {
+          "title": "The subject matter of the event",
+          "name": "title",
+          "type": "string"
+        },
+        {
+          "title": "The person/people involved in the event",
+          "name": "person",
+          "type": "contentRelationship",
+          "contentTypeName": "person",
+          "contentTypeValue": "slug",
+          "multiple": true
+        },
+        {
+          "title": "The organisation/organisations involved in the event",
+          "name": "organisation",
+          "type": "contentRelationship",
+          "contentTypeName": "organisation",
+          "contentTypeValue": "slug",
+          "multiple": true
+        },
+        {
+          "title": "startDate",
+          "name": "startDate",
+          "type": "datetime"
+        },
+        {
+          "title": "endDate",
+          "name": "endDate",
+          "type": "datetime"
+        },
+        {
+          "title": "tags",
+          "name": "tags",
+          "type": "tags"
+        },
+        {
+          "title": "The location where the event took place",
+          "name": "location",
+          "type": "contentRelationship",
+          "contentTypeName": "place",
+          "contentTypeValue": "slug"
+        },
+        {
+          "title": "URL",
+          "name": "url",
+          "type": "block",
+          "fieldGroup": ["URLFields"]
         }
       ]
     }
