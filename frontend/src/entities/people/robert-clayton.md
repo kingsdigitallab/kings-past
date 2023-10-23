@@ -2,8 +2,6 @@
 title: Robert Clayton
 slug: robert-clayton
 alternateName: ""
-birthDate: 1629
-deathDate: 1707
 url: ""
 tags:
   - person

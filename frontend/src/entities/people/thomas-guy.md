@@ -2,9 +2,6 @@
 title: Thomas Guy
 slug: thomas-guy
 alternateName: ""
-birthDate: 1644
-birthPlace: london
-deathDate: 1724
 url: ""
 tags:
   - person

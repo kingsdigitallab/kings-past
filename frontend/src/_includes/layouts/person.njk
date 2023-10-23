@@ -2,13 +2,4 @@
 layout: layouts/entity.njk
 ---
 
-{% if obj.birthPlace %}
-    {% set place = collections.place | filter(obj.birthPlace, 'data.slug') | first %}
-    {% if place %}<a class="entity-ref place" href="{{ place.url }}">{{ place.data.title }}</a>{% endif %}
-{% endif %}
-{% if obj.birthDate %}
-    {{ obj.birthDate }}–
-{%- endif -%}
-{% if obj.deathDate %}{{ obj.deathDate }}{% endif %}
-
 {{ content | safe }}
