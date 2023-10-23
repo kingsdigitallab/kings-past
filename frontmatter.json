@@ -368,7 +368,8 @@
           "name": "memberOf",
           "type": "contentRelationship",
           "contentTypeName": "organisation",
-          "contentTypeValue": "slug"
+          "contentTypeValue": "slug",
+          "multiple": true
         },
         {
           "title": "type",
@@ -449,7 +450,8 @@
           "name": "memberOf",
           "type": "contentRelationship",
           "contentTypeName": "organisation",
-          "contentTypeValue": "slug"
+          "contentTypeValue": "slug",
+          "multiple": true
         },
         {
           "title": "type",
