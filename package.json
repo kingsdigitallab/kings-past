@@ -35,7 +35,8 @@
     "frontend:dev": "npm run -w frontend dev"
   },
   "workspaces": [
-    "frontend"
+    "frontend",
+    "frontmaid"
   ],
   "lint-staged": {
     "*.js": "npm run format",
