@@ -39,7 +39,7 @@
     "frontmaid"
   ],
   "lint-staged": {
-    "*.js": "npm run format",
+    "*.{js,mjs}": "npm run format",
     "*.{json,md,yaml}": "npm run prettier:fix"
   },
   "release-it": {
