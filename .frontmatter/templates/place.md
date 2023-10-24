@@ -12,4 +12,5 @@ feature:
 type: place
 geoCoordinates:
   latitude: null
+  longitude: null
 ---
