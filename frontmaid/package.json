@@ -1,0 +1,12 @@
+{
+  "name": "@kings-past/frontmaid",
+  "version": "0.0.1",
+  "description": "Package to generate mermaid er diagrams from frontmatter content types",
+  "author": "King's Digital Lab",
+  "license": "MPL-2.0",
+  "bin": "src/main.mjs",
+  "scripts": {
+    "frontmaid": "node src/main.mjs",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
