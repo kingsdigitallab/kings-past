@@ -177,7 +177,7 @@
         },
         {
           "title": "The person/people involved in the event",
-          "name": "person",
+          "name": "attendeePerson",
           "type": "contentRelationship",
           "contentTypeName": "person",
           "contentTypeValue": "slug",
@@ -185,7 +185,7 @@
         },
         {
           "title": "The organisation/organisations involved in the event",
-          "name": "organisation",
+          "name": "attendeeOrganisation",
           "type": "contentRelationship",
           "contentTypeName": "organisation",
           "contentTypeValue": "slug",

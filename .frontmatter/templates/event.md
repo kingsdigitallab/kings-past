@@ -1,7 +1,7 @@
 ---
 title: The subject matter of the event
-person: []
-organisation: []
+attendeePerson: []
+attendeeOrganisation: []
 startDate: null
 endDate: null
 tags:
