@@ -1,6 +1,28 @@
 # Changelog
 
-## [Unreleased](https://github.com/kingsdigitallab/kings-past/compare/0.3.1...HEAD)
+## [Unreleased](https://github.com/kingsdigitallab/kings-past/compare/0.4.0...HEAD)
+
+- build(npm): bump lint-staged [`8a43179`](https://github.com/kingsdigitallab/kings-past/commit/8a431799fc842582bf39fec5960392748d5f6109)
+- docs: add data model diagram [`2a26ad0`](https://github.com/kingsdigitallab/kings-past/commit/2a26ad0c5ae313e641f44d56e8d0bc701a7b689a)
+- feat(frontmatter): add page folders for donations and events [`aa678c3`](https://github.com/kingsdigitallab/kings-past/commit/aa678c30bf80c334f59411070f4c07bd8b303782)
+- feat(frontmaid): add small package to generate mermaid diagrams from frontmatter content type definitions [`3bd72e4`](https://github.com/kingsdigitallab/kings-past/commit/3bd72e4521866af8c9f5dfcb51923e9752b67915)
+- feat(frontmatter): add event content type and template [`23405b0`](https://github.com/kingsdigitallab/kings-past/commit/23405b036e283ab8e85504a5228644b89770a499)
+- build(npm): update dependencies [`c652f51`](https://github.com/kingsdigitallab/kings-past/commit/c652f5197f70806946999e7195e678c2ddef5191)
+- refactor(vscode): update the colour setting to match the project colour [`eec0c24`](https://github.com/kingsdigitallab/kings-past/commit/eec0c241c34c3a5c5867bf51f95665d1f9d147f1)
+- style(frontmaid): format code [`e55be54`](https://github.com/kingsdigitallab/kings-past/commit/e55be540e59db602b806e4c7a11df1b950773fd4)
+- fix(entities): remove date and place properties from person [`9a73b12`](https://github.com/kingsdigitallab/kings-past/commit/9a73b124a9eea223c82b4c047fe942d9779c733f)
+- fix(frontmatter): prefix the attendee fields in event [`2ba6cda`](https://github.com/kingsdigitallab/kings-past/commit/2ba6cda9f49fdb3843052c54afd18a8466e07294)
+- feat(frontmatter): add knows field to person content type [`80a2637`](https://github.com/kingsdigitallab/kings-past/commit/80a263701fc3aae9bec11e69f89797bd62d731b5)
+- fix(lint-staged): define commands in the lint-staged section [`772fe8a`](https://github.com/kingsdigitallab/kings-past/commit/772fe8af8fba1dffbbbace2347d92de1e68d8fad)
+- feat(frontmatter): add location field to organisation [`b5f3a60`](https://github.com/kingsdigitallab/kings-past/commit/b5f3a601f8a781f04ec58abfe513391037582fea)
+- feat(frontmatter): set multiple for memberOf fields [`59b7414`](https://github.com/kingsdigitallab/kings-past/commit/59b7414874cf8f29aa0f7d12056f6737e065764d)
+- feat(frontmaid): add initial package configuration [`49d2b9c`](https://github.com/kingsdigitallab/kings-past/commit/49d2b9c539d9ba78adc7809a5ae8213a9dbdb339)
+- build: add mjs to lint staged configuration [`21250ce`](https://github.com/kingsdigitallab/kings-past/commit/21250ce9b376351bf4f2e399a956e877e8ac103c)
+- build(npm): add pico css [`4b0083c`](https://github.com/kingsdigitallab/kings-past/commit/4b0083c7bd2ae8724622024a3a3faeeb01d6c920)
+- fix(templates): add missing lon field to the place template [`0ae1647`](https://github.com/kingsdigitallab/kings-past/commit/0ae16471984a12ed323a6640e2bb12f59e335cd9)
+- feat(frontmatter): add location field to organisation [`af68d96`](https://github.com/kingsdigitallab/kings-past/commit/af68d968244dd24cb17416815d0d795a71638f22)
+
+## [0.4.0](https://github.com/kingsdigitallab/kings-past/compare/0.3.1...0.4.0) (2023-10-19)
 
 - feat(frontmatter): add place content type [`acdbba0`](https://github.com/kingsdigitallab/kings-past/commit/acdbba075c5007d733cfc87dad15376a4f2d44c4)
 - style(frontmatter): re-organise content types [`044cb93`](https://github.com/kingsdigitallab/kings-past/commit/044cb937842bb8476f472689e117916d5bb6defe)
@@ -9,6 +31,7 @@
 - feat(frontmatter): add fieldCollection for feature image fields [`285095b`](https://github.com/kingsdigitallab/kings-past/commit/285095b9de63abdd14aedaaf9953d4a8b3308bb6)
 - feat(frontmatter): add donation content type [`fc18e00`](https://github.com/kingsdigitallab/kings-past/commit/fc18e0068c81abe315394dc2b23659bd36a8962b)
 - fix(frontmatter): nest feature field group [`2b0c996`](https://github.com/kingsdigitallab/kings-past/commit/2b0c996b8373e44f555281e6062d4b697d5c9e99)
+- Release 0.4.0 [`9f80f8a`](https://github.com/kingsdigitallab/kings-past/commit/9f80f8add6c0d677593c92c44a79ef51461d33e2)
 - feat(frontmatter): add geo coordinates fields [`ca8eb95`](https://github.com/kingsdigitallab/kings-past/commit/ca8eb95159c7ff85b089cc847fdf7d61265f681b)
 - feat(frontmatter): add theme content type [`aeab309`](https://github.com/kingsdigitallab/kings-past/commit/aeab309df85656d3df7611c4f53bfb95de87420e)
 - feat(frontmatter): add default types [`016c914`](https://github.com/kingsdigitallab/kings-past/commit/016c914ec2d932573a14a6a297fc46aeed4e1e03)
