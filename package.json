@@ -40,8 +40,11 @@
     "frontmaid"
   ],
   "lint-staged": {
-    "*.{js,mjs}": "npm run format",
-    "*.{json,md,yaml}": "npm run prettier:fix"
+    "*.js": [
+      "prettier --write",
+      "eslint **/src **/tests"
+    ],
+    "*.{css,json,md,scss,yaml}": "prettier --write"
   },
   "release-it": {
     "git": {
