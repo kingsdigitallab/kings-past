@@ -649,5 +649,9 @@
       "path": "[[workspace]]/frontend/src/themes",
       "contentTypes": ["theme"]
     }
-  ]
+  ],
+  "frontMatter.content.publicFolder": {
+    "path": "[[workspace]]/frontend/public",
+    "relative": false
+  }
 }
