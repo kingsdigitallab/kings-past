@@ -465,6 +465,12 @@
           ]
         },
         {
+          "title": "The person occupation",
+          "name": "hasOccupation",
+          "type": "taxonomy",
+          "taxonomyId": "occupationTaxonomy"
+        },
+        {
           "title": "Knows",
           "name": "knows",
           "type": "contentRelationship",
@@ -677,5 +683,18 @@
   "frontMatter.content.publicFolder": {
     "path": "[[workspace]]/frontend/public",
     "relative": false
-  }
+  },
+  "frontMatter.taxonomy.customTaxonomy": [
+    {
+      "id": "occupationTaxonomy",
+      "options": [
+        "Agriculturalist",
+        "Bookseller",
+        "Blacksmith",
+        "Carpenter",
+        "Farmer",
+        "Mason"
+      ]
+    }
+  ]
 }
