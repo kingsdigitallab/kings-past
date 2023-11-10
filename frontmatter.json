@@ -608,45 +608,55 @@
     {
       "title": "src",
       "path": "[[workspace]]/frontend/src",
+      "filePrefix": "",
       "contentTypes": ["default"]
     },
     {
       "title": "about",
-      "path": "[[workspace]]/frontend/src/about"
+      "path": "[[workspace]]/frontend/src/about",
+      "filePrefix": "",
+      "contentTypes": ["default"]
     },
     {
       "title": "events",
       "path": "[[workspace]]/frontend/src/events",
+      "filePrefix": "",
       "contentTypes": ["event"]
     },
     {
       "title": "donations",
       "path": "[[workspace]]/frontend/src/events/donations",
+      "filePrefix": "",
       "contentTypes": ["donation"]
     },
     {
       "title": "moments",
       "path": "[[workspace]]/frontend/src/moments",
+      "filePrefix": "",
       "contentTypes": ["moment"]
     },
     {
       "title": "organisations",
       "path": "[[workspace]]/frontend/src/entities/organisations",
+      "filePrefix": "",
       "contentTypes": ["organisation"]
     },
     {
       "title": "people",
       "path": "[[workspace]]/frontend/src/entities/people",
+      "filePrefix": "",
       "contentTypes": ["person"]
     },
     {
       "title": "places",
       "path": "[[workspace]]/frontend/src/entities/places",
+      "filePrefix": "",
       "contentTypes": ["place"]
     },
     {
       "title": "themes",
       "path": "[[workspace]]/frontend/src/themes",
+      "filePrefix": "",
       "contentTypes": ["theme"]
     }
   ],
