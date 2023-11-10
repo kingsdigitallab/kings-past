@@ -8,6 +8,10 @@
     {
       "id": "occupations",
       "options": ["Bookseller", "Politician", "Scientist"]
+    },
+    {
+      "id": "placeTypes",
+      "options": ["City", "Village"]
     }
   ],
   "frontMatter.taxonomy.fieldGroups": [
@@ -592,6 +596,13 @@
           "type": "string",
           "default": "place",
           "single": true
+        },
+        {
+          "title": "Place type",
+          "name": "additionalType",
+          "type": "taxonomy",
+          "taxonomyId": "placeTypes",
+          "taxonomyLimit": 1
         }
       ]
     },
