@@ -136,6 +136,13 @@
           "single": true
         },
         {
+          "title": "Slug",
+          "name": "slug",
+          "type": "slug",
+          "editable": true,
+          "default": "{{slug}}"
+        },
+        {
           "title": "The receiver of the donation",
           "name": "recipient",
           "type": "contentRelationship",
@@ -180,6 +187,13 @@
           "title": "The subject matter of the event",
           "name": "title",
           "type": "string"
+        },
+        {
+          "title": "Slug",
+          "name": "slug",
+          "type": "slug",
+          "editable": true,
+          "default": "{{slug}}"
         },
         {
           "title": "The person/people involved in the event",
