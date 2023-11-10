@@ -1,5 +1,6 @@
 ---
 title: ""
+slug: ""
 feature:
   image: ""
   title: ""
