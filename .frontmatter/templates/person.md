@@ -1,6 +1,6 @@
 ---
-title: Person Name
-slug: person-name
+title: ""
+slug: ""
 alternateName: ""
 url: null
 tags:

@@ -1,6 +1,6 @@
 ---
-title: The moment title
-slug: moment-title
+title: ""
+slug: ""
 excerpt: Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat.
 tags:
   - moment

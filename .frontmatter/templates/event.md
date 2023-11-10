@@ -1,5 +1,6 @@
 ---
-title: The subject matter of the event
+title: ""
+slug: ""
 attendeePerson: []
 attendeeOrganisation: []
 startDate: null

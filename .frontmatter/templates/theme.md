@@ -1,12 +1,8 @@
 ---
-title: Theme title
-slug: theme-title
+title: ""
+slug: ""
 tags:
   - theme
-feature:
-  image: ""
-  title: The image title
-  description: ""
 type: theme
 ---
 

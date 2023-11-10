@@ -1,7 +1,7 @@
 ---
-title: Place Name
+title: ""
+slug: ""
 alternateName: null
-slug: place-name
 url: null
 tags:
   - place

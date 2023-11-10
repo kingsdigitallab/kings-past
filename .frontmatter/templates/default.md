@@ -1,5 +1,5 @@
 ---
-title: Page title
+title: ""
 feature:
   image: ""
   title: ""

@@ -1,5 +1,6 @@
 ---
-title: The subject matter of the donation
+title: ""
+slug: ""
 recipient: ""
 agent: ""
 price: ""

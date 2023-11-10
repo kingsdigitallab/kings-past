@@ -1,6 +1,6 @@
 ---
-title: The Organisation Name
-slug: organisation-name
+title: ""
+slug: ""
 alternateName: null
 foundingDate: 1800
 location: null
