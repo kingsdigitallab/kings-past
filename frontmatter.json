@@ -130,6 +130,12 @@
       "pageBundle": false,
       "fields": [
         {
+          "title": "title",
+          "name": "title",
+          "type": "string",
+          "single": true
+        },
+        {
           "title": "The receiver of the donation",
           "name": "recipient",
           "type": "contentRelationship",
