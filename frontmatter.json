@@ -1,5 +1,18 @@
 {
   "$schema": "https://frontmatter.codes/frontmatter.schema.json",
+  "frontMatter.taxonomy.customTaxonomy": [
+    {
+      "id": "occupations",
+      "options": [
+        "Agriculturalist",
+        "Bookseller",
+        "Blacksmith",
+        "Carpenter",
+        "Farmer",
+        "Mason"
+      ]
+    }
+  ],
   "frontMatter.taxonomy.fieldGroups": [
     {
       "id": "FeatureImageFields",
@@ -468,7 +481,7 @@
           "title": "The person occupation",
           "name": "hasOccupation",
           "type": "taxonomy",
-          "taxonomyId": "occupationTaxonomy"
+          "taxonomyId": "occupations"
         },
         {
           "title": "Knows",
@@ -683,18 +696,5 @@
   "frontMatter.content.publicFolder": {
     "path": "[[workspace]]/frontend/public",
     "relative": false
-  },
-  "frontMatter.taxonomy.customTaxonomy": [
-    {
-      "id": "occupationTaxonomy",
-      "options": [
-        "Agriculturalist",
-        "Bookseller",
-        "Blacksmith",
-        "Carpenter",
-        "Farmer",
-        "Mason"
-      ]
-    }
-  ]
+  }
 }
