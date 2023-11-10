@@ -163,12 +163,12 @@
         {
           "title": "Start date of the donation",
           "name": "startTime",
-          "type": "number"
+          "type": "string"
         },
         {
           "title": "End date of the donation",
           "name": "endTime",
-          "type": "number"
+          "type": "string"
         }
       ]
     },
@@ -200,12 +200,12 @@
         {
           "title": "startDate",
           "name": "startDate",
-          "type": "datetime"
+          "type": "string"
         },
         {
           "title": "endDate",
           "name": "endDate",
-          "type": "datetime"
+          "type": "string"
         },
         {
           "title": "tags",
