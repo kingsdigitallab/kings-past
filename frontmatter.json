@@ -602,15 +602,15 @@
               "title": "Description",
               "name": "description",
               "type": "string"
-            },
-            {
-              "title": "type",
-              "name": "type",
-              "type": "string",
-              "default": "theme",
-              "single": true
             }
           ]
+        },
+        {
+          "title": "type",
+          "name": "type",
+          "type": "string",
+          "default": "theme",
+          "single": true
         }
       ]
     }
