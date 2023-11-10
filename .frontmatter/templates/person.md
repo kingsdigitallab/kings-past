@@ -2,16 +2,17 @@
 title: ""
 slug: ""
 alternateName: ""
-url: null
-tags:
-  - person
 feature:
   image: /assets/images/people/placeholder.svg
   title: The image title
   description: Placeholder image for the organisation
+url: []
+knowsLanguage: []
 hasOccupation: []
 knows: []
 memberOf: []
+tags:
+  - person
 type: person
 ---
 

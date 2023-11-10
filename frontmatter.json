@@ -2,15 +2,12 @@
   "$schema": "https://frontmatter.codes/frontmatter.schema.json",
   "frontMatter.taxonomy.customTaxonomy": [
     {
+      "id": "languages",
+      "options": ["English", "French"]
+    },
+    {
       "id": "occupations",
-      "options": [
-        "Agriculturalist",
-        "Bookseller",
-        "Blacksmith",
-        "Carpenter",
-        "Farmer",
-        "Mason"
-      ]
+      "options": ["Bookseller", "Politician", "Scientist"]
     }
   ],
   "frontMatter.taxonomy.fieldGroups": [
@@ -396,6 +393,12 @@
           ]
         },
         {
+          "title": "Languages spoken at the organisation",
+          "name": "knowsLanguage",
+          "type": "taxonomy",
+          "taxonomyId": "languages"
+        },
+        {
           "title": "Funder",
           "name": "funder",
           "type": "contentRelationship",
@@ -476,6 +479,12 @@
               "type": "string"
             }
           ]
+        },
+        {
+          "title": "Languages the person knows",
+          "name": "knowsLanguage",
+          "type": "taxonomy",
+          "taxonomyId": "languages"
         },
         {
           "title": "The person occupation",
