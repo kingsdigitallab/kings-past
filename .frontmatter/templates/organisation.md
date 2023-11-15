@@ -13,6 +13,8 @@ url: null
 knowsLanguage: []
 funder: []
 memberOf: []
+subjectOfMoment: []
+subjectOfTheme: []
 tags:
   - organisation
 type: organisation

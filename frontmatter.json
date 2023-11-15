@@ -428,6 +428,22 @@
           "multiple": true
         },
         {
+          "title": "Related moments",
+          "name": "subjectOfMoment",
+          "type": "contentRelationship",
+          "contentTypeName": "moment",
+          "contentTypeValue": "slug",
+          "multiple": true
+        },
+        {
+          "title": "Related themes",
+          "name": "subjectOfTheme",
+          "type": "contentRelationship",
+          "contentTypeName": "theme",
+          "contentTypeValue": "slug",
+          "multiple": true
+        },
+        {
           "title": "tags",
           "name": "tags",
           "type": "tags"
@@ -525,6 +541,22 @@
           "title": "tags",
           "name": "tags",
           "type": "tags"
+        },
+        {
+          "title": "Related moments",
+          "name": "subjectOfMoment",
+          "type": "contentRelationship",
+          "contentTypeName": "moment",
+          "contentTypeValue": "slug",
+          "multiple": true
+        },
+        {
+          "title": "Related themes",
+          "name": "subjectOfTheme",
+          "type": "contentRelationship",
+          "contentTypeName": "theme",
+          "contentTypeValue": "slug",
+          "multiple": true
         }
       ]
     },
