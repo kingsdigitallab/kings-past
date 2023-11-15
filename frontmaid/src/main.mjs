@@ -1,7 +1,7 @@
 import fs from "fs";
 
 const INDENT = "  ";
-const RELATION_FIELDS = ["block", "contentRelationship"];
+const RELATION_FIELDS = ["block", "contentRelationship", "taxonomy"];
 
 function main() {
   const inputFile = process.argv[2] || "frontmatter.json";
@@ -11,6 +11,7 @@ function main() {
 
   const config = JSON.parse(inputJson);
 
+  const customTaxonomy = config["frontMatter.taxonomy.customTaxonomy"];
   const fieldGroups = config["frontMatter.taxonomy.fieldGroups"];
   const contentTypes = config["frontMatter.taxonomy.contentTypes"];
 
@@ -22,15 +23,15 @@ function main() {
   diagram.push("```mermaid");
   diagram.push("erDiagram");
 
-  for (const taxonomy of [...fieldGroups, ...contentTypes]) {
+  for (const taxonomy of [...customTaxonomy, ...fieldGroups, ...contentTypes]) {
     const name = taxonomy.name || taxonomy.id;
 
     // add relationships
     diagram.push(
       ...getFields(
         name,
-        taxonomy.fields.filter((field) => RELATION_FIELDS.includes(field.type)),
-      ),
+        taxonomy.fields?.filter((field) => RELATION_FIELDS.includes(field.type))
+      )
     );
 
     // add taxonomy
@@ -40,10 +41,10 @@ function main() {
     diagram.push(
       ...getFields(
         name,
-        taxonomy.fields.filter(
-          (field) => !RELATION_FIELDS.includes(field.type),
-        ),
-      ),
+        taxonomy.fields?.filter(
+          (field) => !RELATION_FIELDS.includes(field.type)
+        )
+      )
     );
 
     diagram.push(`${INDENT}}`);
@@ -65,13 +66,18 @@ function getFields(name, fields, prefix = "") {
       for (const fieldGroup of field.fieldGroup) {
         const relation = field.multiple ? "o{" : "||";
         result.push(
-          `${INDENT}${name} ||--${relation} ${fieldGroup}: ${field.name}`,
+          `${INDENT}${name} ||--${relation} ${fieldGroup}: ${field.name}`
         );
       }
     } else if (field.type === "contentRelationship") {
       const relation = field.multiple ? "o{" : "||";
       result.push(
-        `${INDENT}${name} ||--${relation} ${field.contentTypeName}: ${field.name}`,
+        `${INDENT}${name} ||--${relation} ${field.contentTypeName}: ${field.name}`
+      );
+    } else if (field.type === "taxonomy") {
+      const relation = field.multiple ? "o{" : "||";
+      result.push(
+        `${INDENT}${name} ||--${relation} ${field.taxonomyId}: ${field.name}`
       );
     } else if (field.fields) {
       result.push(...getFields(name, field.fields, `${prefix}${field.name}__`));
