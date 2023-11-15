@@ -1,3 +1,7 @@
+---
+slug: ""
+---
+
 # kings-past
 
 [![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/kingsdigitallab/kings-past/tree/develop)
@@ -33,6 +37,12 @@ unsing the frontmaid package in this repository.
 
 ```mermaid
 erDiagram
+  languages {
+  }
+  occupations {
+  }
+  placeTypes {
+  }
   FeatureImageFields {
     feature__image image
     feature__title string
@@ -48,20 +58,23 @@ erDiagram
   }
   default {
     title string
+    slug slug
+    type string
     excerpt string
-    tags tags
     feature__image image
     feature__title string
     feature__description string
-    type string
+    tags tags
   }
   donation ||--|| organisation: recipient
   donation ||--|| person: agent
   donation {
+    title string
+    slug slug
     price number
     priceCurrency string
-    startTime number
-    endTime number
+    startTime string
+    endTime string
   }
   event ||--o{ person: attendeePerson
   event ||--o{ organisation: attendeeOrganisation
@@ -69,68 +82,79 @@ erDiagram
   event ||--|| URLFields: url
   event {
     title string
-    startDate datetime
-    endDate datetime
+    slug slug
+    startDate string
+    endDate string
     tags tags
   }
   moment ||--o{ theme: themes
   moment {
     title string
     slug slug
+    type string
     excerpt string
-    tags tags
     feature__image image
     feature__title string
     feature__description string
-    type string
+    tags tags
   }
   organisation ||--|| place: location
   organisation ||--|| URLFields: url
+  organisation ||--|| languages: knowsLanguage
   organisation ||--o{ person: funder
   organisation ||--o{ organisation: memberOf
+  organisation ||--o{ moment: subjectOfMoment
+  organisation ||--o{ theme: subjectOfTheme
   organisation {
     title string
     slug slug
+    type string
     alternateName string
     foundingDate number
     dissolutionDate number
-    tags tags
     feature__image image
     feature__title string
     feature__description string
-    type string
+    tags tags
   }
-  person ||--o{ URLFields: url
+  person ||--|| URLFields: url
+  person ||--|| languages: knowsLanguage
+  person ||--|| occupations: hasOccupation
   person ||--o{ person: knows
   person ||--o{ organisation: memberOf
+  person ||--o{ moment: subjectOfMoment
+  person ||--o{ theme: subjectOfTheme
   person {
     title string
     slug slug
+    type string
     alternateName string
-    tags tags
     feature__image image
     feature__title string
     feature__description string
-    type string
+    tags tags
   }
+  place ||--|| placeTypes: additionalType
   place ||--|| URLFields: url
   place {
     title string
+    slug slug
     alternateName string
+    type string
     geoCoordinates__latitude number
     geoCoordinates__longitude number
-    tags tags
     feature__image image
     feature__title string
     feature__description string
-    type string
+    tags tags
   }
   theme {
     title string
-    tags tags
+    slug slug
+    type string
     feature__image image
     feature__title string
     feature__description string
-    feature__type string
+    tags tags
   }
 ```
