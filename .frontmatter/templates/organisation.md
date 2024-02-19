@@ -1,6 +1,7 @@
 ---
 title: ""
 slug: ""
+additionalType: null
 alternateName: null
 foundingDate: 1800
 location: null

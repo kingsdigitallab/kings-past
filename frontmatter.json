@@ -354,6 +354,12 @@
           "single": true
         },
         {
+          "title": "Additional type",
+          "name": "additionalType",
+          "type": "tags",
+          "default": ""
+        },
+        {
           "title": "An alias for the organisation",
           "name": "alternateName",
           "type": "string",
