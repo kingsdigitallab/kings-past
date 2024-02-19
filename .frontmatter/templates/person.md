@@ -2,6 +2,8 @@
 title: ""
 slug: ""
 alternateName: ""
+nationality: ""
+ethnicity: ""
 feature:
   image: /assets/images/people/placeholder.svg
   title: The image title

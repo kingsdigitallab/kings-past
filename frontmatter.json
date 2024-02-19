@@ -2,6 +2,14 @@
   "$schema": "https://frontmatter.codes/frontmatter.schema.json",
   "frontMatter.taxonomy.customTaxonomy": [
     {
+      "id": "countries",
+      "options": ["United Kingdom", "France"]
+    },
+    {
+      "id": "ethnicities",
+      "options": ["White"]
+    },
+    {
       "id": "languages",
       "options": ["English", "French"]
     },
@@ -485,6 +493,18 @@
           "name": "alternateName",
           "type": "string",
           "single": true
+        },
+        {
+          "title": "Nationality",
+          "name": "nationality",
+          "type": "taxonomy",
+          "taxonomyId": "countries"
+        },
+        {
+          "title": "Ethnicity",
+          "name": "ethnicity",
+          "type": "taxonomy",
+          "taxonomyId": "ethnicities"
         },
         {
           "title": "URL",
