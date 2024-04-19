@@ -40,7 +40,7 @@
   <div class="layout surface-3">
     <section class="kdl">
       <p>
-        Design, developed and maintained by <a href="https://kdl.kcl.ac.uk"
+        Designed, developed and maintained by <a href="https://kdl.kcl.ac.uk"
           >King's Digital Lab</a
         >
       </p>
