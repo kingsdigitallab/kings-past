@@ -1,0 +1,14 @@
+export type Feature = {
+	image: string;
+	title: string;
+	description: string;
+};
+export type Moment = {
+	title: string;
+	n: number
+	slug: string;
+	type: string;
+	excerpt: string;
+	feature: Feature;
+	tags: string[];
+};

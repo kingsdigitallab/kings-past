@@ -1,0 +1,125 @@
+@import '@fontsource/libre-caslon-display';
+@import 'fonts';
+@import 'markdown';
+
+:root {
+	/* font */
+	--font-headings: 'KingsBureauGrotThreeSeven', Impact, sans-serif;
+	--font-sans: 'KingsBureauGrotFiveOne', Arial, sans-serif;
+	--font-serif: 'Libre Caslon Display', Georgia, serif;
+
+	--midnight-blue: #0a2d50;
+	--powder-blue: #8d9ebc;
+	--pearl-grey: #cdd7dc;
+	--yellow: #f5b90f;
+
+	--background: var(--gray-0);
+	--border: var(--gray-4);
+	--brand: var(--midnight-blue);
+	--link: var(--midnight-blue);
+	--link-visited: var(--midnight-blue);
+	--surface-1: var(--gray-0);
+	--surface-2: var(--midnight-blue);
+	--surface-3: var(--powder-blue);
+	--surface-4: var(--pearl-grey);
+	--text-1: var(--gray-12);
+	--text-2: var(--gray-0);
+
+	--header-height: var(--size-9);
+	--header-padding-block: var(--size-2);
+	--header-padding-inline: var(--size-9);
+
+	--section-margin: var(--size-11);
+
+	--button-font-size: var(--font-size-fluid-1);
+}
+
+@media (max-width: 768px) {
+	:root {
+		--header-height: var(--size-7);
+		--header-padding-block: var(--size-1);
+		--header-padding-inline: var(--size-2);
+
+		--button-font-size: var(--font-size-fluid-0);
+	}
+}
+
+html,
+body {
+	height: 100%;
+}
+
+html {
+	accent-color: var(--link);
+	background-attachment: fixed;
+	background-image: var(--background);
+	color: var(--text-1);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: var(--font-headings);
+}
+
+ul,
+ol {
+	list-style: none;
+	padding: 0;
+}
+
+li {
+	padding-inline-start: 0;
+}
+
+a {
+	color: inherit;
+
+	&:hover {
+		color: var(--yellow);
+	}
+}
+
+button {
+	background: var(--midnight-blue);
+	color: white;
+	font-family: var(--font-sans);
+	font-size: var(--button-font-size, var(--font-size-2));
+	padding-inline: var(--size-4);
+	padding-block: var(--size-2);
+	box-shadow: var(--shadow-2);
+
+	&:hover {
+		color: var(--yellow);
+	}
+}
+
+.surface-1 {
+	background-color: var(--surface-1);
+	color: var(--text-1);
+}
+
+.surface-2 {
+	background-color: var(--surface-2);
+	color: var(--text-2);
+
+	& :is(.active) {
+		color: var(--yellow);
+	}
+}
+.surface-3 {
+	background-color: var(--surface-3);
+	color: var(--text-1);
+
+	& :is(a:hover) {
+		color: var(--midnight-blue);
+	}
+}
+
+.surface-4 {
+	background-color: var(--surface-4);
+	color: var(--text-1);
+}

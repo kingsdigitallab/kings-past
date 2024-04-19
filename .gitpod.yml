@@ -1,0 +1,21 @@
+# See https://www.gitpod.io/docs/config-gitpod-file
+tasks:
+  - name: "Set up and run frontend"
+    init: npm install && npx simple-git-hooks
+    command: npm run dev
+
+ports:
+  - port: 8080
+    onOpen: open-browser
+    visibility: private
+
+vscode:
+  extensions:
+    - Catppuccin.catppuccin-vsc
+    - DavidAnson.vscode-markdownlint
+    - dbaeumer.vscode-eslint
+    - deque-systems.vscode-axe-linter
+    - ecmel.vscode-html-css
+    - eliostruyf.vscode-front-matter
+    - esbenp.prettier-vscode
+    - svelte.svelte-vscode

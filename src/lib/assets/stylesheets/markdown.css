@@ -1,0 +1,55 @@
+#moment {
+	& a rect {
+		fill: var(--text-2);
+
+		&:hover {
+			fill: var(--yellow);
+		}
+	}
+
+	& a.active rect {
+		fill: var(--yellow);
+	}
+}
+
+.md {
+	margin-inline: auto;
+	margin-top: var(--size-3);
+}
+
+.md > *:not(:is(h2, h3, h4, h5, h6)) {
+	margin-inline: auto;
+}
+
+.md::first-letter {
+	color: var(--text-1);
+	initial-letter: 2;
+	-webkit-initial-letter: 2;
+}
+
+.md :is(h2, h3, h4, h5, h6) {
+	margin-top: var(--size-8);
+	margin-bottom: var(--size-3);
+}
+
+.md p:not(:is(h2, h3, h4, h5, h6) + p) {
+	margin-top: var(--size-7);
+}
+
+.md :is(ol, ul) {
+	list-style-type: disc;
+	padding-left: var(--size-5);
+}
+
+.md :is(ol, ul) li {
+	margin-block: var(--size-2);
+	padding-inline-start: var(--size-2);
+}
+
+.md :is(p) {
+	font-size: var(--font-size-3);
+}
+
+.md figure:not(:is(h2, h3, h4, h5, h6) + figure) {
+	margin-top: var(--size-7);
+}

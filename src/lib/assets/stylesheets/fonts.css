@@ -1,0 +1,28 @@
+/** Importing King's Fonts **/
+
+/** King's Bureau Grotesque **/
+
+@font-face {
+	font-family: 'KingsBureauGrotThreeSeven';
+	src: url('../fonts/KingsBureauGrot/KingsBureauGrot-ThreeSeven.ttf') format('truetype'); /* Safari, Android, iOS */
+	font-weight: normal;
+}
+
+@font-face {
+	font-family: 'KingsBureauGrotThreeSeven';
+	src: url('../fonts/KingsBureauGrot/KingsBureauGrot-ThrSevenItal.ttf') format('truetype'); /* Safari, Android, iOS */
+	font-style: italic;
+}
+
+@font-face {
+	font-family: 'KingsBureauGrotFiveOne';
+	src: url('../fonts/KingsBureauGrot/KingsBureauGrot-FiveOne.ttf') format('truetype'); /* Safari, Android, iOS */
+	font-weight: 300;
+}
+
+@font-face {
+	font-family: 'KingsBureauGrotFiveOne';
+	src: url('../fonts/KingsBureauGrot/KingsBureauGrot-FiveOneItal.ttf') format('truetype'); /* Safari, Android, iOS */
+	font-weight: 300;
+	font-style: italic;
+}

@@ -1,0 +1,768 @@
+{
+  "$schema": "https://frontmatter.codes/frontmatter.schema.json",
+  "frontMatter.taxonomy.customTaxonomy": [
+    {
+      "id": "countries",
+      "options": ["United Kingdom", "France"]
+    },
+    {
+      "id": "ethnicities",
+      "options": ["White"]
+    },
+    {
+      "id": "languages",
+      "options": ["English", "French"]
+    },
+    {
+      "id": "occupations",
+      "options": ["Bookseller", "Politician", "Scientist"]
+    },
+    {
+      "id": "placeTypes",
+      "options": ["City", "Village"]
+    }
+  ],
+  "frontMatter.taxonomy.fieldGroups": [
+    {
+      "id": "FeatureImageFields",
+      "fields": [
+        {
+          "title": "Feature",
+          "name": "feature",
+          "type": "fields",
+          "fields": [
+            {
+              "title": "Image",
+              "name": "image",
+              "type": "image"
+            },
+            {
+              "title": "Title",
+              "name": "title",
+              "type": "string",
+              "single": true
+            },
+            {
+              "title": "Description",
+              "name": "description",
+              "type": "string"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "GeoCoordinatesFields",
+      "fields": [
+        {
+          "title": "GeoCoordinates",
+          "name": "geoCoordinates",
+          "type": "fields",
+          "fields": [
+            {
+              "title": "Latitude",
+              "name": "latitude",
+              "type": "number",
+              "isDecimal": true
+            },
+            {
+              "title": "Longitude",
+              "name": "longitude",
+              "type": "number",
+              "isDecimal": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "URLFields",
+      "labelField": "name",
+      "fields": [
+        {
+          "title": "The name of the page",
+          "name": "name",
+          "type": "string",
+          "single": true
+        },
+        {
+          "title": "URL",
+          "name": "url",
+          "type": "string"
+        }
+      ]
+    }
+  ],
+  "frontMatter.taxonomy.contentTypes": [
+    {
+      "name": "default",
+      "pageBundle": false,
+      "previewPath": null,
+      "fields": [
+        {
+          "title": "The page title",
+          "name": "title",
+          "type": "string",
+          "single": true
+        },
+        {
+          "title": "Slug",
+          "name": "slug",
+          "type": "slug",
+          "editable": true,
+          "default": "{{slug}}"
+        },
+        {
+          "title": "type",
+          "name": "type",
+          "type": "string",
+          "default": "default",
+          "single": true
+        },
+        {
+          "title": "excerpt",
+          "name": "excerpt",
+          "type": "string"
+        },
+        {
+          "title": "Feature",
+          "name": "feature",
+          "type": "fields",
+          "fields": [
+            {
+              "title": "Image",
+              "name": "image",
+              "type": "image"
+            },
+            {
+              "title": "Title",
+              "name": "title",
+              "type": "string",
+              "single": true
+            },
+            {
+              "title": "Description",
+              "name": "description",
+              "type": "string"
+            }
+          ]
+        },
+        {
+          "title": "tags",
+          "name": "tags",
+          "type": "tags"
+        }
+      ]
+    },
+    {
+      "name": "donation",
+      "pageBundle": false,
+      "fields": [
+        {
+          "title": "Title subject matter of the donation",
+          "name": "title",
+          "type": "string",
+          "single": true
+        },
+        {
+          "title": "Slug",
+          "name": "slug",
+          "type": "slug",
+          "editable": true,
+          "default": "{{slug}}"
+        },
+        {
+          "title": "The receiver of the donation",
+          "name": "recipient",
+          "type": "contentRelationship",
+          "contentTypeName": "organisation",
+          "contentTypeValue": "slug"
+        },
+        {
+          "title": "The donor",
+          "name": "agent",
+          "type": "contentRelationship",
+          "contentTypeName": "person",
+          "contentTypeValue": "slug"
+        },
+        {
+          "title": "The value of the donation",
+          "name": "price",
+          "type": "number"
+        },
+        {
+          "title": "The currency of the donation",
+          "name": "priceCurrency",
+          "type": "string",
+          "single": true
+        },
+        {
+          "title": "Start date of the donation",
+          "name": "startTime",
+          "type": "string"
+        },
+        {
+          "title": "End date of the donation",
+          "name": "endTime",
+          "type": "string"
+        }
+      ]
+    },
+    {
+      "name": "event",
+      "pageBundle": false,
+      "fields": [
+        {
+          "title": "The subject matter of the event",
+          "name": "title",
+          "type": "string"
+        },
+        {
+          "title": "Slug",
+          "name": "slug",
+          "type": "slug",
+          "editable": true,
+          "default": "{{slug}}"
+        },
+        {
+          "title": "The person/people involved in the event",
+          "name": "attendeePerson",
+          "type": "contentRelationship",
+          "contentTypeName": "person",
+          "contentTypeValue": "slug",
+          "multiple": true
+        },
+        {
+          "title": "The organisation/organisations involved in the event",
+          "name": "attendeeOrganisation",
+          "type": "contentRelationship",
+          "contentTypeName": "organisation",
+          "contentTypeValue": "slug",
+          "multiple": true
+        },
+        {
+          "title": "startDate",
+          "name": "startDate",
+          "type": "string"
+        },
+        {
+          "title": "endDate",
+          "name": "endDate",
+          "type": "string"
+        },
+        {
+          "title": "The location where the event took place",
+          "name": "location",
+          "type": "contentRelationship",
+          "contentTypeName": "place",
+          "contentTypeValue": "slug"
+        },
+        {
+          "title": "URL",
+          "name": "url",
+          "type": "block",
+          "fieldGroup": ["URLFields"]
+        },
+        {
+          "title": "tags",
+          "name": "tags",
+          "type": "tags"
+        }
+      ]
+    },
+    {
+      "name": "moment",
+      "pageBundle": false,
+      "fields": [
+        {
+          "title": "The moment title",
+          "name": "title",
+          "type": "string",
+          "single": true
+        },
+        {
+          "title": "The moment number",
+          "name": "n",
+          "type": "number"
+        },
+        {
+          "title": "Slug",
+          "name": "slug",
+          "type": "slug",
+          "editable": true,
+          "default": "{{slug}}"
+        },
+        {
+          "title": "type",
+          "name": "type",
+          "type": "string",
+          "default": "moment",
+          "single": true
+        },
+        {
+          "title": "Excerpt for preview",
+          "name": "excerpt",
+          "type": "string"
+        },
+        {
+          "title": "Feature",
+          "name": "feature",
+          "type": "fields",
+          "fields": [
+            {
+              "title": "Image",
+              "name": "image",
+              "type": "image"
+            },
+            {
+              "title": "Title",
+              "name": "title",
+              "type": "string",
+              "single": true
+            },
+            {
+              "title": "Description",
+              "name": "description",
+              "type": "string"
+            }
+          ]
+        },
+        {
+          "title": "Tags",
+          "name": "tags",
+          "type": "tags"
+        },
+        {
+          "title": "Themes",
+          "name": "themes",
+          "type": "contentRelationship",
+          "contentTypeName": "theme",
+          "contentTypeValue": "slug",
+          "multiple": true
+        }
+      ]
+    },
+    {
+      "name": "organisation",
+      "pageBundle": false,
+      "fields": [
+        {
+          "title": "The organisation name",
+          "name": "title",
+          "type": "string",
+          "single": true
+        },
+        {
+          "title": "Slug",
+          "name": "slug",
+          "type": "slug",
+          "editable": true,
+          "default": "{{slug}}"
+        },
+        {
+          "title": "type",
+          "name": "type",
+          "type": "string",
+          "default": "organisation",
+          "single": true
+        },
+        {
+          "title": "Additional type",
+          "name": "additionalType",
+          "type": "tags",
+          "default": ""
+        },
+        {
+          "title": "An alias for the organisation",
+          "name": "alternateName",
+          "type": "string",
+          "single": true
+        },
+        {
+          "title": "Founding date of the organisation",
+          "name": "foundingDate",
+          "type": "number"
+        },
+        {
+          "title": "The organisation location",
+          "name": "location",
+          "type": "contentRelationship",
+          "contentTypeName": "place",
+          "contentTypeValue": "slug"
+        },
+        {
+          "title": "Dissolution date of the organisation",
+          "name": "dissolutionDate",
+          "type": "number"
+        },
+        {
+          "title": "URL",
+          "name": "url",
+          "type": "block",
+          "fieldGroup": ["URLFields"]
+        },
+        {
+          "title": "Feature",
+          "name": "feature",
+          "type": "fields",
+          "fields": [
+            {
+              "title": "Image",
+              "name": "image",
+              "type": "image"
+            },
+            {
+              "title": "Title",
+              "name": "title",
+              "type": "string",
+              "single": true
+            },
+            {
+              "title": "Description",
+              "name": "description",
+              "type": "string"
+            }
+          ]
+        },
+        {
+          "title": "Languages spoken at the organisation",
+          "name": "knowsLanguage",
+          "type": "taxonomy",
+          "taxonomyId": "languages"
+        },
+        {
+          "title": "Funder",
+          "name": "funder",
+          "type": "contentRelationship",
+          "contentTypeName": "person",
+          "contentTypeValue": "slug",
+          "multiple": true
+        },
+        {
+          "title": "Member of",
+          "name": "memberOf",
+          "type": "contentRelationship",
+          "contentTypeName": "organisation",
+          "contentTypeValue": "slug",
+          "multiple": true
+        },
+        {
+          "title": "Related moments",
+          "name": "subjectOfMoment",
+          "type": "contentRelationship",
+          "contentTypeName": "moment",
+          "contentTypeValue": "slug",
+          "multiple": true
+        },
+        {
+          "title": "Related themes",
+          "name": "subjectOfTheme",
+          "type": "contentRelationship",
+          "contentTypeName": "theme",
+          "contentTypeValue": "slug",
+          "multiple": true
+        },
+        {
+          "title": "tags",
+          "name": "tags",
+          "type": "tags"
+        }
+      ]
+    },
+    {
+      "name": "person",
+      "pageBundle": false,
+      "fields": [
+        {
+          "title": "The person name",
+          "name": "title",
+          "type": "string",
+          "single": true
+        },
+        {
+          "title": "Slug",
+          "name": "slug",
+          "type": "slug",
+          "editable": true,
+          "default": "{{slug}}"
+        },
+        {
+          "title": "type",
+          "name": "type",
+          "type": "string",
+          "default": "person",
+          "single": true
+        },
+        {
+          "title": "An alias for the person",
+          "name": "alternateName",
+          "type": "string",
+          "single": true
+        },
+        {
+          "title": "Nationality",
+          "name": "nationality",
+          "type": "taxonomy",
+          "taxonomyId": "countries"
+        },
+        {
+          "title": "Ethnicity",
+          "name": "ethnicity",
+          "type": "taxonomy",
+          "taxonomyId": "ethnicities"
+        },
+        {
+          "title": "URL",
+          "name": "url",
+          "type": "block",
+          "fieldGroup": ["URLFields"]
+        },
+        {
+          "title": "Feature",
+          "name": "feature",
+          "type": "fields",
+          "fields": [
+            {
+              "title": "Image",
+              "name": "image",
+              "type": "image"
+            },
+            {
+              "title": "Title",
+              "name": "title",
+              "type": "string",
+              "single": true
+            },
+            {
+              "title": "Description",
+              "name": "description",
+              "type": "string"
+            }
+          ]
+        },
+        {
+          "title": "Languages the person knows",
+          "name": "knowsLanguage",
+          "type": "taxonomy",
+          "taxonomyId": "languages"
+        },
+        {
+          "title": "The person occupation",
+          "name": "hasOccupation",
+          "type": "taxonomy",
+          "taxonomyId": "occupations"
+        },
+        {
+          "title": "Knows",
+          "name": "knows",
+          "type": "contentRelationship",
+          "contentTypeName": "person",
+          "contentTypeValue": "slug",
+          "multiple": true
+        },
+        {
+          "title": "Member of",
+          "name": "memberOf",
+          "type": "contentRelationship",
+          "contentTypeName": "organisation",
+          "contentTypeValue": "slug",
+          "multiple": true
+        },
+        {
+          "title": "tags",
+          "name": "tags",
+          "type": "tags"
+        },
+        {
+          "title": "Related moments",
+          "name": "subjectOfMoment",
+          "type": "contentRelationship",
+          "contentTypeName": "moment",
+          "contentTypeValue": "slug",
+          "multiple": true
+        },
+        {
+          "title": "Related themes",
+          "name": "subjectOfTheme",
+          "type": "contentRelationship",
+          "contentTypeName": "theme",
+          "contentTypeValue": "slug",
+          "multiple": true
+        }
+      ]
+    },
+    {
+      "name": "place",
+      "pageBundle": false,
+      "fields": [
+        {
+          "title": "The place name",
+          "name": "title",
+          "type": "string",
+          "single": true
+        },
+        {
+          "title": "Slug",
+          "name": "slug",
+          "type": "slug",
+          "editable": true,
+          "default": "{{slug}}"
+        },
+        {
+          "title": "An alias for the place",
+          "name": "alternateName",
+          "type": "string",
+          "single": true
+        },
+        {
+          "title": "type",
+          "name": "type",
+          "type": "string",
+          "default": "place",
+          "single": true
+        },
+        {
+          "title": "Place type",
+          "name": "additionalType",
+          "type": "taxonomy",
+          "taxonomyId": "placeTypes",
+          "taxonomyLimit": 1
+        },
+        {
+          "title": "GeoCoordinates",
+          "name": "geoCoordinates",
+          "type": "fields",
+          "fields": [
+            {
+              "title": "Latitude",
+              "name": "latitude",
+              "type": "number",
+              "isDecimal": true
+            },
+            {
+              "title": "Longitude",
+              "name": "longitude",
+              "type": "number",
+              "isDecimal": true
+            }
+          ]
+        },
+        {
+          "title": "URL",
+          "name": "url",
+          "type": "block",
+          "fieldGroup": ["URLFields"]
+        },
+        {
+          "title": "Feature",
+          "name": "feature",
+          "type": "fields",
+          "fields": [
+            {
+              "title": "Image",
+              "name": "image",
+              "type": "image"
+            },
+            {
+              "title": "Title",
+              "name": "title",
+              "type": "string",
+              "single": true
+            },
+            {
+              "title": "Description",
+              "name": "description",
+              "type": "string"
+            }
+          ]
+        },
+        {
+          "title": "Tags",
+          "name": "tags",
+          "type": "tags"
+        }
+      ]
+    },
+    {
+      "name": "theme",
+      "pageBundle": false,
+      "fields": [
+        {
+          "title": "The theme title",
+          "name": "title",
+          "type": "string",
+          "single": true
+        },
+        {
+          "title": "Slug",
+          "name": "slug",
+          "type": "slug",
+          "editable": true,
+          "default": "{{slug}}"
+        },
+        {
+          "title": "type",
+          "name": "type",
+          "type": "string",
+          "default": "theme",
+          "single": true
+        },
+        {
+          "title": "Feature",
+          "name": "feature",
+          "type": "fields",
+          "fields": [
+            {
+              "title": "Image",
+              "name": "image",
+              "type": "image"
+            },
+            {
+              "title": "Title",
+              "name": "title",
+              "type": "string",
+              "single": true
+            },
+            {
+              "title": "Description",
+              "name": "description",
+              "type": "string"
+            }
+          ]
+        },
+        {
+          "title": "tags",
+          "name": "tags",
+          "type": "tags"
+        }
+      ]
+    }
+  ],
+  "frontMatter.framework.id": "",
+  "frontMatter.generateSlug": true,
+  "frontMatter.preview.host": "http://localhost:5173",
+  "frontMatter.content.pageFolders": [
+    {
+      "title": "src",
+      "path": "[[workspace]]/src",
+      "filePrefix": "",
+      "contentTypes": ["default"]
+    },
+    {
+      "title": "about",
+      "path": "[[workspace]]/src/routes/about",
+      "filePrefix": "",
+      "contentTypes": ["default"]
+    },
+    {
+      "title": "moments",
+      "path": "[[workspace]]/src/moments",
+      "filePrefix": "",
+      "contentTypes": ["moment"]
+    }
+  ],
+  "frontMatter.content.publicFolder": {
+    "path": "[[workspace]]/static",
+    "relative": false
+  }
+}
