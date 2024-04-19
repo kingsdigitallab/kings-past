@@ -16,8 +16,14 @@
         <strong>{config.title}</strong>
       </a>
       <ul class="project">
-        {#each config.footer.links as link}
-          <li><a href="{base}{link.url}">{link.title}</a></li>
+        {#each config.footer.links as link, idx}
+          <li>
+            {#if link.url.startsWith("http")}
+              <a href={link.url}>{link.title}</a>
+            {:else}
+              <a href="{base}{link.url}">{link.title}</a>
+            {/if}
+          </li>
         {/each}
       </ul>
       <ul class="social">
