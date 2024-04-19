@@ -3,8 +3,7 @@ name: Build and deploy to pages
 on:
   push:
     branches:
-      - main
-      - develop
+      - may
 
 jobs:
   build:
