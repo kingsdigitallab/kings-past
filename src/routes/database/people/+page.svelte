@@ -9,9 +9,10 @@
 
   <section>
     <ul>
-      {#each data.collection as item}
-        <li><a href="{data.url}/{item.slug}">{item.name}</a></li>
+      {#each data.people as person}
+        <li><a href="{data.url}/{person.slug}">{person.name}</a></li>
       {/each}
     </ul>
+    people
   </section>
 </article>

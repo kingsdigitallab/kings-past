@@ -1,9 +1,9 @@
-import { getEntities } from '$lib/supabase';
+import { getRecords } from '$lib/supabase';
 import { error } from '@sveltejs/kit';
 
 export async function load() {
 	try {
-		const data = await getEntities('event');
+		const data = await getRecords('event');
 
 		return {
 			collection: data ?? []

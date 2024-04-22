@@ -4,7 +4,7 @@ import type { Database } from './types';
 
 export const supabase = createClient<Database>(SUPABASE_URL, SUPABASE_KEY);
 
-export async function getEntities(source: string, orderBy?: string) {
+export async function getRecords(source: string, orderBy?: string) {
 	if (!orderBy) {
 		orderBy = 'name';
 	}
@@ -14,7 +14,7 @@ export async function getEntities(source: string, orderBy?: string) {
 	return data;
 }
 
-export async function getEntity(source: string, slug: string) {
+export async function getRecord(source: string, slug: string) {
 	const { data } = await supabase.from(source).select('').eq('slug', slug).single();
 
 	return data;
