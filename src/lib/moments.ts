@@ -18,3 +18,7 @@ export async function getMoments() {
 
 	return moments;
 }
+
+export function getMomentN(n: number | string) {
+	return String(n).padStart(2, "0")
+}

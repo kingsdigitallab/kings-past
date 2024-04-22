@@ -1,7 +1,7 @@
 import { error } from '@sveltejs/kit'
 import { getMoments } from '$lib/moments.js';
 
-export async function load({ params, fetch }) {
+export async function load({ params }) {
   try {
     const moment = await import(`../../../moments/${params.slug}/index.md`)
 

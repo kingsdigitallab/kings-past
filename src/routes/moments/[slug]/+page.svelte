@@ -1,8 +1,13 @@
 <script lang="ts">
+  import { getMomentN } from "$lib/moments";
   import { RectangleHorizontal, RectangleVertical } from "lucide-svelte";
   import { base } from "$app/paths";
 
   export let data;
+
+  let prev = data.meta.n > 1 ? data.moments[data.meta.n - 2] : null;
+  let next =
+    data.meta.n < data.moments.length - 1 ? data.moments[data.meta.n] : null;
 </script>
 
 <svelte:head>
@@ -22,7 +27,7 @@
       {#each data.moments as moment}
         <li>
           <a
-            href={String(moment.n).padStart(2, "0")}
+            href={getMomentN(moment.n)}
             class:active={moment.n === data.meta.n}
             title="Moment {moment.n}"
           >
@@ -47,6 +52,16 @@
       <svelte:component this={data.content} />
     </div>
   </article>
+  <nav class="surface-1">
+    <ol>
+      {#if prev}
+        <li><a href={getMomentN(prev.n)}>&lt;&lt; {prev.title}</a></li>
+      {/if}
+      {#if next}
+        <li><a href={getMomentN(next.n)}>{next.title} &gt;&gt;</a></li>
+      {/if}
+    </ol>
+  </nav>
 </article>
 
 <style>
@@ -93,5 +108,21 @@
     max-inline-size: var(--size-lg);
     place-items: center;
     position: relative;
+  }
+
+  nav {
+    margin-top: var(--section-margin);
+  }
+  nav ol {
+    display: flex;
+    justify-content: space-between;
+    margin-right: var(--size-5);
+    width: 100%;
+
+    & > li,
+    & a {
+      margin-inline: auto;
+      max-inline-size: none;
+    }
   }
 </style>
