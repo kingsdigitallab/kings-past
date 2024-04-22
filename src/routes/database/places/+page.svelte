@@ -4,7 +4,7 @@
 
 <article>
   <header>
-    <h1>{data.source}</h1>
+    <h1>Places</h1>
   </header>
 
   <section>
