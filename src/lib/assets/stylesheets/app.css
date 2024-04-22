@@ -100,6 +100,11 @@ button {
 .surface-1 {
   background-color: var(--surface-1);
   color: var(--text-1);
+
+  & :is(a:hover) {
+    color: var(--midnight-blue);
+    text-decoration-color: var(--midnight-blue);
+  }
 }
 
 .surface-2 {
