@@ -1,1 +1,1 @@
-{"type":"data","nodes":[null,{"type":"data","data":[{"collection":1,"source":2},[],"places"],"uses":{"params":["source"]}}]}
+{"type":"data","nodes":[null,{"type":"data","data":[{"collection":1},[2],{"id":3,"name":4,"slug":5,"alternative_names":6,"description":6,"created_at":7,"draft":8,"latitude":6,"longitude":6,"added_by":6},1,"London","london-1",null,"2024-04-22T15:50:28.751496+00:00",true],"uses":{}}]}
