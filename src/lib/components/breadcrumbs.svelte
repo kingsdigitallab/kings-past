@@ -9,18 +9,20 @@
       .split("/")
       .map((part) => part.trim())
       .filter((part) => part !== "")
-      .filter((part) => part !== base.replace("/", ""));
+      .filter((part) => part !== "kings-past");
 
-    let currentPath = "";
-    breadcrumbs = parts.map((part: string) => {
-      currentPath = `${currentPath}/${part}`;
-      return {
-        label: part.toLowerCase().replace(/\b\w/g, (s) => s.toUpperCase()),
-        href: currentPath,
-      };
-    });
+    if (parts.length > 1) {
+      let currentPath = base;
+      breadcrumbs = parts.map((part: string) => {
+        currentPath = `${currentPath}/${part}`;
+        return {
+          label: part.toLowerCase().replace(/\b\w/g, (s) => s.toUpperCase()),
+          href: currentPath,
+        };
+      });
 
-    breadcrumbs.unshift({ label: "Home", href: `${base}/` });
+      breadcrumbs.unshift({ label: "Home", href: `${base}/` });
+    }
   }
 </script>
 
