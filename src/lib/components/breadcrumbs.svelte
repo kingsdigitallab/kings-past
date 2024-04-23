@@ -7,7 +7,7 @@
   $: {
     const parts = $page.url.pathname.split("/").filter((part) => part !== "");
 
-    let currentPath = base;
+    let currentPath = "";
     breadcrumbs = parts.map((part: string) => {
       currentPath = `${currentPath}/${part}`;
       return {
