@@ -5,7 +5,11 @@
   let breadcrumbs: Array<{ label: string; href: string }> = [];
 
   $: {
-    const parts = $page.url.pathname.split("/").filter((part) => part !== "");
+    const parts = $page.url.pathname
+      .split("/")
+      .map((part) => part.trim())
+      .filter((part) => part !== "")
+      .filter((part) => part !== base.replace("/", ""));
 
     let currentPath = "";
     breadcrumbs = parts.map((part: string) => {
