@@ -13,6 +13,5 @@
         <li><a href="{data.url}/{person.slug}">{person.name}</a></li>
       {/each}
     </ul>
-    people
   </section>
 </article>
