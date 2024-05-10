@@ -23,9 +23,15 @@
 		</dl>
 	</section>
 
+	{#if data.person.description}
+		<section>
+			<p>{data.person.description}</p>
+		</section>
+	{/if}
+
 	{#if data.knows}
 		<section>
-			<h2>Knows</h2>
+			<h2>Relationships</h2>
 			<ul>
 				{#each data.knows as knows}
 					<li>
@@ -35,7 +41,7 @@
 							<a href={knows.person}>{data.people[knows.person].name}</a>
 						{/if}
 						{#if knows.relationship}
-							<span>, {knows.relationship.toLowerCase()} relationship</span>
+							<span>, {knows.relationship.toLowerCase()}</span>
 						{/if}
 					</li>
 				{/each}
@@ -43,11 +49,19 @@
 		</section>
 	{/if}
 
-	{#if data.person.description}
-		<article>
-			<h2>About</h2>
-			<p>{data.person.description}</p>
-		</article>
+	{#if data.memberOf}
+		<section>
+			<h2>Member of</h2>
+			<ul>
+				{#each data.memberOf as member}
+					<li>
+						<a href="../organisations/{member.organisation}"
+							>{data.organisations[member.organisation].name}</a
+						>
+					</li>
+				{/each}
+			</ul>
+		</section>
 	{/if}
 </article>
 
