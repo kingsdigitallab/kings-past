@@ -1,5 +1,5 @@
 ---
-title: Education for the nation
+title: '1946: Education for the nation'
 n: 10
 tags:
   - moment

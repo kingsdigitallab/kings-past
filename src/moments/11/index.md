@@ -1,5 +1,5 @@
 ---
-title: King’s and Decolonization
+title: '1964: King’s and Decolonisation'
 n: 11
 tags:
   - moment
