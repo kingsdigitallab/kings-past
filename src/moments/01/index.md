@@ -1,5 +1,5 @@
 ---
-title: "1721: Money, global trade and slavery in the creation of Guy’s"
+title: '1721: Money, global trade and slavery in the creation of Guy’s'
 n: 1
 tags:
   - moment

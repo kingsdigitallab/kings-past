@@ -1,5 +1,5 @@
 ---
-title: The financial and political networks which created King’s
+title: '1828: The financial and political networks which created King’s'
 n: 2
 tags:
   - moment

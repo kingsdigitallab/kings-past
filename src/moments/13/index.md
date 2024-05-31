@@ -1,5 +1,5 @@
 ---
-title: Diversity and Globalization
+title: '2000: Diversity and Globalisation'
 n: 13
 tags:
   - moment

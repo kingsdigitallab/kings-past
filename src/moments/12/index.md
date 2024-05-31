@@ -1,5 +1,5 @@
 ---
-title: 'King’s at 150: 1979'
+title: '1979: King’s at 150'
 n: 12
 tags:
   - moment

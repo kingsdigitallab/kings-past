@@ -1,5 +1,5 @@
 ---
-title: The crisis of Anglicanism in the mid-nineteenth-century
+title: '1853: The crisis of Anglicanism in the mid-nineteenth-century'
 n: 3
 tags:
   - moment
