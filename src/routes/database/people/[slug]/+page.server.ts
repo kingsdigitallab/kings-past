@@ -17,6 +17,12 @@ export async function load({ params, parent }) {
 			.eq('person', params.slug)
 			.order('organisation');
 
+		const sources = await supabase
+			.from('person_source')
+			.select('')
+			.eq('person', params.slug)
+			.order('source');
+
 		const organisations = await getRecords('organisation');
 
 		const parentData = await parent();
@@ -25,6 +31,7 @@ export async function load({ params, parent }) {
 			person,
 			knows: knows.data,
 			memberOf: memberOf.data,
+			sources: sources.data,
 			people: parentData.peopleBySlug,
 			organisations: organisations?.reduce((acc, org) => {
 				acc[org.slug] = org;
