@@ -1,4 +1,6 @@
 <script lang="ts">
+	import { EMPTY_PLACEHOLDER } from '$lib/constants.js';
+
 	export let data;
 </script>
 
@@ -6,32 +8,31 @@
 	<h1>{data.person.name}</h1>
 
 	<section>
-		<h2>Metadata</h2>
-		<dl>
+		<dl class="dl-inline">
 			<dt>Alternative names</dt>
 			<dd>
-				{data.person.alternative_names || null}
+				{data.person.alternative_names || EMPTY_PLACEHOLDER}
 			</dd>
 			<dt>Gender</dt>
-			<dd>{data.person.gender}</dd>
+			<dd>{data.person.gender || EMPTY_PLACEHOLDER}</dd>
 			<dt>Nationality</dt>
 			<dd>{data.person.nationality}</dd>
 			<dt>Ethnicity</dt>
 			<dd>{data.person.ethnicity}</dd>
 			<dt>Languages</dt>
-			<dd>{data.person.languages || null}</dd>
+			<dd>{data.person.languages || EMPTY_PLACEHOLDER}</dd>
 		</dl>
 	</section>
 
 	{#if data.person.description}
-		<section>
+		<section class="font-serif">
 			<p>{data.person.description}</p>
 		</section>
 	{/if}
 
-	{#if data.knows}
+	{#if data.knows && data.knows.length}
 		<section>
-			<h2>Relationships</h2>
+			<h2>Knows</h2>
 			<ul>
 				{#each data.knows as knows}
 					<li>
@@ -49,7 +50,7 @@
 		</section>
 	{/if}
 
-	{#if data.memberOf}
+	{#if data.memberOf && data.memberOf.length}
 		<section>
 			<h2>Member of</h2>
 			<ul>
@@ -58,6 +59,19 @@
 						<a href="../organisations/{member.organisation}"
 							>{data.organisations[member.organisation].name}</a
 						>
+					</li>
+				{/each}
+			</ul>
+		</section>
+	{/if}
+
+	{#if data.sources && data.sources.length}
+		<section>
+			<h2>Sources</h2>
+			<ul>
+				{#each data.sources as source}
+					<li>
+						<a href={source.url}>{source.name}</a>
 					</li>
 				{/each}
 			</ul>
