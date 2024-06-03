@@ -1,5 +1,5 @@
 ---
-title: '1900: King's and the Staffing of empire'
+title: "1900: King's and the Staffing of empire"
 n: 8
 tags:
   - moment
