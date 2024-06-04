@@ -48,7 +48,7 @@
 	nav {
 		align-content: center;
 		height: calc(var(--header-height) / 2);
-		padding-inline: var(--size-9);
+		padding-inline: var(--size-1);
 
 		& ol {
 			align-items: center;
