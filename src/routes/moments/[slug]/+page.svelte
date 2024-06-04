@@ -65,12 +65,10 @@
 
 <style>
 	#moment {
-		margin-block: var(--section-margin);
-
 		& > p {
 			font-family: var(--font-headings);
 			font-size: var(--font-size-5);
-			padding-inline: var(--header-padding-inline);
+			/* padding-inline: var(--header-padding-inline); */
 		}
 	}
 
