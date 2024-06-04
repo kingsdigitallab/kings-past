@@ -97,6 +97,12 @@ button {
 	}
 }
 
+.body {
+	& > :not(.hero) {
+		margin-block: var(--size-5);
+	}
+}
+
 .surface-1 {
 	background-color: var(--surface-1);
 	color: var(--text-1);

@@ -18,8 +18,9 @@
 	<main>
 		<PageTransition url={data.url}>
 			<Breadcrumbs />
-
-			<slot />
+			<div class="body">
+				<slot />
+			</div>
 		</PageTransition>
 	</main>
 
