@@ -26,7 +26,7 @@
 	}
 </script>
 
-{#if $page.url.pathname !== '/'}
+{#if $page.url.pathname !== '/' && $page.url.pathname !== base}
 	<nav
 		aria-label="Breadcrumb"
 		class:surface-1={breadcrumbs.length < 2}
