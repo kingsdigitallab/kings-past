@@ -1,25 +1,25 @@
 {
-  "name": "kdl",
-  "customizations": {
-    "vscode": {
-      "extensions": [
-        "Catppuccin.catppuccin-vsc",
-        "DavidAnson.vscode-markdownlint",
-        "dbaeumer.vscode-eslint",
-        "deque-systems.vscode-axe-linter",
-        "ecmel.vscode-html-css",
-        "eliostruyf.vscode-front-matter",
-        "esbenp.prettier-vscode",
-        "svelte.svelte-vscode"
-      ]
-    }
-  },
-  "portsAttributes": {
-    "3000": {
-      "label": "VSCode remote port",
-      "onAutoForward": "notify"
-    }
-  },
-  "postCreateCommand": "npm install",
-  "postStartCommand": "npm run dev"
+	"name": "kdl",
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"Catppuccin.catppuccin-vsc",
+				"DavidAnson.vscode-markdownlint",
+				"dbaeumer.vscode-eslint",
+				"deque-systems.vscode-axe-linter",
+				"ecmel.vscode-html-css",
+				"eliostruyf.vscode-front-matter",
+				"esbenp.prettier-vscode",
+				"svelte.svelte-vscode"
+			]
+		}
+	},
+	"portsAttributes": {
+		"3000": {
+			"label": "VSCode remote port",
+			"onAutoForward": "notify"
+		}
+	},
+	"postCreateCommand": "npm install && npx simple-git-hooks",
+	"postStartCommand": "npm run dev"
 }
