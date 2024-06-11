@@ -38,6 +38,10 @@
 		gap: var(--size-3);
 		padding-block: var(--size-9);
 
+		* {
+			box-sizing: border-box;
+		}
+
 		li {
 			align-items: center;
 			display: flex;
@@ -46,7 +50,7 @@
 			justify-content: space-evenly;
 			height: var(--size-14);
 			max-inline-size: none;
-			min-width: 300px;
+			min-width: 250px;
 
 			img {
 				height: 100%;
@@ -67,7 +71,7 @@
 
 		@for $i from 1 through 13 {
 			li:nth-child(#{$i}) {
-				$w: random(3) * 200px;
+				$w: random(3) * 150px;
 				width: $w;
 			}
 		}
