@@ -4,4 +4,4 @@
 	export let data;
 </script>
 
-<Moment meta={data.meta} content={data.content} moments={data.moments} />
+<Moment meta={data.meta} metaExtra={data.essayMeta} content={data.essay} moments={data.moments} />
