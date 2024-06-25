@@ -64,6 +64,10 @@
 	}
 
 	@media (max-width: 768px) {
+		.hero{
+			grid-template-rows: 1fr 1fr;
+			grid-template-columns: 1fr;
+		}
 		.hero-title {
 			font-size: var(--font-size-5);
 		}
