@@ -56,7 +56,7 @@
 			<svelte:component this={content} />
 		</div>
 	</article>
-	<nav class="surface-1">
+	<nav>
 		<ol>
 			{#if prev}
 				<li><a href={`${path}${getMomentN(prev.n)}`}>&lt;&lt; {prev.title}</a></li>
