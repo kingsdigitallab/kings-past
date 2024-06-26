@@ -29,6 +29,8 @@
 	--header-padding-block: var(--size-2);
 	--header-padding-inline: var(--size-9);
 
+
+
 	--section-margin: var(--size-11);
 
 	--button-font-size: var(--font-size-fluid-1);
@@ -36,10 +38,9 @@
 
 @media (max-width: 768px) {
 	:root {
-		--header-height: var(--size-7);
-		--header-padding-block: var(--size-1);
+		--header-height: var(--size-8);
+		--header-padding-block: var(--size-2);
 		--header-padding-inline: var(--size-2);
-
 		--button-font-size: var(--font-size-fluid-0);
 	}
 }

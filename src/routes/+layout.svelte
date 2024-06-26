@@ -36,6 +36,6 @@
 
 	main {
 		max-inline-size: var(--size-xxl);
-		padding-inline: var(--size-9);
+		padding-inline: var(--header-padding-inline);
 	}
 </style>
