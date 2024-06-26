@@ -1,9 +1,12 @@
 import { getRecord, getRecords, supabase } from '$lib/supabase';
 import { error } from '@sveltejs/kit';
+import { compile } from 'mdsvex';
 
 export async function load({ params, parent }) {
 	try {
 		const person = await getRecord('person', params.slug);
+
+		const description = await compile(person.description);
 
 		const knows = await supabase
 			.from('person_knows')
@@ -29,6 +32,7 @@ export async function load({ params, parent }) {
 
 		return {
 			person,
+			description: description?.code,
 			knows: knows.data,
 			memberOf: memberOf.data,
 			sources: sources.data,

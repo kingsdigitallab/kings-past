@@ -25,8 +25,8 @@
 	</section>
 
 	{#if data.person.description}
-		<section class="font-serif">
-			<p>{data.person.description}</p>
+		<section class="md font-serif">
+			{@html data.description}
 		</section>
 	{/if}
 
