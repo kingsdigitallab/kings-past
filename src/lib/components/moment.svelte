@@ -100,6 +100,10 @@
 			padding-block: var(--size-4);
 			padding-inline: var(--header-padding-inline);
 		}
+
+		& a.active {
+			border: none;
+		}
 	}
 
 	.content {
