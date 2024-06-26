@@ -29,8 +29,6 @@
 	--header-padding-block: var(--size-2);
 	--header-padding-inline: var(--size-9);
 
-
-
 	--section-margin: var(--size-11);
 
 	--button-font-size: var(--font-size-fluid-1);
@@ -127,6 +125,7 @@ button {
 		color: var(--yellow);
 	}
 }
+
 .surface-3 {
 	background-color: var(--surface-3);
 	color: var(--text-1);
