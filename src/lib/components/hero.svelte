@@ -7,9 +7,7 @@
 <section class="hero">
 	<div class="hero-welcome">
 		<h1 class="hero-title">
-			{#each config.hero.title as title}
-				<div>{title}</div>
-			{/each}
+			<div>{config.hero.title}</div>
 		</h1>
 		<p class="hero-message">
 			{config.hero.message}
@@ -39,7 +37,6 @@
 	.hero-title {
 		display: grid;
 		font-size: var(--font-size-fluid-2);
-		grid-template-columns: max-content;
 	}
 
 	.hero-message {
@@ -64,15 +61,13 @@
 	}
 
 	@media (max-width: 768px) {
-		.hero{
+		.hero {
 			grid-template-rows: 1fr 1fr;
 			grid-template-columns: 1fr;
 		}
+
 		.hero-title {
 			font-size: var(--font-size-5);
-		}
-		.hero-message {
-			font-size: var(--font-size-fluid-0);
 		}
 	}
 </style>
