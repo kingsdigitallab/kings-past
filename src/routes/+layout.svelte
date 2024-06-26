@@ -12,8 +12,7 @@
 	export let data;
 </script>
 
-
-<div class="layout">
+<div class="layout surface-1">
 	<Header />
 
 	<main>
