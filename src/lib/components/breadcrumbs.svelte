@@ -27,11 +27,7 @@
 </script>
 
 {#if $page.url.pathname !== '/' && $page.url.pathname !== '/kings-past/'}
-	<nav
-		aria-label="Breadcrumb"
-		class:surface-1={breadcrumbs.length < 2}
-		class:surface-3={breadcrumbs.length > 1}
-	>
+	<nav aria-label="Breadcrumb" class="surface-1">
 		<ol>
 			{#each breadcrumbs as crumb, index}
 				<li>
@@ -48,10 +44,8 @@
 	nav {
 		align-content: center;
 		height: calc(var(--header-height) / 2);
-		margin-left: calc(-50vw + 50%);
 		margin-right: calc(-50vw + 50%);
-		padding-inline: var(--header-padding-inline);
-		width: 100vw;
+		width: 100%;
 
 		& ol {
 			align-items: center;
