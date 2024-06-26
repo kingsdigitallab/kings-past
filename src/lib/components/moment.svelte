@@ -124,7 +124,6 @@
 
 		& > li,
 		& a {
-			margin-inline: auto;
 			max-inline-size: none;
 		}
 	}
