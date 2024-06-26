@@ -119,6 +119,11 @@ button {
 
 	& :is(.active) {
 		color: var(--yellow);
+		border-bottom: var(--size-1) solid var(--yellow);
+	}
+
+	& :is(a:hover) {
+		color: var(--yellow);
 	}
 }
 .surface-3 {
