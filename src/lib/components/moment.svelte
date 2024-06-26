@@ -60,6 +60,8 @@
 		<ol>
 			{#if prev}
 				<li><a href={`${path}${getMomentN(prev.n)}`}>&lt;&lt; {prev.title}</a></li>
+			{:else}
+				<li></li>
 			{/if}
 			{#if next}
 				<li><a href={`${path}${getMomentN(next.n)}`}>{next.title} &gt;&gt;</a></li>
@@ -74,7 +76,6 @@
 			font-family: var(--font-headings);
 			font-size: var(--font-size-5);
 			max-inline-size: none;
-			/* padding-inline: var(--header-padding-inline); */
 		}
 	}
 
@@ -123,7 +124,6 @@
 	nav ol {
 		display: flex;
 		justify-content: space-between;
-		margin-right: var(--size-5);
 		width: 100%;
 
 		& > li,
