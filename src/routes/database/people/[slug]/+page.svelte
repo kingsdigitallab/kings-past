@@ -1,35 +1,16 @@
 <script lang="ts">
-	import { EMPTY_PLACEHOLDER } from '$lib/constants.js';
+	import Entity from '$lib/components/entity.svelte';
 
 	export let data;
 </script>
 
-<article>
-	<h1>{data.person.name}</h1>
-
-	<section>
-		<dl class="dl-inline">
-			<dt>Alternative names</dt>
-			<dd>
-				{data.person.alternative_names || EMPTY_PLACEHOLDER}
-			</dd>
-			<dt>Gender</dt>
-			<dd>{data.person.gender || EMPTY_PLACEHOLDER}</dd>
-			<dt>Nationality</dt>
-			<dd>{data.person.nationality}</dd>
-			<dt>Ethnicity</dt>
-			<dd>{data.person.ethnicity}</dd>
-			<dt>Languages</dt>
-			<dd>{data.person.languages || EMPTY_PLACEHOLDER}</dd>
-		</dl>
-	</section>
-
-	{#if data.person.description}
-		<section class="md font-serif">
-			{@html data.description}
-		</section>
-	{/if}
-
+<Entity
+	entityType="Person"
+	entityName={data.person?.name}
+	meta={data.meta}
+	description={data.description}
+	sources={data.sources}
+>
 	{#if data.knows && data.knows.length}
 		<section>
 			<h2>Knows</h2>
@@ -64,24 +45,4 @@
 			</ul>
 		</section>
 	{/if}
-
-	{#if data.sources && data.sources.length}
-		<section>
-			<h2>Sources</h2>
-			<ul>
-				{#each data.sources as source}
-					<li>
-						<a href={source.url}>{source.name}</a>
-					</li>
-				{/each}
-			</ul>
-		</section>
-	{/if}
-</article>
-
-<style>
-	li {
-		display: flex;
-		align-items: baseline;
-	}
-</style>
+</Entity>
