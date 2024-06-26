@@ -13,10 +13,10 @@
 	<ul class="moments">
 		{#each moments as moment}
 			<li class="moment">
-				<img src="{base}{moment.feature.image}" alt={moment.feature.description} />
-				<div class="title">
-					<a href="moments/{moment.slug}">{moment.title}</a>
-				</div>
+				<a href="moments/{moment.slug}">
+					<img src="{base}{moment.feature.image}" alt={moment.feature.description} />
+					<div class="title">{moment.title}</div>
+				</a>
 			</li>
 		{/each}
 	</ul>
@@ -52,19 +52,28 @@
 			max-inline-size: none;
 			min-width: 250px;
 
-			img {
-				height: 100%;
-				object-fit: cover;
-				object-position: center;
-				width: 100%;
-			}
-
 			a {
 				color: white;
+				height: 100%;
+				padding: 0;
+				width: 100%;
 
 				&:hover {
+					box-shadow: var(--size-1) var(--size-1) var(--yellow);
 					color: var(--yellow);
 					text-decoration-color: var(--yellow);
+				}
+
+				img {
+					height: 100%;
+					object-fit: cover;
+					object-position: center;
+					overflow: hidden;
+					width: 100%;
+
+					&:hover {
+						opacity: 0.7;
+					}
 				}
 			}
 		}
