@@ -127,10 +127,10 @@
 		width: 100%;
 
 		& > li,
-		& a {
+		& button a {
 			max-inline-size: none;
-			padding: var(--size-2);
 			display: block;
+			padding: var(--size-2);
 			&.prev{
 				margin-right:var(--size-2);
 			}
@@ -138,10 +138,9 @@
 				text-align: right;
 				margin-left:var(--size-2);
 			}
-		}
-		& > li{
 			&:hover{
-					box-shadow: var(--size-1) var(--size-1) var(--yellow);
+				color: var(--yellow);
+				box-shadow: var(--size-1) var(--size-1) var(--yellow);
 			}
 		}
 	}
