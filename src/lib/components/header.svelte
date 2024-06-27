@@ -104,6 +104,7 @@
 			display: block;
 			margin-left: -10px;
 			padding: 20px 30px 20px 15px;
+			position: absolute;
 		}
 
 		header li {
