@@ -1,5 +1,5 @@
 import { EMPTY_PLACEHOLDER } from '$lib/constants';
-import { getRecord, getRecords, supabase } from '$lib/supabase';
+import { getRecord, getRecordsBy, supabase } from '$lib/supabase';
 import { error } from '@sveltejs/kit';
 import { compile } from 'mdsvex';
 
@@ -37,8 +37,6 @@ export async function load({ params, parent }) {
 			.eq('person', params.slug)
 			.order('source');
 
-		const organisations = await getRecords('organisation');
-
 		const parentData = await parent();
 
 		return {
@@ -50,10 +48,7 @@ export async function load({ params, parent }) {
 			memberOf: memberOf.data,
 			sources: sources.data,
 			people: parentData.peopleBySlug,
-			organisations: organisations?.reduce((acc, org) => {
-				acc[org.slug] = org;
-				return acc;
-			}, {})
+			organisations: await getRecordsBy('organisation', 'slug')
 		};
 	} catch (e) {
 		error(404, `Could not find ${params.slug}`);
