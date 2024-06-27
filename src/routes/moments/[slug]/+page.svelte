@@ -4,4 +4,17 @@
 	export let data;
 </script>
 
-<Moment meta={data.meta} content={data.content} moments={data.moments} />
+<Moment meta={data.meta} content={data.content} moments={data.moments}>
+	{#if data.momentPeople && data.momentPeople.length > 0}
+		<section>
+			<h2>King's lives</h2>
+			<ul>
+				{#each data.momentPeople as person}
+					<li>
+						<a href="../database/people/{person.person}">{data.people[person.person].name}</a>
+					</li>
+				{/each}
+			</ul>
+		</section>
+	{/if}
+</Moment>
