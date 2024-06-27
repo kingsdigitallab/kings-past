@@ -30,6 +30,7 @@
 	--header-padding-inline: var(--size-9);
 
 	--section-margin: var(--size-11);
+	--section-margin-block: var(--size-5);
 
 	--button-font-size: var(--font-size-fluid-1);
 }
@@ -54,6 +55,10 @@ html {
 	background-attachment: fixed;
 	background-image: var(--background);
 	color: var(--text-1);
+}
+
+section {
+	margin-block: var(--section-margin-block);
 }
 
 h1,
