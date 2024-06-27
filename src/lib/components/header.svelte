@@ -16,8 +16,9 @@
 			<ul class="links">
 				{#each config.nav as item}
 					<li>
-						<a href="{base}{item.url}" class:active={$page.url.pathname.startsWith(item.url)}
-							>{item.title}</a
+						<a
+							href="{base}{item.url}"
+							class:active={$page.url.pathname.startsWith(`${base}${item.url}`)}>{item.title}</a
 						>
 					</li>
 				{/each}
