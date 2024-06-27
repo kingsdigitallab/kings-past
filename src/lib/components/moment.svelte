@@ -59,12 +59,12 @@
 	<nav>
 		<ol>
 			{#if prev}
-				<li class="prev surface-2"><a href={`${path}${getMomentN(prev.n)}`}>&lt;&lt; {prev.title}</a></li>
+				<li class="prev surface-2"><a href={`${path}${getMomentN(prev.n)}`}>&#x276E; {prev.title}</a></li>
 			{:else}
 				<li></li>
 			{/if}
 			{#if next}
-				<li class="next surface-2"><a href={`${path}${getMomentN(next.n)}`}>{next.title} &gt;&gt;</a></li>
+				<li class="next surface-2"><a href={`${path}${getMomentN(next.n)}`}>{next.title} &#10095;</a></li>
 			{/if}
 		</ol>
 	</nav>
@@ -130,13 +130,18 @@
 		& a {
 			max-inline-size: none;
 			padding: var(--size-2);
-
+			display: block;
 			&.prev{
 				margin-right:var(--size-2);
 			}
 			&.next{
 				text-align: right;
 				margin-left:var(--size-2);
+			}
+		}
+		& > li{
+			&:hover{
+					box-shadow: var(--size-1) var(--size-1) var(--yellow);
 			}
 		}
 	}
