@@ -14,6 +14,19 @@ export async function getRecords(source: string, orderBy?: string) {
 	return data;
 }
 
+export async function getRecordsBy(source: string, field: string, orderBy?: string) {
+	const records = await getRecords(source, orderBy);
+
+	if (!records) {
+		return {};
+	}
+
+	return records.reduce((acc, cur) => {
+		acc[cur[field]] = cur;
+		return acc;
+	}, {});
+}
+
 export async function getRecord(source: string, slug: string) {
 	const { data } = await supabase.from(source).select('').eq('slug', slug).single();
 
