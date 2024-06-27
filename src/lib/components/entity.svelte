@@ -3,6 +3,7 @@
 	export let entityName: string;
 	export let meta: Record<string, any>;
 	export let description: string | undefined;
+	export let feature: Record<string, any> | null;
 	export let sources;
 </script>
 
@@ -22,6 +23,19 @@
 			{/each}
 		</dl>
 	</section>
+
+	{#if feature}
+		<section class="font-serif">
+			<figure>
+				<img
+					src={feature[0].image_url}
+					alt={feature[0].image_description}
+					title={feature[0].image_title}
+				/>
+				<figcaption>{feature[0].image_title}</figcaption>
+			</figure>
+		</section>
+	{/if}
 
 	{#if description}
 		<section class="md font-serif">
@@ -73,12 +87,12 @@
 		max-inline-size: none;
 	}
 
+	img {
+		height: 50vh;
+	}
+
 	li {
 		display: flex;
 		align-items: baseline;
-	}
-
-	section {
-		margin-block: var(--size-5);
 	}
 </style>
