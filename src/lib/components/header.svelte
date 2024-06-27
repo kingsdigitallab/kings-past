@@ -12,7 +12,8 @@
 			<a href="{base}/" class="title">
 				<strong>{config.title}</strong>
 			</a>
-
+  <input class="menu-btn" type="checkbox" id="menu-btn" />
+  <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
 			<ul class="links">
 				{#each config.nav as item}
 					<li>
@@ -71,6 +72,26 @@
 		z-index: var(--layer-1);
 	}
 
+		header li {
+			float: left;
+		}
+		header li a {
+			padding: 20px 30px;
+		}
+		header .links{
+			clear: none;
+			float: right;
+			max-height: none;
+		}
+		header .menu-icon {
+			display: none;
+		}
+		header .menu-btn {
+		display: none;
+		}
+
+
+
 	@media (max-width: 768px) {
 		.title {
 			font-size: var(--font-size-4);
@@ -79,6 +100,112 @@
 		img {
 			height: 4em;
 			margin-top: calc(-1 * var(--size-1));
+			position: absolute;
+			right: 0;
+			top:0;
 		}
+		nav{
+			display:block;
+		}
+
+/* menu */
+header .links {
+  clear: both;
+  max-height: 0;
+  transition: max-height .2s ease-out;
+  background: var(--midnight-blue);
+  display:block;
+  width: 100vw;
+  margin-left:-20px;
+  padding-top:20px;
+}
+
+
+header li {
+	float: none;
+	width:100%;
+}
+
+		
+				header .menu-btn ~ .links {
+		max-height: 0;
+		display: none;
+		}
+/* menu icon */
+
+header .menu-icon {
+  cursor: pointer;
+  display: inline-block;
+  float: right;
+  padding: 28px 20px;
+  position: absolute;
+right: 90px;
+top: -5px;
+  user-select: none;
+
+}
+
+header .menu-icon .navicon {
+  background: white;
+  display: block;
+  height: 2px;
+  position: relative;
+  transition: background .2s ease-out;
+  width: 18px;
+}
+
+header .menu-icon .navicon:before,
+header .menu-icon .navicon:after {
+  background: white;
+  content: '';
+  display: block;
+  height: 100%;
+  position: absolute;
+  transition: all .2s ease-out;
+  width: 100%;
+}
+
+header .menu-icon .navicon:before {
+  top: 5px;
+}
+
+header .menu-icon .navicon:after {
+  top: -5px;
+}
+
+/* menu btn */
+
+
+
+header .menu-btn:checked ~ .links {
+  max-height: 240px;
+  display: block;
+}
+
+header .menu-btn:checked ~ .menu-icon .navicon {
+  background: transparent;
+}
+
+header .menu-btn:checked ~ .menu-icon .navicon:before {
+  transform: rotate(-45deg);
+}
+
+header .menu-btn:checked ~ .menu-icon .navicon:after {
+  transform: rotate(45deg);
+}
+
+header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
+header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
+  top: 0;
+}
+
+/* 48em = 768px */
+
+
 	}
+
+
+
+
+
 </style>
