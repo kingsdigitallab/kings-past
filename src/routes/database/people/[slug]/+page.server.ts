@@ -17,6 +17,8 @@ export async function load({ params, parent }) {
 
 		const description = await compile(person.description);
 
+		const feature = await supabase.from('person_feature').select('').eq('person', params.slug);
+
 		const knows = await supabase
 			.from('person_knows')
 			.select('')
@@ -43,6 +45,7 @@ export async function load({ params, parent }) {
 			person,
 			meta,
 			description: description?.code,
+			feature: feature.data,
 			knows: knows.data,
 			memberOf: memberOf.data,
 			sources: sources.data,

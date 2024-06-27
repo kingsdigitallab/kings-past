@@ -8,6 +8,7 @@
 	entityType="Person"
 	entityName={data.person?.name}
 	meta={data.meta}
+	feature={data.feature}
 	description={data.description}
 	sources={data.sources}
 >
