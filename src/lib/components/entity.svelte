@@ -46,7 +46,7 @@
 </article>
 
 <style>
-	.person {
+	/* .person {
 		&::before {
 			background-color: var(--yellow);
 			border-radius: 50%;
@@ -60,7 +60,7 @@
 		& * {
 			position: relative;
 		}
-	}
+	} */
 
 	.entity {
 		font-family: var(--font-headings);
@@ -70,6 +70,7 @@
 
 	h1 {
 		color: var(--brand);
+		max-inline-size: none;
 	}
 
 	li {
