@@ -54,6 +54,7 @@
 	<article class="content">
 		<div class="md">
 			<svelte:component this={content} />
+			<slot />
 		</div>
 	</article>
 	<nav>
