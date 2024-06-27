@@ -28,6 +28,7 @@
 		grid-template-columns: 1fr 1fr;
 		grid-template-rows: calc(100vh - var(--header-height));
 		justify-items: center;
+		margin-block: 0;
 	}
 
 	.hero-welcome {
