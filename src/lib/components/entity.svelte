@@ -24,7 +24,7 @@
 		</dl>
 	</section>
 
-	{#if feature}
+	{#if feature && feature.length > 0}
 		<section class="font-serif">
 			<figure>
 				<img
