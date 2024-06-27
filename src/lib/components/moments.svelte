@@ -50,7 +50,7 @@
 			justify-content: space-evenly;
 			height: var(--size-14);
 			max-inline-size: none;
-			min-width: 250px;
+			min-width: 275px;
 
 			a {
 				color: white;
