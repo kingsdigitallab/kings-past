@@ -53,8 +53,10 @@
 }
 
 .md :is(ol, ul) li {
+	font-size: var(--font-size-2);
 	margin-block: var(--size-2);
-	padding-inline-start: var(--size-2);
+	max-inline-size: var(--size-content-3);
+	margin-inline: auto;
 }
 
 .md :is(p) {
@@ -67,6 +69,18 @@
 
 .md blockquote {
 	max-inline-size: var(--size-content-3);
+}
+
+.md table {
+	--nice-inner-radius: 0;
+	border: none;
+	border-radius: 0;
+	font-size: var(--font-size-2);
+	margin-top: var(--size-7);
+
+	& th {
+		background-color: var(--surface-4);
+	}
 }
 
 .md a:not(.footnote-ref):not(.footnote-backref) {
