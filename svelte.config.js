@@ -9,7 +9,8 @@ import remarkFootnotes from 'remark-footnotes';
 const mdsvexOptions = {
 	extensions: ['.md'],
 	rehypePlugins: [rehypeSlug, rehypeFigure],
-	remarkPlugins: [remarkFootnotes]
+	remarkPlugins: [remarkFootnotes],
+	smartypants: true
 };
 
 /** @type {import('@sveltejs/kit').Config} */
