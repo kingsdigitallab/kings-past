@@ -39,8 +39,10 @@
 		display: grid;
 		grid-template-columns: repeat(auto-fill, minmax(var(--size-14), 1fr));
 		grid-gap: var(--size-8);
+		width: 100%;
 
 		& section {
+			padding-block: var(--size-4);
 			padding-inline: var(--size-4);
 		}
 	}
