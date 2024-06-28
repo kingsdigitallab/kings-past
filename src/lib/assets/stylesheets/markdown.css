@@ -42,8 +42,14 @@
 	max-width: 100%;
 }
 
-.md :is(ol, ul),
-.links :is(ol, ul) {
+.md :is(ol),
+.links :is(ol) {
+	list-style-type: decimal;
+	padding-left: var(--size-5);
+}
+
+.md :is(ul),
+.links :is(ul) {
 	list-style-type: disc;
 	padding-left: var(--size-5);
 }
@@ -64,4 +70,16 @@
 
 .md a:not(.footnote-ref):not(.footnote-backref) {
 	text-decoration: underline;
+}
+
+.md sup {
+	font-size: var(--font-size-0);
+}
+
+.md hr {
+	height: var(--border-size-1);
+}
+
+.md .footnotes li {
+	max-inline-size: none;
 }
