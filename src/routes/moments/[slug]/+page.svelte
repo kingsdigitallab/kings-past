@@ -47,7 +47,14 @@
 		}
 	}
 
-	li {
+	.links :is(ul) {
+		list-style-type: disc;
+		padding-left: var(--size-5);
+	}
+
+	.links :is(ol, ul) li {
 		font-size: var(--font-size-3);
+		margin-block: var(--size-2);
+		padding-inline-start: var(--size-2);
 	}
 </style>

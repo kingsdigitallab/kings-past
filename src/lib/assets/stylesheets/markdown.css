@@ -15,7 +15,7 @@
 	margin-inline: auto;
 }
 
-.md p:first-of-type::first-letter {
+.md p:first-of-type:not(blockquote)::first-letter {
 	float: left;
 	font-size: 4rem;
 	padding-right: 0.1rem;
@@ -42,20 +42,17 @@
 	max-width: 100%;
 }
 
-.md :is(ol),
-.links :is(ol) {
+.md :is(ol) {
 	list-style-type: decimal;
 	padding-left: var(--size-5);
 }
 
-.md :is(ul),
-.links :is(ul) {
+.md :is(ul) {
 	list-style-type: disc;
 	padding-left: var(--size-5);
 }
 
-.md :is(ol, ul) li,
-.links :is(ol, ul) li {
+.md :is(ol, ul) li {
 	margin-block: var(--size-2);
 	padding-inline-start: var(--size-2);
 }
@@ -66,6 +63,10 @@
 
 .md figure:not(:is(h2, h3, h4, h5, h6) + figure) {
 	margin-top: var(--size-7);
+}
+
+.md blockquote {
+	max-inline-size: var(--size-content-3);
 }
 
 .md a:not(.footnote-ref):not(.footnote-backref) {
