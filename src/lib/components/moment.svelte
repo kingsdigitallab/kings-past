@@ -52,10 +52,10 @@
 	</header>
 
 	<article class="content">
-		<div class="md">
+		<section class="md">
 			<svelte:component this={content} />
-			<slot />
-		</div>
+		</section>
+		<slot />
 	</article>
 	<nav>
 		<ol>
@@ -81,6 +81,18 @@
 			font-family: var(--font-headings);
 			font-size: var(--font-size-5);
 			max-inline-size: none;
+		}
+
+		& a rect {
+			fill: var(--text-2);
+
+			&:hover {
+				fill: var(--yellow);
+			}
+		}
+
+		& a.active rect {
+			fill: var(--yellow);
 		}
 	}
 
@@ -114,6 +126,7 @@
 
 	.content {
 		background: var(--background);
+		box-shadow: 0px -2px 5px 0px rgba(10, 45, 80, 0.2);
 		display: grid;
 		font-family: var(--font-serif);
 		margin-inline: auto;
