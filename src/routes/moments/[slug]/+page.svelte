@@ -1,4 +1,4 @@
-<script type="ts">
+<script lang="ts">
 	import Moment from '$lib/components/moment.svelte';
 
 	export let data;
