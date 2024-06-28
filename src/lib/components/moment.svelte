@@ -126,7 +126,7 @@
 
 	.content {
 		background: var(--background);
-		box-shadow: 0px -2px 5px 0px rgba(10, 45, 80, 0.2);
+		box-shadow: var(--shadow-2);
 		display: grid;
 		font-family: var(--font-serif);
 		margin-inline: auto;
