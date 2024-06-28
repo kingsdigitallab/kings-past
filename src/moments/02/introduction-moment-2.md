@@ -1,6 +1,7 @@
 ---
 title: An Introduction to Moment 2
 tags:
+  - moment
   - essay
 ---
 

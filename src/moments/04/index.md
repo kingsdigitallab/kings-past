@@ -18,7 +18,3 @@ Throughout this period, King’s fellows, research students, and archivists expa
 ## So what question...
 
 Links to MoD; teaching commitment at Defence Academy, Shrivenham. Implications for modern warfare – sense of how this is changing, place of universities within research landscape. Shock of Ukraine invasion and rising geopolitical tensions.
-
-## Detailed research
-
-- [War Studies at KCL](04/war-studies-at-kcl)

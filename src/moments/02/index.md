@@ -16,7 +16,3 @@ King’s College has been positioned at the heart of networks of power and influ
 ## So what question...
 
 Donors & benefactors: At a point when universities across UK and North America are re-examining their historic connections to empire and slavery, questions around institutions’ relationships to donors and revenue sources in the present have become equally pressing. This Moment will help reveal the historical context in which King’s came into existence. Few expressed concerns in the 1820s over the origins of funds which went into founding, building, and equipping the college that students still move through today. It will provide crucial historical context to ongoing debates around how we might move forward as a community in way that acknowledges the complicated and discomforting history of an institution of higher education that has always existed as a central part of wider networks of power. Later donations from the Wills family (Imperial Tobacco), Alfred Mond (ICI), and more recently the Sacklers (Purdue Pharma) highlight the need to think carefully about the college’s relationship to donors and that this should not be confined to wealth derived from slavery alone.
-
-## Detailed research
-
-- [Introduction to Moment 2](02/introduction-moment-2)
