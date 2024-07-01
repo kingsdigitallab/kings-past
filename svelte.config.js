@@ -3,13 +3,14 @@ import { vitePreprocess } from '@sveltejs/vite-plugin-svelte';
 import { mdsvex } from 'mdsvex';
 import rehypeSlug from 'rehype-slug';
 import rehypeFigure from '@microflash/rehype-figure';
+import remarkFlexibleContainers from 'remark-flexible-containers';
 import remarkFootnotes from 'remark-footnotes';
 
 /** @type {import('mdsvex').MdsvexOptions} */
 const mdsvexOptions = {
 	extensions: ['.md'],
 	rehypePlugins: [rehypeSlug, rehypeFigure],
-	remarkPlugins: [remarkFootnotes],
+	remarkPlugins: [remarkFlexibleContainers, remarkFootnotes],
 	smartypants: true
 };
 
