@@ -1042,7 +1042,6 @@ INSERT INTO "public"."person" ("id", "name", "slug", "alternative_names", "descr
 
 ', '2024-02-29 12:27:39.647072+00', NULL, 'English', 'United Kingdom', 'White', NULL, NULL, true, 'Gillian Lamb'),
 	(156, 'John Kemble', 'john-kemble-156', NULL, 'Brother to the famous Sarah Siddons. Joined the company  and became theatre manager and fought with Sheridan.', '2024-03-20 23:13:56.433845+00', 'Assigned male at birth', 'English', 'United Kingdom', 'White', NULL, NULL, true, 'Gillian Lamb'),
-	(160, 'William Cotton', 'william-cotton-160', NULL, 'English inventor, merchant, philanthropist and Governor of Bank of England 1842-1845. Son of Joseph Cotton who made his fortune as a captain with the East India Company and was later director of EIC. Brother John Cotton became chairman and director of EIC. Passed 1844 bank charter act. Fellow of the Royal Society. Funded Canon Nathanial Woodward''s schools and established new churches. father was a mariner merchant. Grandfather was a director of the Bank of England, father was a long serving director of the EIC. Became and set up his own company steam driven rope making machinery. Inventor. Strong anglican. Deep rooted religious beliefs, keen interest in churches and schools for working-classes. Became a director of the Bank of England. Very interested in the future of his 7 children. Believed needed to relieve the poor of their poverty before could judge their morals. spent much time on moral reform as the best form of patriotism. Built lots of churches. Promoted public baths, wash houses and model lodging houses', '2024-03-21 11:22:08.076963+00', 'Assigned male at birth', 'English', 'United Kingdom', 'White', NULL, NULL, true, 'Gillian Lamb'),
 	(154, 'Richard Sheridan', 'richard-sheridan-154', NULL, 'Richard Sheridan was an Anglo-Irish playwright, writer and Whig politician who sat in the British House of Commons from 1780 to 1812, representing the constituencies of Stafford, Westminster and Ilchester. Was a pupil at Harrow. Fought two duels. Wrote the School for Scandal. In 1780, Sheridan entered the House of Commons as the ally of Charles James Fox on the side of the American Colonials in the political debate of that year. He is said to have paid the burgesses of Stafford five guineas apiece to allow him to represent them. As a consequence, his first speech in Parliament was a defence against the charge of bribery.He held the posts of Receiver-General of the Duchy of Cornwall (1804–1807) and Treasurer of the Navy (1806–1807). Sheridan was noted for his close political relationship with the Prince of Wales, leading a faction of his supporters in the Commons. By 1805 when the Prince was cooling on his previous support of Catholic Emancipation Sheridan, George Tierney and others announced their own opposition to it.[22]
 
 When, after 32 years in Parliament, he lost re-election in 1812, his creditors closed in on him and his last years were harassed by debt and disappointment. On hearing of his debts, the American Congress offered Sheridan £20,000 in recognition of his efforts to prevent the American War of Independence. He refused the offer. Sheridan was good friends with Georgiana Cavendish and Henrietta Ponsonby. He sexually harassed women and was a womaniser.  ', '2024-03-20 23:01:03.620811+00', NULL, 'English', 'United Kingdom', 'White', NULL, NULL, true, 'Gillian Lamb'),
@@ -1051,6 +1050,9 @@ When, after 32 years in Parliament, he lost re-election in 1812, his creditors c
 	(159, 'Henry Cline', 'henry-cline-159', NULL, 'English surgeon and president of the Royal College of Surgeons. Political radical, associated with leading supporters of the French revolution, a farmer and Fellow of the Royal Society. Apprenticed to Thomas Smith, one of the surgeons. ', '2024-03-21 10:07:36.968363+00', NULL, 'English', 'United Kingdom', 'White', NULL, NULL, true, 'Gillian Lamb'),
 	(161, 'Nathaniel Woodward', 'nathaniel-woodward-161', NULL, 'Founded 11 schools for the middle classes to provide education based on sound principle and sound knowledge firmly grounded in the Christian faith. Began life as an evangelical but increasingly drawn to Tractarian movement. ', '2024-03-21 11:24:43.457459+00', 'Assigned male at birth', 'English', 'United Kingdom', 'White', NULL, NULL, true, 'Gillian Lamb'),
 	(118, 'William Manning', 'william-manning-118', NULL, 'Son of a merchant and his wife Elizabeth, daughter and heir of John Ryan, a planter and slave owner in St Kitts and Santa Cruz. His father also came from a planter family and soon after his marriage started a merchant house in Bristol, trading in West Indies. His son inherited 2/3 of the Ryan estates on Santa Cruz. Connection with Smith took him into Pitt''s circle. Staunch supporter of the government. Agent for St Vincent, leading spokesman of West Indies interests in the Commons. Campaigned for a dock to construct the dock. Provided finance for slave owners and became a slave owner himself. Promoted compensation for slave owners. Good friends with Wilberforce. Went bankrupt in 1831 and withdrew from public life. Died in 1834', '2024-02-29 10:42:39.211942+00', 'Assigned male at birth', 'English', 'United Kingdom', 'White', NULL, NULL, true, 'Gillian Lamb'),
+	(160, 'William Cotton', 'william-cotton-160', NULL, 'William Cotton, born in 1786 in Leytonstone, was a founding member of the council of King’s College London. Cotton was a merchant, inventor, banker, and philanthropist, who during his lifetime built numerous churches and schools for the working classes. Cotton came from a well-established upper middle-class family. His father (Joseph Cotton, 1745-1825) had made his money as a captain for the East India Company (EIC) taking advantage of expanding imperial trade and was later appointed a director of the EIC. His grandfather (Dr Nathaniel Cotton, 1705-1788) was a highly respected physician.  Cotton was a deeply religious man and during his lifetime was involved with societies such as the Colonial Bishoprics Fund, Hackney Phalanx of Prominent Churchmen and Society for the Promotion of Christian Knowledge. Cotton believed that moral reform was the best form of patriotism. Importantly, he argued that the poor needed to be relieved of their poverty before their morals could be judged. His philanthropy therefore focused on the promotion of institutions that could relieve economic and social pressures. This included his zeal for building churches, promoting public baths, wash houses and model lodging houses.  
+
+However, Cotton’s behaviour was not always so exemplary. During his time at Chigwell Grammar, 15-year-old Cotton was accused of setting fire to the headmaster’s garden. Cotton married Sarah Fowler in 1812. The couple had seven children together and Cotton maintained a keen interest in their upbringing and education. Reflecting both his business shrewdness and his familial shipping legacy, Cotton first began his career at the Limehouse shipping firm Huddart & Co. which he later adopted full control of, he also invented steam driven rope making machinery and in 1851 was awarded the Telford Medal from the Institution of Civil Engineers. During his tenure at the Bank of England, Cotton alongside Home Secretary Sir Robert Peel and Conservative plantation owner, Henry Goulburn, produced the Bank Charter Act of 1844. One of his most valued inventions was an automatic weighing machine for sovereigns, colloquially referred to as ‘the governor’, which won a medal at the Great Exhibition of 1851 and was used extensively at the Bank of England. William Cotton became a fellow of the Royal Society in 1821, was elected chairman of the London Hospital in 1827 and became treasurer in 1837 echoing some of the roles he undertook for the newly founded King’s College London in 1829. He also used the many connections he made through these roles to fundraise for King’s College London. However, the man he had the most contact with at King’s was his friend Henry Nelson Coleridge, who was also an important council member. Cotton was described by historian Hearnshaw as a ‘venerable member’ of King’s and one whose death in 1866 marked ‘the first age of the college’ coming to an end.', '2024-03-21 11:22:08.076963+00', 'Assigned male at birth', 'English', 'United Kingdom', 'White', NULL, NULL, true, 'Gillian Lamb'),
 	(153, 'William Pitt', 'william-pitt-153', NULL, 'Pitt was a British statesman, the youngest and last prime minister of Great Britain from 1783 until the Acts of Union 1800 and then first prime minister of the United Kingdom from January 1801. He left office in March 1801, but served as prime minister again from 1804 until his death in 1806. He was also Chancellor of the Exchequer for all of his time as prime minister. He is known as "Pitt the Younger" to distinguish him from his father, William Pitt, 1st Earl of Chatham, who had previously served as prime minister and is referred to as "William Pitt the Elder" (or "Chatham" by historians). Pitt, although often referred to as a Tory, or "new Tory", called himself an "independent Whig" and was generally opposed to the development of a strict partisan political system.Pitt was regarded as an outstanding administrator who worked for efficiency and reform, bringing in a new generation of competent administrators. He increased taxes to pay for the great war against France and cracked down on radicalism. To engage the threat of Irish support for France, he engineered the Acts of Union 1800 and tried (but failed) to secure Catholic emancipation as part of the Union. He created the "new Toryism", which revived the Tory Party and enabled it to stay in power for the next quarter-century.', '2024-03-20 22:55:20.198157+00', 'Assigned male at birth', 'English', 'United Kingdom', 'White', NULL, NULL, true, 'Gillian Lamb'),
 	(130, 'William Clift', 'william-clift-130', NULL, 'Born into a large poor family. Had a talent for illustrating. Taken on as an unpaid apprentice in the Hunter museum. Clift achieved respect and popularity within the scientific community of his time. Dr. South spoke of him as ''a kindly-hearted creature, always ready to impart and not to appropriate information,'' and with a ''head crammed full of knowledge.''[citation needed] Benjamin Brodie the elder praised his industry and his thirst for the acquisition of knowledge, his sagacity and keen observation. He was esteemed by Sir Joseph Banks, Dr. Wollaston, Sir Humphry Davy. Through the influence of the latter, he was elected Fellow of the Royal Society on 8 May 1823.
 
@@ -1084,9 +1086,10 @@ INSERT INTO "public"."donation_agent_person" ("id", "donation", "person", "added
 --
 
 INSERT INTO "public"."moment" ("id", "name", "created_at", "added_by") VALUES
-	(1, 'Moment 1.	1721: Money, global trade and slavery in the creation of Guy’s', '2024-02-27 13:42:24.940337+00', 'Erika Melek Delgado'),
-	(5, 'Moment 3. 1853: The crisis of Anglicanism in the mid-nineteenth-century', '2024-02-27 13:47:51.356932+00', 'Erika Melek Delgado'),
-	(7, 'Moment 2. 1828: The Financial and Political Networks That Created King''s', '2024-03-21 11:14:10.6361+00', 'Gillian Lamb');
+	(1, '1', '2024-02-27 13:42:24.940337+00', 'Erika Melek Delgado'),
+	(5, '3
+', '2024-02-27 13:47:51.356932+00', 'Erika Melek Delgado'),
+	(7, '2', '2024-03-21 11:14:10.6361+00', 'Gillian Lamb');
 
 
 --
@@ -1094,7 +1097,7 @@ INSERT INTO "public"."moment" ("id", "name", "created_at", "added_by") VALUES
 --
 
 INSERT INTO "public"."donation_moment" ("id", "created_at", "donation", "moment", "added_by") VALUES
-	(1, '2024-04-18 16:38:46.20323+00', 'foundation-of-kings-3', 'Moment 2. 1828: The Financial and Political Networks That Created King''s', 'Gillian Lamb');
+	(1, '2024-04-18 16:38:46.20323+00', 'foundation-of-kings-3', '2', 'Gillian Lamb');
 
 
 --
@@ -1190,7 +1193,7 @@ Many were prominent members of the Council of the new University of London (late
 --
 
 INSERT INTO "public"."event_moment" ("id", "created_at", "event", "moment", "added_by") VALUES
-	(1, '2024-03-31 20:36:06.953839+00', 'creation-of-society-for-the-diffusion-of-useful-knowledge-3', 'Moment 2. 1828: The Financial and Political Networks That Created King''s', 'Gillian Lamb');
+	(1, '2024-03-31 20:36:06.953839+00', 'creation-of-society-for-the-diffusion-of-useful-knowledge-3', '2', 'Gillian Lamb');
 
 
 --
@@ -1284,18 +1287,18 @@ INSERT INTO "public"."occupation" ("id", "name", "created_at", "added_by") VALUE
 --
 
 INSERT INTO "public"."organisation_moment" ("id", "created_at", "organisation", "moment", "added_by") VALUES
-	(1, '2024-04-18 16:30:19.991788+00', 'eton-college-4', 'Moment 2. 1828: The Financial and Political Networks That Created King''s', 'Gillian Lamb'),
-	(2, '2024-04-18 16:30:33.807198+00', 'st-johns-cambridge-5', 'Moment 2. 1828: The Financial and Political Networks That Created King''s', 'Gillian Lamb'),
-	(3, '2024-04-18 16:30:47.262923+00', 'west-indian-company-10', 'Moment 2. 1828: The Financial and Political Networks That Created King''s', 'Gillian Lamb'),
-	(4, '2024-04-18 16:31:05.405647+00', 'charterhouse-11', 'Moment 2. 1828: The Financial and Political Networks That Created King''s', 'Gillian Lamb'),
-	(5, '2024-04-18 16:31:18.898669+00', 'harrow-16', 'Moment 2. 1828: The Financial and Political Networks That Created King''s', 'Gillian Lamb'),
-	(6, '2024-04-18 16:31:38.713659+00', 'lincolns-inn-17', 'Moment 2. 1828: The Financial and Political Networks That Created King''s', 'Gillian Lamb'),
-	(7, '2024-04-18 16:31:54.761351+00', 'great-northern-railway-9', 'Moment 2. 1828: The Financial and Political Networks That Created King''s', 'Gillian Lamb'),
-	(8, '2024-04-18 16:32:14.814325+00', 'el-dock-company-18', 'Moment 2. 1828: The Financial and Political Networks That Created King''s', 'Gillian Lamb'),
-	(9, '2024-04-18 16:32:29.822872+00', 'athaneum-24', 'Moment 2. 1828: The Financial and Political Networks That Created King''s', 'Gillian Lamb'),
-	(10, '2024-04-18 16:32:43.301962+00', 'greenwich-hospital-25', 'Moment 2. 1828: The Financial and Political Networks That Created King''s', 'Gillian Lamb'),
-	(11, '2024-04-18 16:32:58.725183+00', 'st-bartholomews-hospital-2', 'Moment 2. 1828: The Financial and Political Networks That Created King''s', 'Gillian Lamb'),
-	(12, '2024-04-18 16:33:23.516458+00', 'society-of-psychorolutes-3', 'Moment 2. 1828: The Financial and Political Networks That Created King''s', 'Gillian Lamb');
+	(1, '2024-04-18 16:30:19.991788+00', 'eton-college-4', '2', 'Gillian Lamb'),
+	(2, '2024-04-18 16:30:33.807198+00', 'st-johns-cambridge-5', '2', 'Gillian Lamb'),
+	(3, '2024-04-18 16:30:47.262923+00', 'west-indian-company-10', '2', 'Gillian Lamb'),
+	(4, '2024-04-18 16:31:05.405647+00', 'charterhouse-11', '2', 'Gillian Lamb'),
+	(5, '2024-04-18 16:31:18.898669+00', 'harrow-16', '2', 'Gillian Lamb'),
+	(6, '2024-04-18 16:31:38.713659+00', 'lincolns-inn-17', '2', 'Gillian Lamb'),
+	(7, '2024-04-18 16:31:54.761351+00', 'great-northern-railway-9', '2', 'Gillian Lamb'),
+	(8, '2024-04-18 16:32:14.814325+00', 'el-dock-company-18', '2', 'Gillian Lamb'),
+	(9, '2024-04-18 16:32:29.822872+00', 'athaneum-24', '2', 'Gillian Lamb'),
+	(10, '2024-04-18 16:32:43.301962+00', 'greenwich-hospital-25', '2', 'Gillian Lamb'),
+	(11, '2024-04-18 16:32:58.725183+00', 'st-bartholomews-hospital-2', '2', 'Gillian Lamb'),
+	(12, '2024-04-18 16:33:23.516458+00', 'society-of-psychorolutes-3', '2', 'Gillian Lamb');
 
 
 --
@@ -1332,6 +1335,9 @@ INSERT INTO "public"."organisation_moment" ("id", "created_at", "organisation", 
 -- Data for Name: person_feature; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
+INSERT INTO "public"."person_feature" ("id", "created_at", "person", "image_url", "image_title", "image_description", "added_by") VALUES
+	(1, '2024-06-27 13:57:27.059276+00', 'william-cotton-160', 'https://upload.wikimedia.org/wikipedia/commons/7/7d/William_Cotton_by_Matthew_Noble_1855.JPG', 'William Cotton by Matthew Noble 1855', 'Bust of William Cotton', NULL),
+	(2, '2024-06-27 14:40:37.888768+00', 'sir-robert-peel-138', 'https://upload.wikimedia.org/wikipedia/commons/c/c1/Sir_Robert_Peel%2C_2nd_Bt_by_John_Linnell.jpg', 'Sir Robert Peel, 2nd Bt, by John Linnell', 'Painting of Sir Robert Peel, from the National Portrait Gallery, London', NULL);
 
 
 --
@@ -1450,17 +1456,18 @@ INSERT INTO "public"."person_member_of" ("id", "created_at", "person", "organisa
 --
 
 INSERT INTO "public"."person_moment" ("id", "created_at", "person", "moment", "added_by") VALUES
-	(1, '2024-03-21 11:14:44.002332+00', 'richard-edward-arden-2', 'Moment 2. 1828: The Financial and Political Networks That Created King''s', NULL),
-	(2, '2024-03-21 11:14:57.085739+00', 'lord-arden-1', 'Moment 2. 1828: The Financial and Political Networks That Created King''s', NULL),
-	(3, '2024-03-21 11:15:45.037152+00', 'lancelot-shadwell-102', 'Moment 2. 1828: The Financial and Political Networks That Created King''s', NULL),
-	(4, '2024-03-21 11:15:59.983757+00', 'nicholas-conyngham-tyndal-103', 'Moment 2. 1828: The Financial and Political Networks That Created King''s', NULL),
-	(5, '2024-03-21 11:16:11.860682+00', 'william-astell-104', 'Moment 2. 1828: The Financial and Political Networks That Created King''s', NULL),
-	(6, '2024-03-21 11:16:35.570322+00', 'john-atkins-105', 'Moment 2. 1828: The Financial and Political Networks That Created King''s', NULL),
-	(7, '2024-03-21 11:16:47.731123+00', 'christopher-benson-106', 'Moment 2. 1828: The Financial and Political Networks That Created King''s', NULL),
-	(8, '2024-03-21 11:17:05.150608+00', 'benjamin-collins-brodie-107', 'Moment 2. 1828: The Financial and Political Networks That Created King''s', NULL),
-	(9, '2024-03-21 11:17:18.359446+00', 'archdeacon-cambridge-108', 'Moment 2. 1828: The Financial and Political Networks That Created King''s', NULL),
-	(10, '2024-03-21 11:17:33.665058+00', 'astley-p-cooper-109', 'Moment 2. 1828: The Financial and Political Networks That Created King''s', NULL),
-	(11, '2024-03-21 11:18:20.896402+00', 'george-doyley-111', 'Moment 2. 1828: The Financial and Political Networks That Created King''s', NULL);
+	(1, '2024-03-21 11:14:44.002332+00', 'richard-edward-arden-2', '2', NULL),
+	(2, '2024-03-21 11:14:57.085739+00', 'lord-arden-1', '2', NULL),
+	(3, '2024-03-21 11:15:45.037152+00', 'lancelot-shadwell-102', '2', NULL),
+	(4, '2024-03-21 11:15:59.983757+00', 'nicholas-conyngham-tyndal-103', '2', NULL),
+	(5, '2024-03-21 11:16:11.860682+00', 'william-astell-104', '2', NULL),
+	(6, '2024-03-21 11:16:35.570322+00', 'john-atkins-105', '2', NULL),
+	(7, '2024-03-21 11:16:47.731123+00', 'christopher-benson-106', '2', NULL),
+	(8, '2024-03-21 11:17:05.150608+00', 'benjamin-collins-brodie-107', '2', NULL),
+	(9, '2024-03-21 11:17:18.359446+00', 'archdeacon-cambridge-108', '2', NULL),
+	(10, '2024-03-21 11:17:33.665058+00', 'astley-p-cooper-109', '2', NULL),
+	(11, '2024-03-21 11:18:20.896402+00', 'george-doyley-111', '2', NULL),
+	(12, '2024-06-27 15:04:53.298043+00', 'william-cotton-160', '2', NULL);
 
 
 --
@@ -1896,7 +1903,7 @@ SELECT pg_catalog.setval('"public"."person_id_seq"', 172, true);
 -- Name: person_image_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
-SELECT pg_catalog.setval('"public"."person_image_id_seq"', 1, false);
+SELECT pg_catalog.setval('"public"."person_image_id_seq"', 2, true);
 
 
 --
@@ -1917,7 +1924,7 @@ SELECT pg_catalog.setval('"public"."person_member_of_organisation_id_seq"', 49, 
 -- Name: person_moment_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
-SELECT pg_catalog.setval('"public"."person_moment_id_seq"', 11, true);
+SELECT pg_catalog.setval('"public"."person_moment_id_seq"', 12, true);
 
 
 --
