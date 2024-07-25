@@ -10,6 +10,7 @@
 	meta={data.meta}
 	feature={data.feature}
 	description={data.description}
+	moments={data.moments}
 	sources={data.sources}
 >
 	{#if data.knows && data.knows.length}

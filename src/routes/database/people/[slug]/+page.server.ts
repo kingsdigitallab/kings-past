@@ -31,6 +31,8 @@ export async function load({ params, parent }) {
 			.eq('person', params.slug)
 			.order('organisation');
 
+		const personMoments = await supabase.from('person_moment').select('').eq('person', params.slug).order('moment');
+
 		const sources = await supabase
 			.from('person_source')
 			.select('')
@@ -38,6 +40,9 @@ export async function load({ params, parent }) {
 			.order('source');
 
 		const parentData = await parent();
+		const parentMoments = parentData.moments;
+
+		const moments = parentMoments.filter((moment) => personMoments?.data?.some((pm) => parseInt(pm.moment) === moment.n))
 
 		return {
 			person,
@@ -46,11 +51,12 @@ export async function load({ params, parent }) {
 			feature: feature.data,
 			knows: knows.data,
 			memberOf: memberOf.data,
+			moments: moments,
 			sources: sources.data,
 			people: parentData.peopleBySlug,
 			organisations: await getRecordsBy('organisation', 'slug')
 		};
 	} catch (e) {
-		error(404, `Could not find ${params.slug}`);
+		error(404, `Could not load ${params.slug}: ${e.message}`);
 	}
 }

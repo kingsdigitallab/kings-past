@@ -1,9 +1,12 @@
 <script lang="ts">
+	import type { Moment } from '$lib/types';
+
 	export let entityType: string;
 	export let entityName: string;
 	export let meta: Record<string, any>;
 	export let description: string | undefined;
 	export let feature: Record<string, any> | null;
+	export let moments: Moment[] | null;
 	export let sources;
 </script>
 
@@ -40,6 +43,19 @@
 	{#if description}
 		<section class="md font-serif">
 			{@html description}
+		</section>
+	{/if}
+
+	{#if moments && moments.length}
+		<section class="moments">
+			<h2>Moments</h2>
+			<ol>
+				{#each moments as moment}
+					<a href="../../moments/{moment.slug}">
+						<li class="surface-2">{moment.title}</li>
+					</a>
+				{/each}
+			</ol>
 		</section>
 	{/if}
 
@@ -94,5 +110,38 @@
 	li {
 		display: flex;
 		align-items: baseline;
+	}
+
+	.moments ol {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		gap: var(--size-4);
+		justify-content: space-between;
+		padding-inline-start: 0;
+	}
+
+	.moments ol li {
+		border-radius: var(--radius-1);
+		box-shadow: var(--shadow-2);
+		flex-basis: 95%;
+		padding: var(--size-fluid-3);
+
+		@media (--motionOK) {
+			animation: var(--animation-fade-in);
+		}
+
+		@media (min-width: 640px) {
+			flex-basis: 45%;
+		}
+
+		@media (min-width: 1024px) {
+			flex-basis: 30%;
+		}
+	}
+
+	.moments ol li:hover {
+		color: var(--yellow);
+		box-shadow: var(--size-1) var(--size-1) var(--yellow);
 	}
 </style>
