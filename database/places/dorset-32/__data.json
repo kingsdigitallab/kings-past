@@ -1,0 +1,1 @@
+{"type":"data","nodes":[null,{"type":"data","data":[{"item":1},{"id":2,"name":3,"slug":4,"alternative_names":5,"description":5,"created_at":6,"draft":7,"latitude":8,"longitude":9,"added_by":10},32,"Dorset","dorset-32",null,"2024-08-27T09:31:00+00:00",true,50.710701,-2.43401,"Jonah Miller"],"uses":{"params":["slug"]}}]}

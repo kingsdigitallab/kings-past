@@ -1,0 +1,1 @@
+{"type":"data","nodes":[null,{"type":"data","data":[{"item":1},{"id":2,"name":3,"slug":4,"alternative_names":5,"description":6,"created_at":7,"draft":8,"latitude":9,"longitude":10,"added_by":11},30,"Wortham","wortham-30",null,"Suffolk","2024-08-27T09:16:16+00:00",true,52.33142,1.26461,"Jonah Miller"],"uses":{"params":["slug"]}}]}

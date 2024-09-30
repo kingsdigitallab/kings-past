@@ -1,0 +1,1 @@
+{"type":"data","nodes":[null,{"type":"data","data":[{"item":1},{"id":2,"name":3,"slug":4,"alternative_names":5,"description":6,"created_at":7,"draft":8,"latitude":9,"longitude":10,"added_by":11},8,"Cheshire","cheshire-8","","Cheshire is a county in northwest England","2024-08-15T16:25:49.4292+00:00",true,53.36464,-3.06927,"Arin Edwards"],"uses":{"params":["slug"]}}]}

@@ -1,0 +1,1 @@
+{"type":"data","nodes":[null,{"type":"data","data":[{"item":1},{"id":2,"name":3,"slug":4,"alternative_names":5,"description":5,"created_at":6,"draft":7,"latitude":8,"longitude":9,"added_by":10},12,"India","india-12",null,"2024-08-16T15:34:18+00:00",true,28.632429,77.218788,"Jonah Miller"],"uses":{"params":["slug"]}}]}

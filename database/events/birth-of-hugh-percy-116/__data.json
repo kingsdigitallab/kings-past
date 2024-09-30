@@ -1,0 +1,1 @@
+{"type":"data","nodes":[null,{"type":"data","data":[{"item":1},{"id":2,"name":3,"slug":4,"event_type":5,"start_date":6,"end_date":7,"location":8,"description":8,"added_by":8,"created_at":9,"draft":10},116,"Birth of Hugh Percy","birth-of-hugh-percy-116","Birth","1785-04-20","1847-12-04",null,"2024-09-08T16:18:18+00:00",true],"uses":{"params":["slug"]}}]}

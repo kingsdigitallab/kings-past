@@ -1,0 +1,1 @@
+{"type":"data","nodes":[null,{"type":"data","data":[{"item":1},{"id":2,"name":3,"slug":4,"alternative_names":5,"description":6,"created_at":7,"draft":8,"latitude":9,"longitude":10,"added_by":11},15,"Limerick","limerick-15","Contae Luimnigh","A south western county in Ireland","2024-08-16T16:51:43+00:00",true,52.668018,-8.630498,"Arin Edwards"],"uses":{"params":["slug"]}}]}

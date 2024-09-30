@@ -1,0 +1,1 @@
+{"type":"data","nodes":[null,{"type":"data","data":[{"item":1},{"id":2,"name":3,"slug":4,"alternative_names":5,"description":6,"created_at":7,"draft":8,"latitude":9,"longitude":10,"added_by":11},11,"Oxford","oxford-11",null,"Oxford is a city in central south England","2024-08-15T18:27:09+00:00",true,51.752022,-1.257677,"Arin Edwards"],"uses":{"params":["slug"]}}]}

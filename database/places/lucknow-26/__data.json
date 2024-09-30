@@ -1,0 +1,1 @@
+{"type":"data","nodes":[null,{"type":"data","data":[{"item":1},{"id":2,"name":3,"slug":4,"alternative_names":5,"description":5,"created_at":6,"draft":7,"latitude":8,"longitude":9,"added_by":10},26,"Lucknow","lucknow-26",null,"2024-08-21T11:12:13+00:00",true,26.846251,80.949028,"Jonah Miller"],"uses":{"params":["slug"]}}]}

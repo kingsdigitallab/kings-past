@@ -1,0 +1,1 @@
+{"type":"data","nodes":[null,{"type":"data","data":[{"item":1},{"id":2,"name":3,"slug":4,"alternative_names":5,"description":6,"created_at":7,"draft":8,"latitude":9,"longitude":10,"added_by":11},18,"Leeds","leeds-18",null,"A city in the northern English county of Yorkshire.","2024-08-17T16:20:15.194684+00:00",true,53.8008,1.5491,"Arin Edwards"],"uses":{"params":["slug"]}}]}

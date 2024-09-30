@@ -1,0 +1,1 @@
+{"type":"data","nodes":[null,{"type":"data","data":[{"item":1},{"id":2,"name":3,"slug":4,"alternative_names":5,"description":6,"created_at":7,"draft":8,"latitude":9,"longitude":10,"added_by":11},29,"Yorkshire","yorkshire-29",null," A historic county in northern England.","2024-08-26T14:23:32+00:00",true,53.9591,1.0792,"Arin Edwards"],"uses":{"params":["slug"]}}]}

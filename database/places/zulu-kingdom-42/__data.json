@@ -1,0 +1,1 @@
+{"type":"data","nodes":[null,{"type":"data","data":[{"item":1},{"id":2,"name":3,"slug":4,"alternative_names":5,"description":6,"created_at":7,"draft":8,"latitude":9,"longitude":10,"added_by":11},42,"Zulu Kingdom ","zulu-kingdom-42","KwaZulu, KwaZulu-Natal, South Africa",null,"2024-09-11T15:32:51.101394+00:00",true,-30.845867,30.372374,"Arin Edwards"],"uses":{"params":["slug"]}}]}
