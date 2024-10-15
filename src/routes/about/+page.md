@@ -41,6 +41,7 @@
 - Natasha Kee (2023)
 - Paul-Alexis Nkwedjang (2023)
 - Wendy Agutu (2023)
+- Savina Kataria (2024)
 
 ### King's Digital Lab
 
