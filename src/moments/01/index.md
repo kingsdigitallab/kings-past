@@ -18,7 +18,7 @@ slug: 1721-money-global-trade-slavery-creation-guy’s
   import { base } from "$app/paths";
 </script>
 
-King’s College, as it is today, comprises several institutions which have their own distinct histories and were brought together through mergers from the late-nineteenth to late-twentieth centuries. Two of the most significant are St Thomas’ and Guy’s, teaching hosptials which existed for several hundred years before being incorporated into King’s.
+King’s College, as it is today, comprises several institutions which have their own distinct histories and were brought together through mergers from the late-nineteenth to late-twentieth centuries. Two of the most significant are St Thomas’ and Guy’s, teaching hospitals which existed for several hundred years before being incorporated into King’s.
 
 ![A sugar mill belonging to Phillippe de Longvilliers de Poincy]({base}/assets/images/moments/1.1.jpg "A drawing depicting a sugar mill and workers from 1665")
 
