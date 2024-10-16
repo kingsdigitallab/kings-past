@@ -145,7 +145,8 @@ INSERT INTO "public"."researcher" ("id", "name", "created_at", "added_by") VALUE
 	(4, 'Arin Edwards', '2024-08-12 12:19:27+00', 'Erika Melek Delgado'),
 	(5, 'Im Chiew Ng', '2024-08-12 12:20:11+00', 'Erika Melek Delgado'),
 	(6, 'Savina Kataria', '2024-08-12 12:20:42+00', 'Erika Melek Delgado'),
-	(7, 'Ariunzaya Batkhuyag', '2024-08-12 12:21:23+00', 'Erika Melek Delgado');
+	(7, 'Ariunzaya Batkhuyag', '2024-08-12 12:21:23+00', 'Erika Melek Delgado'),
+	(8, 'Samantha Callaghan', '2024-10-15 08:00:20.857381+00', 'Erika Melek Delgado');
 
 
 --
@@ -461,7 +462,9 @@ INSERT INTO "public"."place" ("id", "name", "slug", "alternative_names", "descri
 	(40, 'Iberian Peninsula', 'iberian-peninsula-40', 'Peninsula', NULL, '2024-09-07 13:38:35+00', true, 40.483, 4.0876, 'Arin Edwards'),
 	(41, 'Ireland', 'ireland-41', NULL, NULL, '2024-09-11 14:28:36.236099+00', true, NULL, NULL, 'Ariunzaya Batkhuyag'),
 	(42, 'Zulu Kingdom ', 'zulu-kingdom-42', 'KwaZulu, KwaZulu-Natal, South Africa', NULL, '2024-09-11 15:32:51.101394+00', true, -30.845867, 30.372374, 'Arin Edwards'),
-	(43, 'Cheltenham', 'cheltenham-43', NULL, NULL, '2024-09-12 10:56:34+00', true, 51.899386, -2.078253, 'Arin Edwards');
+	(43, 'Cheltenham', 'cheltenham-43', NULL, NULL, '2024-09-12 10:56:34+00', true, 51.899386, -2.078253, 'Arin Edwards'),
+	(44, 'Freemason''s Tavern', 'freemasons-tavern-44', '', 'Address: 61-65 Great Queen Street, London, wc2b 5bz
+The Freemasons'' Tavern was established in 1775. It served as a meeting place for a variety of notable organisations from the 18th century until it was demolished in 1909 to make way for the Connaught Rooms.', '2024-10-15 18:22:14+00', true, 51.51574, -0.12044, 'Erika Melek Delgado');
 
 
 --
@@ -469,7 +472,11 @@ INSERT INTO "public"."place" ("id", "name", "slug", "alternative_names", "descri
 --
 
 INSERT INTO "public"."donation" ("id", "name", "slug", "start_date", "end_date", "location", "description", "added_by", "created_at", "price", "currency", "draft") VALUES
-	(3, 'Foundation of King''s', 'foundation-of-kings-3', '1830-01-01', '1830-01-01', NULL, 'Donation for the founding of King''s', 'Gillian Lamb', '2024-04-18 16:38:13.23196+00', 100, 'GBP', true);
+	(3, 'Foundation of King''s', 'foundation-of-kings-3', '1830-01-01', '1830-01-01', NULL, 'Donation for the founding of King''s', 'Gillian Lamb', '2024-04-18 16:38:13.23196+00', 100, 'GBP', true),
+	(13, 'Donation by Rev. Dr. Lord Bishop of Norwich of £200 to the foundation of King’s College London', 'rev-dr-lord-bishop-of-norwich-donation-to-foundation-of-kings-13', '1828-06-21', '1828-06-21', 'freemasons-tavern-44', 'At a meeting of the Friends of this Institution, held at the Freemasons'' Tavern, on Saturday the 21st of June, 1828.  ', 'Erika Melek Delgado', '2024-10-14 21:06:42+00', 200, 'GBP', true),
+	(18, 'Purchase of 52 shares of £100 by Rev Dr Lord Bishop of Norwich y to the foundation of King’s College London', 'purchase-of-52-shares-of-100-by-rev-dr-lord-bishop-of-norwich-y-to-the-foundation-of-kings-college-london-18', '1828-06-21', '1828-06-21', 'freemasons-tavern-44', 'At a meeting of the Friends of this Institution, held at the Freemasons'' Tavern, on Saturday the 21st of June 1828.', 'Erika Melek Delgado', '2024-10-15 19:30:56+00', 5200, 'GBP', true),
+	(11, 'Donation by Rev Dr Lord Bishop of Ely of 200 to the foundation of King’s College London', 'rev-dr-lord-bishop-of-ely-donation-to-foundation-of-kings-11', '1828-06-21', '1828-06-21', 'freemasons-tavern-44', 'At a meeting of the Friends of this Institution, held at the Freemasons'' Tavern, on Saturday the 21st of June, 1828.  ', 'Erika Melek Delgado', '2024-10-14 20:57:13+00', 200, 'GBP', true),
+	(17, 'Purchase of 22 shares of £100 by Rev Dr Lord Bishop of Ely to the foundation of King’s College London', 'purchase-of-22-shares-of-100-by-rev-dr-lord-bishop-of-ely-to-the-foundation-of-kings-college-london-17', '1828-06-21', '1828-06-21', 'freemasons-tavern-44', 'At a meeting of the Friends of this Institution, held at the Freemasons'' Tavern, on Saturday the 21st of June, 1828. ', 'Erika Melek Delgado', '2024-10-15 19:05:46+00', 2200, 'GBP', true);
 
 
 --
@@ -1415,7 +1422,8 @@ He was a member of the Chemical Society, a group of members of the Royal Society
 	(356, 'Charles Burney', 'charles-burney-356', NULL, NULL, '2024-09-23 16:06:56.455745+00', NULL, NULL, NULL, NULL, NULL, NULL, true, 'Ariunzaya Batkhuyag'),
 	(357, ' J.H Monk', 'j-h-monk-357', NULL, NULL, '2024-09-23 16:07:17.340961+00', NULL, NULL, NULL, NULL, NULL, NULL, true, 'Ariunzaya Batkhuyag'),
 	(358, 'Charles Goddard', 'charles-goddard-358', NULL, NULL, '2024-09-23 16:07:32.888745+00', NULL, NULL, NULL, NULL, NULL, NULL, true, 'Ariunzaya Batkhuyag'),
-	(359, 'Henry Bayley of Stow', 'henry-bayley-of-stow-359', NULL, NULL, '2024-09-23 16:07:49.862042+00', NULL, NULL, NULL, NULL, NULL, NULL, true, 'Ariunzaya Batkhuyag');
+	(359, 'Henry Bayley of Stow', 'henry-bayley-of-stow-359', NULL, NULL, '2024-09-23 16:07:49.862042+00', NULL, NULL, NULL, NULL, NULL, NULL, true, 'Ariunzaya Batkhuyag'),
+	(360, 'Tomáš Garrigue Masaryk', 'tomas-garrigue-masaryk-360', NULL, 'Czech intellectual and politician who served as the first president of Czechoslovakia from 1918 to 1935.  Tomáš Garrigue Masaryk was born in 1850 in the town of Hodonín in the province of Moravia, at the time a part of the Austrian Empire. His parents, of Czech and Slovak origin, worked on a local aristocratic estate. Masaryk pursued an academic career, studying at the University of Vienna and later the University of Lepizig. In 1882, he was appointed as a professor of philosophy at the Charles-Ferdinand University in Prague, where he first developed full proficiency in standard Czech after a previous education in German. While studying in Leipzig, he met Charlotte Garrigue, a fellow student from the United States, whom he would later marry. He subsequently changed his own name to include Garrigue’s surname, reflecting his commitment to women’s equality. Masaryk was a strong believer in science and a fierce critic of Austria’s Habsburg dynasty and the Roman Catholic church. While a passionate Czech patriot, he was critical of nationalist mythology and opposed antisemitism. He served as member of the Austrian parliament, affiliated with Czech political parties, between 1891 and 1893 and between 1907 and 1914.  At the outbreak of the First World War, he was deemed a traitor to Austria-Hungary due to his support for Czechoslovak independence and went into exile, initially residing in different parts of Western Europe and Russia. Masaryk was appointed as a lecturer in the new Slavonic School at King’s College London in the autumn of 1915 and delivered his inaugural lecture on ‘The Problem of Small Nations in Europe.’ While delivering periodic lectures at King’s, he continued to travel widely to lobby for support of Czechoslovak independence. He found an especially receptive audience in the United States, drawing on contacts from his days as a visiting professor at the University of Chicago, before the war, and on the large Czech and Slovak emigrant communities. When the Austro-Hungarian empire collapsed in October 1918, Czechoslovakia declared independence, and the newly formed National Assembly elected Masaryk as the nation’s first president in November. He was re-elected three times, serving as president until 1935. During his presidency, Czechoslovakia was among the most stable democracies in Europe, though this stability depended in part on management by a small political and intellectual elite connected to Masaryk. This milieu was known as ‘the Castle,’ a reference to the presidential residence. Masaryk died in 1937, at the age of 87.', '2024-10-15 19:45:46+00', 'Assigned male at birth', 'Czech', 'Austria', 'White', 'Czech', 'Austrian until 1918; Czechoslovak after 1918', true, 'Erika Melek Delgado');
 
 
 --
@@ -1428,14 +1436,15 @@ INSERT INTO "public"."donation_agent_person" ("id", "donation", "person", "added
 	(3, 'foundation-of-kings-3', 'george-henry-law-182', 'Arin Edwards', '2024-08-15 10:55:28+00'),
 	(4, 'foundation-of-kings-3', 'george-james-cholmondeley-190', 'Arin Edwards', '2024-08-15 16:34:43+00'),
 	(5, 'foundation-of-kings-3', 'duke-of-wellington-137', 'Ariunzaya Batkhuyag', '2024-08-16 12:57:55.355152+00'),
-	(6, 'foundation-of-kings-3', 'henry-bathurst-193', 'Arin Edwards', '2024-08-16 15:31:10+00'),
 	(7, 'foundation-of-kings-3', 'henry-handley-norris-194', 'Arin Edwards', '2024-08-16 15:31:32+00'),
 	(8, 'foundation-of-kings-3', 'henry-hugh-hoare-195', 'Arin Edwards', '2024-08-16 15:32:15+00'),
-	(9, 'foundation-of-kings-3', 'patrick-bell-186', 'Ariunzaya Batkhuyag', '2024-08-20 16:57:00.119782+00'),
-	(10, 'foundation-of-kings-3', 'bowyer-edward-sparke-187', 'Ariunzaya Batkhuyag', '2024-08-20 17:12:34.292863+00'),
 	(11, 'foundation-of-kings-3', 'charles-r-sumner-189', 'Ariunzaya Batkhuyag', '2024-08-20 17:26:50.869976+00'),
 	(12, 'foundation-of-kings-3', 'henry-william-majendie-245', 'Ariunzaya Batkhuyag', '2024-08-20 18:54:26.58971+00'),
-	(13, 'foundation-of-kings-3', 'hugh-percy-278', 'Arin Edwards', '2024-09-08 15:58:43+00');
+	(13, 'foundation-of-kings-3', 'hugh-percy-278', 'Arin Edwards', '2024-09-08 15:58:43+00'),
+	(10, 'rev-dr-lord-bishop-of-ely-donation-to-foundation-of-kings-11', 'bowyer-edward-sparke-187', 'Ariunzaya Batkhuyag', '2024-08-20 17:12:34.292863+00'),
+	(6, 'rev-dr-lord-bishop-of-norwich-donation-to-foundation-of-kings-13', 'henry-bathurst-193', 'Arin Edwards', '2024-08-16 15:31:10+00'),
+	(14, 'purchase-of-52-shares-of-100-by-rev-dr-lord-bishop-of-norwich-y-to-the-foundation-of-kings-college-london-18', 'henry-bathurst-193', 'Erika Melek Delgado', '2024-10-15 19:33:31+00'),
+	(15, 'purchase-of-22-shares-of-100-by-rev-dr-lord-bishop-of-ely-to-the-foundation-of-kings-college-london-17', 'bowyer-edward-sparke-187', 'Erika Melek Delgado', '2024-10-15 19:35:45+00');
 
 
 --
@@ -1443,11 +1452,20 @@ INSERT INTO "public"."donation_agent_person" ("id", "donation", "person", "added
 --
 
 INSERT INTO "public"."moment" ("id", "name", "created_at", "added_by") VALUES
-	(1, '1', '2024-02-27 13:42:24.940337+00', 'Erika Melek Delgado'),
-	(5, '3
+	(9, '9 - 1919: Crises of Empire', '2024-10-15 20:02:05+00', 'Erika Melek Delgado'),
+	(1, '1 - 1721: Money, global trade and slavery in the creation of Guy''s', '2024-02-27 13:42:24.940337+00', 'Erika Melek Delgado'),
+	(5, '3 - 1853: The crisis of Anglicanism in the mid-nineteenth-century
 ', '2024-02-27 13:47:51.356932+00', 'Erika Melek Delgado'),
-	(7, '2', '2024-03-21 11:14:10.6361+00', 'Gillian Lamb'),
-	(8, '4', '2024-08-12 12:40:02+00', 'Jonah Miller');
+	(7, '2- 1828: The financial and political networks which created King''s', '2024-03-21 11:14:10.6361+00', 'Gillian Lamb'),
+	(8, '4- 1857: War, nineteenth-century empire and Conservative empire', '2024-08-12 12:40:02+00', 'Jonah Miller'),
+	(10, '5- 1862: Knowledge for industry and science', '2024-10-15 20:05:23+00', 'Erika Melek Delgado'),
+	(11, '6- c. 1872: Race, Civilisation and Culture', '2024-10-15 20:06:08+00', 'Erika Melek Delgado'),
+	(12, '7- 1885: Women''s education', '2024-10-15 20:06:42+00', 'Erika Melek Delgado'),
+	(13, '8- 1900: King''s and the Staffing of empire', '2024-10-15 20:07:15+00', 'Erika Melek Delgado'),
+	(14, '10- 1946: Education for the nation', '2024-10-15 20:07:53+00', 'Erika Melek Delgado'),
+	(15, '11- 1964: King''s and Deconolisation', '2024-10-15 20:14:22+00', 'Erika Melek Delgado'),
+	(16, '12- 1979: King''s at 150', '2024-10-15 20:14:49+00', 'Erika Melek Delgado'),
+	(17, '13- King''s Past / King''s Future', '2024-10-15 20:15:21+00', 'Erika Melek Delgado');
 
 
 --
@@ -1455,7 +1473,7 @@ INSERT INTO "public"."moment" ("id", "name", "created_at", "added_by") VALUES
 --
 
 INSERT INTO "public"."donation_moment" ("id", "created_at", "donation", "moment", "added_by") VALUES
-	(1, '2024-04-18 16:38:46.20323+00', 'foundation-of-kings-3', '2', 'Gillian Lamb');
+	(1, '2024-04-18 16:38:46.20323+00', 'foundation-of-kings-3', '2- 1828: The financial and political networks which created King''s', 'Gillian Lamb');
 
 
 --
@@ -1512,7 +1530,8 @@ INSERT INTO "public"."source" ("id", "name", "slug", "description", "created_at"
 --
 
 INSERT INTO "public"."theme" ("id", "name", "created_at", "added_by") VALUES
-	(1, 'Trans-Atlantic Slave Trade', '2024-02-23 14:10:25.486378+00', NULL);
+	(2, 'Foundation of King''s College London', '2024-10-15 18:40:24+00', 'Erika Melek Delgado'),
+	(1, 'Trans-Atlantic Slave Trade', '2024-02-23 14:10:25.486378+00', 'Erika Melek Delgado');
 
 
 --
@@ -1727,59 +1746,59 @@ Many were prominent members of the Council of the new University of London (late
 --
 
 INSERT INTO "public"."event_moment" ("id", "created_at", "event", "moment", "added_by") VALUES
-	(1, '2024-03-31 20:36:06.953839+00', 'creation-of-society-for-the-diffusion-of-useful-knowledge-3', '2', 'Gillian Lamb'),
-	(2, '2024-08-12 12:43:35+00', 'indian-rebellion-5', '4', 'Jonah Miller'),
-	(3, '2024-08-21 11:23:54+00', 'crimean-war-47', '4', 'Jonah Miller'),
-	(4, '2024-08-21 11:47:20+00', 'siege-of-sebastopol-48', '4', 'Jonah Miller'),
-	(5, '2024-08-21 11:47:39+00', 'siege-of-lucknow-49', '4', 'Jonah Miller'),
-	(6, '2024-08-26 12:10:01.022959+00', 'education-of-george-bannister-55', '4', 'Im Chiew Ng'),
-	(7, '2024-08-26 12:10:10.933245+00', 'education-of-william-barr-56', '4', 'Im Chiew Ng'),
-	(8, '2024-08-26 12:10:25.304341+00', 'education-of-julius-barras-57', '4', 'Im Chiew Ng'),
-	(9, '2024-08-26 12:42:33.796212+00', 'birth-of-john-b-barker-61', '4', 'Im Chiew Ng'),
-	(10, '2024-08-26 12:42:43.991778+00', 'education-of-john-b-barker-62', '4', 'Im Chiew Ng'),
-	(11, '2024-08-26 12:42:54.709531+00', 'birth-of-edward-bell-63', '4', 'Im Chiew Ng'),
-	(12, '2024-08-26 12:43:07.773468+00', 'birth-of-robert-bennett-64', '4', 'Im Chiew Ng'),
-	(13, '2024-08-26 12:43:23.786378+00', 'birth-of-james-c-berkeley-65', '4', 'Im Chiew Ng'),
-	(14, '2024-08-26 12:43:33.658524+00', 'birth-of-robert-berkeley-66', '4', 'Im Chiew Ng'),
-	(15, '2024-08-26 12:43:45.184023+00', 'education-of-edward-bell-67', '4', 'Im Chiew Ng'),
-	(16, '2024-08-26 12:43:55.463211+00', 'education-of-robert-bennett-68', '4', 'Im Chiew Ng'),
-	(17, '2024-08-26 12:44:05.85538+00', 'education-of-james-c-berkeley-69', '4', 'Im Chiew Ng'),
-	(18, '2024-08-26 12:44:18.914858+00', 'education-of-robert-berkeley-70', '4', 'Im Chiew Ng'),
-	(19, '2024-08-26 20:18:16.82641+00', 'birth-of-george-blewitt-71', '4', 'Im Chiew Ng'),
-	(20, '2024-08-26 20:18:27.691143+00', 'birth-of-arthur-cecil-blunt-72', '4', 'Im Chiew Ng'),
-	(21, '2024-08-26 20:18:38.706322+00', 'birth-of-joseph-hf-blyth-73', '4', 'Im Chiew Ng'),
-	(22, '2024-08-26 20:18:53.508707+00', 'birth-of-joshua-j-bowness-74', '4', 'Im Chiew Ng'),
-	(23, '2024-08-26 20:19:03.13375+00', 'birth-of-george-nj-bradford-75', '4', 'Im Chiew Ng'),
-	(24, '2024-08-26 20:19:13.604508+00', 'birth-of-john-d-bradley-76', '4', 'Im Chiew Ng'),
-	(25, '2024-08-26 20:19:23.146911+00', 'birth-of-george-r-byron-77', '4', 'Im Chiew Ng'),
-	(26, '2024-08-26 20:19:31.727127+00', 'birth-of-william-hay-chapman-78', '4', 'Im Chiew Ng'),
-	(27, '2024-08-26 20:19:43.703463+00', 'education-of-george-blewitt-87', '4', 'Im Chiew Ng'),
-	(28, '2024-08-26 20:19:54.368518+00', 'education-of-arthur-cecil-blunt-88', '4', 'Im Chiew Ng'),
-	(29, '2024-08-26 20:20:03.606254+00', 'education-of-joseph-hf-blyth-89', '4', 'Im Chiew Ng'),
-	(30, '2024-08-26 20:20:14.114298+00', 'education-of-joshua-j-bowness-90', '4', 'Im Chiew Ng'),
-	(31, '2024-08-26 20:20:24.520832+00', 'education-of-george-nj-bradford-91', '4', 'Im Chiew Ng'),
-	(32, '2024-08-26 20:20:34.532003+00', 'education-of-john-d-bradley-92', '4', 'Im Chiew Ng'),
-	(34, '2024-08-26 20:21:09.627542+00', 'education-of-george-r-byron-93', '4', 'Im Chiew Ng'),
-	(35, '2024-08-26 20:21:18.456997+00', 'education-of-william-hay-chapman-94', '4', 'Im Chiew Ng'),
-	(36, '2024-08-29 16:24:07+00', 'birth-of-george-henry-law-11', '2', 'Arin Edwards'),
-	(37, '2024-08-29 16:24:57+00', 'birth-of-george-james-cholmondeley-15', '2', 'Arin Edwards'),
-	(38, '2024-08-29 16:25:58+00', 'birth-of-henry-bathurst-16', '2', 'Arin Edwards'),
-	(39, '2024-08-29 16:26:16+00', 'birth-of-henry-handley-norris-17', '2', 'Arin Edwards'),
-	(40, '2024-08-29 16:26:44+00', 'birth-of-henry-hugh-hoare-18', '2', 'Arin Edwards'),
-	(41, '2024-08-29 16:27:04+00', 'birth-of-lady-georgiana-charlotte-bertie-28', '2', 'Arin Edwards'),
-	(42, '2024-08-29 16:27:36+00', 'marriage-of-george-james-cholmondeley-and-lady-georgiana-charlotte-bertie-34', '2', 'Arin Edwards'),
-	(43, '2024-08-29 16:28:06+00', 'birth-of-grace-coote-bathurst-29', '2', 'Arin Edwards'),
-	(44, '2024-08-29 16:28:44+00', 'birth-of-catherine-henrietta-31', '2', 'Arin Edwards'),
-	(46, '2024-08-29 16:29:35+00', 'birth-of-maria-palmer-acland-32', '2', 'Arin Edwards'),
-	(47, '2024-08-29 16:30:25+00', 'marriage-of-george-henry-law-and-jane-adeane-33', '2', 'Arin Edwards'),
-	(48, '2024-08-29 16:31:01+00', 'marriage-of-henry-bathurst-and-grace-coote-35', '2', 'Arin Edwards'),
-	(49, '2024-08-29 16:31:36+00', 'marriage-of-henry-handley-norris-and-henrietta-catherine-36', '2', 'Arin Edwards'),
-	(50, '2024-08-29 16:32:08+00', 'marriage-of-henry-hugh-hoare-and-maria-palmer-acland-38', '2', 'Arin Edwards'),
-	(51, '2024-08-29 16:35:37+00', 'the-catholic-emancipation-40', '2', 'Arin Edwards'),
-	(52, '2024-08-29 16:36:41+00', 'birth-of-comyn-ching-58', '4', 'Arin Edwards'),
-	(53, '2024-08-29 16:36:53+00', 'birth-of-richard-w-cradock-103', '4', 'Arin Edwards'),
-	(54, '2024-08-29 16:37:35+00', 'comyn-ching-104', '4', 'Arin Edwards'),
-	(55, '2024-08-29 16:38:35+00', 'education-of-richard-w-cradock-105', '2', 'Arin Edwards');
+	(1, '2024-03-31 20:36:06.953839+00', 'creation-of-society-for-the-diffusion-of-useful-knowledge-3', '2- 1828: The financial and political networks which created King''s', 'Gillian Lamb'),
+	(36, '2024-08-29 16:24:07+00', 'birth-of-george-henry-law-11', '2- 1828: The financial and political networks which created King''s', 'Arin Edwards'),
+	(37, '2024-08-29 16:24:57+00', 'birth-of-george-james-cholmondeley-15', '2- 1828: The financial and political networks which created King''s', 'Arin Edwards'),
+	(38, '2024-08-29 16:25:58+00', 'birth-of-henry-bathurst-16', '2- 1828: The financial and political networks which created King''s', 'Arin Edwards'),
+	(39, '2024-08-29 16:26:16+00', 'birth-of-henry-handley-norris-17', '2- 1828: The financial and political networks which created King''s', 'Arin Edwards'),
+	(40, '2024-08-29 16:26:44+00', 'birth-of-henry-hugh-hoare-18', '2- 1828: The financial and political networks which created King''s', 'Arin Edwards'),
+	(41, '2024-08-29 16:27:04+00', 'birth-of-lady-georgiana-charlotte-bertie-28', '2- 1828: The financial and political networks which created King''s', 'Arin Edwards'),
+	(42, '2024-08-29 16:27:36+00', 'marriage-of-george-james-cholmondeley-and-lady-georgiana-charlotte-bertie-34', '2- 1828: The financial and political networks which created King''s', 'Arin Edwards'),
+	(43, '2024-08-29 16:28:06+00', 'birth-of-grace-coote-bathurst-29', '2- 1828: The financial and political networks which created King''s', 'Arin Edwards'),
+	(44, '2024-08-29 16:28:44+00', 'birth-of-catherine-henrietta-31', '2- 1828: The financial and political networks which created King''s', 'Arin Edwards'),
+	(46, '2024-08-29 16:29:35+00', 'birth-of-maria-palmer-acland-32', '2- 1828: The financial and political networks which created King''s', 'Arin Edwards'),
+	(47, '2024-08-29 16:30:25+00', 'marriage-of-george-henry-law-and-jane-adeane-33', '2- 1828: The financial and political networks which created King''s', 'Arin Edwards'),
+	(48, '2024-08-29 16:31:01+00', 'marriage-of-henry-bathurst-and-grace-coote-35', '2- 1828: The financial and political networks which created King''s', 'Arin Edwards'),
+	(49, '2024-08-29 16:31:36+00', 'marriage-of-henry-handley-norris-and-henrietta-catherine-36', '2- 1828: The financial and political networks which created King''s', 'Arin Edwards'),
+	(50, '2024-08-29 16:32:08+00', 'marriage-of-henry-hugh-hoare-and-maria-palmer-acland-38', '2- 1828: The financial and political networks which created King''s', 'Arin Edwards'),
+	(51, '2024-08-29 16:35:37+00', 'the-catholic-emancipation-40', '2- 1828: The financial and political networks which created King''s', 'Arin Edwards'),
+	(55, '2024-08-29 16:38:35+00', 'education-of-richard-w-cradock-105', '2- 1828: The financial and political networks which created King''s', 'Arin Edwards'),
+	(2, '2024-08-12 12:43:35+00', 'indian-rebellion-5', '4- 1857: War, nineteenth-century empire and Conservative empire', 'Jonah Miller'),
+	(3, '2024-08-21 11:23:54+00', 'crimean-war-47', '4- 1857: War, nineteenth-century empire and Conservative empire', 'Jonah Miller'),
+	(4, '2024-08-21 11:47:20+00', 'siege-of-sebastopol-48', '4- 1857: War, nineteenth-century empire and Conservative empire', 'Jonah Miller'),
+	(5, '2024-08-21 11:47:39+00', 'siege-of-lucknow-49', '4- 1857: War, nineteenth-century empire and Conservative empire', 'Jonah Miller'),
+	(6, '2024-08-26 12:10:01.022959+00', 'education-of-george-bannister-55', '4- 1857: War, nineteenth-century empire and Conservative empire', 'Im Chiew Ng'),
+	(7, '2024-08-26 12:10:10.933245+00', 'education-of-william-barr-56', '4- 1857: War, nineteenth-century empire and Conservative empire', 'Im Chiew Ng'),
+	(8, '2024-08-26 12:10:25.304341+00', 'education-of-julius-barras-57', '4- 1857: War, nineteenth-century empire and Conservative empire', 'Im Chiew Ng'),
+	(9, '2024-08-26 12:42:33.796212+00', 'birth-of-john-b-barker-61', '4- 1857: War, nineteenth-century empire and Conservative empire', 'Im Chiew Ng'),
+	(10, '2024-08-26 12:42:43.991778+00', 'education-of-john-b-barker-62', '4- 1857: War, nineteenth-century empire and Conservative empire', 'Im Chiew Ng'),
+	(11, '2024-08-26 12:42:54.709531+00', 'birth-of-edward-bell-63', '4- 1857: War, nineteenth-century empire and Conservative empire', 'Im Chiew Ng'),
+	(12, '2024-08-26 12:43:07.773468+00', 'birth-of-robert-bennett-64', '4- 1857: War, nineteenth-century empire and Conservative empire', 'Im Chiew Ng'),
+	(13, '2024-08-26 12:43:23.786378+00', 'birth-of-james-c-berkeley-65', '4- 1857: War, nineteenth-century empire and Conservative empire', 'Im Chiew Ng'),
+	(14, '2024-08-26 12:43:33.658524+00', 'birth-of-robert-berkeley-66', '4- 1857: War, nineteenth-century empire and Conservative empire', 'Im Chiew Ng'),
+	(15, '2024-08-26 12:43:45.184023+00', 'education-of-edward-bell-67', '4- 1857: War, nineteenth-century empire and Conservative empire', 'Im Chiew Ng'),
+	(16, '2024-08-26 12:43:55.463211+00', 'education-of-robert-bennett-68', '4- 1857: War, nineteenth-century empire and Conservative empire', 'Im Chiew Ng'),
+	(17, '2024-08-26 12:44:05.85538+00', 'education-of-james-c-berkeley-69', '4- 1857: War, nineteenth-century empire and Conservative empire', 'Im Chiew Ng'),
+	(18, '2024-08-26 12:44:18.914858+00', 'education-of-robert-berkeley-70', '4- 1857: War, nineteenth-century empire and Conservative empire', 'Im Chiew Ng'),
+	(19, '2024-08-26 20:18:16.82641+00', 'birth-of-george-blewitt-71', '4- 1857: War, nineteenth-century empire and Conservative empire', 'Im Chiew Ng'),
+	(20, '2024-08-26 20:18:27.691143+00', 'birth-of-arthur-cecil-blunt-72', '4- 1857: War, nineteenth-century empire and Conservative empire', 'Im Chiew Ng'),
+	(21, '2024-08-26 20:18:38.706322+00', 'birth-of-joseph-hf-blyth-73', '4- 1857: War, nineteenth-century empire and Conservative empire', 'Im Chiew Ng'),
+	(22, '2024-08-26 20:18:53.508707+00', 'birth-of-joshua-j-bowness-74', '4- 1857: War, nineteenth-century empire and Conservative empire', 'Im Chiew Ng'),
+	(23, '2024-08-26 20:19:03.13375+00', 'birth-of-george-nj-bradford-75', '4- 1857: War, nineteenth-century empire and Conservative empire', 'Im Chiew Ng'),
+	(24, '2024-08-26 20:19:13.604508+00', 'birth-of-john-d-bradley-76', '4- 1857: War, nineteenth-century empire and Conservative empire', 'Im Chiew Ng'),
+	(25, '2024-08-26 20:19:23.146911+00', 'birth-of-george-r-byron-77', '4- 1857: War, nineteenth-century empire and Conservative empire', 'Im Chiew Ng'),
+	(26, '2024-08-26 20:19:31.727127+00', 'birth-of-william-hay-chapman-78', '4- 1857: War, nineteenth-century empire and Conservative empire', 'Im Chiew Ng'),
+	(27, '2024-08-26 20:19:43.703463+00', 'education-of-george-blewitt-87', '4- 1857: War, nineteenth-century empire and Conservative empire', 'Im Chiew Ng'),
+	(28, '2024-08-26 20:19:54.368518+00', 'education-of-arthur-cecil-blunt-88', '4- 1857: War, nineteenth-century empire and Conservative empire', 'Im Chiew Ng'),
+	(29, '2024-08-26 20:20:03.606254+00', 'education-of-joseph-hf-blyth-89', '4- 1857: War, nineteenth-century empire and Conservative empire', 'Im Chiew Ng'),
+	(30, '2024-08-26 20:20:14.114298+00', 'education-of-joshua-j-bowness-90', '4- 1857: War, nineteenth-century empire and Conservative empire', 'Im Chiew Ng'),
+	(31, '2024-08-26 20:20:24.520832+00', 'education-of-george-nj-bradford-91', '4- 1857: War, nineteenth-century empire and Conservative empire', 'Im Chiew Ng'),
+	(32, '2024-08-26 20:20:34.532003+00', 'education-of-john-d-bradley-92', '4- 1857: War, nineteenth-century empire and Conservative empire', 'Im Chiew Ng'),
+	(34, '2024-08-26 20:21:09.627542+00', 'education-of-george-r-byron-93', '4- 1857: War, nineteenth-century empire and Conservative empire', 'Im Chiew Ng'),
+	(35, '2024-08-26 20:21:18.456997+00', 'education-of-william-hay-chapman-94', '4- 1857: War, nineteenth-century empire and Conservative empire', 'Im Chiew Ng'),
+	(52, '2024-08-29 16:36:41+00', 'birth-of-comyn-ching-58', '4- 1857: War, nineteenth-century empire and Conservative empire', 'Arin Edwards'),
+	(53, '2024-08-29 16:36:53+00', 'birth-of-richard-w-cradock-103', '4- 1857: War, nineteenth-century empire and Conservative empire', 'Arin Edwards'),
+	(54, '2024-08-29 16:37:35+00', 'comyn-ching-104', '4- 1857: War, nineteenth-century empire and Conservative empire', 'Arin Edwards');
 
 
 --
@@ -1985,19 +2004,19 @@ INSERT INTO "public"."occupation" ("id", "name", "created_at", "added_by") VALUE
 --
 
 INSERT INTO "public"."organisation_moment" ("id", "created_at", "organisation", "moment", "added_by") VALUES
-	(1, '2024-04-18 16:30:19.991788+00', 'eton-college-4', '2', 'Gillian Lamb'),
-	(2, '2024-04-18 16:30:33.807198+00', 'st-johns-cambridge-5', '2', 'Gillian Lamb'),
-	(3, '2024-04-18 16:30:47.262923+00', 'west-indian-company-10', '2', 'Gillian Lamb'),
-	(4, '2024-04-18 16:31:05.405647+00', 'charterhouse-11', '2', 'Gillian Lamb'),
-	(5, '2024-04-18 16:31:18.898669+00', 'harrow-16', '2', 'Gillian Lamb'),
-	(6, '2024-04-18 16:31:38.713659+00', 'lincolns-inn-17', '2', 'Gillian Lamb'),
-	(7, '2024-04-18 16:31:54.761351+00', 'great-northern-railway-9', '2', 'Gillian Lamb'),
-	(8, '2024-04-18 16:32:14.814325+00', 'el-dock-company-18', '2', 'Gillian Lamb'),
-	(9, '2024-04-18 16:32:29.822872+00', 'athaneum-24', '2', 'Gillian Lamb'),
-	(10, '2024-04-18 16:32:43.301962+00', 'greenwich-hospital-25', '2', 'Gillian Lamb'),
-	(11, '2024-04-18 16:32:58.725183+00', 'st-bartholomews-hospital-2', '2', 'Gillian Lamb'),
-	(12, '2024-04-18 16:33:23.516458+00', 'society-of-psychorolutes-3', '2', 'Gillian Lamb'),
-	(13, '2024-08-21 11:46:11+00', 'department-of-military-science-kings-college-london-48', '4', 'Jonah Miller');
+	(1, '2024-04-18 16:30:19.991788+00', 'eton-college-4', '2- 1828: The financial and political networks which created King''s', 'Gillian Lamb'),
+	(2, '2024-04-18 16:30:33.807198+00', 'st-johns-cambridge-5', '2- 1828: The financial and political networks which created King''s', 'Gillian Lamb'),
+	(3, '2024-04-18 16:30:47.262923+00', 'west-indian-company-10', '2- 1828: The financial and political networks which created King''s', 'Gillian Lamb'),
+	(4, '2024-04-18 16:31:05.405647+00', 'charterhouse-11', '2- 1828: The financial and political networks which created King''s', 'Gillian Lamb'),
+	(5, '2024-04-18 16:31:18.898669+00', 'harrow-16', '2- 1828: The financial and political networks which created King''s', 'Gillian Lamb'),
+	(6, '2024-04-18 16:31:38.713659+00', 'lincolns-inn-17', '2- 1828: The financial and political networks which created King''s', 'Gillian Lamb'),
+	(7, '2024-04-18 16:31:54.761351+00', 'great-northern-railway-9', '2- 1828: The financial and political networks which created King''s', 'Gillian Lamb'),
+	(8, '2024-04-18 16:32:14.814325+00', 'el-dock-company-18', '2- 1828: The financial and political networks which created King''s', 'Gillian Lamb'),
+	(9, '2024-04-18 16:32:29.822872+00', 'athaneum-24', '2- 1828: The financial and political networks which created King''s', 'Gillian Lamb'),
+	(10, '2024-04-18 16:32:43.301962+00', 'greenwich-hospital-25', '2- 1828: The financial and political networks which created King''s', 'Gillian Lamb'),
+	(11, '2024-04-18 16:32:58.725183+00', 'st-bartholomews-hospital-2', '2- 1828: The financial and political networks which created King''s', 'Gillian Lamb'),
+	(12, '2024-04-18 16:33:23.516458+00', 'society-of-psychorolutes-3', '2- 1828: The financial and political networks which created King''s', 'Gillian Lamb'),
+	(13, '2024-08-21 11:46:11+00', 'department-of-military-science-kings-college-london-48', '4- 1857: War, nineteenth-century empire and Conservative empire', 'Jonah Miller');
 
 
 --
@@ -2036,7 +2055,8 @@ INSERT INTO "public"."organisation_moment" ("id", "created_at", "organisation", 
 
 INSERT INTO "public"."person_feature" ("id", "created_at", "person", "image_url", "image_title", "image_description", "added_by") VALUES
 	(1, '2024-06-27 13:57:27.059276+00', 'william-cotton-160', 'https://upload.wikimedia.org/wikipedia/commons/7/7d/William_Cotton_by_Matthew_Noble_1855.JPG', 'William Cotton by Matthew Noble 1855', 'Bust of William Cotton', NULL),
-	(2, '2024-06-27 14:40:37.888768+00', 'sir-robert-peel-138', 'https://upload.wikimedia.org/wikipedia/commons/c/c1/Sir_Robert_Peel%2C_2nd_Bt_by_John_Linnell.jpg', 'Sir Robert Peel, 2nd Bt, by John Linnell', 'Painting of Sir Robert Peel, from the National Portrait Gallery, London', NULL);
+	(2, '2024-06-27 14:40:37.888768+00', 'sir-robert-peel-138', 'https://upload.wikimedia.org/wikipedia/commons/c/c1/Sir_Robert_Peel%2C_2nd_Bt_by_John_Linnell.jpg', 'Sir Robert Peel, 2nd Bt, by John Linnell', 'Painting of Sir Robert Peel, from the National Portrait Gallery, London', NULL),
+	(3, '2024-10-15 19:59:22.023963+00', 'tomas-garrigue-masaryk-360', 'https://cdn.britannica.com/38/133538-050-668FB114/Tomas-Masaryk.jpg', 'Tomáš Masaryk', 'Tomáš Masaryk - Photo; Encyclopædia Britannica, Inc.', 'Erika Melek Delgado');
 
 
 --
@@ -2236,6 +2256,12 @@ INSERT INTO "public"."person_knows" ("id", "created_at", "person", "knows", "add
 -- Data for Name: person_language; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
+INSERT INTO "public"."person_language" ("id", "created_at", "language", "added_by", "person") VALUES
+	(1, '2024-10-15 19:50:32+00', 'Slovak', 'Erika Melek Delgado', 'tomas-garrigue-masaryk-360'),
+	(2, '2024-10-15 19:50:43+00', 'German', 'Erika Melek Delgado', 'tomas-garrigue-masaryk-360'),
+	(3, '2024-10-15 19:51:26+00', 'Russian', 'Erika Melek Delgado', 'tomas-garrigue-masaryk-360'),
+	(4, '2024-10-15 19:52:08+00', 'French', 'Erika Melek Delgado', 'tomas-garrigue-masaryk-360'),
+	(5, '2024-10-15 19:52:36+00', 'English', 'Erika Melek Delgado', 'tomas-garrigue-masaryk-360');
 
 
 --
@@ -2475,114 +2501,115 @@ INSERT INTO "public"."person_member_of" ("id", "created_at", "person", "organisa
 --
 
 INSERT INTO "public"."person_moment" ("id", "created_at", "person", "moment", "added_by") VALUES
-	(1, '2024-03-21 11:14:44.002332+00', 'richard-edward-arden-2', '2', NULL),
-	(2, '2024-03-21 11:14:57.085739+00', 'lord-arden-1', '2', NULL),
-	(3, '2024-03-21 11:15:45.037152+00', 'lancelot-shadwell-102', '2', NULL),
-	(4, '2024-03-21 11:15:59.983757+00', 'nicholas-conyngham-tyndal-103', '2', NULL),
-	(5, '2024-03-21 11:16:11.860682+00', 'william-astell-104', '2', NULL),
-	(6, '2024-03-21 11:16:35.570322+00', 'john-atkins-105', '2', NULL),
-	(7, '2024-03-21 11:16:47.731123+00', 'christopher-benson-106', '2', NULL),
-	(8, '2024-03-21 11:17:05.150608+00', 'benjamin-collins-brodie-107', '2', NULL),
-	(9, '2024-03-21 11:17:18.359446+00', 'archdeacon-cambridge-108', '2', NULL),
-	(10, '2024-03-21 11:17:33.665058+00', 'astley-p-cooper-109', '2', NULL),
-	(11, '2024-03-21 11:18:20.896402+00', 'george-doyley-111', '2', NULL),
-	(12, '2024-06-27 15:04:53.298043+00', 'william-cotton-160', '2', NULL),
-	(13, '2024-08-12 12:40:31+00', 'arthur-angelo-174', '4', 'Jonah Miller'),
-	(14, '2024-08-16 13:05:42.130128+00', 'duke-of-wellington-137', '2', 'Ariunzaya Batkhuyag'),
-	(15, '2024-08-16 14:28:40+00', 'william-roger-snow-196', '4', 'Jonah Miller'),
-	(16, '2024-08-16 15:06:25+00', 'edmund-staveley-197', '4', 'Jonah Miller'),
-	(17, '2024-08-16 15:28:07+00', 'charles-doyne-anderson-straker-198', '4', 'Jonah Miller'),
-	(18, '2024-08-16 15:46:47+00', 'roger-swire-199', '4', 'Jonah Miller'),
-	(19, '2024-08-20 16:56:04.454744+00', 'patrick-bell-186', '2', 'Ariunzaya Batkhuyag'),
-	(20, '2024-08-20 18:55:19.40531+00', 'bowyer-edward-sparke-187', '2', 'Ariunzaya Batkhuyag'),
-	(21, '2024-08-20 18:55:37.064057+00', 'c-m-sutton-188', '2', 'Ariunzaya Batkhuyag'),
-	(22, '2024-08-20 18:55:57.913233+00', 'charles-r-sumner-189', '2', 'Ariunzaya Batkhuyag'),
-	(23, '2024-08-20 18:56:15.972494+00', 'henry-william-majendie-245', '2', 'Ariunzaya Batkhuyag'),
-	(24, '2024-08-21 17:47:16+00', 'jane-adeane-184', '2', 'Arin Edwards'),
-	(25, '2024-08-21 17:47:43+00', 'george-henry-law-182', '2', 'Arin Edwards'),
-	(26, '2024-08-21 17:48:07+00', 'george-james-cholmondeley-190', '2', 'Arin Edwards'),
-	(27, '2024-08-21 17:48:57+00', 'lady-georgiana-charlotte-bertie-191', '2', 'Arin Edwards'),
-	(28, '2024-08-21 17:49:28+00', 'henry-bathurst-193', '2', 'Arin Edwards'),
-	(29, '2024-08-21 17:52:51+00', 'henry-handley-norris-194', '2', 'Arin Edwards'),
-	(30, '2024-08-21 17:53:16+00', 'henry-hugh-hoare-195', '2', 'Arin Edwards'),
-	(31, '2024-08-21 17:56:42+00', 'grace-coote-200', '2', 'Arin Edwards'),
-	(32, '2024-08-21 17:57:24+00', 'catherine-henrietta-201', '2', 'Arin Edwards'),
-	(33, '2024-08-21 17:57:55+00', 'maria-palmer-acland-202', '2', 'Arin Edwards'),
-	(34, '2024-08-21 17:58:18+00', 'isaac-milner-203', '2', 'Arin Edwards'),
-	(35, '2024-08-21 17:58:49+00', 'edward-law-204', '2', 'Arin Edwards'),
-	(36, '2024-08-21 17:59:16+00', 'gertrude-mahon-206', '2', 'Arin Edwards'),
-	(37, '2024-08-21 17:59:45+00', 'grace-dalrymple-elliott-207', '2', 'Arin Edwards'),
-	(38, '2024-08-21 18:00:01+00', 'edward-smith-stanley-208', '2', 'Arin Edwards'),
-	(39, '2024-08-21 18:00:30+00', 'george-vancouver-209', '2', 'Arin Edwards'),
-	(40, '2024-08-21 18:00:58+00', 'thomas-coke-of-holkham-210', '2', 'Arin Edwards'),
-	(41, '2024-08-21 18:01:14+00', 'richard-prosser-211', '2', 'Arin Edwards'),
-	(42, '2024-08-21 18:10:36+00', 'charles-lloyd-212', '2', 'Arin Edwards'),
-	(43, '2024-08-21 18:10:59+00', 'john-henry-hobart-213', '2', 'Arin Edwards'),
-	(44, '2024-08-21 18:11:34+00', 'john-henry-hobart-213', '2', 'Arin Edwards'),
-	(45, '2024-08-21 18:12:05+00', 'john-jebb-214', '2', 'Arin Edwards'),
-	(46, '2024-08-21 18:12:35+00', 'charles-james-blomfield-215', '2', 'Arin Edwards'),
-	(47, '2024-08-21 18:12:56+00', 'lord-liverpool-216', '2', 'Arin Edwards'),
-	(48, '2024-08-21 18:13:21+00', 'dr-hawks-217', '2', 'Arin Edwards'),
-	(49, '2024-08-21 18:13:48+00', 'thomas-mozley-218', '2', 'Arin Edwards'),
-	(50, '2024-08-21 18:14:07+00', 'thomas-willement-219', '2', 'Arin Edwards'),
-	(51, '2024-08-21 18:14:32+00', 'lord-charles-fitzroy-220', '2', 'Arin Edwards'),
-	(52, '2024-08-21 18:14:48+00', 'george-elphinstone-keith-221', '2', 'Arin Edwards'),
-	(53, '2024-08-26 11:53:39.326714+00', 'george-bannister-175', '4', 'Im Chiew Ng'),
-	(54, '2024-08-26 12:01:41.918802+00', 'julius-barras-177', '4', 'Im Chiew Ng'),
-	(55, '2024-08-26 12:02:01.743564+00', 'william-barr-176', '4', 'Im Chiew Ng'),
-	(56, '2024-08-26 12:13:10+00', 'comyn-ching-254', '4', 'Arin Edwards'),
-	(57, '2024-08-26 12:18:36.922187+00', 'john-b-barker-255', '4', 'Im Chiew Ng'),
-	(58, '2024-08-26 12:18:49.391023+00', 'edward-bell-256', '4', 'Im Chiew Ng'),
-	(59, '2024-08-26 12:19:00.287698+00', 'robert-bennett-257', '4', 'Im Chiew Ng'),
-	(60, '2024-08-26 12:19:12.585199+00', 'james-c-berkeley-258', '4', 'Im Chiew Ng'),
-	(61, '2024-08-26 12:19:24.154898+00', 'robert-berkeley-259', '4', 'Im Chiew Ng'),
-	(62, '2024-08-26 20:12:11.459049+00', 'george-blewitt-260', '4', 'Im Chiew Ng'),
-	(63, '2024-08-26 20:12:27.42715+00', 'arthur-cecil-blunt-261', '4', 'Im Chiew Ng'),
-	(64, '2024-08-26 20:12:42.499904+00', 'joseph-hf-blyth-262', '4', 'Im Chiew Ng'),
-	(65, '2024-08-26 20:13:01.97592+00', 'joshua-j-bowness-266', '4', 'Im Chiew Ng'),
-	(66, '2024-08-26 20:13:16.700503+00', 'george-nj-bradford-267', '4', 'Im Chiew Ng'),
-	(67, '2024-08-26 20:13:29.925286+00', 'john-d-bradley-268', '4', 'Im Chiew Ng'),
-	(68, '2024-08-26 20:13:41.53296+00', 'george-r-byron-269', '4', 'Im Chiew Ng'),
-	(69, '2024-08-26 20:13:55.871355+00', 'william-hay-chapman-270', '4', 'Im Chiew Ng'),
-	(70, '2024-08-27 09:09:14+00', 'arthur-manning-tuck-271', '4', 'Jonah Miller'),
-	(71, '2024-08-27 09:27:29+00', 'granville-waddilove-273', '4', 'Jonah Miller'),
-	(72, '2024-08-29 18:00:56+00', 'richard-w-cradock-274', '4', 'Arin Edwards'),
-	(73, '2024-08-29 18:06:09+00', 'charles-fw-cuffe-275', '4', 'Arin Edwards'),
-	(74, '2024-09-02 09:44:23+00', 'john-tindal-de-veulle-276', '4', 'Arin Edwards'),
-	(75, '2024-09-07 13:32:31+00', 'j-des-barres-277', '4', 'Arin Edwards'),
-	(76, '2024-09-12 11:33:59+00', 'thomas-wc-dickinson-299', '4', 'Arin Edwards'),
-	(77, '2024-09-13 13:04:40.737705+00', 'john-george-de-la-poer-beresford-280', '2', 'Ariunzaya Batkhuyag'),
-	(78, '2024-09-13 13:09:32.301711+00', 'sir-james-bart-langham-284', '2', 'Ariunzaya Batkhuyag'),
-	(79, '2024-09-13 13:13:10.901254+00', 'john-banks-jenkinson-285', '2', 'Ariunzaya Batkhuyag'),
-	(80, '2024-09-13 13:17:39.986446+00', 'earl-brownlow-287', '2', 'Ariunzaya Batkhuyag'),
-	(81, '2024-09-13 13:26:43.826366+00', 'john-ireland-290', '2', 'Ariunzaya Batkhuyag'),
-	(82, '2024-09-13 13:30:37.951826+00', 'john-kaye-292', '2', 'Ariunzaya Batkhuyag'),
-	(83, '2024-09-13 13:36:12.089413+00', 'john-luxmoore-293', '2', 'Ariunzaya Batkhuyag'),
-	(84, '2024-09-13 13:42:36.164114+00', 'john-manners-233', '2', 'Ariunzaya Batkhuyag'),
-	(85, '2024-09-13 13:53:38.405177+00', 'joshua-watson-303', '2', 'Ariunzaya Batkhuyag'),
-	(86, '2024-09-13 13:57:07.981848+00', 'lord-crewe-304', '2', 'Ariunzaya Batkhuyag'),
-	(87, '2024-09-13 14:02:07.651282+00', 'lord-kenyon-296', '2', 'Ariunzaya Batkhuyag'),
-	(88, '2024-09-13 14:06:40.429769+00', 'lord-rolle-300', '2', 'Ariunzaya Batkhuyag'),
-	(89, '2024-09-13 14:11:54.591931+00', 'marquess-of-bristol-298', '2', 'Ariunzaya Batkhuyag'),
-	(90, '2024-09-21 16:07:04.017931+00', 'john-crichton-stuart-311', '2', 'Ariunzaya Batkhuyag'),
-	(91, '2024-09-21 16:38:04.822757+00', 'george-horatio-cholmondeley-315', '2', 'Ariunzaya Batkhuyag'),
-	(92, '2024-09-21 18:16:39.325952+00', 'elisabeth-sophia-lawrence-319', '2', 'Ariunzaya Batkhuyag'),
-	(93, '2024-09-21 18:16:58.964097+00', 'richard-fountayne-wilson-320', '2', 'Ariunzaya Batkhuyag'),
-	(94, '2024-09-21 18:17:13.940169+00', 'richard-bagot-323', '2', 'Ariunzaya Batkhuyag'),
-	(95, '2024-09-21 18:17:30.276645+00', 'richard-prosser-324', '2', 'Ariunzaya Batkhuyag'),
-	(96, '2024-09-21 18:32:52.371316+00', 'richard-william-penn-curzon-howe-326', '2', 'Ariunzaya Batkhuyag'),
-	(97, '2024-09-22 14:49:07.721606+00', 'robert-james-carr-328', '2', 'Ariunzaya Batkhuyag'),
-	(98, '2024-09-22 14:56:20.786043+00', 'sir-robert-peel-138', '2', 'Ariunzaya Batkhuyag'),
-	(99, '2024-09-22 15:26:40.527299+00', 'thomas-burgess-334', '2', 'Ariunzaya Batkhuyag'),
-	(100, '2024-09-22 16:09:15.554186+00', 'walter-francis-montagu-douglas-scott-337', '2', 'Ariunzaya Batkhuyag'),
-	(101, '2024-09-22 16:17:22.526401+00', 'william-carey-338', '2', 'Ariunzaya Batkhuyag'),
-	(102, '2024-09-23 10:38:31.203129+00', 'william-howley-342', '2', 'Ariunzaya Batkhuyag'),
-	(103, '2024-09-23 13:20:25.809432+00', 'william-van-mildert-348', '2', 'Ariunzaya Batkhuyag'),
-	(104, '2024-09-23 15:47:12.922818+00', 'thomas-sikes-351', '2', 'Ariunzaya Batkhuyag'),
-	(105, '2024-09-23 15:48:18.854344+00', 'rev-dr-richards-352', '2', 'Ariunzaya Batkhuyag'),
-	(106, '2024-09-23 15:50:21.272284+00', 'messrs-drummonds-353', '2', 'Ariunzaya Batkhuyag'),
-	(107, '2024-09-23 15:51:13.264262+00', 'messrs-hoares-354', '2', 'Ariunzaya Batkhuyag'),
-	(108, '2024-09-23 15:52:52.3247+00', 'rev-j-m-rogers-355', '2', NULL);
+	(109, '2024-10-15 20:15:46+00', 'tomas-garrigue-masaryk-360', '9 - 1919: Crises of Empire', 'Erika Melek Delgado'),
+	(13, '2024-08-12 12:40:31+00', 'arthur-angelo-174', '4- 1857: War, nineteenth-century empire and Conservative empire', 'Jonah Miller'),
+	(15, '2024-08-16 14:28:40+00', 'william-roger-snow-196', '4- 1857: War, nineteenth-century empire and Conservative empire', 'Jonah Miller'),
+	(16, '2024-08-16 15:06:25+00', 'edmund-staveley-197', '4- 1857: War, nineteenth-century empire and Conservative empire', 'Jonah Miller'),
+	(17, '2024-08-16 15:28:07+00', 'charles-doyne-anderson-straker-198', '4- 1857: War, nineteenth-century empire and Conservative empire', 'Jonah Miller'),
+	(18, '2024-08-16 15:46:47+00', 'roger-swire-199', '4- 1857: War, nineteenth-century empire and Conservative empire', 'Jonah Miller'),
+	(53, '2024-08-26 11:53:39.326714+00', 'george-bannister-175', '4- 1857: War, nineteenth-century empire and Conservative empire', 'Im Chiew Ng'),
+	(54, '2024-08-26 12:01:41.918802+00', 'julius-barras-177', '4- 1857: War, nineteenth-century empire and Conservative empire', 'Im Chiew Ng'),
+	(55, '2024-08-26 12:02:01.743564+00', 'william-barr-176', '4- 1857: War, nineteenth-century empire and Conservative empire', 'Im Chiew Ng'),
+	(56, '2024-08-26 12:13:10+00', 'comyn-ching-254', '4- 1857: War, nineteenth-century empire and Conservative empire', 'Arin Edwards'),
+	(57, '2024-08-26 12:18:36.922187+00', 'john-b-barker-255', '4- 1857: War, nineteenth-century empire and Conservative empire', 'Im Chiew Ng'),
+	(58, '2024-08-26 12:18:49.391023+00', 'edward-bell-256', '4- 1857: War, nineteenth-century empire and Conservative empire', 'Im Chiew Ng'),
+	(59, '2024-08-26 12:19:00.287698+00', 'robert-bennett-257', '4- 1857: War, nineteenth-century empire and Conservative empire', 'Im Chiew Ng'),
+	(60, '2024-08-26 12:19:12.585199+00', 'james-c-berkeley-258', '4- 1857: War, nineteenth-century empire and Conservative empire', 'Im Chiew Ng'),
+	(61, '2024-08-26 12:19:24.154898+00', 'robert-berkeley-259', '4- 1857: War, nineteenth-century empire and Conservative empire', 'Im Chiew Ng'),
+	(62, '2024-08-26 20:12:11.459049+00', 'george-blewitt-260', '4- 1857: War, nineteenth-century empire and Conservative empire', 'Im Chiew Ng'),
+	(63, '2024-08-26 20:12:27.42715+00', 'arthur-cecil-blunt-261', '4- 1857: War, nineteenth-century empire and Conservative empire', 'Im Chiew Ng'),
+	(64, '2024-08-26 20:12:42.499904+00', 'joseph-hf-blyth-262', '4- 1857: War, nineteenth-century empire and Conservative empire', 'Im Chiew Ng'),
+	(65, '2024-08-26 20:13:01.97592+00', 'joshua-j-bowness-266', '4- 1857: War, nineteenth-century empire and Conservative empire', 'Im Chiew Ng'),
+	(66, '2024-08-26 20:13:16.700503+00', 'george-nj-bradford-267', '4- 1857: War, nineteenth-century empire and Conservative empire', 'Im Chiew Ng'),
+	(67, '2024-08-26 20:13:29.925286+00', 'john-d-bradley-268', '4- 1857: War, nineteenth-century empire and Conservative empire', 'Im Chiew Ng'),
+	(68, '2024-08-26 20:13:41.53296+00', 'george-r-byron-269', '4- 1857: War, nineteenth-century empire and Conservative empire', 'Im Chiew Ng'),
+	(69, '2024-08-26 20:13:55.871355+00', 'william-hay-chapman-270', '4- 1857: War, nineteenth-century empire and Conservative empire', 'Im Chiew Ng'),
+	(70, '2024-08-27 09:09:14+00', 'arthur-manning-tuck-271', '4- 1857: War, nineteenth-century empire and Conservative empire', 'Jonah Miller'),
+	(71, '2024-08-27 09:27:29+00', 'granville-waddilove-273', '4- 1857: War, nineteenth-century empire and Conservative empire', 'Jonah Miller'),
+	(72, '2024-08-29 18:00:56+00', 'richard-w-cradock-274', '4- 1857: War, nineteenth-century empire and Conservative empire', 'Arin Edwards'),
+	(73, '2024-08-29 18:06:09+00', 'charles-fw-cuffe-275', '4- 1857: War, nineteenth-century empire and Conservative empire', 'Arin Edwards'),
+	(74, '2024-09-02 09:44:23+00', 'john-tindal-de-veulle-276', '4- 1857: War, nineteenth-century empire and Conservative empire', 'Arin Edwards'),
+	(75, '2024-09-07 13:32:31+00', 'j-des-barres-277', '4- 1857: War, nineteenth-century empire and Conservative empire', 'Arin Edwards'),
+	(76, '2024-09-12 11:33:59+00', 'thomas-wc-dickinson-299', '4- 1857: War, nineteenth-century empire and Conservative empire', 'Arin Edwards'),
+	(1, '2024-03-21 11:14:44.002332+00', 'richard-edward-arden-2', '2- 1828: The financial and political networks which created King''s', NULL),
+	(2, '2024-03-21 11:14:57.085739+00', 'lord-arden-1', '2- 1828: The financial and political networks which created King''s', NULL),
+	(3, '2024-03-21 11:15:45.037152+00', 'lancelot-shadwell-102', '2- 1828: The financial and political networks which created King''s', NULL),
+	(4, '2024-03-21 11:15:59.983757+00', 'nicholas-conyngham-tyndal-103', '2- 1828: The financial and political networks which created King''s', NULL),
+	(5, '2024-03-21 11:16:11.860682+00', 'william-astell-104', '2- 1828: The financial and political networks which created King''s', NULL),
+	(6, '2024-03-21 11:16:35.570322+00', 'john-atkins-105', '2- 1828: The financial and political networks which created King''s', NULL),
+	(7, '2024-03-21 11:16:47.731123+00', 'christopher-benson-106', '2- 1828: The financial and political networks which created King''s', NULL),
+	(8, '2024-03-21 11:17:05.150608+00', 'benjamin-collins-brodie-107', '2- 1828: The financial and political networks which created King''s', NULL),
+	(9, '2024-03-21 11:17:18.359446+00', 'archdeacon-cambridge-108', '2- 1828: The financial and political networks which created King''s', NULL),
+	(10, '2024-03-21 11:17:33.665058+00', 'astley-p-cooper-109', '2- 1828: The financial and political networks which created King''s', NULL),
+	(11, '2024-03-21 11:18:20.896402+00', 'george-doyley-111', '2- 1828: The financial and political networks which created King''s', NULL),
+	(12, '2024-06-27 15:04:53.298043+00', 'william-cotton-160', '2- 1828: The financial and political networks which created King''s', NULL),
+	(14, '2024-08-16 13:05:42.130128+00', 'duke-of-wellington-137', '2- 1828: The financial and political networks which created King''s', 'Ariunzaya Batkhuyag'),
+	(19, '2024-08-20 16:56:04.454744+00', 'patrick-bell-186', '2- 1828: The financial and political networks which created King''s', 'Ariunzaya Batkhuyag'),
+	(20, '2024-08-20 18:55:19.40531+00', 'bowyer-edward-sparke-187', '2- 1828: The financial and political networks which created King''s', 'Ariunzaya Batkhuyag'),
+	(21, '2024-08-20 18:55:37.064057+00', 'c-m-sutton-188', '2- 1828: The financial and political networks which created King''s', 'Ariunzaya Batkhuyag'),
+	(22, '2024-08-20 18:55:57.913233+00', 'charles-r-sumner-189', '2- 1828: The financial and political networks which created King''s', 'Ariunzaya Batkhuyag'),
+	(23, '2024-08-20 18:56:15.972494+00', 'henry-william-majendie-245', '2- 1828: The financial and political networks which created King''s', 'Ariunzaya Batkhuyag'),
+	(24, '2024-08-21 17:47:16+00', 'jane-adeane-184', '2- 1828: The financial and political networks which created King''s', 'Arin Edwards'),
+	(25, '2024-08-21 17:47:43+00', 'george-henry-law-182', '2- 1828: The financial and political networks which created King''s', 'Arin Edwards'),
+	(26, '2024-08-21 17:48:07+00', 'george-james-cholmondeley-190', '2- 1828: The financial and political networks which created King''s', 'Arin Edwards'),
+	(27, '2024-08-21 17:48:57+00', 'lady-georgiana-charlotte-bertie-191', '2- 1828: The financial and political networks which created King''s', 'Arin Edwards'),
+	(28, '2024-08-21 17:49:28+00', 'henry-bathurst-193', '2- 1828: The financial and political networks which created King''s', 'Arin Edwards'),
+	(29, '2024-08-21 17:52:51+00', 'henry-handley-norris-194', '2- 1828: The financial and political networks which created King''s', 'Arin Edwards'),
+	(30, '2024-08-21 17:53:16+00', 'henry-hugh-hoare-195', '2- 1828: The financial and political networks which created King''s', 'Arin Edwards'),
+	(31, '2024-08-21 17:56:42+00', 'grace-coote-200', '2- 1828: The financial and political networks which created King''s', 'Arin Edwards'),
+	(32, '2024-08-21 17:57:24+00', 'catherine-henrietta-201', '2- 1828: The financial and political networks which created King''s', 'Arin Edwards'),
+	(33, '2024-08-21 17:57:55+00', 'maria-palmer-acland-202', '2- 1828: The financial and political networks which created King''s', 'Arin Edwards'),
+	(34, '2024-08-21 17:58:18+00', 'isaac-milner-203', '2- 1828: The financial and political networks which created King''s', 'Arin Edwards'),
+	(35, '2024-08-21 17:58:49+00', 'edward-law-204', '2- 1828: The financial and political networks which created King''s', 'Arin Edwards'),
+	(36, '2024-08-21 17:59:16+00', 'gertrude-mahon-206', '2- 1828: The financial and political networks which created King''s', 'Arin Edwards'),
+	(37, '2024-08-21 17:59:45+00', 'grace-dalrymple-elliott-207', '2- 1828: The financial and political networks which created King''s', 'Arin Edwards'),
+	(38, '2024-08-21 18:00:01+00', 'edward-smith-stanley-208', '2- 1828: The financial and political networks which created King''s', 'Arin Edwards'),
+	(39, '2024-08-21 18:00:30+00', 'george-vancouver-209', '2- 1828: The financial and political networks which created King''s', 'Arin Edwards'),
+	(40, '2024-08-21 18:00:58+00', 'thomas-coke-of-holkham-210', '2- 1828: The financial and political networks which created King''s', 'Arin Edwards'),
+	(41, '2024-08-21 18:01:14+00', 'richard-prosser-211', '2- 1828: The financial and political networks which created King''s', 'Arin Edwards'),
+	(42, '2024-08-21 18:10:36+00', 'charles-lloyd-212', '2- 1828: The financial and political networks which created King''s', 'Arin Edwards'),
+	(43, '2024-08-21 18:10:59+00', 'john-henry-hobart-213', '2- 1828: The financial and political networks which created King''s', 'Arin Edwards'),
+	(44, '2024-08-21 18:11:34+00', 'john-henry-hobart-213', '2- 1828: The financial and political networks which created King''s', 'Arin Edwards'),
+	(45, '2024-08-21 18:12:05+00', 'john-jebb-214', '2- 1828: The financial and political networks which created King''s', 'Arin Edwards'),
+	(46, '2024-08-21 18:12:35+00', 'charles-james-blomfield-215', '2- 1828: The financial and political networks which created King''s', 'Arin Edwards'),
+	(47, '2024-08-21 18:12:56+00', 'lord-liverpool-216', '2- 1828: The financial and political networks which created King''s', 'Arin Edwards'),
+	(48, '2024-08-21 18:13:21+00', 'dr-hawks-217', '2- 1828: The financial and political networks which created King''s', 'Arin Edwards'),
+	(49, '2024-08-21 18:13:48+00', 'thomas-mozley-218', '2- 1828: The financial and political networks which created King''s', 'Arin Edwards'),
+	(50, '2024-08-21 18:14:07+00', 'thomas-willement-219', '2- 1828: The financial and political networks which created King''s', 'Arin Edwards'),
+	(51, '2024-08-21 18:14:32+00', 'lord-charles-fitzroy-220', '2- 1828: The financial and political networks which created King''s', 'Arin Edwards'),
+	(52, '2024-08-21 18:14:48+00', 'george-elphinstone-keith-221', '2- 1828: The financial and political networks which created King''s', 'Arin Edwards'),
+	(77, '2024-09-13 13:04:40.737705+00', 'john-george-de-la-poer-beresford-280', '2- 1828: The financial and political networks which created King''s', 'Ariunzaya Batkhuyag'),
+	(78, '2024-09-13 13:09:32.301711+00', 'sir-james-bart-langham-284', '2- 1828: The financial and political networks which created King''s', 'Ariunzaya Batkhuyag'),
+	(79, '2024-09-13 13:13:10.901254+00', 'john-banks-jenkinson-285', '2- 1828: The financial and political networks which created King''s', 'Ariunzaya Batkhuyag'),
+	(80, '2024-09-13 13:17:39.986446+00', 'earl-brownlow-287', '2- 1828: The financial and political networks which created King''s', 'Ariunzaya Batkhuyag'),
+	(81, '2024-09-13 13:26:43.826366+00', 'john-ireland-290', '2- 1828: The financial and political networks which created King''s', 'Ariunzaya Batkhuyag'),
+	(82, '2024-09-13 13:30:37.951826+00', 'john-kaye-292', '2- 1828: The financial and political networks which created King''s', 'Ariunzaya Batkhuyag'),
+	(83, '2024-09-13 13:36:12.089413+00', 'john-luxmoore-293', '2- 1828: The financial and political networks which created King''s', 'Ariunzaya Batkhuyag'),
+	(84, '2024-09-13 13:42:36.164114+00', 'john-manners-233', '2- 1828: The financial and political networks which created King''s', 'Ariunzaya Batkhuyag'),
+	(85, '2024-09-13 13:53:38.405177+00', 'joshua-watson-303', '2- 1828: The financial and political networks which created King''s', 'Ariunzaya Batkhuyag'),
+	(86, '2024-09-13 13:57:07.981848+00', 'lord-crewe-304', '2- 1828: The financial and political networks which created King''s', 'Ariunzaya Batkhuyag'),
+	(87, '2024-09-13 14:02:07.651282+00', 'lord-kenyon-296', '2- 1828: The financial and political networks which created King''s', 'Ariunzaya Batkhuyag'),
+	(88, '2024-09-13 14:06:40.429769+00', 'lord-rolle-300', '2- 1828: The financial and political networks which created King''s', 'Ariunzaya Batkhuyag'),
+	(89, '2024-09-13 14:11:54.591931+00', 'marquess-of-bristol-298', '2- 1828: The financial and political networks which created King''s', 'Ariunzaya Batkhuyag'),
+	(90, '2024-09-21 16:07:04.017931+00', 'john-crichton-stuart-311', '2- 1828: The financial and political networks which created King''s', 'Ariunzaya Batkhuyag'),
+	(91, '2024-09-21 16:38:04.822757+00', 'george-horatio-cholmondeley-315', '2- 1828: The financial and political networks which created King''s', 'Ariunzaya Batkhuyag'),
+	(92, '2024-09-21 18:16:39.325952+00', 'elisabeth-sophia-lawrence-319', '2- 1828: The financial and political networks which created King''s', 'Ariunzaya Batkhuyag'),
+	(93, '2024-09-21 18:16:58.964097+00', 'richard-fountayne-wilson-320', '2- 1828: The financial and political networks which created King''s', 'Ariunzaya Batkhuyag'),
+	(94, '2024-09-21 18:17:13.940169+00', 'richard-bagot-323', '2- 1828: The financial and political networks which created King''s', 'Ariunzaya Batkhuyag'),
+	(95, '2024-09-21 18:17:30.276645+00', 'richard-prosser-324', '2- 1828: The financial and political networks which created King''s', 'Ariunzaya Batkhuyag'),
+	(96, '2024-09-21 18:32:52.371316+00', 'richard-william-penn-curzon-howe-326', '2- 1828: The financial and political networks which created King''s', 'Ariunzaya Batkhuyag'),
+	(97, '2024-09-22 14:49:07.721606+00', 'robert-james-carr-328', '2- 1828: The financial and political networks which created King''s', 'Ariunzaya Batkhuyag'),
+	(98, '2024-09-22 14:56:20.786043+00', 'sir-robert-peel-138', '2- 1828: The financial and political networks which created King''s', 'Ariunzaya Batkhuyag'),
+	(99, '2024-09-22 15:26:40.527299+00', 'thomas-burgess-334', '2- 1828: The financial and political networks which created King''s', 'Ariunzaya Batkhuyag'),
+	(100, '2024-09-22 16:09:15.554186+00', 'walter-francis-montagu-douglas-scott-337', '2- 1828: The financial and political networks which created King''s', 'Ariunzaya Batkhuyag'),
+	(101, '2024-09-22 16:17:22.526401+00', 'william-carey-338', '2- 1828: The financial and political networks which created King''s', 'Ariunzaya Batkhuyag'),
+	(102, '2024-09-23 10:38:31.203129+00', 'william-howley-342', '2- 1828: The financial and political networks which created King''s', 'Ariunzaya Batkhuyag'),
+	(103, '2024-09-23 13:20:25.809432+00', 'william-van-mildert-348', '2- 1828: The financial and political networks which created King''s', 'Ariunzaya Batkhuyag'),
+	(104, '2024-09-23 15:47:12.922818+00', 'thomas-sikes-351', '2- 1828: The financial and political networks which created King''s', 'Ariunzaya Batkhuyag'),
+	(105, '2024-09-23 15:48:18.854344+00', 'rev-dr-richards-352', '2- 1828: The financial and political networks which created King''s', 'Ariunzaya Batkhuyag'),
+	(106, '2024-09-23 15:50:21.272284+00', 'messrs-drummonds-353', '2- 1828: The financial and political networks which created King''s', 'Ariunzaya Batkhuyag'),
+	(107, '2024-09-23 15:51:13.264262+00', 'messrs-hoares-354', '2- 1828: The financial and political networks which created King''s', 'Ariunzaya Batkhuyag'),
+	(108, '2024-09-23 15:52:52.3247+00', 'rev-j-m-rogers-355', '2- 1828: The financial and political networks which created King''s', NULL);
 
 
 --
@@ -2702,6 +2729,8 @@ INSERT INTO "public"."person_occupation" ("id", "person", "occupation", "created
 -- Data for Name: person_same_as; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
+INSERT INTO "public"."person_same_as" ("id", "created_at", "person", "name", "url", "added_by") VALUES
+	(1, '2024-10-15 19:54:17+00', 'tomas-garrigue-masaryk-360', 'Tomáš Masaryk - president of Czechoslovakia', 'https://www.britannica.com/biography/Tomas-Masaryk', 'Erika Melek Delgado');
 
 
 --
@@ -2735,24 +2764,32 @@ INSERT INTO "public"."person_source" ("id", "person", "source", "added_by", "cre
 -- Data for Name: person_url; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
+INSERT INTO "public"."person_url" ("id", "created_at", "person", "name", "url", "added_by") VALUES
+	(1, '2024-10-15 19:55:33+00', 'tomas-garrigue-masaryk-360', 'Tomas Garrigue Masaryk - Government Information Centre of the CR', 'https://vlada.gov.cz/en/tema/tomas-garrigue-masaryk-7-march-1850--14-september-1937-69539/tmplid-676/', 'Erika Melek Delgado');
 
 
 --
 -- Data for Name: place_feature; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
+INSERT INTO "public"."place_feature" ("id", "created_at", "place", "image_url", "image_title", "image_description", "added_by") VALUES
+	(1, '2024-10-15 18:35:26+00', 'freemasons-tavern-44', 'https://www.royalacademy.org.uk/art-artists/work-of-art/freemasons-tavern-great-queen-street-lincolns-inn-fields', 'Freemasons'' Tavern, Great Queen Street, Lincoln''s Inn Fields', 'Watercolour by John Nixon circa 1800. Line engraving. 108 mm x 168 mm. © Photo: Royal Academy of Arts, London.', 'Erika Melek Delgado');
 
 
 --
 -- Data for Name: place_moment; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
+INSERT INTO "public"."place_moment" ("id", "created_at", "place", "moment", "added_by") VALUES
+	(1, '2024-10-15 18:38:49+00', 'freemasons-tavern-44', '2- 1828: The financial and political networks which created King''s', 'Erika Melek Delgado');
 
 
 --
 -- Data for Name: place_same_as; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
+INSERT INTO "public"."place_same_as" ("id", "created_at", "place", "name", "url", "added_by") VALUES
+	(1, '2024-10-15 18:39:11+00', 'freemasons-tavern-44', 'Freemasons'' Tavern', 'https://en.wikipedia.org/wiki/Freemasons%27_Tavern#:~:text=The%20Freemasons''%20Tavern%20was%20established,way%20for%20the%20Connaught%20Rooms.', 'Erika Melek Delgado');
 
 
 --
@@ -2776,13 +2813,16 @@ INSERT INTO "public"."place_type" ("id", "name", "created_at", "added_by") VALUE
 	(2, 'City', '2024-08-14 10:40:17+00', 'Erika Melek Delgado'),
 	(3, 'County', '2024-08-15 16:24:41+00', 'Arin Edwards'),
 	(4, 'Island', '2024-08-16 16:36:52+00', 'Arin Edwards'),
-	(5, 'Kingdom', '2024-09-11 15:28:50+00', 'Arin Edwards');
+	(5, 'Kingdom', '2024-09-11 15:28:50+00', 'Arin Edwards'),
+	(6, 'Pub/Tavern', '2024-10-15 18:21:34+00', 'Erika Melek Delgado');
 
 
 --
 -- Data for Name: place_url; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
+INSERT INTO "public"."place_url" ("id", "created_at", "place", "name", "url", "added_by") VALUES
+	(1, '2024-10-15 18:41:08+00', 'freemasons-tavern-44', 'Freemasons'' Tavern', 'https://londonwiki.co.uk/LondonPubs/StGiles/FreeMasonsTavern.shtml', 'Erika Melek Delgado');
 
 
 --
@@ -2854,14 +2894,14 @@ SELECT pg_catalog.setval('"public"."donation_agent_organisation_id_seq"', 1, fal
 -- Name: donation_agent_person_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
-SELECT pg_catalog.setval('"public"."donation_agent_person_id_seq"', 13, true);
+SELECT pg_catalog.setval('"public"."donation_agent_person_id_seq"', 15, true);
 
 
 --
 -- Name: donation_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
-SELECT pg_catalog.setval('"public"."donation_id_seq"', 10, true);
+SELECT pg_catalog.setval('"public"."donation_id_seq"', 18, true);
 
 
 --
@@ -3015,7 +3055,7 @@ SELECT pg_catalog.setval('"public"."language_id_seq"', 633, true);
 -- Name: moment_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
-SELECT pg_catalog.setval('"public"."moment_id_seq"', 8, true);
+SELECT pg_catalog.setval('"public"."moment_id_seq"', 17, true);
 
 
 --
@@ -3113,14 +3153,14 @@ SELECT pg_catalog.setval('"public"."person_funder_id_seq"', 7, true);
 -- Name: person_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
-SELECT pg_catalog.setval('"public"."person_id_seq"', 359, true);
+SELECT pg_catalog.setval('"public"."person_id_seq"', 360, true);
 
 
 --
 -- Name: person_image_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
-SELECT pg_catalog.setval('"public"."person_image_id_seq"', 2, true);
+SELECT pg_catalog.setval('"public"."person_image_id_seq"', 3, true);
 
 
 --
@@ -3134,7 +3174,7 @@ SELECT pg_catalog.setval('"public"."person_knows_id_seq"', 164, true);
 -- Name: person_language_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
-SELECT pg_catalog.setval('"public"."person_language_id_seq"', 1, false);
+SELECT pg_catalog.setval('"public"."person_language_id_seq"', 5, true);
 
 
 --
@@ -3148,7 +3188,7 @@ SELECT pg_catalog.setval('"public"."person_member_of_organisation_id_seq"', 232,
 -- Name: person_moment_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
-SELECT pg_catalog.setval('"public"."person_moment_id_seq"', 108, true);
+SELECT pg_catalog.setval('"public"."person_moment_id_seq"', 109, true);
 
 
 --
@@ -3169,7 +3209,7 @@ SELECT pg_catalog.setval('"public"."person_relationship_type_id_seq"', 12, true)
 -- Name: person_same_as_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
-SELECT pg_catalog.setval('"public"."person_same_as_id_seq"', 1, false);
+SELECT pg_catalog.setval('"public"."person_same_as_id_seq"', 1, true);
 
 
 --
@@ -3197,35 +3237,35 @@ SELECT pg_catalog.setval('"public"."person_theme_id_seq"', 1, false);
 -- Name: person_url_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
-SELECT pg_catalog.setval('"public"."person_url_id_seq"', 1, false);
+SELECT pg_catalog.setval('"public"."person_url_id_seq"', 1, true);
 
 
 --
 -- Name: place_feature_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
-SELECT pg_catalog.setval('"public"."place_feature_id_seq"', 1, false);
+SELECT pg_catalog.setval('"public"."place_feature_id_seq"', 1, true);
 
 
 --
 -- Name: place_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
-SELECT pg_catalog.setval('"public"."place_id_seq"', 43, true);
+SELECT pg_catalog.setval('"public"."place_id_seq"', 44, true);
 
 
 --
 -- Name: place_moment_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
-SELECT pg_catalog.setval('"public"."place_moment_id_seq"', 1, false);
+SELECT pg_catalog.setval('"public"."place_moment_id_seq"', 1, true);
 
 
 --
 -- Name: place_same_as_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
-SELECT pg_catalog.setval('"public"."place_same_as_id_seq"', 1, false);
+SELECT pg_catalog.setval('"public"."place_same_as_id_seq"', 1, true);
 
 
 --
@@ -3246,21 +3286,21 @@ SELECT pg_catalog.setval('"public"."place_theme_id_seq"', 1, false);
 -- Name: place_type_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
-SELECT pg_catalog.setval('"public"."place_type_id_seq"', 5, true);
+SELECT pg_catalog.setval('"public"."place_type_id_seq"', 6, true);
 
 
 --
 -- Name: place_url_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
-SELECT pg_catalog.setval('"public"."place_url_id_seq"', 1, false);
+SELECT pg_catalog.setval('"public"."place_url_id_seq"', 1, true);
 
 
 --
 -- Name: researcher_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
-SELECT pg_catalog.setval('"public"."researcher_id_seq"', 7, true);
+SELECT pg_catalog.setval('"public"."researcher_id_seq"', 8, true);
 
 
 --
@@ -3274,7 +3314,7 @@ SELECT pg_catalog.setval('"public"."source_id_seq"', 4, true);
 -- Name: theme_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
-SELECT pg_catalog.setval('"public"."theme_id_seq"', 1, true);
+SELECT pg_catalog.setval('"public"."theme_id_seq"', 2, true);
 
 
 --

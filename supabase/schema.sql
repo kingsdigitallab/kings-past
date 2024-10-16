@@ -934,7 +934,7 @@ CREATE TABLE IF NOT EXISTS "public"."person_language" (
     "created_at" timestamp with time zone DEFAULT "now"() NOT NULL,
     "language" "text" NOT NULL,
     "added_by" "text",
-    "person" bigint NOT NULL
+    "person" "text" NOT NULL
 );
 
 ALTER TABLE "public"."person_language" OWNER TO "postgres";
@@ -1739,7 +1739,7 @@ ALTER TABLE ONLY "public"."person_language"
     ADD CONSTRAINT "person_language_language_fkey" FOREIGN KEY ("language") REFERENCES "public"."language"("name") ON UPDATE CASCADE ON DELETE CASCADE;
 
 ALTER TABLE ONLY "public"."person_language"
-    ADD CONSTRAINT "person_language_person_fkey" FOREIGN KEY ("person") REFERENCES "public"."person"("id") ON DELETE CASCADE;
+    ADD CONSTRAINT "person_language_person_fkey" FOREIGN KEY ("person") REFERENCES "public"."person"("slug") ON UPDATE CASCADE ON DELETE CASCADE;
 
 ALTER TABLE ONLY "public"."person_member_of"
     ADD CONSTRAINT "person_member_of_added_by_fkey" FOREIGN KEY ("added_by") REFERENCES "public"."researcher"("name");
