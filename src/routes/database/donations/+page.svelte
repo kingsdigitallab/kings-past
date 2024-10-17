@@ -1,45 +1,40 @@
 <script lang="ts">
 	import * as config from '$lib/config';
 	import { createTable, Render, Subscribe } from 'svelte-headless-table';
+	import { addPagination } from 'svelte-headless-table/plugins';
 	import { readable } from 'svelte/store';
 
 	export let data;
 
 	const { collection } = data;
 
-	const table = createTable(readable(collection));
+	const table = createTable(readable(collection), {
+		pagination: addPagination({ initialPageSize: 5 })
+	});
 	const columns = table.createColumns([
 		table.column({
-			header: 'Slug',
-			accessor: 'slug'
-		}),
-		table.column({
-			header: 'Start Date',
+			header: 'Start date',
 			accessor: 'start_date'
 		}),
 		table.column({
-			header: 'End Date',
+			header: 'End date',
 			accessor: 'end_date'
 		}),
 		table.column({
 			header: 'Name',
-			accessor: 'name'
+			accessor: (item) => ({ slug: item.slug, name: item.name }),
+			id: 'name'
 		}),
 		table.column({
 			header: 'Description',
-			accessor: 'description'
+			accessor: 'description',
+			cell: ({ value }) => value?.slice(0, 50) + '…'
 		})
 	]);
 
-	const { headerRows, rows, tableAttrs, tableBodyAttrs } = table.createViewModel(columns);
-
-	function getDate(item: any) {
-		if (item.start_date !== item.end_date) {
-			return `${item.start_date} - ${item.end_date}`;
-		}
-
-		return item.start_date;
-	}
+	const { headerRows, pageRows, tableAttrs, tableBodyAttrs, pluginStates } =
+		table.createViewModel(columns);
+	const { pageIndex, pageCount, pageSize, hasNextPage, hasPreviousPage } = pluginStates.pagination;
 </script>
 
 <svelte:head>
@@ -52,6 +47,13 @@
 	</header>
 
 	<section>
+		<h2>
+			Displaying {$pageIndex * $pageSize + 1} to {Math.min(
+				($pageIndex + 1) * $pageSize,
+				collection.length
+			)} of {collection.length}
+			donations
+		</h2>
 		<table {...$tableAttrs}>
 			<thead>
 				{#each $headerRows as headerRow (headerRow.id)}
@@ -59,7 +61,7 @@
 						<tr {...rowAttrs}>
 							{#each headerRow.cells as cell (cell.id)}
 								<Subscribe attrs={cell.attrs()} let:attrs>
-									<th {...attrs}>
+									<th class="surface-2" {...attrs}>
 										<Render of={cell.render()} />
 									</th>
 								</Subscribe>
@@ -69,13 +71,17 @@
 				{/each}
 			</thead>
 			<tbody {...$tableBodyAttrs}>
-				{#each $rows as row (row.id)}
+				{#each $pageRows as row (row.id)}
 					<Subscribe rowAttrs={row.attrs()} let:rowAttrs>
 						<tr {...rowAttrs}>
 							{#each row.cells as cell (cell.id)}
 								<Subscribe attrs={cell.attrs()} let:attrs>
-									<td {...attrs}>
-										<Render of={cell.render()} />
+									<td class={cell.id} {...attrs}>
+										{#if cell.id === 'name'}
+											<a href={`${data.url}/${cell.value.slug}`}>{cell.value.name}</a>
+										{:else}
+											<Render of={cell.render()} />
+										{/if}
 									</td>
 								</Subscribe>
 							{/each}
@@ -85,24 +91,31 @@
 			</tbody>
 		</table>
 	</section>
+
+	<nav>
+		<ol>
+			<li>
+				<button disabled={!$hasPreviousPage} on:click={() => $pageIndex--}>Previous</button>
+			</li>
+			<li>
+				<button disabled={!$hasNextPage} on:click={() => $pageIndex++}>Next</button>
+			</li>
+		</ol>
+	</nav>
 </article>
 
 <style>
-	a {
+	h2 {
+		max-inline-size: none;
+	}
+
+	nav ol {
 		display: flex;
-
-		&:is(:hover) {
-			text-decoration: none;
-		}
+		justify-content: space-between;
+		width: 100%;
 	}
 
-	h2,
-	li {
-		max-inline-size: none;
-		text-wrap: auto;
-	}
-
-	.excerpt {
-		max-inline-size: none;
+	table {
+		width: 100%;
 	}
 </style>
