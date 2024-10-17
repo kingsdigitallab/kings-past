@@ -4,12 +4,16 @@ import type { Database } from './types';
 
 export const supabase = createClient<Database>(SUPABASE_URL, SUPABASE_KEY);
 
-export async function getRecords(source: string, orderBy?: string) {
+export async function getRecords(source: string, orderBy?: string, ascending?: boolean) {
 	if (!orderBy) {
 		orderBy = 'name';
 	}
 
-	const { data } = await supabase.from(source).select('').order(orderBy);
+	if (ascending === undefined) {
+		ascending = true;
+	}
+
+	const { data } = await supabase.from(source).select('').order(orderBy, { ascending });
 
 	return data;
 }

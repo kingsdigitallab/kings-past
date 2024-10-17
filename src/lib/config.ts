@@ -2,7 +2,7 @@ import { dev } from '$app/environment';
 
 export const title = "King's Past";
 export const description = "King's Past description";
-export const url = dev ? 'https://localhost:5173/' : 'https://kings-past.kcl.ac.uk/';
+export const url = dev ? 'https://localhost:5173/' : 'https://kingspast.kcl.ac.uk/';
 
 export const nav = [
 	{ title: 'About', url: '/about' },
