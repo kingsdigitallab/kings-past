@@ -95,10 +95,12 @@
 	<nav>
 		<ol>
 			<li>
-				<button disabled={!$hasPreviousPage} on:click={() => $pageIndex--}>Previous</button>
+				<button disabled={!$hasPreviousPage} on:click={() => $pageIndex--}>
+					&#10094; Previous
+				</button>
 			</li>
 			<li>
-				<button disabled={!$hasNextPage} on:click={() => $pageIndex++}>Next</button>
+				<button disabled={!$hasNextPage} on:click={() => $pageIndex++}> Next &#10095; </button>
 			</li>
 		</ol>
 	</nav>
@@ -109,13 +111,28 @@
 		max-inline-size: none;
 	}
 
+	table {
+		width: 100%;
+	}
+
 	nav ol {
 		display: flex;
 		justify-content: space-between;
 		width: 100%;
 	}
 
-	table {
-		width: 100%;
+	button {
+		font-size: var(--font-size-1);
+
+		&:disabled {
+			opacity: 0.6;
+			cursor: not-allowed;
+			box-shadow: none;
+
+			&:hover {
+				box-shadow: none;
+				color: unset;
+			}
+		}
 	}
 </style>
