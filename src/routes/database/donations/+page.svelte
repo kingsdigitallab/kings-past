@@ -99,6 +99,7 @@
 					&#10094; Previous
 				</button>
 			</li>
+			<li>Page {$pageIndex + 1} of {$pageCount}</li>
 			<li>
 				<button disabled={!$hasNextPage} on:click={() => $pageIndex++}> Next &#10095; </button>
 			</li>
