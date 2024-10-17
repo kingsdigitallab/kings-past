@@ -11,7 +11,7 @@ export const nav = [
 ];
 
 export const hero = {
-	title: "Discover the Hidden History of King's College London Over 190 Years",
+	title: "Discover the past of King's College London to help shape the future",
 	message:
 		'Explore the most important moments that shaped King’s College  and discover the individuals, organisations, and themes that influenced its journey.'
 };
