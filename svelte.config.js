@@ -31,7 +31,7 @@ const config = {
 			$css: 'src/lib/assets/stylesheets'
 		},
 		paths: {
-			base: process.env.NODE_ENV === 'production' ? '/kings-past' : ''
+			base: process.env.GITHUB_ACTIONS_BUILD === 'true' ? '/kings-past' : ''
 		}
 	}
 };
