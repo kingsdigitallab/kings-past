@@ -7,11 +7,12 @@
 	export let data: any[];
 	export let label: string;
 	export let columns: any[];
+	export let sortBy: {};
 	export let url: string;
 
 	const table = createTable(readable(data), {
 		pagination: addPagination({ initialPageSize: 25 }),
-		sort: addSortBy({ initialSortKeys: [{ id: 'date', order: 'asc' }] })
+		sort: addSortBy(sortBy)
 	});
 
 	const tableColumns = columns.map((col) => table.column(col));
