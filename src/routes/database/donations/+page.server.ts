@@ -4,7 +4,7 @@ import { error } from '@sveltejs/kit';
 
 export async function load() {
 	try {
-		const data = await getRecords('donation', 'start_date', false);
+		const data = await getRecords('donation', 'start_date');
 
 		return {
 			collection: ((data as any[]) ?? []) as Database['public']['Tables']['donation']['Row'][]
