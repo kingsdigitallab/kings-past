@@ -21,6 +21,7 @@
 		{ header: 'Currency', accessor: 'currency' },
 		statusColumn
 	];
+	const sortBy = { initialSortKeys: [{ id: 'date', order: 'asc' }] };
 </script>
 
 <svelte:head>
@@ -32,5 +33,5 @@
 		<h1>Donations</h1>
 	</header>
 
-	<IndexTable data={collection} {label} {columns} {url} />
+	<IndexTable data={collection} {label} {columns} {sortBy} {url} />
 </article>
