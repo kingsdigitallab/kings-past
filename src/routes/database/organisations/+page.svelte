@@ -1,17 +1,57 @@
 <script lang="ts">
-  export let data;
+	import * as config from '$lib/config';
+	import IndexTable from '$lib/components/IndexTable.svelte';
+	import { locationColumn, nameColumn, statusColumn } from '$lib/tableColumns';
+
+	export let data;
+
+	const label = 'organisations';
+	const { collection, url, placesBySlug } = data;
+
+	const columns = [
+		{ header: 'Slug', accessor: 'slug' },
+		nameColumn,
+		{ header: 'Type', accessor: 'organisation_type' },
+		locationColumn(placesBySlug),
+		{
+			header: 'Founding date',
+			accessor: 'founding_date',
+			cell: ({ value }: { value: string }) =>
+				value ? new Date(value).toLocaleDateString() : 'N/A',
+			plugins: {
+				sort: {
+					getSortValue(item: string) {
+						return item || '';
+					}
+				}
+			}
+		},
+		{
+			header: 'Dissolution date',
+			accessor: 'dissolution_date',
+			cell: ({ value }: { value: string }) =>
+				value ? new Date(value).toLocaleDateString() : 'N/A',
+			plugins: {
+				sort: {
+					getSortValue(item: string) {
+						return item || '';
+					}
+				}
+			}
+		},
+		statusColumn
+	];
+	const sortBy = { initialSortKeys: [{ id: 'name', order: 'asc' }] };
 </script>
 
-<article>
-  <header>
-    <h1>Organisations</h1>
-  </header>
+<svelte:head>
+	<title>Organisations | {config.title}</title>
+</svelte:head>
 
-  <section>
-    <ul>
-      {#each data.collection as item}
-        <li><a href="{data.url}/{item.slug}">{item.name}</a></li>
-      {/each}
-    </ul>
-  </section>
+<article>
+	<header>
+		<h1>Organisations</h1>
+	</header>
+
+	<IndexTable data={collection} {columns} {sortBy} {label} {url} />
 </article>
