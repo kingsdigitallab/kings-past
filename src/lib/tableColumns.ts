@@ -31,15 +31,10 @@ export const nameColumn = {
 	}
 };
 
-export const locationColumn = {
+export const locationColumn = (placesBySlug: Record<string, Record<string, unknown>>) => ({
 	header: 'Location',
 	accessor: 'location',
-	cell: ({ value }: { value: string }) =>
-		value
-			?.split('-')
-			.slice(0, -1)
-			.map((word: string) => word.charAt(0).toUpperCase() + word.slice(1))
-			.join(' ') || 'N/A',
+	cell: ({ value }: { value: string }) => (value ? placesBySlug[value]?.name : 'N/A'),
 	plugins: {
 		sort: {
 			getSortValue(item: string) {
@@ -47,7 +42,7 @@ export const locationColumn = {
 			}
 		}
 	}
-};
+});
 
 export const statusColumn = {
 	header: 'Status',

@@ -1,5 +1,4 @@
 import { getRecords } from '$lib/supabase';
-import type { Database } from '$lib/supabase/types';
 import { error } from '@sveltejs/kit';
 
 export async function load() {
@@ -7,7 +6,7 @@ export async function load() {
 		const data = await getRecords('donation', 'start_date');
 
 		return {
-			collection: ((data as any[]) ?? []) as Database['public']['Tables']['donation']['Row'][]
+			collection: data ?? []
 		};
 	} catch (e) {
 		error(404, `Could not find donations`);

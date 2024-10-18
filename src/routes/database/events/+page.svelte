@@ -6,7 +6,7 @@
 	export let data;
 
 	const label = 'events';
-	const { collection, url } = data;
+	const { collection, url, placesBySlug } = data;
 
 	const columns = [
 		dateColumn,
@@ -15,7 +15,7 @@
 			header: 'Type',
 			accessor: 'event_type'
 		},
-		locationColumn,
+		locationColumn(placesBySlug),
 		statusColumn
 	];
 </script>

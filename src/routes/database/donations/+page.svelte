@@ -5,13 +5,13 @@
 
 	export let data;
 
-	const { collection, url } = data;
+	const { collection, url, placesBySlug } = data;
 	const label = 'donations';
 
 	const columns = [
 		dateColumn,
 		nameColumn,
-		locationColumn,
+		locationColumn(placesBySlug),
 		{
 			header: 'Price',
 			accessor: 'price',
