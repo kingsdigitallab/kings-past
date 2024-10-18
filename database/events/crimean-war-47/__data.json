@@ -1,1 +1,0 @@
-{"type":"data","nodes":[null,{"type":"data","data":[{"item":1},{"id":2,"name":3,"slug":4,"event_type":5,"start_date":6,"end_date":7,"location":8,"description":9,"added_by":10,"created_at":11,"draft":12},47,"Crimean War","crimean-war-47","Military action","1853-10-16","1856-05-30","crimea-24",null,"Jonah Miller","2024-08-21T11:09:00+00:00",true],"uses":{"params":["slug"]}}]}

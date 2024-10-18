@@ -1,1 +1,0 @@
-{"type":"data","nodes":[null,{"type":"data","data":[{"item":1},{"id":2,"name":3,"slug":4,"event_type":5,"start_date":6,"end_date":6,"location":7,"description":8,"added_by":9,"created_at":10,"draft":11},26,"Birth of Roger Swire","birth-of-roger-swire-26","Birth","1834-07-02","manfield-13",null,"Jonah Miller","2024-08-16T15:52:30+00:00",true],"uses":{"params":["slug"]}}]}
