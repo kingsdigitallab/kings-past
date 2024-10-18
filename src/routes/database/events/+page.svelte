@@ -1,17 +1,33 @@
 <script lang="ts">
-  export let data;
+	import * as config from '$lib/config';
+	import IndexTable from '$lib/components/IndexTable.svelte';
+	import { dateColumn, nameColumn, locationColumn, statusColumn } from '$lib/tableColumns';
+
+	export let data;
+
+	const label = 'events';
+	const { collection, url } = data;
+
+	const columns = [
+		dateColumn,
+		nameColumn,
+		{
+			header: 'Type',
+			accessor: 'event_type'
+		},
+		locationColumn,
+		statusColumn
+	];
 </script>
 
-<article>
-  <header>
-    <h1>Events</h1>
-  </header>
+<svelte:head>
+	<title>Events | {config.title}</title>
+</svelte:head>
 
-  <section>
-    <ul>
-      {#each data.collection as item}
-        <li><a href="{data.url}/{item.slug}">{item.name}</a></li>
-      {/each}
-    </ul>
-  </section>
+<article>
+	<header>
+		<h1>Events</h1>
+	</header>
+
+	<IndexTable data={collection} {label} {columns} {url} />
 </article>
