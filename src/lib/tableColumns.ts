@@ -1,17 +1,19 @@
 export const dateColumn = {
 	header: 'Date',
 	id: 'date',
-	accessor: (item: { start_date: Date; end_date: Date }) => ({
+	accessor: (item: { start_date: string; end_date: string }) => ({
 		start_date: item.start_date,
 		end_date: item.end_date
 	}),
-	cell: ({ value }: { value: { start_date: Date; end_date: Date } }) => {
+	cell: ({ value }: { value: { start_date: string; end_date: string } }) => {
 		const { start_date, end_date } = value;
-		return start_date !== end_date ? `${start_date}–${end_date}` : start_date;
+		return start_date !== end_date
+			? `${new Date(start_date).toLocaleDateString()}–${new Date(end_date).toLocaleDateString()}`
+			: new Date(start_date).toLocaleDateString();
 	},
 	plugins: {
 		sort: {
-			getSortValue(item: { start_date: Date; end_date: Date }) {
+			getSortValue(item: { start_date: string; end_date: string }) {
 				return [item.start_date, item.end_date];
 			}
 		}
