@@ -1,19 +1,20 @@
-import type { Database } from "./supabase/types";
+import type { Database } from './supabase/types';
 
 export type Feature = {
-  image: string;
-  title: string;
-  description: string;
+	image: string;
+	title: string;
+	description: string;
 };
 
 export type Moment = {
-  title: string;
-  n: number;
-  slug: string;
-  type: string;
-  excerpt: string;
-  feature: Feature;
-  tags: string[];
+	title: string;
+	n: number;
+	slug: string;
+	type: string;
+	excerpt: string;
+	feature: Feature;
+	tags: string[];
 };
 
-export type Person = Database["public"]["Tables"]["person"];
+export type Person = Database['public']['Tables']['person']['Row'];
+export type Place = Database['public']['Tables']['place']['Row'];
