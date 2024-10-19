@@ -44,6 +44,7 @@
 	"dependencies": {
 		"@fontsource/libre-caslon-display": "^5.0.19",
 		"lucide-svelte": "^0.360.0",
+		"maplibre-gl": "^4.7.1",
 		"open-props": "^1.6.21"
 	},
 	"release-it": {
