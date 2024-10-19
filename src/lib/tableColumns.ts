@@ -27,7 +27,7 @@ export const nameColumn = {
 	plugins: {
 		sort: {
 			getSortValue(item: { slug: string; name: string }) {
-				return item.slug;
+				return item.slug || item.name.toLowerCase();
 			}
 		}
 	}
