@@ -1,3 +1,169 @@
+
+
+# [0.8.0](https://github.com/kingsdigitallab/kings-past/compare/0.7.0...v0.8.0) (2024-10-20)
+
+
+### Bug Fixes
+
+* **donations:** sort ascending ([58f766d](https://github.com/kingsdigitallab/kings-past/commit/58f766ddf4485f1957dd19c5a22f031512683f58))
+* **moments:** update image url ([4bbdc68](https://github.com/kingsdigitallab/kings-past/commit/4bbdc6860985bb9830ee0e82f323dcd8078accab))
+* **tablecolumns:** sort by name when slug is not available ([e39d15b](https://github.com/kingsdigitallab/kings-past/commit/e39d15b07872d2cdc0a49530916a74105a22a966))
+
+
+### Features
+
+* **components:** add component to render and index table ([aa0b93b](https://github.com/kingsdigitallab/kings-past/commit/aa0b93bf1d60035049c2d30f18c296e134ff88fb))
+* **database:** load common data needed for child routes ([0a335d1](https://github.com/kingsdigitallab/kings-past/commit/0a335d1b0f2af510a2669cb04c6c0fcecb8e76a3))
+* **database:** set custom sort options ([887e5aa](https://github.com/kingsdigitallab/kings-past/commit/887e5aae8c163624579aa71ce59298d30bae596a))
+* **donations:** display currency in a separate column and add status column ([d2e8f3e](https://github.com/kingsdigitallab/kings-past/commit/d2e8f3e153ebb4894648797e3d7fc9680b2251b6))
+* **donations:** display donations as a table ([ad9aeb5](https://github.com/kingsdigitallab/kings-past/commit/ad9aeb5a4a61ef28e9342e3a4d46a8ecf5594c4a))
+* **donations:** display page count ([83ea0e1](https://github.com/kingsdigitallab/kings-past/commit/83ea0e1223500f81d92cd75033d7cbe6b40864e7))
+* **donations:** style pagination ([e8d0064](https://github.com/kingsdigitallab/kings-past/commit/e8d0064bcb4fb86203cdd628d0c2770fc7082b82))
+* **donations:** use reusable column definitions ([2b96c8e](https://github.com/kingsdigitallab/kings-past/commit/2b96c8ee069eb41b465b3ab0c9eacf0f23300283))
+* **donations:** use the indextable plugin ([bc89b30](https://github.com/kingsdigitallab/kings-past/commit/bc89b30f180d2a5e0fac308b3a020b76bb630841))
+* **events:** load place name from data ([9b2eee9](https://github.com/kingsdigitallab/kings-past/commit/9b2eee9699720de9d17e34acfc8e9f8a62c2fb2f))
+* **events:** sort events by start date ([09e2c90](https://github.com/kingsdigitallab/kings-past/commit/09e2c907b93a4bfe923ff55b35f7af884a6313eb))
+* **events:** use index table to render events ([3f96a90](https://github.com/kingsdigitallab/kings-past/commit/3f96a906918679c710477c8646867050ca5e8789))
+* **indextable:** add file with reusable column definitions ([19fafef](https://github.com/kingsdigitallab/kings-past/commit/19fafef0bbd326c8a90697d74d4b4318d111f063))
+* **indextable:** add prop to set the table sort options ([4e6ba3d](https://github.com/kingsdigitallab/kings-past/commit/4e6ba3d5d04291b981a572da7bf69aed78cf20ad))
+* **organisations:** use index table to render organisations ([5806e78](https://github.com/kingsdigitallab/kings-past/commit/5806e7803bd6cde4d51aeed09e678800f01ccd71))
+* **people:** add index table to render people ([a5bc04a](https://github.com/kingsdigitallab/kings-past/commit/a5bc04a251b794ec1043719c50604a323e92eebc))
+* **people:** list moments ([3f30028](https://github.com/kingsdigitallab/kings-past/commit/3f30028142e8d6e495dad5cf753263b9f8bac10a))
+* **places:** add map component ([e7ae0a9](https://github.com/kingsdigitallab/kings-past/commit/e7ae0a9740fa6e19f4da3699bb94fc7238c021dd))
+* **places:** add toggle between map and table ([b6aceab](https://github.com/kingsdigitallab/kings-past/commit/b6aceab3639b8dcecea39a912193be7d10f0153c))
+* **places:** render places on map ([d7a040e](https://github.com/kingsdigitallab/kings-past/commit/d7a040e16fd8c288c0888a96e9fe74705ab1d35d))
+* **scripts:** add script to backup supabase ([f081636](https://github.com/kingsdigitallab/kings-past/commit/f081636aeea068546df2b96496919d754ea99273))
+* **stylesheets:** add var for light border ([ef805ba](https://github.com/kingsdigitallab/kings-past/commit/ef805ba005789357b68cb545922aa8dea2fc3970))
+* **tablecolums:** display the dates as locale ([15fa81a](https://github.com/kingsdigitallab/kings-past/commit/15fa81a6730268d486bb37b75ea93faa464b30be))
+
+
+
+# [0.7.0](https://github.com/kingsdigitallab/kings-past/compare/0.6.1...0.7.0) (2024-07-12)
+
+
+### Bug Fixes
+
+* **entity:** ensure feature exists before accessing ([1945543](https://github.com/kingsdigitallab/kings-past/commit/19455439f6f8e4e2bc32650ab682f0b0c8874c4e))
+* **hero:** remove margin block ([aaace28](https://github.com/kingsdigitallab/kings-past/commit/aaace28ddaacf1101ba2883e8f05bcd34f2dcb19))
+* **moment:** add lang attribute ([1bbee49](https://github.com/kingsdigitallab/kings-past/commit/1bbee49ae8b9db5d621531b35781d6a750f47ef1))
+* **moment:** ensure link underline is the same colour as the text ([64f9d12](https://github.com/kingsdigitallab/kings-past/commit/64f9d12b1ecb3ab28ee9b35c20e218e817c2782b))
+* **moment:** prevent moment caption from overflowing ([3108c73](https://github.com/kingsdigitallab/kings-past/commit/3108c7309b4a0f5092d6698108318cb378e368bb))
+* **moments:** remove biographies ([a832af8](https://github.com/kingsdigitallab/kings-past/commit/a832af82f3f258028ebaa3c22b8b623454119c30))
+* **moments:** remove empty columns from table ([10ea401](https://github.com/kingsdigitallab/kings-past/commit/10ea40193d83dbc1672d2edaafe21797b1afe68e))
+
+
+### Features
+
+* add hamburger menu icon to smaller screens ([dc69f8d](https://github.com/kingsdigitallab/kings-past/commit/dc69f8d6ebae51736fe8314428f44698cea72598))
+* **component:** use open props shadow ([5b28ac8](https://github.com/kingsdigitallab/kings-past/commit/5b28ac848623aebdfc1b909d203eeee979652a6d))
+* **css:** add default margin block for section elements ([a161853](https://github.com/kingsdigitallab/kings-past/commit/a161853a3efccbaa00b0738ce5f3d62858a021b0))
+* **entity:** add feature prop to display images for entities ([7cde151](https://github.com/kingsdigitallab/kings-past/commit/7cde151af24457c90eb64977fa14f0496a771cb3))
+* **entity:** hide the entity shape for now, because it has no links with anything else ([b3ff18b](https://github.com/kingsdigitallab/kings-past/commit/b3ff18b61fb6151c1f05917fcc78fcacb5f91c3a))
+* **moment:** add links from moment to people ([fcf776f](https://github.com/kingsdigitallab/kings-past/commit/fcf776fd8e2259e2350764cbf6916a05df0dd51e))
+* **moment:** add slot for dynamic content ([755104f](https://github.com/kingsdigitallab/kings-past/commit/755104fe48649cf1ddad55e6f97639294b9ab27b))
+* **moment:** add style to the research and lives sections ([d0b685f](https://github.com/kingsdigitallab/kings-past/commit/d0b685fa8e4cfea4dfaec03d79a0f0a1e0bfbcff))
+* **moment:** add test custom container ([ab3d8b8](https://github.com/kingsdigitallab/kings-past/commit/ab3d8b81689a5d54ce08fafeef5dd99423cf7ae5))
+* **moment:** align headers with content ([fdbef34](https://github.com/kingsdigitallab/kings-past/commit/fdbef3444fbe8c64a90d0af768ecd1eb8762bfd3))
+* **moment:** ensure the links are full width ([13bba13](https://github.com/kingsdigitallab/kings-past/commit/13bba131600e95f5287b533ed1c843c4c18b5688))
+* **moment:** move moment specific style to the moment page ([6fbba01](https://github.com/kingsdigitallab/kings-past/commit/6fbba01bba8392ed9c4ee40f04ad13a939f5f5a3))
+* **moment:** moved moment specific styling into the component ([8d253e5](https://github.com/kingsdigitallab/kings-past/commit/8d253e53d4fa23e9cb1f60ea7233db30fdf0bc1c))
+* **moments:** add function to get detailed research related to a moment ([7e53e6e](https://github.com/kingsdigitallab/kings-past/commit/7e53e6e74595371f1fd3f5f2480b5f2f07c7bb2f))
+* **moments:** add link to database ([5fbd291](https://github.com/kingsdigitallab/kings-past/commit/5fbd291765e4d7b0617623bef3afe494bbdecd09))
+* **moments:** dynamically load the detailed research and king's lives sections ([52137d6](https://github.com/kingsdigitallab/kings-past/commit/52137d641cfda6530cedc0675f059bec284f3f4c))
+* **moments:** render detailed research in the moment page ([2fc4e1a](https://github.com/kingsdigitallab/kings-past/commit/2fc4e1a5016bde06ddfd6dab410fff993d214bb8))
+* **moment:** style footnotes ([6298078](https://github.com/kingsdigitallab/kings-past/commit/62980784bd3179b6000ca6321043698ea2a97a51))
+* **moment:** style links ([d4f279b](https://github.com/kingsdigitallab/kings-past/commit/d4f279b90ec0c23f356ccea67d499209edd274ed))
+* **moment:** style tables ([a91be79](https://github.com/kingsdigitallab/kings-past/commit/a91be790319dbd447a40e49288722ef351995c2d))
+* **organisations:** use the entity component to render the organisation ([5cb8317](https://github.com/kingsdigitallab/kings-past/commit/5cb83173cc7c420f2103dfdaaf3f5abcf992fba0))
+* **people:** display featured image ([78392f5](https://github.com/kingsdigitallab/kings-past/commit/78392f5d19b3ce869e0bedf27f5d00c91bb1be70))
+* **people:** use the getRecordBy function to get people and organisations ([7cffb9a](https://github.com/kingsdigitallab/kings-past/commit/7cffb9a16ca62136d16d42cb2879d06716c87f44))
+* **supabase:** add function to get records grouped by a field ([251df83](https://github.com/kingsdigitallab/kings-past/commit/251df834e648dde0a05da5a267c19792496f2e5a))
+
+
+
+## [0.6.1](https://github.com/kingsdigitallab/kings-past/compare/0.6.0...0.6.1) (2024-06-27)
+
+
+### Bug Fixes
+
+* **breadcrumbs:** do not display breadcrumbs in the home page ([e769668](https://github.com/kingsdigitallab/kings-past/commit/e769668c9a2a3e56711dc5b52e8f6503e433ce2d))
+* **breadcrumbs:** do not display breadcrumbs in the home page ([eaf5593](https://github.com/kingsdigitallab/kings-past/commit/eaf55938e237552fccd39f10bcf92d86217c59bb))
+* **breadcrumbs:** remove padding and margin and background ([c8e563b](https://github.com/kingsdigitallab/kings-past/commit/c8e563bb769b0963cb14edf64d415d74df249b02))
+* **footer:** add media queries styling for smaller screens ([db2278c](https://github.com/kingsdigitallab/kings-past/commit/db2278cf5d3d60ae612d0ad9b1bb823abc0c2a67))
+* **header:** ensure active class works on non-root path deployments ([47a884c](https://github.com/kingsdigitallab/kings-past/commit/47a884c0dd1502ce2b0da21355418a4b2dd524ed))
+* **hero:** do not break hero title into lines ([88b0788](https://github.com/kingsdigitallab/kings-past/commit/88b0788d4d30c17a3653dabd72522ce5d54a4146))
+* **moment:** align prev/next navigation with main content ([aeda634](https://github.com/kingsdigitallab/kings-past/commit/aeda63406718c51aa1b452295a99898d303d85db))
+* **moment:** remove border from moment nav for active moment ([a6ba2c2](https://github.com/kingsdigitallab/kings-past/commit/a6ba2c2025cdbf80a5b5e6cf6ef53f3416665b67))
+* **moments:** link to moment 8 ([b03da6b](https://github.com/kingsdigitallab/kings-past/commit/b03da6b9e003c812100ddc9f307311e4f9f187f6))
+* **moments:** move the surface class up the tree for simpler styling ([e96dbe2](https://github.com/kingsdigitallab/kings-past/commit/e96dbe2c72de2dd1fac305df90645b460e41083f))
+* **moments:** prevent last moment to be full width ([b5a822b](https://github.com/kingsdigitallab/kings-past/commit/b5a822b969e92797a0e762519c6edd1cc74eb63b))
+* **style:** active class for surface 2 ([abf7991](https://github.com/kingsdigitallab/kings-past/commit/abf79915333ba812f842dd71361ade3f6806aa04))
+* update port to the correct number ([33ce9d4](https://github.com/kingsdigitallab/kings-past/commit/33ce9d426661c5382084a4d7ebb72c4b2ecfd4d1))
+
+
+### Features
+
+* add box shadow to button hover ([725167b](https://github.com/kingsdigitallab/kings-past/commit/725167b23828f30f730bc6781a344117b921ce64))
+* add support for footnotes ([2442900](https://github.com/kingsdigitallab/kings-past/commit/2442900d869824969f884d2dbb4cd47cf9741d4a))
+* **breadcrumbs:** align the breadcrumbs with the site title ([213de70](https://github.com/kingsdigitallab/kings-past/commit/213de70d76199deacee6492185ac2fa6babbd921))
+* **entities:** create entity component ([1942e7f](https://github.com/kingsdigitallab/kings-past/commit/1942e7f77bbe15fefdd8bef121c8d1217d3fde76))
+* **moment:** add moment image to list of moments ([11eb656](https://github.com/kingsdigitallab/kings-past/commit/11eb6568d346fa45959f860bd110774f834b0f69))
+* **moments:** add links to detailed research ([aa753e8](https://github.com/kingsdigitallab/kings-past/commit/aa753e80197673c55149516c4dc907083c7dde24))
+* **moments:** add moment component ([aa38333](https://github.com/kingsdigitallab/kings-past/commit/aa383337e9b42cf00a6ab5a96e49d07fcb428326))
+* **moments:** move the link to include the image and the image title ([e4bad72](https://github.com/kingsdigitallab/kings-past/commit/e4bad72faedb1df531df5780cc0856de9ea1d722))
+* **moments:** restructure the moment layout to incorporate sub pages ([3dd6709](https://github.com/kingsdigitallab/kings-past/commit/3dd670913133098cff8d18ae00a3f08360b34780))
+* **people:** parse the description as markdown ([7625949](https://github.com/kingsdigitallab/kings-past/commit/762594975a604f33dce18d2ea6475acb3035c981))
+* smaller screen style changes ([87acdfc](https://github.com/kingsdigitallab/kings-past/commit/87acdfc7cd2f043bebd94ce69694b214b8c60747))
+* **supabase:** add supabase data model and data ([cf4b78f](https://github.com/kingsdigitallab/kings-past/commit/cf4b78f064eded9d93438b55b786d55a486481c3))
+
+
+
+# [0.6.0](https://github.com/kingsdigitallab/kings-past/compare/bd1316b3cf0e7a18c960f8ac2428558719fbe392...0.6.0) (2024-06-04)
+
+
+### Bug Fixes
+
+* add base path to resolve links properly in gh pages ([9d66348](https://github.com/kingsdigitallab/kings-past/commit/9d663488960711ca534b13312c3ea212b8367da7))
+* add base path to resolve links properly in gh pages ([00e8cee](https://github.com/kingsdigitallab/kings-past/commit/00e8cee88b3e3178067d6c4bfcecb65b4db0cc36))
+* **breadcrumbs:** add base path for github deployment ([f335d02](https://github.com/kingsdigitallab/kings-past/commit/f335d027fbc8a24ab12c7ade1c787536077009cc))
+* **breadcrumbs:** do not display base path part when it exists ([cd9b77f](https://github.com/kingsdigitallab/kings-past/commit/cd9b77f2b11be8c6589291190a1801575eca5416))
+* **breadcrumbs:** remove base path, it is not needed for the crumbs ([2ad5000](https://github.com/kingsdigitallab/kings-past/commit/2ad5000d57f72e0f68073cc6918730164c24d5e9))
+* **breadcrums:** reduce padding inline ([7b353b7](https://github.com/kingsdigitallab/kings-past/commit/7b353b7665c640b2b0cdf9b432916b01dc936dc7))
+* **database:** remove element that was not needed ([219ce38](https://github.com/kingsdigitallab/kings-past/commit/219ce38217b9db9151716145381cee989910fc5e))
+* **footer:** typo ([151627b](https://github.com/kingsdigitallab/kings-past/commit/151627b100dcf9c82b3e40aa04a7ab58371f8b9b))
+* **footer:** update with correct image ([dffb1f4](https://github.com/kingsdigitallab/kings-past/commit/dffb1f4507ed4e391ddaeae32f5369ae682c6866))
+* **layout:** move the breadcrumbs inside the transition ([29f191a](https://github.com/kingsdigitallab/kings-past/commit/29f191a324e597643aad203c9952e73533c5b0f7))
+* **moments:** change to double quotes because title had single quote ([d3da727](https://github.com/kingsdigitallab/kings-past/commit/d3da727677412e652ce614f7161de24aeb235767))
+* **moments:** ensure cards have enough width to display title ([335860d](https://github.com/kingsdigitallab/kings-past/commit/335860d7be8210b28ec001b45aedb621f6bdbde6))
+* **moments:** remove margin, it is set at the layout level ([a8d5dc5](https://github.com/kingsdigitallab/kings-past/commit/a8d5dc5fe6fbf2428bea1fc2d876e3003cda46c3))
+* **people:** remove typo ([9fb1b27](https://github.com/kingsdigitallab/kings-past/commit/9fb1b278c114ff463a8ebeb468e764cc0e00523d))
+* update patht to hero image ([2e65a45](https://github.com/kingsdigitallab/kings-past/commit/2e65a45128e02a40f4e482edb1b4f3f4313c8e2b))
+
+
+### Features
+
+* **about:** add team content ([ccc2274](https://github.com/kingsdigitallab/kings-past/commit/ccc22742424a7b5d38e9b1d7aa0d3d4920ab7fed))
+* **about:** use md page ([2677e90](https://github.com/kingsdigitallab/kings-past/commit/2677e90693146b2eebef4fd8528cfcc9a24d6cf8))
+* add more data to the person view ([bcd1dd9](https://github.com/kingsdigitallab/kings-past/commit/bcd1dd9397b387868724884f5a68c2f02ce30f24))
+* add project favicon ([f53c8ec](https://github.com/kingsdigitallab/kings-past/commit/f53c8ec47929ec2859909a404d32906605e62117))
+* **breadcrumbs:** add breadcrumbs component ([c37eb49](https://github.com/kingsdigitallab/kings-past/commit/c37eb492a99b7a6cdae5a38f69ea6b44421cc37c))
+* **constants:** add constant to store placeholder value for empty fields ([36f4be3](https://github.com/kingsdigitallab/kings-past/commit/36f4be3972deac515249a0b79ed66f657a7907a5))
+* **css:** add hover state to default links ([7e76d72](https://github.com/kingsdigitallab/kings-past/commit/7e76d72330c53dd59b19b26be9e39ed67979cc57))
+* **css:** add utility class for serif text and inline dls ([ee43baa](https://github.com/kingsdigitallab/kings-past/commit/ee43baa01fed6afd29a835b8d969e727efc19116))
+* **database:** add supabase integration to load database pages ([92d0cb8](https://github.com/kingsdigitallab/kings-past/commit/92d0cb8b0c1f470cdd7bc7950bf79c94aa4f2949))
+* initial commit of design implementation for may release ([bd1316b](https://github.com/kingsdigitallab/kings-past/commit/bd1316b3cf0e7a18c960f8ac2428558719fbe392))
+* keep a consistent margin block across all pages ([3f540c4](https://github.com/kingsdigitallab/kings-past/commit/3f540c432796ed894806c1ca53d3601b0104d3bb))
+* keep breadcrumbs on all pages ([f31509e](https://github.com/kingsdigitallab/kings-past/commit/f31509e310e31adf2da9fe158ff08981a811c2d3))
+* **moments:** add basic styling to the index page ([eb10535](https://github.com/kingsdigitallab/kings-past/commit/eb105358fbb4209654c7db4b32de2130ee910f22))
+* **moments:** add moments index page ([be58fc6](https://github.com/kingsdigitallab/kings-past/commit/be58fc6dfd161915ba59d96d3b635d9330e23ab0))
+* **people:** add empty placeholder and basic styling ([8d7fae7](https://github.com/kingsdigitallab/kings-past/commit/8d7fae7ee69ba6cae94a9f2879dd39b8e04f7244))
+* **people:** add person sources data ([5f695bf](https://github.com/kingsdigitallab/kings-past/commit/5f695bfb6a02f872b521886e60be46ce7b6099c4))
+* **people:** display knows information ([24e9cba](https://github.com/kingsdigitallab/kings-past/commit/24e9cba3895e7afe7efe3ed39b2afad5cf31faeb))
+* **people:** display relationship name ([8974da5](https://github.com/kingsdigitallab/kings-past/commit/8974da55146a0bd6b862e3f368700a2654f88031))
+* **person:** display memberships ([0fe178b](https://github.com/kingsdigitallab/kings-past/commit/0fe178be7a1e1af223f7363fbe376dc892590800))
+* **transition:** increase the transition duration ([2c579bc](https://github.com/kingsdigitallab/kings-past/commit/2c579bc20d0632803e4018a2d27e055ec2ca386c))
+* update links to social accounts ([eb92f57](https://github.com/kingsdigitallab/kings-past/commit/eb92f575ee4118393bcafc2840798177a264ac65))
+
 # Changelog
 
 ## [Unreleased](https://github.com/kingsdigitallab/kings-past/compare/0.6.1...HEAD)
