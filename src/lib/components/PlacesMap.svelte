@@ -1,10 +1,10 @@
 <script lang="ts">
+	import PlacePopup from '$lib/components/PlacePopup.svelte';
 	import type { Place } from '$lib/types';
 	import { LucideMapPin } from 'lucide-svelte';
 	import maplibregl from 'maplibre-gl';
 	import 'maplibre-gl/dist/maplibre-gl.css';
 	import { onDestroy, onMount } from 'svelte';
-	import PlacePopup from './PlacePopup.svelte';
 
 	export let places: Array<Place>;
 
@@ -90,7 +90,7 @@
 	.map-container {
 		border: 1px solid var(--border);
 		font-family: var(--font-sans);
-		height: 480px;
+		height: 600px;
 		width: 100%;
 	}
 
