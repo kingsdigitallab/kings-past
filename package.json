@@ -9,10 +9,13 @@
 		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
 		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
 		"lint": "prettier --check . && eslint .",
-		"format": "prettier --write ."
+		"format": "prettier --write .",
+		"release": "release-it"
 	},
 	"devDependencies": {
 		"@microflash/rehype-figure": "^2.1.0",
+		"@release-it/bumper": "^6.0.1",
+		"@release-it/conventional-changelog": "^9.0.0",
 		"@supabase/supabase-js": "^2.42.5",
 		"@sveltejs/adapter-static": "^3.0.1",
 		"@sveltejs/kit": "^2.0.0",
@@ -27,7 +30,7 @@
 		"prettier": "^3.1.1",
 		"prettier-plugin-svelte": "^3.1.2",
 		"rehype-slug": "^6.0.0",
-		"release-it": "^17.4.0",
+		"release-it": "^17.10.0",
 		"remark-flexible-containers": "^1.2.1",
 		"remark-footnotes": "^2.0.0",
 		"sass": "^1.75.0",
@@ -46,19 +49,5 @@
 		"lucide-svelte": "^0.360.0",
 		"maplibre-gl": "^4.7.1",
 		"open-props": "^1.6.21"
-	},
-	"release-it": {
-		"git": {
-			"changelog": "npx auto-changelog --stdout --commit-limit false --unreleased --template https://raw.githubusercontent.com/release-it/release-it/main/templates/keepachangelog.hbs"
-		},
-		"github": {
-			"release": false
-		},
-		"hooks": {
-			"after:bump": "npx auto-changelog --commit-limit false --unreleased --template https://raw.githubusercontent.com/release-it/release-it/main/templates/keepachangelog.hbs"
-		},
-		"npm": {
-			"publish": false
-		}
 	}
 }
