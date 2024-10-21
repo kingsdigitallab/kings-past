@@ -60,6 +60,10 @@
 		width: 100%;
 	}
 
+	picture img {
+		width: 100%;
+	}
+
 	.layout {
 		height: 100%;
 		padding-inline: var(--header-padding-inline);
