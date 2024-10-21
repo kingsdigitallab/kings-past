@@ -35,7 +35,7 @@
 	}
 
 	main {
-		max-inline-size: var(--size-xxl);
+		max-inline-size: unset;
 		padding-inline: var(--header-padding-inline);
 	}
 </style>
