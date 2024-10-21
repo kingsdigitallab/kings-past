@@ -5,7 +5,7 @@
 </script>
 
 <div class="place-popup">
-	<h3><a href="../places/{place.slug}">{place.name}</a></h3>
+	<h3><a href="../database/places/{place.slug}">{place.name}</a></h3>
 	<p><strong>Status:</strong> {place.draft ? 'draft' : 'edited'}</p>
 	<p>{place.description || 'No description available.'}</p>
 </div>
