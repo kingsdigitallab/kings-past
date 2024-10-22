@@ -1,5 +1,19 @@
 
 
+## [0.9.1](https://github.com/kingsdigitallab/kings-past/compare/v0.9.0...v0.9.1) (2024-10-22)
+
+
+### Bug Fixes
+
+* **people:** convert string to lower case for sorting ([b278af6](https://github.com/kingsdigitallab/kings-past/commit/b278af61742287eb6f3579d753ad73ec1f835f1e))
+* **people:** convert string to lower case for sorting ([59db5c2](https://github.com/kingsdigitallab/kings-past/commit/59db5c268083b845934ba98aa8186318c6bcf07b))
+* **tablecolumns:** convert string to lower case for sorting ([6554c62](https://github.com/kingsdigitallab/kings-past/commit/6554c62f34577f64ff6b45c91bb3db61b72fea88))
+
+
+### Features
+
+* **about:** add team as a subpage ([119e8cc](https://github.com/kingsdigitallab/kings-past/commit/119e8cca808964385db21602fb40b8e13b33e6f0))
+
 # [0.9.0](https://github.com/kingsdigitallab/kings-past/compare/v0.8.0...v0.9.0) (2024-10-22)
 
 
