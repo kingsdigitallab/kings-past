@@ -5,7 +5,7 @@ tags:
   - moment
 excerpt: From its foundation, King’s College sat at the heart of overlapping networks of institutional power in Britain.
 feature:
-  image: /assets/images/moments/2.jpg
+  image: /assets/images/moments/2.webp
   title: The image title
   description: Placeholder image for moments
 type: moment

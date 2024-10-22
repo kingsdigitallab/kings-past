@@ -5,7 +5,7 @@ tags:
   - moment
 excerpt: ''
 feature:
-  image: /assets/images/moments/11.jpg
+  image: /assets/images/moments/11.webp
   title: The image title
   description: Placeholder image for moments
 type: moment
@@ -17,4 +17,4 @@ Exploring how student culture engaged with these wider questions as well as the 
 
 ## So what question...
 
-Decolonizing agendas are at the centre of current critiques of university culture and systems. They offer an analytical framework to think about how inequalities and exclusions in the present connect to a longer history. Even so, this historical context is often invoked in hazy form, with little sense of the ways in which mid-twentieth century anti-colonialism and decolonizing impulses articulated similar demands for change.  Exploring these earlier demands and the ways King’s responded will offer important insight into the persistence of inequality at King’s and how it might be addressed.
+Decolonizing agendas are at the centre of current critiques of university culture and systems. They offer an analytical framework to think about how inequalities and exclusions in the present connect to a longer history. Even so, this historical context is often invoked in hazy form, with little sense of the ways in which mid-twentieth century anti-colonialism and decolonizing impulses articulated similar demands for change. Exploring these earlier demands and the ways King’s responded will offer important insight into the persistence of inequality at King’s and how it might be addressed.

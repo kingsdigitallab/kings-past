@@ -7,7 +7,7 @@ themes:
   - trans-atlantic-slave-trade
 excerpt: King's College, as it is today, comprises several institutions, each with a distinct history, brought together through a series of mergers from the late-nineteenth to late-twentieth centuries.
 feature:
-  image: /assets/images/moments/1.png
+  image: /assets/images/moments/1.webp
   title: The image title
   description: Placeholder image for the moment
 type: moment
@@ -20,7 +20,7 @@ slug: 1721-money-global-trade-slavery-creation-guy’s
 
 King’s College, as it is today, comprises several institutions which have their own distinct histories and were brought together through mergers from the late-nineteenth to late-twentieth centuries. Two of the most significant are St Thomas’ and Guy’s, teaching hospitals which existed for several hundred years before being incorporated into King’s.
 
-![A sugar mill belonging to Phillippe de Longvilliers de Poincy]({base}/assets/images/moments/1.1.jpg 'A drawing depicting a sugar mill and workers from 1665')
+![A sugar mill belonging to Phillippe de Longvilliers de Poincy]({base}/assets/images/moments/1.1.webp 'A drawing depicting a sugar mill and workers from 1665')
 
 Both benefitted hugely from wealth generated through the trans-Atlantic slave trade; St Thomas’ was rebuilt through donations by Robert Clayton – a City banker, MP, and investor in the Royal Africa Company – while Guy’s is named for its principal benefactor, Thomas Guy, whose wealth came from investments in the South Sea Company (both the RAC and SSC were major forces in the slave trade during the 17th and 18th centuries). This strand of research will situate these individuals and their bequests in the wider historical context of post-Civil War England where rapidly expanding global commercial opportunities transformed the City of London and a shifting moral economy energised new forms of civic philanthropy. It will provide an important contextual foundation for the subsequent Moments by surveying the area in which King’s would be built and mapping the geographies of power and wealth that marked London’s built environment before 1800 and the first decades of the 19th century.
 

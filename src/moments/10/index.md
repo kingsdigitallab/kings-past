@@ -5,7 +5,7 @@ tags:
   - moment
 excerpt: ''
 feature:
-  image: /assets/images/moments/10.jpg
+  image: /assets/images/moments/10.webp
   title: The image title
   description: Placeholder image for moments
 type: moment
