@@ -18,7 +18,7 @@
 			plugins: {
 				sort: {
 					getSortValue(item: string) {
-						return item.toLowerCase() || '';
+						return (item || '').toLowerCase();
 					}
 				}
 			}
@@ -30,7 +30,7 @@
 			plugins: {
 				sort: {
 					getSortValue(item: string) {
-						return item.toLowerCase() || '';
+						return (item || '').toLowerCase();
 					}
 				}
 			}
@@ -42,7 +42,7 @@
 			plugins: {
 				sort: {
 					getSortValue(item: string) {
-						return item.toLowerCase() || '';
+						return (item || '').toLowerCase();
 					}
 				}
 			}
@@ -54,7 +54,7 @@
 			plugins: {
 				sort: {
 					getSortValue(item: string) {
-						return item.toLowerCase() || '';
+						return (item || '').toLowerCase();
 					}
 				}
 			}
@@ -66,7 +66,7 @@
 			plugins: {
 				sort: {
 					getSortValue(item: string) {
-						return item.toLowerCase() || '';
+						return (item || '').toLowerCase();
 					}
 				}
 			}
