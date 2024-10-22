@@ -34,5 +34,7 @@ export async function getRecordsBy(source: string, field: string, orderBy?: stri
 export async function getRecord(source: string, slug: string) {
 	const { data } = await supabase.from(source).select('').eq('slug', slug).single();
 
+	if (!data) throw new Error(`${source}/${slug} not found!`);
+
 	return data;
 }
