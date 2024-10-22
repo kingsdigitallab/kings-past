@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { dev } from '$app/environment';
 	import { LucideArrowDown, LucideArrowUp } from 'lucide-svelte';
 	import { createTable, Render, Subscribe } from 'svelte-headless-table';
 	import { addPagination, addSortBy } from 'svelte-headless-table/plugins';
@@ -15,7 +16,9 @@
 		sort: addSortBy(sortBy)
 	});
 
-	const tableColumns = columns.map((col) => table.column(col));
+	const tableColumns = columns
+		.filter((col) => col.accessor !== 'status' || dev)
+		.map((col) => table.column(col));
 
 	const { headerRows, pageRows, tableAttrs, tableBodyAttrs, pluginStates } =
 		table.createViewModel(tableColumns);
