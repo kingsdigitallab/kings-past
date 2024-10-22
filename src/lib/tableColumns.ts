@@ -40,7 +40,7 @@ export const locationColumn = (placesBySlug: Record<string, Record<string, unkno
 	plugins: {
 		sort: {
 			getSortValue(item: string) {
-				return item || '';
+				return (item || '').toLowerCase();
 			}
 		}
 	}
