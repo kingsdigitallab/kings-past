@@ -1,5 +1,23 @@
 
 
+# [0.9.0](https://github.com/kingsdigitallab/kings-past/compare/v0.8.0...v0.9.0) (2024-10-22)
+
+
+### Bug Fixes
+
+* **footer:** expand image to 100% ([7bbab31](https://github.com/kingsdigitallab/kings-past/commit/7bbab315374430fb6b24caf0576b52417ea0b840))
+* **layout:** unset max inline size ([b8b3f68](https://github.com/kingsdigitallab/kings-past/commit/b8b3f68082f0de91b9ba23fd5da58294032d0898))
+* **places:** add entries function to get all possible place routes ([8220bbb](https://github.com/kingsdigitallab/kings-past/commit/8220bbb5489043686cb057db5e3112f5c566274f))
+* **places:** link from popup to place ([5241414](https://github.com/kingsdigitallab/kings-past/commit/524141406bd8fa6e9d75705b9a2a4494b15961a7))
+* **places:** link from popup to place ([518f8b6](https://github.com/kingsdigitallab/kings-past/commit/518f8b662cac9f2ab51fdcdf2fba60b620e9f362))
+
+
+### Features
+
+* **indextable:** only display status on dev ([d1d60c0](https://github.com/kingsdigitallab/kings-past/commit/d1d60c046318dda5493d5897657cb87607f797d2))
+* **moments:** update moment images ([7eace11](https://github.com/kingsdigitallab/kings-past/commit/7eace115d6a7251f99533468a4523529c90272bc))
+* **people:** display alternative names ([dc11eca](https://github.com/kingsdigitallab/kings-past/commit/dc11ecac2aed29f8fde6dcac1ede5d59c62de6aa))
+
 # [0.8.0](https://github.com/kingsdigitallab/kings-past/compare/0.7.0...v0.8.0) (2024-10-20)
 
 
