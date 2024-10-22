@@ -5,7 +5,7 @@ tags:
   - moment
 excerpt: ''
 feature:
-  image: /assets/images/moments/5.jpg
+  image: /assets/images/moments/5.webp
   title: The image title
   description: Placeholder image for moments
 type: moment
@@ -15,4 +15,4 @@ From the outset, King’s promised its students a modern education that, unlike 
 
 ## So what question...
 
-Ethics and social and political implications of scientific research – thinking through implications of university-based research in relation to global capitalism/growth, climate, health etc.  Entanglement of science and medicine with military, colonialism, business and environment.  Dynamics of scientific change. Role of training and education in scientific and medical history.
+Ethics and social and political implications of scientific research – thinking through implications of university-based research in relation to global capitalism/growth, climate, health etc. Entanglement of science and medicine with military, colonialism, business and environment. Dynamics of scientific change. Role of training and education in scientific and medical history.

@@ -12,6 +12,18 @@
 		{ header: 'Slug', accessor: 'slug' },
 		nameColumn,
 		{
+			header: 'Alternative names',
+			accessor: 'alternative_names',
+			cell: ({ value }: { value: string }) => value ?? 'N/A',
+			plugins: {
+				sort: {
+					getSortValue(item: string) {
+						return item || '';
+					}
+				}
+			}
+		},
+		{
 			header: 'Gender',
 			accessor: 'gender',
 			cell: ({ value }: { value: string }) => value ?? 'N/A',
