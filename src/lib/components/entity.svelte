@@ -51,9 +51,9 @@
 			<h2>Moments</h2>
 			<ol>
 				{#each moments as moment}
-					<a href="../../moments/{moment.slug}">
-						<li class="surface-2">{moment.title}</li>
-					</a>
+					<li class="surface-2">
+						<a href="../../moments/{moment.slug}">{moment.title}</a>
+					</li>
 				{/each}
 			</ol>
 		</section>
@@ -67,7 +67,16 @@
 			<ul>
 				{#each sources as source}
 					<li>
-						<a href={source.url}>{source.name}</a>
+						<p>
+							{#if source.url}
+								<a href={source.url}>{source.name}</a>
+							{:else}
+								{source.name}
+							{/if}
+						</p>
+						{#if source.description}
+							<p>{source.description}</p>
+						{/if}
 					</li>
 				{/each}
 			</ul>
@@ -105,11 +114,6 @@
 
 	img {
 		height: 50vh;
-	}
-
-	li {
-		display: flex;
-		align-items: baseline;
 	}
 
 	.moments ol {
