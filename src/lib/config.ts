@@ -45,3 +45,5 @@ export const footer = {
 		}
 	]
 };
+
+export const EMPTY_PLACEHOLDER = 'Unknown';
