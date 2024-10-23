@@ -1,5 +1,5 @@
+import { handleLoadError } from '$lib/errorHandling';
 import { getRecords } from '$lib/supabase';
-import { error } from '@sveltejs/kit';
 
 export async function load() {
 	try {
@@ -9,6 +9,6 @@ export async function load() {
 			collection: data ?? []
 		};
 	} catch (e) {
-		error(404, `Could not find donations`);
+		handleLoadError('donations', e);
 	}
 }
