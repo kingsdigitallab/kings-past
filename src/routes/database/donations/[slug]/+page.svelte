@@ -1,10 +1,12 @@
 <script lang="ts">
-  export let data;
+	export let data;
+
+	const { donation } = data;
 </script>
 
 <article>
-  <h1>{data.item.name}</h1>
-  {#if data.item.description}
-    <p>{data.item.description}</p>
-  {/if}
+	<h1>{donation.name}</h1>
+	{#if donation.description}
+		<p>{donation.description}</p>
+	{/if}
 </article>

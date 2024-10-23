@@ -1,12 +1,15 @@
 import { getRecord } from '$lib/supabase';
-import { error } from '@sveltejs/kit';
+import type { Donation } from '$lib/types';
+import { handleLoadError } from '$lib/errorHandling';
 
 export async function load({ params }) {
+	const { slug } = params;
+
 	try {
 		return {
-			item: await getRecord('donation', params.slug)
+			donation: (await getRecord('donation', slug)) as Donation
 		};
 	} catch (e) {
-		error(404, `Could not find ${params.slug}`);
+		handleLoadError(slug, e);
 	}
 }
