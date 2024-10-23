@@ -1,12 +1,14 @@
+import { handleLoadError } from '$lib/errorHandling';
 import { getRecord } from '$lib/supabase';
-import { error } from '@sveltejs/kit';
+import type { Event } from '$lib/types';
 
 export async function load({ params }) {
+	const { slug } = params;
 	try {
 		return {
-			item: await getRecord('event', params.slug)
+			event: (await getRecord('event', slug)) as Event
 		};
 	} catch (e) {
-		error(404, `Could not find ${params.slug}`);
+		handleLoadError(slug, e);
 	}
 }
