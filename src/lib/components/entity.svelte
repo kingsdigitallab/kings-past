@@ -4,10 +4,10 @@
 	export let entityType: string;
 	export let entityName: string;
 	export let meta: Record<string, any>;
-	export let description: string | undefined;
-	export let feature: Record<string, any> | null;
-	export let moments: Moment[] | null;
-	export let sources;
+	export let description: string | undefined = undefined;
+	export let feature: Record<string, any> | undefined = undefined;
+	export let moments: Moment[] | undefined = undefined;
+	export let sources: Record<string, any> | undefined = undefined;
 </script>
 
 <article>
