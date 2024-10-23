@@ -5,7 +5,8 @@ import {
 	getRecordsBy,
 	supabase,
 	getRecordSources,
-	getRecordMoments
+	getRecordMoments,
+	getRecordLanguages
 } from '$lib/supabase';
 import type { Moment, Person, PersonMoment } from '$lib/types';
 import { compile } from 'mdsvex';
@@ -17,12 +18,18 @@ export async function load({ params, parent }) {
 	try {
 		const person = (await getRecord('person', slug)) as Person;
 
+		const personLanguages = await getRecordLanguages('person', slug);
+		const languages =
+			personLanguages && personLanguages.length
+				? personLanguages.map((l) => l.name)
+				: [person?.language || EMPTY_PLACEHOLDER];
+
 		const meta = {
 			'Alternative names': person?.alternative_names || EMPTY_PLACEHOLDER,
 			Gender: person?.gender || EMPTY_PLACEHOLDER,
 			Nationality: person?.nationality || EMPTY_PLACEHOLDER,
 			Ethnicity: person?.ethnicity || EMPTY_PLACEHOLDER,
-			Languages: person?.language || EMPTY_PLACEHOLDER
+			Languages: languages?.join(', ') || EMPTY_PLACEHOLDER
 		};
 
 		const description = await compile(person?.description || '');
