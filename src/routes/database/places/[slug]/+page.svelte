@@ -1,10 +1,12 @@
 <script lang="ts">
-  export let data;
+	export let data;
+
+	const { place } = data;
 </script>
 
 <article>
-  <h1>{data.item.name}</h1>
-  {#if data.item.description}
-    <p>{data.item.description}</p>
-  {/if}
+	<h1>{place.name}</h1>
+	{#if place.description}
+		<p>{place.description}</p>
+	{/if}
 </article>

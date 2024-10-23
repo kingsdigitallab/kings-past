@@ -1,13 +1,16 @@
 import { getRecord, getRecords } from '$lib/supabase';
-import { error } from '@sveltejs/kit';
+import { handleLoadError } from '$lib/errorHandling';
+import type { Place } from '$lib/types';
 
 export async function load({ params }) {
+	const { slug } = params;
+
 	try {
 		return {
-			item: await getRecord('place', params.slug)
+			place: await getRecord('place', slug)
 		};
 	} catch (e) {
-		error(404, `Could not find ${params.slug}`);
+		handleLoadError(slug, e);
 	}
 }
 

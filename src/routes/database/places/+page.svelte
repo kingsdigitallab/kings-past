@@ -15,7 +15,7 @@
 		{
 			header: 'Latitude',
 			accessor: 'latitude',
-			cell: ({ value }: { value: number }) => (value ? value.toFixed(2) : 'N/A'),
+			cell: ({ value }: { value: number }) => (value ? value.toFixed(2) : config.EMPTY_PLACEHOLDER),
 			plugins: {
 				sort: {
 					getSortValue(item: number) {
@@ -27,7 +27,7 @@
 		{
 			header: 'Longitude',
 			accessor: 'longitude',
-			cell: ({ value }: { value: number }) => (value ? value.toFixed(2) : 'N/A'),
+			cell: ({ value }: { value: number }) => (value ? value.toFixed(2) : config.EMPTY_PLACEHOLDER),
 			plugins: {
 				sort: {
 					getSortValue(item: number) {
