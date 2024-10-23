@@ -17,7 +17,7 @@
 			header: 'Founding date',
 			accessor: 'founding_date',
 			cell: ({ value }: { value: string }) =>
-				value ? new Date(value).toLocaleDateString() : 'N/A',
+				value ? new Date(value).toLocaleDateString() : config.EMPTY_PLACEHOLDER,
 			plugins: {
 				sort: {
 					getSortValue(item: string) {
@@ -30,7 +30,7 @@
 			header: 'Dissolution date',
 			accessor: 'dissolution_date',
 			cell: ({ value }: { value: string }) =>
-				value ? new Date(value).toLocaleDateString() : 'N/A',
+				value ? new Date(value).toLocaleDateString() : config.EMPTY_PLACEHOLDER,
 			plugins: {
 				sort: {
 					getSortValue(item: string) {
