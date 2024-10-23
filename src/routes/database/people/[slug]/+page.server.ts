@@ -1,6 +1,13 @@
 import { EMPTY_PLACEHOLDER } from '$lib/config';
-import { getRecord, getRecords, getRecordsBy, supabase } from '$lib/supabase';
-import type { Person, PersonMoment } from '$lib/types';
+import {
+	getRecord,
+	getRecords,
+	getRecordsBy,
+	supabase,
+	getRecordSources,
+	getRecordMoments
+} from '$lib/supabase';
+import type { Moment, Person, PersonMoment } from '$lib/types';
 import { compile } from 'mdsvex';
 import { handleLoadError } from '$lib/errorHandling';
 
@@ -20,37 +27,29 @@ export async function load({ params, parent }) {
 
 		const description = await compile(person?.description || '');
 
-		const feature = await supabase.from('person_feature').select('').eq('person', slug);
+		const feature = await supabase.from('person_feature').select('*').eq('person', slug).single();
 
 		const knows = await supabase
 			.from('person_knows')
-			.select('')
+			.select('*')
 			.or(`person.eq.${slug},knows.eq.${slug}`)
 			.order('knows,person');
 
 		const memberOf = await supabase
-			.from('person_member_of')
-			.select('')
-			.eq('person', slug)
-			.order('organisation');
+			.from('organisation')
+			.select('*, person_member_of!inner(person)')
+			.eq('person_member_of.person', slug)
+			.order('slug');
 
-		const personMoments = await supabase
-			.from('person_moment')
-			.select('*')
-			.eq('person', slug)
-			.order('moment');
+		const personMoments = await getRecordMoments('person', slug);
 
-		const sources = await supabase
-			.from('person_source')
-			.select('')
-			.eq('person', slug)
-			.order('source');
+		const sources = await getRecordSources('person', slug);
 
 		const parentData = await parent();
 		const parentMoments = parentData.moments;
 
-		const moments = parentMoments.filter((moment) =>
-			personMoments?.data?.some((pm: PersonMoment) => parseInt(pm.moment) === moment.n)
+		const moments = parentMoments.filter((moment: Moment) =>
+			personMoments?.some((pm) => parseInt(pm.moment) === moment.n)
 		);
 
 		return {
@@ -61,9 +60,8 @@ export async function load({ params, parent }) {
 			knows: knows.data,
 			memberOf: memberOf.data,
 			moments: moments,
-			sources: sources.data,
-			people: parentData.peopleBySlug,
-			organisations: await getRecordsBy('organisation', 'slug')
+			sources,
+			people: parentData.peopleBySlug
 		};
 	} catch (e) {
 		handleLoadError(slug, e);

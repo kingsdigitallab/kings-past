@@ -54,3 +54,33 @@ export async function getRecord(source: TableNames, slug: string): Promise<KPRec
 
 	return data as KPRecord;
 }
+
+export async function getRecordMoments(source: TableNames, slug: string) {
+	// @ts-expect-error No overload matches this call.
+	const momentsQuery = supabase
+		.from(`${source}_moment`)
+		.select('*')
+		.eq(source, slug)
+		.order('moment');
+
+	const { data: moments, error } = await momentsQuery;
+
+	if (error) throw error;
+
+	return moments;
+}
+
+export async function getRecordSources(source: TableNames, slug: string) {
+	// @ts-expect-error Too complex for TS.
+	const sourcesQuery = supabase
+		.from('source')
+		.select(`*, ${source}_source!inner(${source})`)
+		.eq(`${source}_source.${source}`, slug)
+		.order('slug');
+
+	const { data: sources, error } = await sourcesQuery;
+
+	if (error) throw error;
+
+	return sources;
+}
