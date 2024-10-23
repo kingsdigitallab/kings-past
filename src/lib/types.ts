@@ -1,4 +1,4 @@
-import type { Database } from './supabase/types';
+import type { Database, Tables } from './supabase/types';
 
 export type Feature = {
 	image: string;
@@ -16,5 +16,13 @@ export type Moment = {
 	tags: string[];
 };
 
-export type Person = Database['public']['Tables']['person']['Row'];
-export type Place = Database['public']['Tables']['place']['Row'];
+export type TableNames = keyof Database['public']['Tables'];
+
+export type Donation = Tables<'donation'>;
+export type Event = Tables<'event'>;
+export type Organisation = Tables<'organisation'>;
+export type Person = Tables<'person'>;
+export type PersonMoment = Tables<'person_moment'>;
+export type Place = Tables<'place'>;
+
+export type KPRecord = Donation | Event | Organisation | Person | Place;
