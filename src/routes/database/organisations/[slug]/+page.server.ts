@@ -1,49 +1,46 @@
-import { EMPTY_PLACEHOLDER } from '$lib/constants';
-import { getRecord, getRecords, supabase } from '$lib/supabase';
-import { error } from '@sveltejs/kit';
+import { EMPTY_PLACEHOLDER } from '$lib/config';
+import { handleLoadError } from '$lib/errorHandling.js';
+import { getRecord, getRecordsBy, supabase } from '$lib/supabase';
+import type { Organisation } from '$lib/types';
 import { compile } from 'mdsvex';
 
 export async function load({ params }) {
+	const { slug } = params;
+
 	try {
-		const item = await getRecord('organisation', params.slug);
+		const organisation = (await getRecord('organisation', slug)) as Organisation;
 
 		const meta = {
-			'Alternative names': item.alternative_names || EMPTY_PLACEHOLDER,
-			'Founding date': item.founding_date || EMPTY_PLACEHOLDER,
-			'Dissolution date': item.dissolution_date || EMPTY_PLACEHOLDER,
-			Location: item.location || EMPTY_PLACEHOLDER,
-			'Organisation type': item.organisation_type || EMPTY_PLACEHOLDER
+			'Alternative names': organisation.alternative_names || EMPTY_PLACEHOLDER,
+			'Founding date': organisation.founding_date || EMPTY_PLACEHOLDER,
+			'Dissolution date': organisation.dissolution_date || EMPTY_PLACEHOLDER,
+			Location: organisation.location || EMPTY_PLACEHOLDER,
+			'Organisation type': organisation.organisation_type || EMPTY_PLACEHOLDER
 		};
 
-		const description = await compile(item.description);
+		const description = await compile(organisation?.description || '');
 
 		const members = await supabase
 			.from('person_member_of')
-			.select('')
-			.eq('organisation', params.slug)
+			.select('*')
+			.eq('organisation', slug)
 			.order('person');
 
 		const sources = await supabase
-			.from('person_source')
-			.select('')
-			.eq('person', params.slug)
+			.from('organisation_source')
+			.select('*')
+			.eq('organisation', slug)
 			.order('source');
 
-		const people = await getRecords('person');
-
 		return {
-			item,
+			organisation,
 			meta,
 			description,
 			members: members.data,
 			sources,
-			people: people?.reduce((acc, cur) => {
-				acc[cur.slug] = cur;
-				return acc;
-			}, {})
+			people: await getRecordsBy('person', 'slug')
 		};
 	} catch (e) {
-		console.error(e);
-		error(404, `Could not find ${params.slug}`);
+		handleLoadError(slug, e);
 	}
 }
