@@ -72,3 +72,12 @@ export async function load({ params, parent }) {
 		}
 	}
 }
+
+export async function entries() {
+	const data = await getRecords('person');
+	if (!data) return [];
+
+	const entries = data.filter((person) => person.slug).map((person) => ({ slug: person.slug }));
+
+	return entries;
+}
