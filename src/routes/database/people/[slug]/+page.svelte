@@ -1,28 +1,35 @@
 <script lang="ts">
 	import Entity from '$lib/components/entity.svelte';
+	import * as config from '$lib/config';
 
 	export let data;
+
+	const { person, meta, description, feature, moments, sources, people, knows, memberOf } = data;
 </script>
+
+<svelte:head>
+	<title>{person?.name} | {config.title}</title>
+</svelte:head>
 
 <Entity
 	entityType="Person"
-	entityName={data.person?.name}
-	meta={data.meta}
-	feature={data.feature}
-	description={data.description}
-	moments={data.moments}
-	sources={data.sources}
+	entityName={person?.name}
+	{meta}
+	{feature}
+	{description}
+	{moments}
+	{sources}
 >
-	{#if data.knows && data.knows.length}
+	{#if knows && knows.length}
 		<section>
 			<h2>Knows</h2>
 			<ul>
-				{#each data.knows as knows}
+				{#each knows as knows}
 					<li>
-						{#if knows.person === data.person.slug}
-							<a href={knows.knows}>{data.people[knows.knows].name}</a>
+						{#if knows.person === person.slug}
+							<a href={knows.knows}>{people[knows.knows].name}</a>
 						{:else}
-							<a href={knows.person}>{data.people[knows.person].name}</a>
+							<a href={knows.person}>{people[knows.person].name}</a>
 						{/if}
 						{#if knows.relationship}
 							<span>, {knows.relationship.toLowerCase()}</span>
@@ -33,15 +40,13 @@
 		</section>
 	{/if}
 
-	{#if data.memberOf && data.memberOf.length}
+	{#if memberOf && memberOf.length}
 		<section>
 			<h2>Member of</h2>
 			<ul>
-				{#each data.memberOf as member}
+				{#each memberOf as organisation}
 					<li>
-						<a href="../organisations/{member.organisation}"
-							>{data.organisations[member.organisation].name}</a
-						>
+						<a href="../organisations/{organisation.slug}">{organisation.name}</a>
 					</li>
 				{/each}
 			</ul>
