@@ -1,20 +1,21 @@
-import { EMPTY_PLACEHOLDER } from '$lib/constants';
+import { EMPTY_PLACEHOLDER } from '$lib/config';
 import { getRecord, getRecords, getRecordsBy, supabase } from '$lib/supabase';
-import { error } from '@sveltejs/kit';
+import type { Person, PersonMoment } from '$lib/types';
 import { compile } from 'mdsvex';
+import { handleLoadError } from '$lib/errorHandling';
 
 export async function load({ params, parent }) {
 	const { slug } = params;
 
 	try {
-		const person = await getRecord('person', slug);
+		const person = (await getRecord('person', slug)) as Person;
 
 		const meta = {
 			'Alternative names': person?.alternative_names || EMPTY_PLACEHOLDER,
 			Gender: person?.gender || EMPTY_PLACEHOLDER,
 			Nationality: person?.nationality || EMPTY_PLACEHOLDER,
 			Ethnicity: person?.ethnicity || EMPTY_PLACEHOLDER,
-			Languages: person?.languages || EMPTY_PLACEHOLDER
+			Languages: person?.language || EMPTY_PLACEHOLDER
 		};
 
 		const description = await compile(person?.description || '');
@@ -35,7 +36,7 @@ export async function load({ params, parent }) {
 
 		const personMoments = await supabase
 			.from('person_moment')
-			.select('')
+			.select('*')
 			.eq('person', slug)
 			.order('moment');
 
@@ -49,7 +50,7 @@ export async function load({ params, parent }) {
 		const parentMoments = parentData.moments;
 
 		const moments = parentMoments.filter((moment) =>
-			personMoments?.data?.some((pm) => parseInt(pm.moment) === moment.n)
+			personMoments?.data?.some((pm: PersonMoment) => parseInt(pm.moment) === moment.n)
 		);
 
 		return {
@@ -65,11 +66,7 @@ export async function load({ params, parent }) {
 			organisations: await getRecordsBy('organisation', 'slug')
 		};
 	} catch (e) {
-		if (e instanceof Error) {
-			error(404, `Could not load ${slug}: ${e.message}`);
-		} else {
-			error(404, `Could not load ${slug}: An unknown error occurred`);
-		}
+		handleLoadError(slug, e);
 	}
 }
 

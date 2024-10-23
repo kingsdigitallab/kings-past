@@ -1,10 +1,11 @@
+import { handleLoadError } from '$lib/errorHandling';
 import { getMoments } from '$lib/moments';
 import { getRecords, getRecordsBy } from '$lib/supabase';
-import { error } from '@sveltejs/kit';
+import type { Person } from '$lib/types';
 
 export async function load() {
 	try {
-		const data = await getRecords('person');
+		const data = (await getRecords('person')) as Person[];
 
 		return {
 			people: data ?? [],
@@ -12,6 +13,6 @@ export async function load() {
 			moments: await getMoments()
 		};
 	} catch (e) {
-		error(404, `Could not find people`);
+		handleLoadError('people', e);
 	}
 }
