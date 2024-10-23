@@ -1,3 +1,5 @@
+import { EMPTY_PLACEHOLDER } from './config';
+
 export const dateColumn = {
 	header: 'Date',
 	id: 'date',
@@ -36,7 +38,7 @@ export const nameColumn = {
 export const locationColumn = (placesBySlug: Record<string, Record<string, unknown>>) => ({
 	header: 'Location',
 	accessor: 'location',
-	cell: ({ value }: { value: string }) => (value ? placesBySlug[value]?.name : 'N/A'),
+	cell: ({ value }: { value: string }) => (value ? placesBySlug[value]?.name : EMPTY_PLACEHOLDER),
 	plugins: {
 		sort: {
 			getSortValue(item: string) {
