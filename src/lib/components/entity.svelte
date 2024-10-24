@@ -27,15 +27,11 @@
 		</dl>
 	</section>
 
-	{#if feature && feature.length > 0}
+	{#if feature}
 		<section class="font-serif">
 			<figure>
-				<img
-					src={feature[0].image_url}
-					alt={feature[0].image_description}
-					title={feature[0].image_title}
-				/>
-				<figcaption>{feature[0].image_title}</figcaption>
+				<img src={feature.image_url} alt={feature.image_description} title={feature.image_title} />
+				<figcaption>{feature.image_title}</figcaption>
 			</figure>
 		</section>
 	{/if}
