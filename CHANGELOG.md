@@ -1,5 +1,32 @@
 
 
+## [0.9.2](https://github.com/kingsdigitallab/kings-past/compare/v0.9.1...v0.9.2) (2024-10-22)
+
+
+### Bug Fixes
+
+* **people:** check if metadata fields exist ([7f18b20](https://github.com/kingsdigitallab/kings-past/commit/7f18b206c4feef93a6afb05cdc0b1cb186a5a8f9))
+
+
+### Features
+
+* **error:** add route to render errors ([0abc4cd](https://github.com/kingsdigitallab/kings-past/commit/0abc4cd8939e773a953480d0fb7d423481ee1ef2))
+* **supabase:** throw an error if a record is not found ([1c27820](https://github.com/kingsdigitallab/kings-past/commit/1c27820ecc5566e7ed1ce9f09e89f464abb5b9d8))
+
+## [0.9.1](https://github.com/kingsdigitallab/kings-past/compare/v0.9.0...v0.9.1) (2024-10-22)
+
+
+### Bug Fixes
+
+* **people:** convert string to lower case for sorting ([b278af6](https://github.com/kingsdigitallab/kings-past/commit/b278af61742287eb6f3579d753ad73ec1f835f1e))
+* **people:** convert string to lower case for sorting ([59db5c2](https://github.com/kingsdigitallab/kings-past/commit/59db5c268083b845934ba98aa8186318c6bcf07b))
+* **tablecolumns:** convert string to lower case for sorting ([6554c62](https://github.com/kingsdigitallab/kings-past/commit/6554c62f34577f64ff6b45c91bb3db61b72fea88))
+
+
+### Features
+
+* **about:** add team as a subpage ([119e8cc](https://github.com/kingsdigitallab/kings-past/commit/119e8cca808964385db21602fb40b8e13b33e6f0))
+
 # [0.9.0](https://github.com/kingsdigitallab/kings-past/compare/v0.8.0...v0.9.0) (2024-10-22)
 
 
