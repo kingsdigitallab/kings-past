@@ -1,2 +1,2 @@
-# The Demonumenta project and King's Past
+# The demonumenta project and King's Past
 
