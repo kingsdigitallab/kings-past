@@ -6,7 +6,7 @@ tags:
 excerpt: ''
 feature:
   image: /assets/images/moments/6.webp
-  title: The image title
+  title: Collage from Reginald Gates Expeditions Collection, 1882-1962, Skull measurement. 
   description: Placeholder image for moments
 type: moment
 ---
