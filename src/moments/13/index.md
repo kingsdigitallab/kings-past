@@ -1,12 +1,12 @@
 ---
-title: '2000: Diversity and Globalisation'
+title: 'King's Past / King's Future'
 n: 13
 tags:
   - moment
 excerpt: ''
 feature:
-  image: /assets/images/placeholder.svg
-  title: The image title
+  image: /assets/images/moments/13.webp
+  title: Collage of the King's Building, designed by Sir Robert Smirke in 1829
   description: Placeholder image for moments
 type: moment
 ---
