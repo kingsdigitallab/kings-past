@@ -1,6 +1,6 @@
 <script lang="ts">
 	import * as config from '$lib/config';
-	import footerImg from '$images/footer.jpg';
+	import footerImg from '$images/footer.webp';
 	import * as icons from 'lucide-svelte';
 
 	import { base } from '$app/paths';

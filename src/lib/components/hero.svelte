@@ -1,6 +1,6 @@
 <script lang="ts">
 	import * as config from '../config';
-	import heroImg from '$images/hero.jpg';
+	import heroImg from '$images/hero.webp';
 	import { base } from '$app/paths';
 </script>
 
