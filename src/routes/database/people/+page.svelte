@@ -87,21 +87,21 @@
 <article>
 	<header>
 		<h1>People</h1>
-		<div class="view-toggle">
+		<!-- <div class="view-toggle">
 			<button class:active={viewMode === 'table'} on:click={() => (viewMode = 'table')}
 				><LucideTable />Table view</button
 			>
 			<button class:active={viewMode === 'cards'} on:click={() => (viewMode = 'cards')}
 				><LucideLayoutGrid />Card view</button
 			>
-		</div>
+		</div> -->
 	</header>
 
-	{#if viewMode === 'table'}
-		<IndexTable data={people} {label} {columns} {sortBy} {url} />
-	{:else}
+	<!-- {#if viewMode === 'table'} -->
+	<IndexTable data={people} {label} {columns} {sortBy} {url} />
+	<!-- {:else}
 		<IndexCards data={people} {columns} {url} />
-	{/if}
+	{/if} -->
 </article>
 
 <style>
