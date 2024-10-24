@@ -1,6 +1,7 @@
 <script lang="ts">
 	import type { Moment } from '$lib/types';
 	import { base } from '$app/paths';
+	import { Image } from '@unpic/svelte';
 
 	export let moments: Moment[];
 </script>
@@ -14,7 +15,13 @@
 		{#each moments as moment}
 			<li class="moment">
 				<a href="moments/{moment.slug}">
-					<img src="{base}{moment.feature.image}" alt={moment.feature.description} />
+					<Image
+						src={`${base}${moment.feature.image}`}
+						alt={moment.feature.description}
+						title={moment.feature.title}
+						layout="fullWidth"
+						height={320}
+					/>
 					<div class="title">{moment.title}</div>
 				</a>
 			</li>
