@@ -6,7 +6,8 @@ import {
 	supabase,
 	getRecordSources,
 	getRecordMoments,
-	getRecordLanguages
+	getRecordLanguages,
+	getRecordFeature
 } from '$lib/supabase';
 import type { Moment, Person, PersonMoment } from '$lib/types';
 import { compile } from 'mdsvex';
@@ -34,7 +35,7 @@ export async function load({ params, parent }) {
 
 		const description = await compile(person?.description || '');
 
-		const feature = await supabase.from('person_feature').select('*').eq('person', slug).single();
+		const feature = await getRecordFeature('person', slug);
 
 		const knows = await supabase
 			.from('person_knows')
@@ -63,7 +64,7 @@ export async function load({ params, parent }) {
 			person,
 			meta,
 			description: description?.code,
-			feature: feature.data,
+			feature,
 			knows: knows.data,
 			memberOf: memberOf.data,
 			moments: moments,

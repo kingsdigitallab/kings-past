@@ -55,6 +55,17 @@ export async function getRecord(source: TableNames, slug: string): Promise<KPRec
 	return data as KPRecord;
 }
 
+export async function getRecordFeature(source: string, slug: string) {
+	const tableName = `${source}_feature` as TableNames;
+	const featureQuery = supabase.from(tableName).select('*').eq(source, slug).single();
+
+	const { data: feature, error } = await featureQuery;
+
+	if (error) throw error;
+
+	return feature;
+}
+
 export async function getRecordLanguages(source: TableNames, slug: string) {
 	// @ts-expect-error Too complex for TS.
 	const languagesQuery = supabase
@@ -70,13 +81,9 @@ export async function getRecordLanguages(source: TableNames, slug: string) {
 	return languages;
 }
 
-export async function getRecordMoments(source: TableNames, slug: string) {
-	// @ts-expect-error No overload matches this call.
-	const momentsQuery = supabase
-		.from(`${source}_moment`)
-		.select('*')
-		.eq(source, slug)
-		.order('moment');
+export async function getRecordMoments(source: string, slug: string) {
+	const tableName = `${source}_moment` as TableNames;
+	const momentsQuery = supabase.from(tableName).select('*').eq(source, slug).order('moment');
 
 	const { data: moments, error } = await momentsQuery;
 
