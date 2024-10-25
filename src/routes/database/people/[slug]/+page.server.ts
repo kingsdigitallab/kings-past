@@ -1,58 +1,60 @@
 import { EMPTY_PLACEHOLDER } from '$lib/config';
+import { handleLoadError } from '$lib/errorHandling';
 import {
 	getRecord,
-	getRecords,
-	getRecordsBy,
-	supabase,
-	getRecordSources,
-	getRecordMoments,
+	getRecordDonations,
+	getRecordEvents,
+	getRecordFeature,
+	getRecordFunded,
+	getRecordKnows,
 	getRecordLanguages,
-	getRecordFeature
+	getRecordMemberOf,
+	getRecordMoments,
+	getRecordOccupations,
+	getRecords,
+	getRecordSameAs,
+	getRecordSources,
+	getRecordUrls
 } from '$lib/supabase';
 import type { Moment, Person, PersonMoment } from '$lib/types';
 import { compile } from 'mdsvex';
-import { handleLoadError } from '$lib/errorHandling';
 
 export async function load({ params, parent }) {
 	const { slug } = params;
 
 	try {
-		const person = (await getRecord('person', slug)) as Person;
+		const source = 'person';
+		const person = (await getRecord(source, slug)) as Person;
 
-		const personLanguages = await getRecordLanguages('person', slug);
+		const recordLanguages = await getRecordLanguages(source, slug);
 		const languages =
-			personLanguages && personLanguages.length
-				? personLanguages.map((l) => l.name)
+			recordLanguages && recordLanguages.length
+				? recordLanguages.map((l) => l.name)
 				: [person?.language || EMPTY_PLACEHOLDER];
+
+		const occupations = await getRecordOccupations(source, slug);
 
 		const meta = {
 			'Alternative names': person?.alternative_names || EMPTY_PLACEHOLDER,
 			Gender: person?.gender || EMPTY_PLACEHOLDER,
 			Nationality: person?.nationality || EMPTY_PLACEHOLDER,
 			Ethnicity: person?.ethnicity || EMPTY_PLACEHOLDER,
-			Languages: languages?.join(', ') || EMPTY_PLACEHOLDER
+			Languages: languages?.join(', ') || EMPTY_PLACEHOLDER,
+			Occupations: occupations?.map((po) => po.occupation).join(', ') || EMPTY_PLACEHOLDER
 		};
 
 		const description = await compile(person?.description || '');
+		const donations = await getRecordDonations(source, slug);
+		const events = await getRecordEvents(source, slug);
+		const feature = await getRecordFeature(source, slug);
+		const funded = await getRecordFunded(source, slug);
+		const knows = await getRecordKnows(slug);
+		const memberOf = await getRecordMemberOf(source, slug);
+		const sameAs = await getRecordSameAs(source, slug);
+		const sources = await getRecordSources(source, slug);
+		const urls = await getRecordUrls(source, slug);
 
-		const feature = await getRecordFeature('person', slug);
-
-		const knows = await supabase
-			.from('person_knows')
-			.select('*')
-			.or(`person.eq.${slug},knows.eq.${slug}`)
-			.order('knows,person');
-
-		const memberOf = await supabase
-			.from('organisation')
-			.select('*, person_member_of!inner(person)')
-			.eq('person_member_of.person', slug)
-			.order('slug');
-
-		const personMoments = await getRecordMoments('person', slug);
-
-		const sources = await getRecordSources('person', slug);
-
+		const personMoments = (await getRecordMoments(source, slug)) as PersonMoment[];
 		const parentData = await parent();
 		const parentMoments = parentData.moments;
 
@@ -64,11 +66,16 @@ export async function load({ params, parent }) {
 			person,
 			meta,
 			description: description?.code,
+			donations,
+			events,
 			feature,
-			knows: knows.data,
-			memberOf: memberOf.data,
-			moments: moments,
+			funded,
+			knows,
+			memberOf,
+			moments,
+			sameAs,
 			sources,
+			urls,
 			people: parentData.peopleBySlug
 		};
 	} catch (e) {

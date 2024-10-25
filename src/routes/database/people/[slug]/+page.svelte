@@ -1,10 +1,26 @@
 <script lang="ts">
+	import { getEventDate } from '$lib';
 	import Entity from '$lib/components/entity.svelte';
 	import * as config from '$lib/config';
 
 	export let data;
 
-	const { person, meta, description, feature, moments, sources, people, knows, memberOf } = data;
+	const {
+		person,
+		meta,
+		description,
+		donations,
+		events,
+		feature,
+		funded,
+		knows,
+		memberOf,
+		moments,
+		sources,
+		people,
+		sameAs,
+		urls
+	} = data;
 </script>
 
 <svelte:head>
@@ -18,8 +34,23 @@
 	{feature}
 	{description}
 	{moments}
+	{sameAs}
 	{sources}
+	{urls}
 >
+	{#if events && events.length}
+		<section>
+			<h2>Events</h2>
+			<ul>
+				{#each events as event}
+					<li>
+						<a href="../events/{event.slug}">{getEventDate(event)} — {event.name}</a>
+					</li>
+				{/each}
+			</ul>
+		</section>
+	{/if}
+
 	{#if knows && knows.length}
 		<section>
 			<h2>Knows</h2>
@@ -47,6 +78,32 @@
 				{#each memberOf as organisation}
 					<li>
 						<a href="../organisations/{organisation.slug}">{organisation.name}</a>
+					</li>
+				{/each}
+			</ul>
+		</section>
+	{/if}
+
+	{#if funded && funded.length}
+		<section>
+			<h2>Funded</h2>
+			<ul>
+				{#each funded as organisation}
+					<li>
+						<a href="../organisations/{organisation.slug}">{organisation.name}</a>
+					</li>
+				{/each}
+			</ul>
+		</section>
+	{/if}
+
+	{#if donations && donations.length}
+		<section>
+			<h2>Donations</h2>
+			<ul>
+				{#each donations as donation}
+					<li>
+						<a href="../donations/{donation.slug}">{donation.name}</a>
 					</li>
 				{/each}
 			</ul>
