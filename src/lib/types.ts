@@ -20,11 +20,13 @@ export type TableNames = keyof Database['public']['Tables'];
 
 export type Donation = Tables<'donation'>;
 export type Event = Tables<'event'>;
+export type Language = Tables<'language'>;
 export type Organisation = Tables<'organisation'>;
 export type OrganisationSource = Tables<'organisation_source'>;
 export type Person = Tables<'person'>;
 export type PersonMoment = Tables<'person_moment'>;
 export type PersonMemberOf = Tables<'person_member_of'>;
+export type PersonOccupation = Tables<'person_occupation'>;
 export type Place = Tables<'place'>;
 export type Source = Tables<'source'>;
 
