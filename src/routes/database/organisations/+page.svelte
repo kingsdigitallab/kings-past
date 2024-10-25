@@ -1,7 +1,12 @@
 <script lang="ts">
 	import * as config from '$lib/config';
 	import IndexTable from '$lib/components/IndexTable.svelte';
-	import { locationColumn, nameColumn, statusColumn } from '$lib/tableColumns';
+	import {
+		locationColumn,
+		nameColumn,
+		alternativeNamesColumn,
+		statusColumn
+	} from '$lib/tableColumns';
 
 	export let data;
 
@@ -11,6 +16,7 @@
 	const columns = [
 		{ header: 'Slug', accessor: 'slug' },
 		nameColumn,
+		alternativeNamesColumn,
 		{ header: 'Type', accessor: 'organisation_type' },
 		locationColumn(placesBySlug),
 		{

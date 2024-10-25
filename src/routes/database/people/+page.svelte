@@ -2,7 +2,7 @@
 	import * as config from '$lib/config';
 	import IndexTable from '$lib/components/IndexTable.svelte';
 	// import IndexCards from '$lib/components/IndexCards.svelte';
-	import { nameColumn, statusColumn } from '$lib/tableColumns';
+	import { nameColumn, alternativeNamesColumn, statusColumn } from '$lib/tableColumns';
 	// import { LucideTable, LucideLayoutGrid } from 'lucide-svelte';
 
 	export let data;
@@ -15,18 +15,7 @@
 	const columns = [
 		{ header: 'Slug', accessor: 'slug' },
 		nameColumn,
-		{
-			header: 'Alternative names',
-			accessor: 'alternative_names',
-			cell: ({ value }: { value: string }) => value ?? config.EMPTY_PLACEHOLDER,
-			plugins: {
-				sort: {
-					getSortValue(item: string) {
-						return (item || '').toLowerCase();
-					}
-				}
-			}
-		},
+		alternativeNamesColumn,
 		{
 			header: 'Gender',
 			accessor: 'gender',

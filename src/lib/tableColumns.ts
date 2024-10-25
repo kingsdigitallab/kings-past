@@ -35,6 +35,19 @@ export const nameColumn = {
 	}
 };
 
+export const alternativeNamesColumn = {
+	header: 'Alternative names',
+	accessor: 'alternative_names',
+	cell: ({ value }: { value: string }) => value ?? EMPTY_PLACEHOLDER,
+	plugins: {
+		sort: {
+			getSortValue(item: string) {
+				return (item || '').toLowerCase();
+			}
+		}
+	}
+};
+
 export const locationColumn = (placesBySlug: Record<string, Record<string, unknown>>) => ({
 	header: 'Location',
 	accessor: 'location',

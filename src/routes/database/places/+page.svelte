@@ -2,7 +2,7 @@
 	import * as config from '$lib/config';
 	import IndexTable from '$lib/components/IndexTable.svelte';
 	import PlacesMap from '$lib/components/PlacesMap.svelte';
-	import { nameColumn, statusColumn } from '$lib/tableColumns';
+	import { nameColumn, alternativeNamesColumn, statusColumn } from '$lib/tableColumns';
 	import { LucideMap, LucideTable } from 'lucide-svelte';
 
 	export let data;
@@ -12,6 +12,7 @@
 
 	const columns = [
 		nameColumn,
+		alternativeNamesColumn,
 		{
 			header: 'Latitude',
 			accessor: 'latitude',
