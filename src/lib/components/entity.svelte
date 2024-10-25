@@ -1,5 +1,6 @@
 <script lang="ts">
 	import type { Moment } from '$lib/types';
+	import { LucideExternalLink } from 'lucide-svelte';
 
 	export let entityType: string;
 	export let entityName: string;
@@ -7,7 +8,9 @@
 	export let description: string | undefined = undefined;
 	export let feature: Record<string, any> | undefined = undefined;
 	export let moments: Moment[] | undefined = undefined;
+	export let sameAs: Record<string, any>[] | undefined = undefined;
 	export let sources: Record<string, any> | undefined = undefined;
+	export let urls: Record<string, any>[] | undefined = undefined;
 </script>
 
 <article>
@@ -24,6 +27,18 @@
 				<dt>{key}</dt>
 				<dd>{value}</dd>
 			{/each}
+			{#if sameAs && sameAs.length}
+				<dt><LucideExternalLink />Related</dt>
+				<dd>
+					<ul>
+						{#each sameAs as sa}
+							<li>
+								<a href={sa.url}>{sa.name}</a>
+							</li>
+						{/each}
+					</ul>
+				</dd>
+			{/if}
 		</dl>
 	</section>
 
@@ -78,25 +93,22 @@
 			</ul>
 		</section>
 	{/if}
+
+	{#if urls && urls.length}
+		<section>
+			<h2>External links</h2>
+			<ul>
+				{#each urls as url}
+					<li>
+						<a href={url.url}>{url.name}</a>
+					</li>
+				{/each}
+			</ul>
+		</section>
+	{/if}
 </article>
 
 <style>
-	/* .person {
-		&::before {
-			background-color: var(--yellow);
-			border-radius: 50%;
-			content: ' ';
-			display: inline-block;
-			height: 100px;
-			position: absolute;
-			width: 100px;
-		}
-
-		& * {
-			position: relative;
-		}
-	} */
-
 	.entity {
 		font-family: var(--font-headings);
 		font-size: var(--font-size-5);
@@ -106,6 +118,30 @@
 	h1 {
 		color: var(--brand);
 		max-inline-size: none;
+	}
+
+	dt {
+		display: flex;
+	}
+
+	:global(dt svg) {
+		margin-right: var(--size-2);
+	}
+
+	dd ul {
+		display: flex;
+		max-inline-size: none;
+	}
+
+	dd ul li,
+	dd ul li a {
+		display: flex;
+		max-inline-size: none;
+	}
+
+	dd ul li:not(:first-child)::before {
+		content: ',';
+		margin-right: var(--size-1);
 	}
 
 	img {
