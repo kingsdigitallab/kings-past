@@ -48,6 +48,19 @@ export const alternativeNamesColumn = {
 	}
 };
 
+export const hasDescriptionColumn = {
+	header: 'Bio',
+	accessor: 'description',
+	cell: ({ value }: { value: string }) => (value ? 'yes' : 'no'),
+	plugins: {
+		sort: {
+			getSortValue(item: string) {
+				return (item || '').toLowerCase();
+			}
+		}
+	}
+};
+
 export const locationColumn = (placesBySlug: Record<string, Record<string, unknown>>) => ({
 	header: 'Location',
 	accessor: 'location',
