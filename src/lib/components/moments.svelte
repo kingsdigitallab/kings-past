@@ -70,18 +70,6 @@
 					color: var(--yellow);
 					text-decoration-color: var(--yellow);
 				}
-
-				img {
-					height: 100%;
-					object-fit: cover;
-					object-position: center;
-					overflow: hidden;
-					width: 100%;
-
-					&:hover {
-						opacity: 0.7;
-					}
-				}
 			}
 		}
 
@@ -103,6 +91,18 @@
 			padding: var(--size-4);
 			position: absolute;
 			width: 100%;
+		}
+	}
+
+	:global(.moments li a img) {
+		height: 100%;
+		object-fit: cover;
+		object-position: center;
+		overflow: hidden;
+		width: 100%;
+
+		&:hover {
+			opacity: 0.7;
 		}
 	}
 </style>
