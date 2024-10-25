@@ -159,7 +159,7 @@ button {
 
 	& dt {
 		margin-block-start: unset;
-		margin-right: 0.5rem;
+		margin-right: var(--size-2);
 
 		&::after {
 			content: ':';
@@ -168,8 +168,8 @@ button {
 		&:not(:first-child)::before {
 			content: '|';
 			font-weight: normal;
-			margin-left: 0.5rem;
-			margin-right: 0.5rem;
+			margin-left: var(--size-2);
+			margin-right: var(--size-2);
 		}
 	}
 }
