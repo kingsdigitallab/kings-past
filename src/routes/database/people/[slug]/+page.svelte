@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { getEventDate } from '$lib';
-	import Entity from '$lib/components/entity.svelte';
+	import Entity from '$lib/components/EntityDetails.svelte';
 	import * as config from '$lib/config';
 
 	export let data;
@@ -28,8 +28,8 @@
 </svelte:head>
 
 <Entity
+	entity={person}
 	entityType="Person"
-	entityName={person?.name}
 	{meta}
 	{feature}
 	{description}

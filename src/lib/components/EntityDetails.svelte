@@ -1,9 +1,9 @@
 <script lang="ts">
-	import type { Moment } from '$lib/types';
+	import type { Donation, Event, Moment, Organisation, Person, Place } from '$lib/types';
 	import { LucideExternalLink } from 'lucide-svelte';
 
+	export let entity: Donation | Event | Organisation | Person | Place;
 	export let entityType: string;
-	export let entityName: string;
 	export let meta: Record<string, any>;
 	export let description: string | undefined = undefined;
 	export let feature: Record<string, any> | undefined = undefined;
@@ -18,11 +18,13 @@
 		<p class="entity">
 			<strong>{entityType}</strong>
 		</p>
-		<h1>{entityName}</h1>
+		<h1>{entity.name}</h1>
 	</hgroup>
 
 	<section>
 		<dl class="dl-inline">
+			<dt>Slug</dt>
+			<dd>{entity.slug}</dd>
 			{#each Object.entries(meta) as [key, value]}
 				<dt>{key}</dt>
 				<dd>{value}</dd>

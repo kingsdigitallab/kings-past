@@ -1,5 +1,5 @@
 <script lang="ts">
-	import Entity from '$lib/components/entity.svelte';
+	import Entity from '$lib/components/EntityDetails.svelte';
 
 	export let data;
 
@@ -7,8 +7,8 @@
 </script>
 
 <Entity
+	entity={organisation}
 	entityType="Organisation"
-	entityName={organisation.name}
 	{meta}
 	description={description?.code}
 	{sources}
