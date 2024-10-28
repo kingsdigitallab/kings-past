@@ -63,11 +63,15 @@ export async function getRecord(source: TableNames, slug: string): Promise<KPRec
 	return data as KPRecord;
 }
 
-export async function getRecordDonations(source: string, slug: string): Promise<Donation[]> {
+export async function getRecordDonations(
+	source: string,
+	slug: string,
+	role: 'agent' | 'recipient' = 'agent'
+): Promise<Donation[]> {
 	const donationsQuery = supabase
 		.from('donation')
-		.select(`*, donation_agent_${source}!inner(${source})`)
-		.eq(`donation_agent_${source}.${source}`, slug)
+		.select(`*, donation_${role}_${source}!inner(${source})`)
+		.eq(`donation_${role}_${source}.${source}`, slug)
 		.order('name');
 
 	const { data: donations, error } = await donationsQuery;
