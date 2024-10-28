@@ -1,6 +1,6 @@
 <script lang="ts">
+	import EntityIndex from '$lib/components/EntityIndex.svelte';
 	import * as config from '$lib/config';
-	import IndexTable from '$lib/components/IndexTable.svelte';
 	import {
 		locationColumn,
 		nameColumn,
@@ -12,6 +12,8 @@
 
 	const label = 'organisations';
 	const { collection, url, placesBySlug } = data;
+
+	let view: 'table' | 'cards' = 'table';
 
 	const columns = [
 		{ header: 'Slug', accessor: 'slug' },
@@ -59,5 +61,5 @@
 		<h1>Organisations</h1>
 	</header>
 
-	<IndexTable data={collection} {columns} {sortBy} {label} {url} />
+	<EntityIndex data={collection} {columns} {label} {sortBy} {url} {view} />
 </article>
