@@ -1,7 +1,6 @@
 <script lang="ts">
 	import * as config from '$lib/config';
-	import IndexTable from '$lib/components/IndexTable.svelte';
-	import IndexCards from '$lib/components/IndexCards.svelte';
+	import EntityIndex from '$lib/components/EntityIndex.svelte';
 	import {
 		nameColumn,
 		alternativeNamesColumn,
@@ -15,7 +14,7 @@
 	const label = 'people';
 	const { people, url } = data;
 
-	let viewMode: 'table' | 'cards' = 'table';
+	let view: 'table' | 'cards' = 'table'; // You can toggle this based on user preference
 
 	const columns = [
 		{ header: 'Slug', accessor: 'slug' },
@@ -135,26 +134,27 @@
 	<section>
 		<h2>Summary</h2>
 		<p>
-			The database currently contains <strong>{people.length.toLocaleString()}</strong> documented peoplem,
+			The database currently contains <strong>{people.length.toLocaleString()}</strong> documented people,
 			with the following characteristics:
 		</p>
 
 		<h3>Completeness</h3>
 		<ul>
 			<li>
-				<strong>{descriptionCount.toLocaleString()}</strong> ({descriptionPercentage}%) have
-				biographical information
+				<strong>{descriptionCount.toLocaleString()}</strong>
+				({descriptionPercentage}%) have biographical information
 			</li>
 			<li>
-				<strong>{alternativeNamesCount.toLocaleString()}</strong> ({alternativeNamesPercentage}%)
-				have recorded alternative names
+				<strong>{alternativeNamesCount.toLocaleString()}</strong>
+				({alternativeNamesPercentage}%) have recorded alternative names
 			</li>
 		</ul>
 		<h3>Gender distribution</h3>
 		<ul>
 			{#each genderDistribution as { gender, count, percentage }}
 				<li>
-					<strong>{count.toLocaleString()}</strong> ({percentage}%) <em>{gender}</em>
+					<strong>{count.toLocaleString()}</strong> ({percentage}%)
+					<em>{gender}</em>
 				</li>
 			{/each}
 		</ul>
@@ -162,7 +162,8 @@
 		<ul>
 			{#each ethnicityDistribution as { ethnicity, count, percentage }}
 				<li>
-					<strong>{count.toLocaleString()}</strong> ({percentage}%) <em>{ethnicity}</em>
+					<strong>{count.toLocaleString()}</strong> ({percentage}%)
+					<em>{ethnicity}</em>
 				</li>
 			{/each}
 		</ul>
@@ -175,19 +176,15 @@
 
 	<section>
 		<div class="view-toggle">
-			<button class:active={viewMode === 'table'} on:click={() => (viewMode = 'table')}
+			<button class:active={view === 'table'} on:click={() => (view = 'table')}
 				><LucideTable />Table view</button
 			>
-			<button class:active={viewMode === 'cards'} on:click={() => (viewMode = 'cards')}
+			<button class:active={view === 'cards'} on:click={() => (view = 'cards')}
 				><LucideLayoutGrid />Card view</button
 			>
 		</div>
 
-		{#if viewMode === 'table'}
-			<IndexTable data={people} {label} {columns} {sortBy} {url} />
-		{:else}
-			<IndexCards data={people} {columns} {url} />
-		{/if}
+		<EntityIndex data={people} {columns} {label} {sortBy} {url} {view} />
 	</section>
 </article>
 

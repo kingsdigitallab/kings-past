@@ -1,11 +1,13 @@
 <script lang="ts">
-	import type { Column } from '$lib/types';
+	import type { BodyRow } from 'svelte-headless-table';
+	import type { Column } from 'svelte-headless-table';
+	import type { Readable } from 'svelte/store';
 
-	export let data: any[];
+	export let pageRows: Readable<BodyRow<any, any>[]>;
+	export let columns: Column<any>[];
 	export let url: string;
-	export let columns: Column[];
 
-	function formatValue(item: any, column: Column) {
+	function formatValue(item: Record<string, any>, column: Column<any>) {
 		if (column.cell) {
 			return column.cell({ value: item[column.accessor] });
 		}
@@ -14,7 +16,8 @@
 </script>
 
 <div class="cards-container">
-	{#each data as item}
+	{#each $pageRows as row (row.id)}
+		{@const item = row.original}
 		<article class="card">
 			<header>
 				<h2><a href={`${url}/${item.slug}`}>{item.name}</a></h2>
