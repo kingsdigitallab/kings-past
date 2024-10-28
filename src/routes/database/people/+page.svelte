@@ -14,7 +14,7 @@
 	const label = 'people';
 	const { people, url } = data;
 
-	let view: 'table' | 'cards' = 'table'; // You can toggle this based on user preference
+	let view: 'table' | 'cards' = 'table';
 
 	const columns = [
 		{ header: 'Slug', accessor: 'slug' },
