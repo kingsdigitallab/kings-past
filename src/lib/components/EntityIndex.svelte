@@ -28,6 +28,7 @@
 
 	const tableColumns = columns
 		.filter((col) => col.accessor !== 'status' || dev)
+		.filter((col) => col.accessor !== 'slug')
 		.map((col) => table.column(col));
 
 	const { headerRows, pageRows, tableAttrs, tableBodyAttrs, pluginStates } =
