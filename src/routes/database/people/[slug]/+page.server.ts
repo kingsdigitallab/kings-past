@@ -44,7 +44,8 @@ export async function load({ params, parent }) {
 		};
 
 		const description = await compile(person?.description || '');
-		const donations = await getRecordDonations(source, slug);
+		const donationsAsAgent = await getRecordDonations(source, slug, 'agent');
+		const donationsAsRecipient = await getRecordDonations(source, slug, 'recipient');
 		const events = await getRecordEvents(source, slug);
 		const feature = await getRecordFeature(source, slug);
 		const funded = await getRecordFunded(source, slug);
@@ -66,7 +67,8 @@ export async function load({ params, parent }) {
 			person,
 			meta,
 			description: description?.code,
-			donations,
+			donationsAsAgent,
+			donationsAsRecipient,
 			events,
 			feature,
 			funded,

@@ -2,6 +2,7 @@
 	import { getEventDate } from '$lib';
 	import Entity from '$lib/components/EntityDetails.svelte';
 	import * as config from '$lib/config';
+	import DonationsList from '$lib/components/DonationsList.svelte';
 
 	export let data;
 
@@ -9,7 +10,8 @@
 		person,
 		meta,
 		description,
-		donations,
+		donationsAsAgent,
+		donationsAsRecipient,
 		events,
 		feature,
 		funded,
@@ -97,16 +99,5 @@
 		</section>
 	{/if}
 
-	{#if donations && donations.length}
-		<section>
-			<h2>Donations</h2>
-			<ul>
-				{#each donations as donation}
-					<li>
-						<a href="../donations/{donation.slug}">{donation.name}</a>
-					</li>
-				{/each}
-			</ul>
-		</section>
-	{/if}
+	<DonationsList entityName={person.name} {donationsAsAgent} {donationsAsRecipient} />
 </Entity>
