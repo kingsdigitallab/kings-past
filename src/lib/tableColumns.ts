@@ -1,3 +1,4 @@
+import { formatDate } from '$lib';
 import { EMPTY_PLACEHOLDER } from './config';
 
 export const dateColumn = {
@@ -7,12 +8,8 @@ export const dateColumn = {
 		start_date: item.start_date,
 		end_date: item.end_date
 	}),
-	cell: ({ value }: { value: { start_date: string; end_date: string } }) => {
-		const { start_date, end_date } = value;
-		return start_date !== end_date
-			? `${new Date(start_date).toLocaleDateString()}–${new Date(end_date).toLocaleDateString()}`
-			: new Date(start_date).toLocaleDateString();
-	},
+	cell: ({ value }: { value: { start_date: string; end_date: string } }) =>
+		formatDate(value.start_date, value.end_date),
 	plugins: {
 		sort: {
 			getSortValue(item: { start_date: string; end_date: string }) {
