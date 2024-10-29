@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { EMPTY_PLACEHOLDER } from '$lib/config';
 	import type { Donation, Event, Moment, Organisation, Person, Place } from '$lib/types';
 	import { LucideExternalLink } from 'lucide-svelte';
 
@@ -33,7 +34,7 @@
 					<dd><a href="../places/{value.slug}">{value.name}</a></dd>
 				{:else}
 					<dt>{key}</dt>
-					<dd>{value}</dd>
+					<dd>{value || EMPTY_PLACEHOLDER}</dd>
 				{/if}
 			{/each}
 			{#if sameAs && sameAs.length}
