@@ -1,19 +1,16 @@
-import { error } from '@sveltejs/kit';
-import { getRecordsBy, supabase } from '$lib/supabase';
+import { getMomentPeople } from '$lib/supabase';
+import { handleLoadError } from '$lib/errorHandling.js';
 
 export async function load({ params }) {
+	const { slug } = params;
+
 	try {
-		const momentPeople = await supabase
-			.from('person_moment')
-			.select('')
-			.eq('moment', parseInt(params.slug))
-			.order('person');
+		const people = await getMomentPeople(slug);
 
 		return {
-			momentPeople: momentPeople.data,
-			people: await getRecordsBy('person', 'slug')
+			people
 		};
 	} catch (e) {
-		error(404, `Could not find ${params.slug}`);
+		handleLoadError(slug, e);
 	}
 }

@@ -306,3 +306,17 @@ export async function getRecordUrls(source: string, slug: string) {
 
 	return urls;
 }
+
+export async function getMomentPeople(slug: string) {
+	const momentPeopleQuery = supabase
+		.from('person')
+		.select('*, person_moment!inner(moment)')
+		.like('person_moment.moment', `${parseInt(slug)}%`)
+		.order('name');
+
+	const { data: momentPeople, error } = await momentPeopleQuery;
+
+	if (error) throw error;
+
+	return momentPeople as unknown as Person[];
+}

@@ -2,29 +2,30 @@
 	import Moment from '$lib/components/moment.svelte';
 
 	export let data;
+	const { slug, meta, content, moments, essays, people } = data;
 </script>
 
-<Moment meta={data.meta} content={data.content} moments={data.moments}>
-	{#if (data.essays && data.essays.length > 0) || (data.momentPeople && data.momentPeople.length > 0)}
+<Moment {meta} {content} {moments}>
+	{#if essays?.length || people?.length}
 		<section class="links">
-			{#if data.essays && data.essays.length > 0}
+			{#if essays?.length}
 				<section class="surface-4">
 					<h2>Detailed research</h2>
 					<ul>
-						{#each data.essays as essay}
-							<li><a href="{data.slug}/{essay.slug}">{essay.title}</a></li>
+						{#each essays as essay}
+							<li><a href="{slug}/{essay.slug}">{essay.title}</a></li>
 						{/each}
 					</ul>
 				</section>
 			{/if}
 
-			{#if data.momentPeople && data.momentPeople.length > 0}
+			{#if people?.length}
 				<section class="surface-4">
 					<h2>King's lives</h2>
 					<ul>
-						{#each data.momentPeople as person}
+						{#each people as person}
 							<li>
-								<a href="../database/people/{person.person}">{data.people[person.person].name}</a>
+								<a href="../database/people/{person.slug}">{person.name}</a>
 							</li>
 						{/each}
 					</ul>
