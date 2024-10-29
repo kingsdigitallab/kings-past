@@ -1,7 +1,15 @@
-import type { Event } from '$lib/types';
+import type { Donation, Event } from '$lib/types';
 
-export function getEventDate(event: Event) {
-	return event.start_date !== event.end_date
-		? `${new Date(event.start_date).toLocaleDateString()}–${new Date(event.end_date).toLocaleDateString()}`
-		: new Date(event.start_date).toLocaleDateString();
+export function formatDonationDate(donation: Donation) {
+	return formatDate(donation.start_date, donation.end_date);
+}
+
+export function formatDate(startDate: string, endDate: string) {
+	return startDate !== endDate
+		? `${new Date(startDate).toLocaleDateString()}–${new Date(endDate).toLocaleDateString()}`
+		: new Date(startDate).toLocaleDateString();
+}
+
+export function formatEventDate(event: Event) {
+	return formatDate(event.start_date, event.end_date);
 }
