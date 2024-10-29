@@ -1,4 +1,4 @@
-import { getRecord, getRecordUrls } from '$lib/supabase';
+import { getDonationEntities, getRecord, getRecordSources, getRecordUrls } from '$lib/supabase';
 import type { Donation } from '$lib/types';
 import { handleLoadError } from '$lib/errorHandling';
 import { formatDonationDate } from '$lib';
@@ -23,6 +23,12 @@ export async function load({ params, parent }) {
 
 		const description = await compile(donation?.description || '');
 
+		const donorsPerson = await getDonationEntities(slug);
+		const donorsOrganisation = await getDonationEntities(slug, 'organisation');
+		const recipientsPerson = await getDonationEntities(slug, 'person', 'recipient');
+		const recipientsOrganisation = await getDonationEntities(slug, 'organisation', 'recipient');
+
+		const sources = await getRecordSources(source, slug);
 		const urls = await getRecordUrls(source, slug);
 
 		return {
@@ -30,6 +36,11 @@ export async function load({ params, parent }) {
 			title: donation.name,
 			meta,
 			description: description?.code,
+			donorsPerson,
+			donorsOrganisation,
+			recipientsPerson,
+			recipientsOrganisation,
+			sources,
 			urls
 		};
 	} catch (e) {
