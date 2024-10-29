@@ -59,7 +59,7 @@
 			max-inline-size: none;
 			min-width: 275px;
 			/*box-shadow: var(--size-1) var(--size-1) var(--powder-blue);*/
-			
+			overflow: hidden;
 			a {
 				color: white;
 				height: 100%;
@@ -106,7 +106,7 @@
 		object-position: center;
 		overflow: hidden;
 		width: 100%;
-
+		transform: scale(1.1);
 		&:hover {
 			opacity: 0.7;
 		}
