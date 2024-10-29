@@ -22,6 +22,7 @@ export type Donation = Tables<'donation'>;
 export type Event = Tables<'event'>;
 export type Language = Tables<'language'>;
 export type Organisation = Tables<'organisation'>;
+export type OrganisationMoment = Tables<'organisation_moment'>;
 export type OrganisationSource = Tables<'organisation_source'>;
 export type Person = Tables<'person'>;
 export type PersonMoment = Tables<'person_moment'>;
