@@ -25,7 +25,14 @@
 
 	<header class="surface-2">
 		<h1>
-			{#if metaExtra}{metaExtra.title}{:else}{meta.title}{/if}
+			{#if metaExtra}
+				{metaExtra.title}
+			{:else if meta.title.includes(':')}
+				<span>{meta.title.split(':')[0]}</span>
+				{meta.title.split(':')[1]}
+			{:else}
+				{meta.title}
+			{/if}
 		</h1>
 		<ol>
 			{#each moments as cur}
@@ -104,8 +111,8 @@
 			max-inline-size: none;
 			padding-inline: var(--header-padding-inline);
 			text-wrap: auto;
-		 	font-weight: 400;
-    		text-align: center;
+			font-weight: 400;
+			text-align: center;
 		}
 
 		& img {
@@ -122,7 +129,7 @@
 			padding-block: var(--size-4);
 			padding-inline: var(--header-padding-inline);
 			align-items: center;
-    		justify-content: center;
+			justify-content: center;
 		}
 
 		& a.active {
@@ -158,19 +165,19 @@
 			padding: var(--size-2);
 			&.prev {
 				margin-right: var(--size-2);
-				border-top:var(--size-1) solid transparent;
+				border-top: var(--size-1) solid transparent;
 			}
 			&.next {
 				text-align: right;
 				margin-left: var(--size-2);
-				border-top:var(--size-1) solid transparent;
-				
-				& a{
+				border-top: var(--size-1) solid transparent;
+
+				& a {
 					display: inline-block;
 				}
 			}
 			&:hover {
-				border-top:var(--size-1) solid var(--powder-blue);
+				border-top: var(--size-1) solid var(--powder-blue);
 			}
 		}
 	}
