@@ -38,20 +38,25 @@
 
 	.hero-title {
 		display: grid;
-		font-size: var(--font-size-fluid-2);
+		font-size: var(--font-size-6);
 		animation:fadeInUp 2s ease backwards;
 	}
 
 	.hero-message {
 		font-family: var(--font-serif);
-		font-size: var(--font-size-fluid-1);
+		font-size: var(--font-size-3);
 		padding-block: var(--size-5);
 		animation:fadeInUp 3s ease backwards;
 	}
 
-	.hero-welcome button{
+	.hero-welcome a button{
 		animation:fadeInUp 4s ease backwards;
+		font-size: var(--font-size-2);
 	}
+
+	.hero-welcome a:hover{
+			opacity: 1;
+		}
 
 	.hero-img {
 		align-self: stretch;
