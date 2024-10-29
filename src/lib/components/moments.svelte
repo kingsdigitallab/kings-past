@@ -58,8 +58,8 @@
 			height: var(--size-14);
 			max-inline-size: none;
 			min-width: 275px;
-			/*box-shadow: var(--size-1) var(--size-1) var(--powder-blue);*/
 			overflow: hidden;
+
 			a {
 				color: white;
 				height: 100%;
@@ -67,13 +67,12 @@
 				width: 100%;
 
 				&:hover {
-					/*box-shadow: var(--size-1) var(--size-1) var(--yellow);*/
-					
 					color: var(--yellow);
 					text-decoration-color: var(--yellow);
 					opacity: 1;
+
 					.title {
-						border-bottom:var(--size-1) solid var(--yellow);
+						border-bottom: var(--size-1) solid var(--yellow);
 					}
 				}
 			}
@@ -97,7 +96,7 @@
 			padding: var(--size-4);
 			position: absolute;
 			width: 100%;
-			border-bottom:var(--size-1) solid var(--powder-blue);
+			border-bottom: var(--size-1) solid var(--powder-blue);
 		}
 	}
 
@@ -109,10 +108,10 @@
 		width: 100%;
 		transform: scale(1.1);
 		transition: all 1.5s ease-in-out;
+
 		&:hover {
 			opacity: 0.7;
 			transform: scale(1.3);
-			
 		}
 	}
 </style>
