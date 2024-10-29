@@ -113,6 +113,19 @@ export async function getRecordEvents(source: string, slug: string): Promise<Eve
 	return events as unknown as Event[];
 }
 
+export async function getEventEntities(slug: string, role: 'person' | 'organisation' = 'person') {
+	const entitiesQuery = supabase
+		.from(role)
+		.select(`*, event_${role}!inner(event)`)
+		.eq(`event_${role}.event`, slug);
+
+	const { data: entities, error } = await entitiesQuery;
+
+	if (error) throw error;
+
+	return entities as unknown as Person[];
+}
+
 export async function getRecordFeature(source: string, slug: string) {
 	const tableName = `${source}_feature` as TableNames;
 	const featureQuery = supabase.from(tableName).select('*').eq(source, slug);
