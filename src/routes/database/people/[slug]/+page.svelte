@@ -19,9 +19,9 @@
 		memberOf,
 		moments,
 		sources,
-		people,
 		sameAs,
-		urls
+		urls,
+		people
 	} = data;
 </script>
 
