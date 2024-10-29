@@ -1,5 +1,11 @@
-import { getDonationEntities, getRecord, getRecordSources, getRecordUrls } from '$lib/supabase';
-import type { Donation } from '$lib/types';
+import {
+	getDonationEntities,
+	getRecord,
+	getRecordMoments,
+	getRecordSources,
+	getRecordUrls
+} from '$lib/supabase';
+import type { Donation, Moment } from '$lib/types';
 import { handleLoadError } from '$lib/errorHandling';
 import { formatDonationDate } from '$lib';
 import { compile } from 'mdsvex';
@@ -31,6 +37,13 @@ export async function load({ params, parent }) {
 		const sources = await getRecordSources(source, slug);
 		const urls = await getRecordUrls(source, slug);
 
+		const donationMoments = await getRecordMoments(source, slug);
+		const parentMoments = parentData.moments;
+
+		const moments = parentMoments.filter((moment: Moment) =>
+			donationMoments?.some((dm) => parseInt(dm.moment) === moment.n)
+		);
+
 		return {
 			donation,
 			title: donation.name,
@@ -40,6 +53,7 @@ export async function load({ params, parent }) {
 			donorsOrganisation,
 			recipientsPerson,
 			recipientsOrganisation,
+			moments,
 			sources,
 			urls
 		};

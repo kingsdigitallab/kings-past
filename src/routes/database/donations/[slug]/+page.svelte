@@ -10,12 +10,13 @@
 		donorsOrganisation,
 		recipientsPerson,
 		recipientsOrganisation,
+		moments,
 		sources,
 		urls
 	} = data;
 </script>
 
-<Entity entity={donation} entityType="Donation" {meta} {description} {sources} {urls}>
+<Entity entity={donation} entityType="Donation" {meta} {description} {moments} {sources} {urls}>
 	{#if donorsPerson?.length || donorsOrganisation?.length}
 		<section>
 			<h2>Donors</h2>
