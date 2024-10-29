@@ -98,11 +98,14 @@
 
 	header {
 		padding-top: var(--size-8);
+		border-top: var(--size-1) solid var(--powder-blue);
 
 		& h1 {
 			max-inline-size: none;
 			padding-inline: var(--header-padding-inline);
 			text-wrap: auto;
+		 	font-weight: 400;
+    		text-align: center;
 		}
 
 		& img {
@@ -110,13 +113,16 @@
 			object-fit: cover;
 			object-position: center;
 			width: 100%;
+			border-top: var(--size-7) solid white;
 		}
 
 		& ol {
 			display: flex;
-			gap: var(--size-5);
+			gap: var(--size-2);
 			padding-block: var(--size-4);
 			padding-inline: var(--header-padding-inline);
+			align-items: center;
+    		justify-content: center;
 		}
 
 		& a.active {
