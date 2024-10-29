@@ -71,6 +71,7 @@
 					
 					color: var(--yellow);
 					text-decoration-color: var(--yellow);
+					opacity: 1;
 					.title {
 						border-bottom:var(--size-1) solid var(--yellow);
 					}

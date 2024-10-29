@@ -46,7 +46,7 @@
 	</div>
 </footer>
 
-<style>
+<style lang="scss">
 	footer {
 		border-top: 1px solid var(--border);
 		display: grid;
@@ -79,7 +79,6 @@
 		display: flex;
 		justify-content: space-between;
 		width: 100%;
-		
 	}
 
 	.links ul {
@@ -135,10 +134,9 @@
 			width:100%;
 			display: flex;
 			text-align: center;
-	
-		}
-		li a{
+			a{
 			width: 100%;
+			}
 		}
 	}
 </style>
