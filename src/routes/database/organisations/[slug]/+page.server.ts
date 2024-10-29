@@ -1,44 +1,62 @@
 import { EMPTY_PLACEHOLDER } from '$lib/config';
 import { handleLoadError } from '$lib/errorHandling.js';
-import { getRecord, getRecordsBy, supabase } from '$lib/supabase';
-import type { Organisation } from '$lib/types';
+import {
+	getRecord,
+	getRecordDonations,
+	getRecordLanguages,
+	getPersonMemberOf,
+	getRecordMoments,
+	getRecordSources,
+	getOrganisationMemberOf
+} from '$lib/supabase';
+import type { Moment, Organisation, OrganisationMoment } from '$lib/types';
 import { compile } from 'mdsvex';
 
-export async function load({ params }) {
+export async function load({ params, parent }) {
 	const { slug } = params;
 
 	try {
-		const organisation = (await getRecord('organisation', slug)) as Organisation;
+		const source = 'organisation';
+		const organisation = (await getRecord(source, slug)) as Organisation;
+
+		const languages = await getRecordLanguages(source, slug);
 
 		const meta = {
 			'Alternative names': organisation.alternative_names || EMPTY_PLACEHOLDER,
+			'Organisation type': organisation.organisation_type || EMPTY_PLACEHOLDER,
 			'Founding date': organisation.founding_date || EMPTY_PLACEHOLDER,
 			'Dissolution date': organisation.dissolution_date || EMPTY_PLACEHOLDER,
 			Location: organisation.location || EMPTY_PLACEHOLDER,
-			'Organisation type': organisation.organisation_type || EMPTY_PLACEHOLDER
+			Languages: languages?.join(', ') || EMPTY_PLACEHOLDER
 		};
 
 		const description = await compile(organisation?.description || '');
+		const donationsAsAgent = await getRecordDonations(source, slug, 'agent');
+		const donationsAsRecipient = await getRecordDonations(source, slug, 'recipient');
+		const personMembers = await getPersonMemberOf('person', source, slug);
+		const organisationMembers = await getOrganisationMemberOf('member_of', source, slug);
+		const memberOf = await getOrganisationMemberOf(source, 'member_of', slug);
+		const sources = await getRecordSources(source, slug);
 
-		const members = await supabase
-			.from('person_member_of')
-			.select('*')
-			.eq('organisation', slug)
-			.order('person');
+		const orgMoments = (await getRecordMoments(source, slug)) as OrganisationMoment[];
+		const parentData = await parent();
+		const parentMoments = parentData.moments;
 
-		const sources = await supabase
-			.from('organisation_source')
-			.select('*')
-			.eq('organisation', slug)
-			.order('source');
+		const moments = parentMoments.filter((moment: Moment) =>
+			orgMoments?.some((om) => parseInt(om.moment) === moment.n)
+		);
 
 		return {
 			organisation,
 			meta,
-			description,
-			members: members.data,
-			sources,
-			people: await getRecordsBy('person', 'slug')
+			description: description?.code,
+			donationsAsAgent,
+			donationsAsRecipient,
+			personMembers,
+			organisationMembers,
+			memberOf,
+			moments,
+			sources
 		};
 	} catch (e) {
 		handleLoadError(slug, e);
