@@ -140,7 +140,6 @@ export async function getPlaceEvents(slug: string) {
 	const eventsQuery = supabase.from('event').select('*').eq('location', slug);
 
 	const { data: events, error } = await eventsQuery;
-	console.log(events, error);
 
 	if (error) throw error;
 
