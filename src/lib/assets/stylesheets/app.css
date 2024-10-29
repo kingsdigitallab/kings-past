@@ -36,7 +36,7 @@
 	--button-font-size: var(--font-size-fluid-1);
 }
 
-@media (max-width: 768px) {
+@media (max-width: 992px) {
 	:root {
 		--header-height: var(--size-8);
 		--header-padding-block: var(--size-2);
