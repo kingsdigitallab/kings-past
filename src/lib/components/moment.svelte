@@ -16,10 +16,7 @@
 </script>
 
 <article id="moment">
-
-
 	<header class="surface-2">
-
 		<h1>
 			{#if metaExtra}
 				{metaExtra.title}
@@ -48,12 +45,12 @@
 				</li>
 			{/each}
 		</ol>
-			<p class="n">
-		<strong
-			>Moment {meta.n}{#if metaExtra}
-				&#160;-&#160;{meta.title}{/if}</strong
-		>
-	</p>
+		<p class="n">
+			<strong
+				>Moment {meta.n}{#if metaExtra}
+					&#160;-&#160;{meta.title}{/if}</strong
+			>
+		</p>
 		<img
 			src="{base}{meta.feature.image}"
 			alt={meta.feature.description}
@@ -93,9 +90,9 @@
 			max-inline-size: none;
 		}
 
-		& header p{
+		& header p {
 			max-inline-size: none;
-			width:100%;
+			width: 100%;
 			color: var(--yellow);
 			text-align: center;
 			font-size: var(--font-size-4);
@@ -126,7 +123,7 @@
 			font-weight: 400;
 			font-size: var(--font-size-5);
 			text-align: center;
-			& span{
+			& span {
 				font-size: var(--font-size-8);
 				display: block;
 			}
@@ -147,7 +144,6 @@
 			align-items: center;
 			justify-content: center;
 			padding-top: var(--size-4);
-
 		}
 
 		& a.active {
@@ -182,22 +178,22 @@
 			display: block;
 			padding: var(--size-2);
 			transition: all 1s ease-in-out;
-			&.prev a{
+			&.prev a {
 				margin-right: var(--size-2);
 				text-decoration: none;
-				&:before{
+				&:before {
 					content: '❮';
 					position: relative;
 					transition: all 1s ease-in-out;
 					padding: var(--size-3);
 				}
 			}
-			&.next a{
+			&.next a {
 				text-align: right;
 				margin-left: var(--size-2);
 				text-decoration: none;
 				display: inline-block;
-				&:after{
+				&:after {
 					content: '❯';
 					position: relative;
 					transition: all 1s ease-in-out;
@@ -206,10 +202,11 @@
 			}
 			&:hover {
 				& a {
-				opacity: 1;
+					opacity: 1;
 				}
-				&.next a:after, &.prev a:before{
-					line-height:0;
+				&.next a:after,
+				&.prev a:before {
+					line-height: 0;
 					padding: var(--size-2);
 				}
 			}
