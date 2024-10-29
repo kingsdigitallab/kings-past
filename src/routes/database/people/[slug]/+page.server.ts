@@ -8,7 +8,7 @@ import {
 	getRecordFunded,
 	getRecordKnows,
 	getRecordLanguages,
-	getRecordMemberOf,
+	getPersonMemberOf,
 	getRecordMoments,
 	getRecordOccupations,
 	getRecords,
@@ -50,7 +50,7 @@ export async function load({ params, parent }) {
 		const feature = await getRecordFeature(source, slug);
 		const funded = await getRecordFunded(source, slug);
 		const knows = await getRecordKnows(slug);
-		const memberOf = await getRecordMemberOf(source, slug);
+		const memberOf = await getPersonMemberOf('organisation', source, slug);
 		const sameAs = await getRecordSameAs(source, slug);
 		const sources = await getRecordSources(source, slug);
 		const urls = await getRecordUrls(source, slug);
