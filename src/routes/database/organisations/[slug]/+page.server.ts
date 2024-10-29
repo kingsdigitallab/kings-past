@@ -7,7 +7,8 @@ import {
 	getPersonMemberOf,
 	getRecordMoments,
 	getRecordSources,
-	getOrganisationMemberOf
+	getOrganisationMemberOf,
+	getRecordSameAs
 } from '$lib/supabase';
 import type { Moment, Organisation, OrganisationMoment } from '$lib/types';
 import { compile } from 'mdsvex';
@@ -36,6 +37,7 @@ export async function load({ params, parent }) {
 		const personMembers = await getPersonMemberOf('person', source, slug);
 		const organisationMembers = await getOrganisationMemberOf('member_of', source, slug);
 		const memberOf = await getOrganisationMemberOf(source, 'member_of', slug);
+		const sameAs = await getRecordSameAs(source, slug);
 		const sources = await getRecordSources(source, slug);
 
 		const orgMoments = (await getRecordMoments(source, slug)) as OrganisationMoment[];
@@ -56,6 +58,7 @@ export async function load({ params, parent }) {
 			organisationMembers,
 			memberOf,
 			moments,
+			sameAs,
 			sources
 		};
 	} catch (e) {

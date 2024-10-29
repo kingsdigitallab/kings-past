@@ -14,11 +14,20 @@
 		organisationMembers,
 		memberOf,
 		moments,
+		sameAs,
 		sources
 	} = data;
 </script>
 
-<Entity entity={organisation} entityType="Organisation" {meta} {description} {moments} {sources}>
+<Entity
+	entity={organisation}
+	entityType="Organisation"
+	{meta}
+	{description}
+	{moments}
+	{sameAs}
+	{sources}
+>
 	{#if personMembers?.length || organisationMembers?.length}
 		<section>
 			<h2>Members</h2>
