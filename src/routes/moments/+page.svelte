@@ -22,39 +22,58 @@
 	{/each}
 </article>
 
-<style>
+<style lang="scss">
 	article {
 		margin-bottom: 2rem;
+		overflow: hidden;
+		
+		> article{
+			background-color: var(--midnight-blue);
+				div {
+					padding: var(--size-4);
+					transition: all 1s ease-out;
+					color:white;
+					border-bottom: var(--size-2) solid var(--powder-blue);
+				}
+		}
 	}
 	a {
-		display: flex;
-
+		display: block;
+		text-decoration: none;
+		
 		&:is(:hover) {
 			text-decoration: none;
+			opacity: 1;
+
+			div{
+			color: var(--yellow);
+			border-bottom: var(--size-2) solid var(--yellow);
+			}
+			img{
+				opacity: 1;
+				transform: scale(1.1);
+			}
 		}
 	}
 
-	div {
-		padding-inline-start: var(--size-4);
-	}
+
 
 	h2 {
 		max-inline-size: none;
 		text-wrap: auto;
+		font-weight: 400;
+		
 	}
 
 	img {
 		height: 150px;
-		min-width: 300px;
 		object-fit: cover;
 		object-position: center;
-		width: 300px;
-
-		&:hover {
-			box-shadow: var(--size-1) var(--size-1) var(--yellow);
-			opacity: 0.7;
-		}
+		width: 100%;
+		transform: scale(1.05);
+		transition: all 1.5s ease-in-out;
 	}
+	
 
 	.excerpt {
 		max-inline-size: none;
