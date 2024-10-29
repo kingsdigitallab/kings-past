@@ -74,6 +74,10 @@
 					.title {
 						border-bottom: var(--size-1) solid var(--yellow);
 					}
+
+					:global(img) {
+						transform: scale(1.3);
+					}
 				}
 			}
 		}
@@ -108,10 +112,5 @@
 		width: 100%;
 		transform: scale(1.1);
 		transition: all 1.5s ease-in-out;
-
-		&:hover {
-			opacity: 0.7;
-			transform: scale(1.3);
-		}
 	}
 </style>
