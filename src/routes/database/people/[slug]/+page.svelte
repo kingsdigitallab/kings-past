@@ -1,7 +1,7 @@
 <script lang="ts">
-	import { formatEventDate } from '$lib';
 	import Entity from '$lib/components/EntityDetails.svelte';
 	import DonationsList from '$lib/components/DonationsList.svelte';
+	import EventsList from '$lib/components/EventsList.svelte';
 
 	export let data;
 
@@ -35,18 +35,7 @@
 	{sources}
 	{urls}
 >
-	{#if events && events.length}
-		<section>
-			<h2>Events</h2>
-			<ul>
-				{#each events as event}
-					<li>
-						<a href="../events/{event.slug}">{formatEventDate(event)} — {event.name}</a>
-					</li>
-				{/each}
-			</ul>
-		</section>
-	{/if}
+	<EventsList {events} />
 
 	{#if knows && knows.length}
 		<section>
