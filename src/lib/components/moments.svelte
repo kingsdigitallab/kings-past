@@ -58,7 +58,8 @@
 			height: var(--size-14);
 			max-inline-size: none;
 			min-width: 275px;
-
+			/*box-shadow: var(--size-1) var(--size-1) var(--powder-blue);*/
+			
 			a {
 				color: white;
 				height: 100%;
@@ -66,9 +67,13 @@
 				width: 100%;
 
 				&:hover {
-					box-shadow: var(--size-1) var(--size-1) var(--yellow);
+					/*box-shadow: var(--size-1) var(--size-1) var(--yellow);*/
+					
 					color: var(--yellow);
 					text-decoration-color: var(--yellow);
+					.title {
+						border-bottom:var(--size-1) solid var(--yellow);
+					}
 				}
 			}
 		}
@@ -91,6 +96,7 @@
 			padding: var(--size-4);
 			position: absolute;
 			width: 100%;
+			border-bottom:var(--size-1) solid var(--powder-blue);
 		}
 	}
 

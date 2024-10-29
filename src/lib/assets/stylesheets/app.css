@@ -96,11 +96,12 @@ button {
 	font-size: var(--button-font-size, var(--font-size-2));
 	padding-inline: var(--size-4);
 	padding-block: var(--size-2);
-	box-shadow: var(--shadow-2);
-
+	/*box-shadow: var(--shadow-2);*/
+	border-bottom: var(--size-1) solid var(--powder-blue);
 	&:hover {
 		color: var(--yellow);
-		box-shadow: var(--size-1) var(--size-1) var(--yellow);
+		/*box-shadow: var(--size-1) var(--size-1) var(--yellow);*/
+		border-bottom: var(--size-1) solid var(--yellow);
 	}
 }
 
