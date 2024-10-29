@@ -16,14 +16,10 @@
 </script>
 
 <article id="moment">
-	<p class="n">
-		<strong
-			>Moment {meta.n}{#if metaExtra}
-				&#160;-&#160;{meta.title}{/if}</strong
-		>
-	</p>
+
 
 	<header class="surface-2">
+
 		<h1>
 			{#if metaExtra}
 				{metaExtra.title}
@@ -34,6 +30,7 @@
 				{meta.title}
 			{/if}
 		</h1>
+
 		<ol>
 			{#each moments as cur}
 				<li>
@@ -51,6 +48,12 @@
 				</li>
 			{/each}
 		</ol>
+			<p class="n">
+		<strong
+			>Moment {meta.n}{#if metaExtra}
+				&#160;-&#160;{meta.title}{/if}</strong
+		>
+	</p>
 		<img
 			src="{base}{meta.feature.image}"
 			alt={meta.feature.description}
@@ -86,32 +89,47 @@
 	#moment {
 		& > p {
 			font-family: var(--font-headings);
-			font-size: var(--font-size-5);
+			font-size: var(--font-size-4);
 			max-inline-size: none;
 		}
 
-		& a rect {
-			fill: var(--text-2);
+		& header p{
+			max-inline-size: none;
+			width:100%;
+			color: var(--yellow);
+			text-align: center;
+			font-size: var(--font-size-4);
+			padding-bottom: var(--size-4);
+		}
 
+		& a rect {
+			fill: var(--powder-blue);
+			stroke: var(--powder-blue);
+			transform: scale(0.7);
 			&:hover {
-				fill: var(--yellow);
+				fill: white;
+				stroke: white;
 			}
 		}
 
 		& a.active rect {
 			fill: var(--yellow);
+			stroke: var(--yellow);
 		}
 	}
 
 	header {
-		padding-top: var(--size-8);
-		border-top: var(--size-1) solid var(--powder-blue);
-
+		padding: var(--size-4) 0;
 		& h1 {
 			max-inline-size: none;
-			padding-inline: var(--header-padding-inline);
 			text-wrap: auto;
 			font-weight: 400;
+			font-size: var(--font-size-5);
+			text-align: center;
+			& span{
+				font-size: var(--font-size-8);
+				display: block;
+			}
 		}
 
 		& img {
@@ -124,11 +142,12 @@
 
 		& ol {
 			display: flex;
-			gap: var(--size-2);
-			padding-block: var(--size-4);
+			gap: var(--size-1);
 			padding-inline: var(--header-padding-inline);
 			align-items: center;
 			justify-content: center;
+			padding-top: var(--size-4);
+
 		}
 
 		& a.active {
