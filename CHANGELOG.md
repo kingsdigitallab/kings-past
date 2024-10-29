@@ -1,5 +1,54 @@
 
 
+# [0.11.0](https://github.com/kingsdigitallab/kings-past/compare/v0.10.0...v0.11.0) (2024-10-29)
+
+
+### Bug Fixes
+
+* a link default style ([10b8994](https://github.com/kingsdigitallab/kings-past/commit/10b899439abb4b7d0cc93256b0c1315e210d57ce))
+* add max-width to main ([a455375](https://github.com/kingsdigitallab/kings-past/commit/a4553754eaded3bf8146ea4a8f955a6828bc6fec))
+* **entitydetails:** if metadata value is empty replace with empty placeholder ([72e68ff](https://github.com/kingsdigitallab/kings-past/commit/72e68ff1f93166a080448e2999591271aad5c6ef))
+* footer layout for small screens, and change background colour for kdl section ([f681959](https://github.com/kingsdigitallab/kings-past/commit/f681959cdae43efe32ac7a514e461b597b796ee1))
+* **layout:** remove max width ([fb06d80](https://github.com/kingsdigitallab/kings-past/commit/fb06d80f9791e6df4c459406e87c2f11890aa7d0))
+* moments images scale up to hide even borders ([fac75fc](https://github.com/kingsdigitallab/kings-past/commit/fac75fc923d98a12cb42f656b0470d883b7b0c7d))
+* **moments:** add links from moment to people ([89bead1](https://github.com/kingsdigitallab/kings-past/commit/89bead12eb06deb9f084d01ff93f64a72c657efb))
+* next arrow not wrapping ([58a3787](https://github.com/kingsdigitallab/kings-past/commit/58a37876576d6fe13b5c5d69ecfce8c4a7b88dc9))
+* revert footer background colour, reduce section margin ([4c380ef](https://github.com/kingsdigitallab/kings-past/commit/4c380ef5777d141b00cefe2d27e6edd00399a6c4))
+* **supabase:** remove console log ([e684e11](https://github.com/kingsdigitallab/kings-past/commit/e684e112411fdd78dce26c718d44d88fc766d949))
+
+
+### Features
+
+* add moment images hover scale transistion ([8a031ec](https://github.com/kingsdigitallab/kings-past/commit/8a031ec61c44ad115e9dbd55acdda84eed222f05))
+* change hero section fixed font size, remove opacity on button hover ([4dc3a0c](https://github.com/kingsdigitallab/kings-past/commit/4dc3a0c1d84f23488fb1dfab167bb23bc1133a64))
+* change media queries ([4a07d5a](https://github.com/kingsdigitallab/kings-past/commit/4a07d5adc42be558bc561b49257c277719ba0bf0))
+* **components:** add component to render events for entities ([d22e386](https://github.com/kingsdigitallab/kings-past/commit/d22e386ae498eda0c24fb2387ea958353490c77e))
+* **donations:** add donation metadata and description ([420779a](https://github.com/kingsdigitallab/kings-past/commit/420779a5460bd64056a70ced0ec758dab2b18f48))
+* **donations:** get data about related entities and sources ([aa82b4d](https://github.com/kingsdigitallab/kings-past/commit/aa82b4ded8023c7bef1b0f96f4290b0ac2ff3a1c))
+* **donations:** get related moments ([4bb0d48](https://github.com/kingsdigitallab/kings-past/commit/4bb0d48f451a68eb741a134485170427241ed18e))
+* **donations:** separate the value and currency columns ([e46be43](https://github.com/kingsdigitallab/kings-past/commit/e46be4337ef45baf52741c8df31358aea26ea796))
+* **entitydetails:** only render slugs for people and organisations, and add links to places ([2638b88](https://github.com/kingsdigitallab/kings-past/commit/2638b883d868f7e5fe13923d0f1261a700231fe3))
+* **events:** get and display event data ([0b9bdce](https://github.com/kingsdigitallab/kings-past/commit/0b9bdce8bdce9b552e4cf49b19887b7d87612e31))
+* **lib:** add function to format date ranges ([1d5ab94](https://github.com/kingsdigitallab/kings-past/commit/1d5ab94ceaf54e5f9bcbd1d818c9c63903ea9847))
+* **moments:** add a function to split the moment title into year and title string ([60c82d6](https://github.com/kingsdigitallab/kings-past/commit/60c82d657d699864835f97060535372116019440))
+* **moment:** split the year from the title ([6bc5067](https://github.com/kingsdigitallab/kings-past/commit/6bc50673491367568e44c6cb632f6bc80a29d599))
+* **moments:** split the year from the title string ([bf4a302](https://github.com/kingsdigitallab/kings-past/commit/bf4a302c61baed54d6020bcf872235b227665d25))
+* new style and layout on moments index ([b807d98](https://github.com/kingsdigitallab/kings-past/commit/b807d981322ef8b975a8d88fec028f35f7b0fd6c))
+* **organisations:** add organisation name to the page title ([cf7d41f](https://github.com/kingsdigitallab/kings-past/commit/cf7d41febba56c95772003e57ad89d7ef24928bf))
+* **organisations:** get and display related events ([f8055fd](https://github.com/kingsdigitallab/kings-past/commit/f8055fd1a2ac3e7b11b03d434a39df2525ffc6ac))
+* **places:** get and display place data ([bbf47d4](https://github.com/kingsdigitallab/kings-past/commit/bbf47d43aae3393b5a9fb10a7cc7d1d22fbfc2b6))
+* remove opacity on moment images hover ([476efb7](https://github.com/kingsdigitallab/kings-past/commit/476efb7bd822f0b89c1569996a567e0e47b34981))
+* style moment header, center with border top powder blue ([a0aafcc](https://github.com/kingsdigitallab/kings-past/commit/a0aafcc77e3c91566b7163e615aace9bb9973aeb))
+* style moment page header ([7010776](https://github.com/kingsdigitallab/kings-past/commit/7010776e74ba95cbac3f5177b886470044a75592))
+* style next prev buttons with transitions ([ba44100](https://github.com/kingsdigitallab/kings-past/commit/ba4410031cf60db3fc962a4aa0ed0c159da9c0f2))
+* style prev next buttons ([c17f395](https://github.com/kingsdigitallab/kings-past/commit/c17f395c09872cdfc9d0992a6f6d0c7b1acb5bcd))
+* **supabase:** add function to get entities related to a donation ([beb03d8](https://github.com/kingsdigitallab/kings-past/commit/beb03d8acc69b6c861ca74c88bd1ded93894a6e3))
+* **supabase:** add function to get entities related to events ([1c2b2c1](https://github.com/kingsdigitallab/kings-past/commit/1c2b2c19fa13d27377d10930f90fba6e9fe260e9))
+* **supabase:** add function to get people related to a moment ([be2403b](https://github.com/kingsdigitallab/kings-past/commit/be2403b1f830294d7755217edb375cdce4feb3c0))
+* **supabase:** add functions to get entities related to places ([0651ab8](https://github.com/kingsdigitallab/kings-past/commit/0651ab88591b90db877b5708d2a9038a93c5f2af))
+* testing fade in animation for hero section ([4db918d](https://github.com/kingsdigitallab/kings-past/commit/4db918dea1d60aacd0b7bc140d2df482d1854c0f))
+* trying out border-bottom style to integrate more powder blue and more subtle hover effect. ([a2be7c9](https://github.com/kingsdigitallab/kings-past/commit/a2be7c9289b6c9e97c36fbd61e1c518f54bacd57))
+
 # [0.10.0](https://github.com/kingsdigitallab/kings-past/compare/v0.9.2...v0.10.0) (2024-10-29)
 
 
