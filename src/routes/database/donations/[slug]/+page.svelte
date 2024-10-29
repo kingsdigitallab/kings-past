@@ -1,12 +1,8 @@
 <script lang="ts">
+	import Entity from '$lib/components/EntityDetails.svelte';
 	export let data;
 
-	const { donation } = data;
+	const { donation, meta, description, urls } = data;
 </script>
 
-<article>
-	<h1>{donation.name}</h1>
-	{#if donation.description}
-		<p>{donation.description}</p>
-	{/if}
-</article>
+<Entity entity={donation} entityType="Donation" {meta} {description} {urls}></Entity>
