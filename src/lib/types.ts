@@ -29,6 +29,7 @@ export type PersonMoment = Tables<'person_moment'>;
 export type PersonMemberOf = Tables<'person_member_of'>;
 export type PersonOccupation = Tables<'person_occupation'>;
 export type Place = Tables<'place'>;
+export type PlaceMoment = Tables<'place_moment'>;
 export type Source = Tables<'source'>;
 
 export type KPRecord = Donation | Event | Organisation | Person | Place;

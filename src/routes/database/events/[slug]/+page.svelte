@@ -1,12 +1,29 @@
 <script lang="ts">
-	export let data;
+	import Entity from '$lib/components/EntityDetails.svelte';
 
-	const { event } = data;
+	export let data;
+	const { event, meta, description, people, organisations, moments, sources, urls } = data;
 </script>
 
-<article>
-	<h1>{event.name}</h1>
-	{#if event.description}
-		<p>{event.description}</p>
+<Entity entity={event} entityType="Event" {meta} {description} {moments} {sources} {urls}>
+	{#if people?.length}
+		<section>
+			<h2>People</h2>
+			<ul>
+				{#each people as person}
+					<li><a href="../people/{person.slug}">{person.name}</a></li>
+				{/each}
+			</ul>
+		</section>
 	{/if}
-</article>
+	{#if organisations?.length}
+		<section>
+			<h2>Organisations</h2>
+			<ul>
+				{#each organisations as organisation}
+					<li><a href="../organisations/{organisation.slug}">{organisation.name}</a></li>
+				{/each}
+			</ul>
+		</section>
+	{/if}
+</Entity>

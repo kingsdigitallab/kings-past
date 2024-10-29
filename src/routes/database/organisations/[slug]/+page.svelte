@@ -1,6 +1,7 @@
 <script lang="ts">
-	import Entity from '$lib/components/EntityDetails.svelte';
 	import DonationsList from '$lib/components/DonationsList.svelte';
+	import Entity from '$lib/components/EntityDetails.svelte';
+	import EventsList from '$lib/components/EventsList.svelte';
 
 	export let data;
 
@@ -10,6 +11,7 @@
 		description,
 		donationsAsAgent,
 		donationsAsRecipient,
+		events,
 		personMembers,
 		organisationMembers,
 		memberOf,
@@ -67,6 +69,8 @@
 			</ul>
 		</section>
 	{/if}
+
+	<EventsList {events} />
 
 	<DonationsList entityName={organisation.name} {donationsAsAgent} {donationsAsRecipient} />
 </Entity>

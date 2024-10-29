@@ -82,6 +82,23 @@ export async function getRecordDonations(
 	return donations as unknown as Donation[];
 }
 
+export async function getDonationEntities(
+	slug: string,
+	donor: 'person' | 'organisation' = 'person',
+	role: 'agent' | 'recipient' = 'agent'
+): Promise<Person[]> {
+	const donorsQuery = supabase
+		.from(donor)
+		.select(`*, donation_${role}_${donor}!inner(donation)`)
+		.eq(`donation_${role}_${donor}.donation`, slug);
+
+	const { data: donors, error } = await donorsQuery;
+
+	if (error) throw error;
+
+	return donors as unknown as Person[];
+}
+
 export async function getRecordEvents(source: string, slug: string): Promise<Event[]> {
 	const eventsQuery = supabase
 		.from('event')
@@ -94,6 +111,50 @@ export async function getRecordEvents(source: string, slug: string): Promise<Eve
 	if (error) throw error;
 
 	return events as unknown as Event[];
+}
+
+export async function getEventEntities(slug: string, role: 'person' | 'organisation' = 'person') {
+	const entitiesQuery = supabase
+		.from(role)
+		.select(`*, event_${role}!inner(event)`)
+		.eq(`event_${role}.event`, slug);
+
+	const { data: entities, error } = await entitiesQuery;
+
+	if (error) throw error;
+
+	return entities as unknown as Person[];
+}
+
+export async function getPlaceDonations(slug: string) {
+	const donationsQuery = supabase.from('donation').select('*').eq('location', slug);
+
+	const { data: donations, error } = await donationsQuery;
+
+	if (error) throw error;
+
+	return donations as unknown as Donation[];
+}
+
+export async function getPlaceEvents(slug: string) {
+	const eventsQuery = supabase.from('event').select('*').eq('location', slug);
+
+	const { data: events, error } = await eventsQuery;
+	console.log(events, error);
+
+	if (error) throw error;
+
+	return events as unknown as Event[];
+}
+
+export async function getPlaceOrganisations(slug: string) {
+	const organisationsQuery = supabase.from('organisation').select('*').eq('location', slug);
+
+	const { data: organisations, error } = await organisationsQuery;
+
+	if (error) throw error;
+
+	return organisations as unknown as Organisation[];
 }
 
 export async function getRecordFeature(source: string, slug: string) {
