@@ -68,21 +68,21 @@
 		<ol>
 			{#if prev}
 				<li class="prev">
-					<a href={`${path}${getMomentN(prev.n)}`}>&#x276E; {prev.title}</a>
+					<a href={`${path}${getMomentN(prev.n)}`}>{prev.title}</a>
 				</li>
 			{:else}
 				<li></li>
 			{/if}
 			{#if next}
 				<li class="next">
-					<a href={`${path}${getMomentN(next.n)}`}>{next.title} &#10095;</a>
+					<a href={`${path}${getMomentN(next.n)}`}>{next.title}</a>
 				</li>
 			{/if}
 		</ol>
 	</nav>
 </article>
 
-<style lang="scss">
+<style>
 	#moment {
 		& > p {
 			font-family: var(--font-headings);
@@ -162,22 +162,37 @@
 			max-inline-size: none;
 			display: block;
 			padding: var(--size-2);
-	
-			border-bottom: var(--size-1) solid transparent;
+			transition: all 1s ease-in-out;
 			&.prev a{
 				margin-right: var(--size-2);
-				border-top: var(--size-1) solid transparent;
 				text-decoration: none;
+				&:before{
+					content: '❮';
+					position: relative;
+					transition: all 1s ease-in-out;
+					padding: var(--size-3);
+				}
 			}
 			&.next a{
 				text-align: right;
 				margin-left: var(--size-2);
-				border-top: var(--size-1) solid transparent;
 				text-decoration: none;
 				display: inline-block;
+				&:after{
+					content: '❯';
+					position: relative;
+					transition: all 1s ease-in-out;
+					padding: var(--size-3);
+				}
 			}
 			&:hover {
-				border-bottom: var(--size-1) solid var(--powder-blue);
+				& a {
+				opacity: 1;
+				}
+				&.next a:after, &.prev a:before{
+					line-height:0;
+					padding: var(--size-2);
+				}
 			}
 		}
 	}
