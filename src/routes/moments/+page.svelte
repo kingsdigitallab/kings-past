@@ -1,21 +1,23 @@
 <script lang="ts">
 	import { base } from '$app/paths';
+	import { splitMomentTitle } from '$lib/moments';
 
 	export let data;
+	const { moments } = data;
 </script>
 
 <article>
 	<h1>Moments</h1>
 
-	{#each data.moments as moment}
+	{#each moments as moment}
+		{@const title = splitMomentTitle(moment.title)}
+
 		<article class="surface-1">
 			<a href="moments/{moment.slug}">
 				<img src="{base}{moment.feature.image}" alt={moment.feature.description} />
 				<div>
-					<h2>{moment.title}</h2>
-					<p class="excerpt">
-						{moment.excerpt}
-					</p>
+					<h2><span>{title.year}</span> {title.name}</h2>
+					<p class="excerpt">{moment.excerpt}</p>
 				</div>
 			</a>
 		</article>

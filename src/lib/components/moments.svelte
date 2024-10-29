@@ -2,6 +2,7 @@
 	import type { Moment } from '$lib/types';
 	import { base } from '$app/paths';
 	import { Image } from '@unpic/svelte';
+	import { splitMomentTitle } from '$lib/moments';
 
 	export let moments: Moment[];
 </script>
@@ -13,6 +14,7 @@
 	</hgroup>
 	<ul class="moments">
 		{#each moments as moment}
+			{@const title = splitMomentTitle(moment.title)}
 			<li class="moment">
 				<a href="moments/{moment.slug}">
 					<Image
@@ -22,7 +24,7 @@
 						layout="fullWidth"
 						height={320}
 					/>
-					<div class="title">{moment.title}</div>
+					<div class="title"><span>{title.year}</span> {title.name}</div>
 				</a>
 			</li>
 		{/each}
