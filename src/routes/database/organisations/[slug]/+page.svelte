@@ -15,7 +15,8 @@
 		memberOf,
 		moments,
 		sameAs,
-		sources
+		sources,
+		urls
 	} = data;
 </script>
 
@@ -27,6 +28,7 @@
 	{moments}
 	{sameAs}
 	{sources}
+	{urls}
 >
 	{#if personMembers?.length || organisationMembers?.length}
 		<section>
