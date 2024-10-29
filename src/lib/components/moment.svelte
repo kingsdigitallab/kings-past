@@ -162,6 +162,9 @@
 			&.next {
 				text-align: right;
 				margin-left: var(--size-2);
+				& a{
+					display: inline-block;
+				}
 			}
 			&:hover {
 				color: var(--yellow);
