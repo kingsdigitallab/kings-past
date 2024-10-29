@@ -12,7 +12,7 @@
 		donationsAsRecipient,
 		personMembers,
 		organisationMembers,
-		mermberOf,
+		memberOf,
 		moments,
 		sources
 	} = data;
@@ -44,11 +44,11 @@
 			{/if}
 		</section>
 	{/if}
-	{#if mermberOf?.length}
+	{#if memberOf?.length}
 		<section>
 			<h2>Member of</h2>
 			<ul>
-				{#each mermberOf as organisation}
+				{#each memberOf as organisation}
 					<li>
 						<a href="../organisations/{organisation.slug}">{organisation.name}</a>
 					</li>
