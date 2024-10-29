@@ -52,6 +52,7 @@ export async function load({ params, parent }) {
 
 		return {
 			organisation,
+			title: organisation.name,
 			meta,
 			description: description?.code,
 			donationsAsAgent,
