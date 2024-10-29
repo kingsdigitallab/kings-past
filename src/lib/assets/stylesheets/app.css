@@ -36,7 +36,9 @@
 	--button-font-size: var(--font-size-fluid-1);
 }
 
-@media (max-width: 768px) {
+
+
+@media (max-width: 992px) {
 	:root {
 		--header-height: var(--size-8);
 		--header-padding-block: var(--size-2);
@@ -82,10 +84,11 @@ li {
 }
 
 a {
-	color: inherit;
-
+	color: var(--midnight-blue);
+	text-decoration: underline;
+	cursor: pointer;
 	&:hover {
-		color: var(--yellow);
+		opacity: 0.7;
 	}
 }
 
@@ -96,11 +99,12 @@ button {
 	font-size: var(--button-font-size, var(--font-size-2));
 	padding-inline: var(--size-4);
 	padding-block: var(--size-2);
-	box-shadow: var(--shadow-2);
-
+	/*box-shadow: var(--shadow-2);*/
+	border-bottom: var(--size-1) solid var(--powder-blue);
 	&:hover {
 		color: var(--yellow);
-		box-shadow: var(--size-1) var(--size-1) var(--yellow);
+		/*box-shadow: var(--size-1) var(--size-1) var(--yellow);*/
+		border-bottom: var(--size-1) solid var(--yellow);
 	}
 }
 
@@ -131,6 +135,12 @@ button {
 
 	& :is(a:hover) {
 		color: var(--yellow);
+	}
+	a{
+		color:white;
+		&:hover {
+			opacity: 1;
+		}
 	}
 }
 

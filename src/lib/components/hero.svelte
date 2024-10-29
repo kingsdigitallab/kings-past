@@ -31,6 +31,7 @@
 		margin-block: 0;
 	}
 
+
 	.hero-welcome {
 		padding-right: var(--size-9);
 	}
@@ -38,12 +39,18 @@
 	.hero-title {
 		display: grid;
 		font-size: var(--font-size-fluid-2);
+		animation:fadeInUp 2s ease backwards;
 	}
 
 	.hero-message {
 		font-family: var(--font-serif);
 		font-size: var(--font-size-fluid-1);
 		padding-block: var(--size-5);
+		animation:fadeInUp 3s ease backwards;
+	}
+
+	.hero-welcome button{
+		animation:fadeInUp 4s ease backwards;
 	}
 
 	.hero-img {
@@ -51,6 +58,7 @@
 		height: 100%;
 		overflow: hidden;
 		width: 100%;
+		animation:fadeInUp 1s ease backwards;
 	}
 
 	.hero-img img {
@@ -60,6 +68,12 @@
 		transform: scale(1.7);
 		width: 100%;
 	}
+
+	@keyframes fadeInUp{
+  0%{transform:translate(0px, 100px); opacity: 0;}
+  20%{opacity: 0;}
+  100%{transform:translate(0px, 0); opacity: 1;}
+}
 
 	@media (max-width: 768px) {
 		.hero {

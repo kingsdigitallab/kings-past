@@ -44,8 +44,11 @@
 		height: 100%;
 	}
 
+	
 	main {
 		max-inline-size: unset;
 		padding-inline: var(--header-padding-inline);
+		max-width:1400px;
+		margin: 0 auto;
 	}
 </style>

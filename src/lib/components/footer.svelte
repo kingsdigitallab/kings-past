@@ -37,7 +37,7 @@
 			</ul>
 		</section>
 	</div>
-	<div class="layout surface-3">
+	<div class="layout">
 		<section class="kdl">
 			<p>
 				Designed, developed and maintained by <a href="https://kdl.kcl.ac.uk">King's Digital Lab</a>
@@ -78,8 +78,8 @@
 		align-items: center;
 		display: flex;
 		justify-content: space-between;
-		padding-block: var(--size-6);
 		width: 100%;
+		
 	}
 
 	.links ul {
@@ -100,9 +100,12 @@
 	.links .social {
 		justify-content: flex-end;
 	}
+	.surface-2 {
+		border-bottom: var(--size-7) solid var(--surface-3);
+	}
 
 	.kdl {
-		padding-block: var(--size-4);
+	
 		text-align: center;
 	}
 
@@ -111,7 +114,6 @@
 		max-inline-size: none;
 	}
 
-	.links ul a,
 	.kdl a {
 		text-decoration: underline;
 	}
@@ -123,6 +125,20 @@
 
 		.links ul.project {
 			flex-direction: column;
+			gap: var(--size-2);
+			width:100%;
+			display: flex;
+			margin: var(--size-5) 0 ; 
+		}
+
+		.links ul.project li{
+			width:100%;
+			display: flex;
+			text-align: center;
+	
+		}
+		li a{
+			width: 100%;
 		}
 	}
 </style>
