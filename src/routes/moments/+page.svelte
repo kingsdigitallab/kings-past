@@ -12,9 +12,12 @@
 	{#each moments as moment}
 		{@const title = splitMomentTitle(moment.title)}
 
-		<article class="surface-1">
+		<article class="surface-1" id="moment-{moment.slug}">
 			<a href="moments/{moment.slug}">
-				<img src="{base}{moment.feature.image}" alt={moment.feature.description} />
+				<div>
+					<span>Moment {parseInt(moment.slug)}</span>
+					<img src="{base}{moment.feature.image}" alt={moment.feature.description} />
+				</div>
 				<div>
 					<h2><span>{title.year}</span> {title.name}</h2>
 					<p class="excerpt">{moment.excerpt}</p>
