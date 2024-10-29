@@ -5,6 +5,7 @@ import type {
 	KPRecord,
 	Language,
 	Organisation,
+	Person,
 	PersonOccupation,
 	TableNames
 } from '$lib/types';
@@ -148,18 +149,36 @@ export async function getRecordLanguages(source: string, slug: string): Promise<
 	return languages as unknown as Language[];
 }
 
-export async function getRecordMemberOf(source: string, slug: string) {
+export async function getPersonMemberOf(source: TableNames, rel: string, slug: string) {
 	const memberOfQuery = supabase
-		.from('organisation')
-		.select('*, person_member_of!inner(person)')
-		.eq('person_member_of.person', slug)
+		.from(source)
+		.select(`*, person_member_of!inner(${rel})`)
+		.eq(`person_member_of.${rel}`, slug)
 		.order('slug');
 
 	const { data: memberOf, error } = await memberOfQuery;
 
 	if (error) throw error;
 
-	return memberOf;
+	if (source === 'person') {
+		return memberOf as unknown as Person[];
+	}
+
+	return memberOf as unknown as Organisation[];
+}
+
+export async function getOrganisationMemberOf(source: string, rel: string, slug: string) {
+	const memberOfQuery = supabase
+		.from('organisation')
+		.select(`*, organisation_member_of!public_organisation_member_of_${rel}_fkey!inner(${source})`)
+		.eq(`organisation_member_of.${source}`, slug)
+		.order('slug');
+
+	const { data: memberOf, error } = await memberOfQuery;
+
+	if (error) throw error;
+
+	return memberOf as unknown as Organisation[];
 }
 
 export async function getRecordMoments(source: string, slug: string) {
