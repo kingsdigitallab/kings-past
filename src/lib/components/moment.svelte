@@ -60,14 +60,14 @@
 	<nav>
 		<ol>
 			{#if prev}
-				<li class="prev surface-2">
+				<li class="prev">
 					<a href={`${path}${getMomentN(prev.n)}`}>&#x276E; {prev.title}</a>
 				</li>
 			{:else}
 				<li></li>
 			{/if}
 			{#if next}
-				<li class="next surface-2">
+				<li class="next">
 					<a href={`${path}${getMomentN(next.n)}`}>{next.title} &#10095;</a>
 				</li>
 			{/if}
@@ -158,17 +158,19 @@
 			padding: var(--size-2);
 			&.prev {
 				margin-right: var(--size-2);
+				border-top:var(--size-1) solid transparent;
 			}
 			&.next {
 				text-align: right;
 				margin-left: var(--size-2);
+				border-top:var(--size-1) solid transparent;
+				
 				& a{
 					display: inline-block;
 				}
 			}
 			&:hover {
-				color: var(--yellow);
-				box-shadow: var(--size-1) var(--size-1) var(--yellow);
+				border-top:var(--size-1) solid var(--powder-blue);
 			}
 		}
 	}

@@ -82,10 +82,11 @@ li {
 }
 
 a {
-	color: inherit;
-
+	color: var(--midnight-blue);
+	text-decoration: underline;
+	cursor: pointer;
 	&:hover {
-		color: var(--yellow);
+		opacity: 0.7;
 	}
 }
 
@@ -132,6 +133,12 @@ button {
 
 	& :is(a:hover) {
 		color: var(--yellow);
+	}
+	a{
+		color:white;
+		&:hover {
+			opacity: 1;
+		}
 	}
 }
 
