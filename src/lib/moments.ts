@@ -1,5 +1,15 @@
 import type { Moment } from '$lib/types';
 
+interface MomentTitle {
+	year: string;
+	name: string;
+}
+
+export function splitMomentTitle(title: string): MomentTitle {
+	const [year = '', name = ''] = title.split(':').map((part) => part.trim());
+	return { year, name };
+}
+
 export async function getMoments() {
 	const moments: Moment[] = [];
 
