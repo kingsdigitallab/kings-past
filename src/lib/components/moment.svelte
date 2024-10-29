@@ -82,7 +82,7 @@
 	</nav>
 </article>
 
-<style>
+<style lang="scss">
 	#moment {
 		& > p {
 			font-family: var(--font-headings);
@@ -112,7 +112,6 @@
 			padding-inline: var(--header-padding-inline);
 			text-wrap: auto;
 			font-weight: 400;
-			text-align: center;
 		}
 
 		& img {
@@ -163,21 +162,22 @@
 			max-inline-size: none;
 			display: block;
 			padding: var(--size-2);
-			&.prev {
+	
+			border-bottom: var(--size-1) solid transparent;
+			&.prev a{
 				margin-right: var(--size-2);
 				border-top: var(--size-1) solid transparent;
+				text-decoration: none;
 			}
-			&.next {
+			&.next a{
 				text-align: right;
 				margin-left: var(--size-2);
 				border-top: var(--size-1) solid transparent;
-
-				& a {
-					display: inline-block;
-				}
+				text-decoration: none;
+				display: inline-block;
 			}
 			&:hover {
-				border-top: var(--size-1) solid var(--powder-blue);
+				border-bottom: var(--size-1) solid var(--powder-blue);
 			}
 		}
 	}
