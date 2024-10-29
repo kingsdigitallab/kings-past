@@ -107,8 +107,11 @@
 		overflow: hidden;
 		width: 100%;
 		transform: scale(1.1);
+		transition: all 1.5s ease-in-out;
 		&:hover {
 			opacity: 0.7;
+			transform: scale(1.3);
+			
 		}
 	}
 </style>
