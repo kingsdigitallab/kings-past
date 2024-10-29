@@ -1,7 +1,6 @@
 <script lang="ts">
-	import { getEventDate } from '$lib';
+	import { formatEventDate } from '$lib';
 	import Entity from '$lib/components/EntityDetails.svelte';
-	import * as config from '$lib/config';
 	import DonationsList from '$lib/components/DonationsList.svelte';
 
 	export let data;
@@ -25,10 +24,6 @@
 	} = data;
 </script>
 
-<svelte:head>
-	<title>{person?.name} | {config.title}</title>
-</svelte:head>
-
 <Entity
 	entity={person}
 	entityType="Person"
@@ -46,7 +41,7 @@
 			<ul>
 				{#each events as event}
 					<li>
-						<a href="../events/{event.slug}">{getEventDate(event)} — {event.name}</a>
+						<a href="../events/{event.slug}">{formatEventDate(event)} — {event.name}</a>
 					</li>
 				{/each}
 			</ul>

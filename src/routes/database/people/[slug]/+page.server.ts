@@ -65,6 +65,7 @@ export async function load({ params, parent }) {
 
 		return {
 			person,
+			title: person.name,
 			meta,
 			description: description?.code,
 			donationsAsAgent,
