@@ -1,5 +1,58 @@
 
 
+# [0.10.0](https://github.com/kingsdigitallab/kings-past/compare/v0.9.2...v0.10.0) (2024-10-29)
+
+
+### Bug Fixes
+
+* **constants:** remove  unused file ([87bcf2f](https://github.com/kingsdigitallab/kings-past/commit/87bcf2f4037e452b58257b41b25acf9f67030344))
+* **database:** replace indextable with the entityindex component ([561561a](https://github.com/kingsdigitallab/kings-past/commit/561561a4792d38b67d2077ee16d7b5679c24642b))
+* **entity:** correct list markup ([94d8b08](https://github.com/kingsdigitallab/kings-past/commit/94d8b08ae86fd001f6b7ae2c0954b06e0d086b99))
+* **entity:** restore feature display ([b976314](https://github.com/kingsdigitallab/kings-past/commit/b9763142cd89ab99dd0f703802f0178048709bf2))
+* **moments:** restore hover effect on moment image ([6cf90c7](https://github.com/kingsdigitallab/kings-past/commit/6cf90c708b93e7cec66f704fb78fc54012ff17c7))
+* **organisations:** typo ([6adc2bb](https://github.com/kingsdigitallab/kings-past/commit/6adc2bb2d695f0b87cf78c0942f3c77184df1287))
+* **people:** add entries function to ensure all routes are built ([1ee37e7](https://github.com/kingsdigitallab/kings-past/commit/1ee37e7883e25fd3ff520936524eccebaf0bd782))
+* **people:** disable card view for now, wip ([e3e9fba](https://github.com/kingsdigitallab/kings-past/commit/e3e9fba001273c48041a1c9497e956eb3f33107a))
+* **people:** disable card view for now, wip ([5570c55](https://github.com/kingsdigitallab/kings-past/commit/5570c551b09078544343f31f981eebb78896bb7d))
+* **people:** typo ([64c18b0](https://github.com/kingsdigitallab/kings-past/commit/64c18b07bbcff62a49aefcb159d60279e4eff814))
+
+
+### Features
+
+* **a11y:** add placeholder statement ([05abaad](https://github.com/kingsdigitallab/kings-past/commit/05abaad42a3fda9ee53ba12d1d5b9b21169d0434))
+* **a11y:** add placeholder statement ([cd84366](https://github.com/kingsdigitallab/kings-past/commit/cd84366abffa533199478673e82573597590e266))
+* **config:** add setting for empty placeholder ([4f933b0](https://github.com/kingsdigitallab/kings-past/commit/4f933b046eac675bd260bbaeb4f5653e75f5dc68))
+* **demonumenta:** add sketchfab embeds ([2b6b40b](https://github.com/kingsdigitallab/kings-past/commit/2b6b40b47269bb36202ef1ba570e1c77f1bd10d8))
+* **donations:** add component to render donations ([2ff10a8](https://github.com/kingsdigitallab/kings-past/commit/2ff10a8bfebe889c8006914b61662612a14f49aa))
+* **donations:** add types and error handling function ([1658d02](https://github.com/kingsdigitallab/kings-past/commit/1658d02332609be05c0189ff3dc382c816a03e22))
+* **entity:** display same as and urls ([e547788](https://github.com/kingsdigitallab/kings-past/commit/e547788d62fd9dcdf55d4cebde25bb79d3b8a33b))
+* **entityindex:** do not display the slug in the table ([9ac256c](https://github.com/kingsdigitallab/kings-past/commit/9ac256c8d5f064c5284b7512b6621faf8e3a5254))
+* **errorhandling:** add helper function to render load errors ([60260e7](https://github.com/kingsdigitallab/kings-past/commit/60260e725817db43d266f6ff177f94c69f89a774))
+* **layout:** add global title to head ([bae2f9d](https://github.com/kingsdigitallab/kings-past/commit/bae2f9d9f842f2a83c134181821366a3766562c7))
+* **lib:** add helper function to render event dates ([fda9837](https://github.com/kingsdigitallab/kings-past/commit/fda9837ea73c0aa48d647c97bc0daf7569f6e896))
+* **organisation:** get and display urls ([be4b22d](https://github.com/kingsdigitallab/kings-past/commit/be4b22d56e77941fba5ac6cd1683ca2b2ff12293))
+* **organisations:** display memberships and donations ([6d8d284](https://github.com/kingsdigitallab/kings-past/commit/6d8d28405ca8f9e81c2c00e1b54e53aedcbf142c))
+* **organisations:** get and display same as ([3b2c2ec](https://github.com/kingsdigitallab/kings-past/commit/3b2c2ec209ba6036a5982efb596f725995e3c2c2))
+* **organisations:** get more data about organisations ([df1d492](https://github.com/kingsdigitallab/kings-past/commit/df1d492e2d5342b46adc0aeeb68590be6c7c8d14))
+* **people:** add a database summary before the data ([6991458](https://github.com/kingsdigitallab/kings-past/commit/6991458e0514ad1895ac1fdd23a5771c66130139))
+* **people:** add test card view, not styled ([58373c3](https://github.com/kingsdigitallab/kings-past/commit/58373c3cdb3806cc16cced5e13bffbb3612fd480))
+* **people:** enhance person detail page and data loading ([2287dbe](https://github.com/kingsdigitallab/kings-past/commit/2287dbedbc3de399b249e804adbf967b7192ef91))
+* **people:** get both donations as agent and as recipient ([93726fa](https://github.com/kingsdigitallab/kings-past/commit/93726fa1e4adfee056c3597033c19063abb4953d))
+* **supabase:** add function to get feature for records ([0b3a3c0](https://github.com/kingsdigitallab/kings-past/commit/0b3a3c08a390f1f6a94e491ff61762cfef526d81))
+* **supabase:** add function to get languages for records ([2cdaa82](https://github.com/kingsdigitallab/kings-past/commit/2cdaa826a697f20a9f6c60c1a172b7697aaf299f))
+* **supabase:** add function to get organisations memberships ([6d32915](https://github.com/kingsdigitallab/kings-past/commit/6d32915692e1fbd4297ed09fe8c78fc55110ef53))
+* **supabase:** add helper functions to get moments and sources for records ([3b300eb](https://github.com/kingsdigitallab/kings-past/commit/3b300ebcc635248679de914d12df9b9f3af3d518))
+* **supabase:** enhance data fetching functions ([f25781e](https://github.com/kingsdigitallab/kings-past/commit/f25781e0a57cb986fa81fbcd3ddfdb389ad178c6))
+* **supabase:** modify get record donations ([c1dc9af](https://github.com/kingsdigitallab/kings-past/commit/c1dc9afcddd103045409e66a74191792c80e6581))
+* **tablecolumns:** add alternative names column ([af5b4af](https://github.com/kingsdigitallab/kings-past/commit/af5b4afdabbcc2d7d71abb95fb5af60d07bda934))
+* **tablecolumns:** add column to display wether people have bios or not ([d152a06](https://github.com/kingsdigitallab/kings-past/commit/d152a06bc13547916970b0c79b86a4f87a023486))
+
+
+### Performance Improvements
+
+* **moments:** lazy load the images ([a6e2df0](https://github.com/kingsdigitallab/kings-past/commit/a6e2df05cca6461d1681d2f9644080efb05c54ad))
+* reduce image sizes ([554fd7f](https://github.com/kingsdigitallab/kings-past/commit/554fd7f149d0bd71e4a0630b8ba6dcad6c6ea6e7))
+
 ## [0.9.2](https://github.com/kingsdigitallab/kings-past/compare/v0.9.1...v0.9.2) (2024-10-22)
 
 
