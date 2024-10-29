@@ -126,6 +126,37 @@ export async function getEventEntities(slug: string, role: 'person' | 'organisat
 	return entities as unknown as Person[];
 }
 
+export async function getPlaceDonations(slug: string) {
+	const donationsQuery = supabase.from('donation').select('*').eq('location', slug);
+
+	const { data: donations, error } = await donationsQuery;
+
+	if (error) throw error;
+
+	return donations as unknown as Donation[];
+}
+
+export async function getPlaceEvents(slug: string) {
+	const eventsQuery = supabase.from('event').select('*').eq('location', slug);
+
+	const { data: events, error } = await eventsQuery;
+	console.log(events, error);
+
+	if (error) throw error;
+
+	return events as unknown as Event[];
+}
+
+export async function getPlaceOrganisations(slug: string) {
+	const organisationsQuery = supabase.from('organisation').select('*').eq('location', slug);
+
+	const { data: organisations, error } = await organisationsQuery;
+
+	if (error) throw error;
+
+	return organisations as unknown as Organisation[];
+}
+
 export async function getRecordFeature(source: string, slug: string) {
 	const tableName = `${source}_feature` as TableNames;
 	const featureQuery = supabase.from(tableName).select('*').eq(source, slug);
