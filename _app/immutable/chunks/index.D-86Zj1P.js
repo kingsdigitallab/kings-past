@@ -1,1 +1,0 @@
-function a(t,e){return t!==e?`${new Date(t).toLocaleDateString()}–${new Date(e).toLocaleDateString()}`:new Date(t).toLocaleDateString()}function n(t){return a(t.start_date,t.end_date)}export{a,n as f};
