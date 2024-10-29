@@ -1,6 +1,6 @@
 <script lang="ts">
 	import type { Moment } from '$lib/types';
-	import { getMomentN } from '$lib/moments';
+	import { getMomentN, splitMomentTitle } from '$lib/moments';
 	import { RectangleHorizontal, RectangleVertical } from 'lucide-svelte';
 	import { base } from '$app/paths';
 
@@ -21,8 +21,9 @@
 			{#if metaExtra}
 				{metaExtra.title}
 			{:else if meta.title.includes(':')}
-				<span>{meta.title.split(':')[0]}</span>
-				{meta.title.split(':')[1]}
+				{@const title = splitMomentTitle(meta.title)}
+				<span>{title.year}</span>
+				{title.name}
 			{:else}
 				{meta.title}
 			{/if}
