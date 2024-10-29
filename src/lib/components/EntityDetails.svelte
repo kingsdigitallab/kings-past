@@ -23,11 +23,18 @@
 
 	<section>
 		<dl class="dl-inline">
-			<dt>Slug</dt>
-			<dd>{entity.slug}</dd>
+			{#if ['Organisation', 'Person'].includes(entityType)}
+				<dt>Slug</dt>
+				<dd>{entity.slug}</dd>
+			{/if}
 			{#each Object.entries(meta) as [key, value]}
-				<dt>{key}</dt>
-				<dd>{value}</dd>
+				{#if value?.slug}
+					<dt>{key}</dt>
+					<dd><a href="../places/{value.slug}">{value.name}</a></dd>
+				{:else}
+					<dt>{key}</dt>
+					<dd>{value}</dd>
+				{/if}
 			{/each}
 			{#if sameAs && sameAs.length}
 				<dt><LucideExternalLink />Related</dt>
@@ -135,8 +142,8 @@
 		max-inline-size: none;
 	}
 
-	dd ul li,
-	dd ul li a {
+	dd a,
+	dd ul li {
 		display: flex;
 		max-inline-size: none;
 	}
