@@ -1,6 +1,6 @@
 <script lang="ts">
 	import * as config from '$lib/config';
-	import IndexTable from '$lib/components/IndexTable.svelte';
+	import EntityIndex from '$lib/components/EntityIndex.svelte';
 	import PlacesMap from '$lib/components/PlacesMap.svelte';
 	import { nameColumn, alternativeNamesColumn, statusColumn } from '$lib/tableColumns';
 	import { LucideMap, LucideTable } from 'lucide-svelte';
@@ -81,7 +81,7 @@
 	{#if showMap}
 		<PlacesMap places={collection} />
 	{:else}
-		<IndexTable data={collection} {label} {columns} {sortBy} {url} />
+		<EntityIndex data={collection} {label} {columns} {sortBy} {url} />
 	{/if}
 </article>
 

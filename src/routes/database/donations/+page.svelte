@@ -1,6 +1,6 @@
 <script lang="ts">
 	import * as config from '$lib/config';
-	import IndexTable from '$lib/components/IndexTable.svelte';
+	import EntityIndex from '$lib/components/EntityIndex.svelte';
 	import { dateColumn, nameColumn, locationColumn, statusColumn } from '$lib/tableColumns';
 
 	export let data;
@@ -33,5 +33,5 @@
 		<h1>Donations</h1>
 	</header>
 
-	<IndexTable data={collection} {label} {columns} {sortBy} {url} />
+	<EntityIndex data={collection} {label} {columns} {sortBy} {url} />
 </article>
