@@ -15,8 +15,7 @@
 		{
 			header: 'Price',
 			accessor: 'price',
-			cell: ({ value, row }: { value: number; row: { original: { currency: string } } }) =>
-				`${value.toLocaleString()} ${row.original.currency}`
+			cell: ({ value }: { value: number }) => `${value.toLocaleString()}`
 		},
 		{ header: 'Currency', accessor: 'currency' },
 		statusColumn
