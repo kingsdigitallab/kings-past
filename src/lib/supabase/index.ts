@@ -82,6 +82,23 @@ export async function getRecordDonations(
 	return donations as unknown as Donation[];
 }
 
+export async function getDonationEntities(
+	slug: string,
+	donor: 'person' | 'organisation' = 'person',
+	role: 'agent' | 'recipient' = 'agent'
+): Promise<Person[]> {
+	const donorsQuery = supabase
+		.from(donor)
+		.select(`*, donation_${role}_${donor}!inner(donation)`)
+		.eq(`donation_${role}_${donor}.donation`, slug);
+
+	const { data: donors, error } = await donorsQuery;
+
+	if (error) throw error;
+
+	return donors as unknown as Person[];
+}
+
 export async function getRecordEvents(source: string, slug: string): Promise<Event[]> {
 	const eventsQuery = supabase
 		.from('event')
