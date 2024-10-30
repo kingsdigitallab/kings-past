@@ -9,7 +9,7 @@
 	{#if essays?.length || people?.length}
 		<section class="links">
 			{#if essays?.length}
-				<section class="surface-4">
+				<section class="info">
 					<h2>Detailed research</h2>
 					<ul>
 						{#each essays as essay}
@@ -20,7 +20,7 @@
 			{/if}
 
 			{#if people?.length}
-				<section class="surface-4">
+				<section class="info">
 					<h2>King's lives</h2>
 					<ul>
 						{#each people as person}
@@ -57,5 +57,35 @@
 		font-size: var(--font-size-3);
 		margin-block: var(--size-2);
 		padding-inline-start: var(--size-2);
+	}
+	section.info{
+		background-color: white;
+		padding:0;
+		margin:var(--size-3);
+		& h2{
+			background-color: var(--powder-blue);
+			margin:0;
+			padding:var(--size-3) var(--size-4);
+			font-weight: 200;
+			font-size:var(--font-size-5);
+			min-width: 100%;
+		}
+		& ul {
+			list-style-type: none;
+			margin-left: -10px;
+			& li a{
+			display: block;
+			text-decoration: none;
+			padding-left: var(--size-3);
+			border-left:var(--size-2) solid var(--surface-1);
+			width: calc(100% - var(--size-2));
+			&:hover{
+				background-color: var(--midnight-blue);
+				border-left:var(--size-2) solid var(--yellow);
+				opacity:1;
+				color:white;
+			}
+			}
+		}
 	}
 </style>

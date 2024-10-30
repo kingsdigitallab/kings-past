@@ -15,7 +15,7 @@ KCL’s close association with Arthur Wellesley, Duke of Wellington – hero of 
 
 Throughout this period, King’s fellows, research students, and archivists expanded the academic analysis of military science and history, created the Liddell Hart Centre for Military Archives, and established the study of war as a core specialism within the university. Relationships with the armed forces and other key agents of Britain’s expanding global power shaped the college’s early development and institutional identity. In the 21st century, this tradition has continued through collaborations with the Ministry of Defence, Security Services, and armed forces. This research strand explores the intellectual and practical implications of these relationships. Much has been written on the idea of Britain’s nineteenth century liberal empire, but far less attention has been given to more conservative understandings of empire and imperial power, often premised on an assumption of military superiority. Understanding better how King’s contributed to these is crucial to gaining a more nuanced appreciation of the ways in which the college was invested in British imperialism. The long afterlives of those connections have shaped the college’s development to the present day.
 
-:::question{section.surface-3}
+:::question{section}
 
 ## So what question...
 
