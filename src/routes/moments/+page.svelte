@@ -38,23 +38,24 @@
 				flex-direction: row;
 				justify-content: space-between;
 				align-items: center;
-				background-color: var(--powder-blue);
+				background-color: var(--pearl-grey);
 				height: 150px;
 				overflow: hidden;
-					transition: all 0.5s ease-out;
+				transition: all 0.5s ease-out;
 				& span{
 					width: 10%;
 					font-size: var(--font-size-5);
 					color: var(--midnight-blue);
 					padding: var(--size-3);
 					text-align: center;
+			
 				}
 			}
 			div:last-child {
 				padding: var(--size-4);
 				color: white;
 				border-bottom: var(--size-2) solid var(--powder-blue);
-					transition: all 0.5s ease-out;
+				transition: all 0.5s ease-out;
 			}
 		}
 	}
@@ -66,7 +67,8 @@
 			opacity: 1;
 
 			div:first-child  {
-				background-color: var(--yellow);
+				background-color: var(--powder-blue);
+		
 			}
 			div:last-child  {
 				color: var(--yellow);
