@@ -7,7 +7,8 @@ export const url = dev ? 'https://localhost:5173/' : 'https://kingspast.kcl.ac.u
 export const nav = [
 	{ title: 'About', url: '/about' },
 	{ title: 'Moments', url: '/moments' },
-	{ title: 'Database', url: '/database' }
+	{ title: 'Database', url: '/database' },
+	{ title: 'Search', url: '/search' }
 ];
 
 export const hero = {

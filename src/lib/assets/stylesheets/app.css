@@ -34,6 +34,19 @@
 	--section-margin-block: var(--size-5);
 
 	--button-font-size: var(--font-size-fluid-1);
+
+	/* Search */
+	--pagefind-ui-scale: 1;
+	--pagefind-ui-primary: var(--midnight-blue);
+	--pagefind-ui-text: var(--text-1);
+	--pagefind-ui-background: var(--surface-1);
+	--pagefind-ui-border: var(--border-light);
+	--pagefind-ui-tag: var(--border-light);
+	--pagefind-ui-border-width: calc(var(--size-1) / 2);
+	--pagefind-ui-border-radius: var(--size-2);
+	--pagefind-ui-image-border-radius: var(--size-2);
+	--pagefind-ui-image-box-ratio: 3 / 2;
+	--pagefind-ui-font: var(--font-sans);
 }
 
 @media (max-width: 992px) {
@@ -180,4 +193,11 @@ button {
 			margin-right: var(--size-2);
 		}
 	}
+}
+
+/* Search */
+.pagefind-ui__result-excerpt mark {
+	background-color: var(--yellow);
+	padding: var(--size-1);
+	border-radius: var(--size-1);
 }
