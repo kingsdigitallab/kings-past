@@ -17,5 +17,24 @@
 	"[scss]": {
 		"editor.defaultFormatter": "esbenp.prettier-vscode"
 	},
-	"peacock.color": "#00316f"
+	"peacock.color": "#0a2d50",
+	"workbench.colorCustomizations": {
+		"activityBar.activeBackground": "#10467d",
+		"activityBar.background": "#10467d",
+		"activityBar.foreground": "#e7e7e7",
+		"activityBar.inactiveForeground": "#e7e7e799",
+		"activityBarBadge.background": "#1c0410",
+		"activityBarBadge.foreground": "#e7e7e7",
+		"commandCenter.border": "#e7e7e799",
+		"sash.hoverBorder": "#10467d",
+		"statusBar.background": "#0a2d50",
+		"statusBar.foreground": "#e7e7e7",
+		"statusBarItem.hoverBackground": "#10467d",
+		"statusBarItem.remoteBackground": "#0a2d50",
+		"statusBarItem.remoteForeground": "#e7e7e7",
+		"titleBar.activeBackground": "#0a2d50",
+		"titleBar.activeForeground": "#e7e7e7",
+		"titleBar.inactiveBackground": "#0a2d5099",
+		"titleBar.inactiveForeground": "#e7e7e799"
+	}
 }
