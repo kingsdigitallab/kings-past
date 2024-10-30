@@ -68,29 +68,17 @@
 }
 
 .md section.question {
-	margin-top:var(--size-10);
+	margin-top: var(--size-10);
 	background-color: var(--pearl-grey);
 	/*border-top: var(--size-2) solid var(--powder-blue);*/
 	padding: var(--size-7);
-	& h2{
-		margin:0 0 var(--size-4) 0;
+	& h2 {
+		margin: 0 0 var(--size-4) 0;
 	}
 }
 
 .md blockquote {
 	max-inline-size: var(--size-content-3);
-}
-
-.md table {
-	--nice-inner-radius: 0;
-	border: none;
-	border-radius: 0;
-	font-size: var(--font-size-2);
-	margin-top: var(--size-7);
-
-	& th {
-		background-color: var(--surface-4);
-	}
 }
 
 .md a:not(.footnote-ref):not(.footnote-backref) {
@@ -109,4 +97,3 @@
 .md .footnotes li {
 	max-inline-size: none;
 }
-
