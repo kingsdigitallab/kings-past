@@ -37,15 +37,17 @@
 	<section class="grid">
 		{#each items as item}
 			<article class="card">
+				<a href={item.href}>
 				<header>
-					<a href={item.href}>
 						<h2>{item.title}</h2>
-					</a>
 				</header>
-				<p>{item.description}</p>
-				<footer>
-					<p>Stats?</p>
-				</footer>
+				</a>
+				<article>
+					<p>{item.description}</p>
+					<footer>
+						<p>Stats?</p>
+					</footer>
+				</article>
 			</article>
 		{/each}
 	</section>
@@ -56,6 +58,50 @@
 		display: grid;
 		grid-template-columns: 1fr;
 		gap: var(--size-4);
+		height: 100%;
+	}
+	article.card{
+		padding: 0;
+		border:0;
+		background-color: white;
+		border-radius: 0;
+		display:block;
+		box-shadow: var(--shadow-2);
+		
+		& a {
+			display:block;
+			& header{
+				background-color: var(--midnight-blue);
+				padding: var(--size-4);
+				border-bottom: var(--size-2) solid var(--powder-blue);
+				transition: all 0.5s ease-out;
+				& h2{
+					color:white;
+					font-weight: 400;
+					font-size: var(--font-size-5);
+					transition: all 0.5s ease-out;
+				}
+				&:hover{
+					border-bottom: var(--size-2) solid var(--yellow);
+					& h2{
+						color:var(--yellow);
+						opacity:1;
+					}
+				}
+			}
+			&:hover{
+				opacity: 1;
+			}
+		}
+		& >article{
+			background-color: white;
+			margin: 0 var(--size-1) var(--size-1) var(--size-1);
+			padding: var(--size-3);
+		}
+		&:hover{
+			transform: translateY(0);
+			box-shadow: var(--shadow-3);
+		}
 	}
 
 	@media (min-width: 768px) {

@@ -41,7 +41,8 @@
 				background-color: var(--powder-blue);
 				height: 150px;
 				overflow: hidden;
-					transition: all 0.5s ease-out;
+				transition: all 0.5s ease-out;
+				
 				& span{
 					width: 10%;
 					font-size: var(--font-size-5);
