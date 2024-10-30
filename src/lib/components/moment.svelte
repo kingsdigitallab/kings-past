@@ -28,30 +28,31 @@
 				{meta.title}
 			{/if}
 		</h1>
-
-		<ol>
-			{#each moments as cur}
-				<li>
-					<a
-						href={`${path}${getMomentN(cur.n)}`}
-						class:active={cur.n === meta.n}
-						title="Moment {cur.n}"
-					>
-						{#if cur.n === meta.n}
-							<RectangleHorizontal />
-						{:else}
-							<RectangleVertical />
-						{/if}
-					</a>
-				</li>
-			{/each}
-		</ol>
-		<p class="n">
-			<strong
-				>Moment {meta.n}{#if metaExtra}
-					&#160;-&#160;{meta.title}{/if}</strong
-			>
-		</p>
+		<article>
+			<ol>
+				{#each moments as cur}
+					<li>
+						<a
+							href={`${path}${getMomentN(cur.n)}`}
+							class:active={cur.n === meta.n}
+							title="Moment {cur.n}"
+						>
+							{#if cur.n === meta.n}
+								<RectangleHorizontal />
+							{:else}
+								<RectangleVertical />
+							{/if}
+						</a>
+					</li>
+				{/each}
+			</ol>
+			<p class="n">
+				<strong
+					>Moment {meta.n}{#if metaExtra}
+						&#160;-&#160;{meta.title}{/if}</strong
+				>
+			</p>
+		</article>
 		<img
 			src="{base}{meta.feature.image}"
 			alt={meta.feature.description}
@@ -101,8 +102,8 @@
 		}
 
 		& a rect {
-			fill: var(--powder-blue);
-			stroke: var(--powder-blue);
+			fill: var(--pearl-grey);
+			stroke: var(--pearl-grey);
 			transform: scale(0.7);
 			&:hover {
 				fill: white;
@@ -117,7 +118,7 @@
 	}
 
 	header {
-		padding: var(--size-4) 0;
+		padding: var(--size-4) 0 0 0;
 		& h1 {
 			max-inline-size: none;
 			text-wrap: auto;
@@ -135,7 +136,6 @@
 			object-fit: cover;
 			object-position: center;
 			width: 100%;
-			border-top: var(--size-7) solid white;
 		}
 
 		& ol {
