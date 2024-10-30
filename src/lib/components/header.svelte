@@ -10,7 +10,7 @@
 	<div class="layout surface-2">
 		<nav>
 			<a href="{base}/" class="title">
-				<strong>{config.title}</strong>
+				{config.title}
 			</a>
 			<input class="menu-btn" type="checkbox" id="menu-btn" />
 			<label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
@@ -79,9 +79,16 @@
 		display: none;
 	}
 
-	@media (max-width: 768px) {
+	@media (max-width: 992px) {
 		.title {
 			font-size: var(--font-size-4);
+		}
+	}
+
+	@media (max-width: 768px) {
+
+		section.hero{
+			margin: var(-size-4) 0;
 		}
 
 		img {
