@@ -11,7 +11,6 @@
 
 	onMount(() => {
 		if (browser) {
-			console.log('onMount', location.href);
 			pagefind = new PagefindUI({
 				element: '#search',
 				autofocus: true,
