@@ -9,6 +9,8 @@
 	export let content;
 	export let moments: Moment[];
 
+	const title = meta.title.includes(':') ? splitMomentTitle(meta.title) : null;
+
 	const path = metaExtra ? '../' : '';
 
 	const prev = meta.n > 1 ? moments[meta.n - 2] : null;
@@ -24,8 +26,7 @@
 					<hgroup>
 						<h1 data-pagefind-filter="moment">{metaExtra.title}</h1>
 						<h2>
-							{#if meta.title.includes(':')}
-								{@const title = splitMomentTitle(meta.title)}
+							{#if title}
 								<span>{title.year}</span>
 								{title.name}
 							{:else}
@@ -35,8 +36,7 @@
 					</hgroup>
 				{:else}
 					<h1 data-pagefind-filter="moment">
-						{#if meta.title.includes(':')}
-							{@const title = splitMomentTitle(meta.title)}
+						{#if title}
 							<span>{title.year}</span>
 							{title.name}
 						{:else}
