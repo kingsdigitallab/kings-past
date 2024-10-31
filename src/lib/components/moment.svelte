@@ -17,18 +17,23 @@
 
 <article id="moment">
 	<header class="surface-2">
-		<h1 data-pagefind-filter="moment">
-			{#if metaExtra}
-				{metaExtra.title}
-			{:else if meta.title.includes(':')}
-				{@const title = splitMomentTitle(meta.title)}
-				<span>{title.year}</span>
-				{title.name}
-			{:else}
-				{meta.title}
-			{/if}
-		</h1>
-		<article>
+		<section>
+			<span class="n">
+			{meta.n}{#if metaExtra}
+						&#160;-&#160;{meta.title}{/if}
+			</span>
+			<section>
+			<h1 data-pagefind-filter="moment">
+				{#if metaExtra}
+					{metaExtra.title}
+				{:else if meta.title.includes(':')}
+					{@const title = splitMomentTitle(meta.title)}
+					<span>{title.year}</span>
+					{title.name}
+				{:else}
+					{meta.title}
+				{/if}
+			</h1>
 			<ol>
 				{#each moments as cur}
 					<li>
@@ -45,14 +50,10 @@
 						</a>
 					</li>
 				{/each}
-			</ol>
-			<p class="n">
-				<strong
-					>Moment {meta.n}{#if metaExtra}
-						&#160;-&#160;{meta.title}{/if}</strong
-				>
-			</p>
-		</article>
+			</ol>	
+			</section>
+		</section>
+	
 		<img
 			src="{base}{meta.feature.image}"
 			alt={meta.feature.description}
@@ -92,14 +93,7 @@
 			max-inline-size: none;
 		}
 
-		& header p {
-			max-inline-size: none;
-			width: 100%;
-			color: var(--yellow);
-			text-align: center;
-			font-size: var(--font-size-4);
-			padding-bottom: var(--size-4);
-		}
+
 
 		& a rect {
 			fill: var(--pearl-grey);
@@ -118,18 +112,52 @@
 	}
 
 	header {
-		padding: var(--size-4) 0 0 0;
-		& h1 {
-			max-inline-size: none;
-			text-wrap: auto;
-			font-weight: 400;
-			font-size: var(--font-size-5);
-			text-align: center;
-			& span {
-				font-size: var(--font-size-8);
-				display: block;
+		padding: 0;
+		& > section{  
+			    width : 100%;
+				height : 100%;
+				display:flex;
+				margin:0;
+				justify-content: space-between;
+				align-self: stretch;
+				background-color: var(--midnight-blue);
+				& > span {
+					max-inline-size: none;
+					max-width: var(--size-9);
+					color: var(--midnight-blue);
+					text-align: center;
+					font-size: var(--font-size-4);
+					background-color: var(--powder-blue);
+					flex:1;
+					padding-top:var(--size-10);
+				}
+				& > section{
+					flex : 1;
+					display:flex;
+					flex-direction : column;
+					width:100%;
+					padding: var(--size-4);
+					margin:0;
+				& h1 {
+					max-inline-size: none;
+					text-wrap: auto;
+					font-weight: 400;
+					font-size: var(--font-size-5);
+					height: 50%;
+					width:100%;
+					flex:1;
+					& > span {
+						font-size: var(--font-size-8);
+					}
+				}
+				& ol{
+					height: 50%;
+					width:100%;
+					flex:1;
+				}
 			}
-		}
+			}
+
 
 		& img {
 			height: 100%;

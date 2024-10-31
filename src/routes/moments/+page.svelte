@@ -47,7 +47,6 @@
 					min-width:var(--size-8);
 					font-size: var(--font-size-3);
 					color: var(--midnight-blue);
-					padding: var(--size-3);
 					text-align: center;
 				}
 			}
