@@ -19,7 +19,7 @@
 		<p class="entity">
 			<strong>{entityType}</strong>
 		</p>
-		<h1>{entity.name}</h1>
+		<h1 data-pagefind-filter={entityType}>{entity.name}</h1>
 	</hgroup>
 
 	<section>

@@ -11,7 +11,8 @@
 			new PagefindUI({
 				element: '#search',
 				autofocus: true,
-				bundlePath: `${base}/pagefind/`
+				bundlePath: `${base}/pagefind/`,
+				showEmptyFilters: false
 			});
 		}
 	});

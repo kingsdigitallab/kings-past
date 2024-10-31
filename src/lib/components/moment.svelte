@@ -17,7 +17,7 @@
 
 <article id="moment">
 	<header class="surface-2">
-		<h1>
+		<h1 data-pagefind-filter="moment">
 			{#if metaExtra}
 				{metaExtra.title}
 			{:else if meta.title.includes(':')}
