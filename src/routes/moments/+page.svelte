@@ -85,6 +85,9 @@
 		max-inline-size: none;
 		text-wrap: auto;
 		font-weight: 400;
+		& span{
+			font-size: var(--font-size-5);
+		}
 	}
 	figure{
 		overflow: hidden;

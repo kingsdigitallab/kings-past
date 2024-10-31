@@ -85,6 +85,16 @@ h6 {
 	font-weight: 400;
 }
 
+h1{
+	font-size: var(--font-size-6);
+}
+h2{
+	font-size: var(--font-size-5);
+}
+h3{
+	font-size: var(--font-size-4);
+}
+
 @media (max-width: 768px) {
 	h1{
 		font-size: var(--font-size-5);
