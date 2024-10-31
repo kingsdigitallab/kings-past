@@ -196,6 +196,22 @@ button {
 	}
 }
 
+table {
+	--nice-inner-radius: 0;
+	border: none;
+	border-radius: 0;
+	font-size: var(--font-size-2);
+	margin-top: var(--size-7);
+
+	& th {
+		background-color: var(--surface-4);
+	}
+}
+
+table tr:hover td {
+	background-color: var(--yellow);
+}
+
 /* Search */
 .pagefind-ui__result-excerpt mark {
 	background-color: var(--yellow);

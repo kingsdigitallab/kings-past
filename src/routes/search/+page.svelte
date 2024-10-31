@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { browser } from '$app/environment';
+	import { base } from '$app/paths';
 	import { PagefindUI } from '@pagefind/default-ui';
 	import { onMount } from 'svelte';
 
@@ -9,7 +10,8 @@
 		if (browser) {
 			new PagefindUI({
 				element: '#search',
-				autofocus: true
+				autofocus: true,
+				bundlePath: `${base}/pagefind/`
 			});
 		}
 	});
