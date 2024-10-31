@@ -1,5 +1,27 @@
 
 
+# [0.12.0](https://github.com/kingsdigitallab/kings-past/compare/v0.11.0...v0.12.0) (2024-10-31)
+
+
+### Bug Fixes
+
+* homepage small screen horizontal scroll, style years ([18735a0](https://github.com/kingsdigitallab/kings-past/commit/18735a07cd38880167f02696964b3e4501b4faa7))
+* nav title resize ([d12aea8](https://github.com/kingsdigitallab/kings-past/commit/d12aea833ac7b8a91a047f28b19bf1d2766e25c5))
+* **search:** set bundle path to enable subpath deployments ([f6775ed](https://github.com/kingsdigitallab/kings-past/commit/f6775ed9fc9f17a7bfe754955562563ff0daa974))
+
+
+### Features
+
+* **database:** organise the page content ([c11a41b](https://github.com/kingsdigitallab/kings-past/commit/c11a41bc9cfa9a27d6682542ffa238fb82471b1a))
+* **moments:** display the moment number ([79f1612](https://github.com/kingsdigitallab/kings-past/commit/79f1612033180446931bc3c3599cfcf777842517))
+* re-colour moment numbers index page, moment page ([7675d36](https://github.com/kingsdigitallab/kings-past/commit/7675d36b8c4fc606dc2fda4f635d97caab34feeb))
+* remove header var font size ([f30f7b9](https://github.com/kingsdigitallab/kings-past/commit/f30f7b97a2ff97a0eb4c2175086ec8fe512ec215))
+* resize heading font-size for mq ([c3e4c92](https://github.com/kingsdigitallab/kings-past/commit/c3e4c92f28a976b9a2115748d4f68a69d8aaa143))
+* **search:** implement full site search ([3a43111](https://github.com/kingsdigitallab/kings-past/commit/3a43111d0f9016acbdcd599ecdc6133b9c507bee))
+* style database index page ([9c19df1](https://github.com/kingsdigitallab/kings-past/commit/9c19df1952e37c2634b824366bfe597ea30633de))
+* style moment page ([bc8261e](https://github.com/kingsdigitallab/kings-past/commit/bc8261ed263fe0f2e66a25c12b6faa3c38c73e4d))
+* style moments index with numbers ([1cb761b](https://github.com/kingsdigitallab/kings-past/commit/1cb761b9933f25cb5cae2be8c14bac5691612bc5))
+
 # [0.11.0](https://github.com/kingsdigitallab/kings-past/compare/v0.10.0...v0.11.0) (2024-10-29)
 
 
