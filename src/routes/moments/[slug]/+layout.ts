@@ -6,15 +6,14 @@ export async function load({ data, params }) {
 		const moment = await import(`../../../moments/${params.slug}/index.md`);
 
 		const moments = await getMoments();
-		const essays = await getResearch(params.slug);
+		const essaysByCategory = await getResearch(params.slug);
 
 		return {
 			slug: getMomentN(moment.metadata.n),
 			meta: moment.metadata,
 			content: moment.default,
 			moments,
-			essays,
-			momentPeople: data.momentPeople,
+			essaysByCategory,
 			people: data.people
 		};
 	} catch (e) {

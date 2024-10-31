@@ -33,7 +33,7 @@ export function getMomentN(n: number | string) {
 	return String(n).padStart(2, '0');
 }
 
-export async function getResearch(moment: string) {
+export async function getResearch(moment: string): Promise<Record<string, Moment[]>> {
 	const essays = [];
 
 	const paths = import.meta.glob(['/src/moments/*/*.md', '!/src/moments/*/index.md'], {
@@ -57,5 +57,17 @@ export async function getResearch(moment: string) {
 		}
 	}
 
-	return essays;
+	const defaultCategory = 'Academic';
+
+	const essaysByCategory = essays
+		.sort((a, b) => a.category?.localeCompare(b.category || '') || a.title.localeCompare(b.title))
+		.reduce<Record<string, typeof essays>>((acc, essay) => {
+			const category = essay?.category || defaultCategory;
+
+			acc[category] = acc[category] || [];
+			acc[category].push(essay);
+			return acc;
+		}, {});
+
+	return essaysByCategory;
 }

@@ -14,6 +14,7 @@ export type Moment = {
 	excerpt: string;
 	feature: Feature;
 	tags: string[];
+	category?: string;
 };
 
 export type TableNames = keyof Database['public']['Tables'];
