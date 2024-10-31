@@ -34,8 +34,7 @@ jobs:
           GITHUB_ACTIONS_BUILD: true
         run: |
           npm ci
-          npm run build
-          npx -y pagefind --site build
+          npm run build:all
 
       - name: Deploy to GitHub pages
         uses: peaceiris/actions-gh-pages@v3

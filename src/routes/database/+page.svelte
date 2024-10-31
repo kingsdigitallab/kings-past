@@ -38,9 +38,9 @@
 		{#each items as item}
 			<article class="card">
 				<a href={item.href}>
-				<header>
+					<header>
 						<h2>{item.title}</h2>
-				</header>
+					</header>
 				</a>
 				<article>
 					<p>{item.description}</p>
@@ -60,45 +60,45 @@
 		gap: var(--size-4);
 		height: 100%;
 	}
-	article.card{
+	article.card {
 		padding: 0;
-		border:0;
+		border: 0;
 		background-color: white;
 		border-radius: 0;
-		display:block;
+		display: block;
 		box-shadow: var(--shadow-2);
-		
+
 		& a {
-			display:block;
-			& header{
+			display: block;
+			& header {
 				background-color: var(--midnight-blue);
 				padding: var(--size-4);
 				border-bottom: var(--size-2) solid var(--powder-blue);
 				transition: all 0.5s ease-out;
-				& h2{
-					color:white;
+				& h2 {
+					color: white;
 					font-weight: 400;
 					font-size: var(--font-size-5);
 					transition: all 0.5s ease-out;
 				}
-				&:hover{
+				&:hover {
 					border-bottom: var(--size-2) solid var(--yellow);
-					& h2{
-						color:var(--yellow);
-						opacity:1;
+					& h2 {
+						color: var(--yellow);
+						opacity: 1;
 					}
 				}
 			}
-			&:hover{
+			&:hover {
 				opacity: 1;
 			}
 		}
-		& >article{
+		& > article {
 			background-color: white;
 			margin: 0 var(--size-1) var(--size-1) var(--size-1);
 			padding: var(--size-3);
 		}
-		&:hover{
+		&:hover {
 			transform: translateY(0);
 			box-shadow: var(--shadow-3);
 		}
