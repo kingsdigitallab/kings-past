@@ -38,17 +38,17 @@
 				flex-direction: row;
 				justify-content: space-between;
 				align-items: center;
-				background-color: var(--pearl-grey);
+				background-color: var(--powder-blue);
 				height: 150px;
 				overflow: hidden;
 				transition: all 0.5s ease-out;
 				& span{
-					width: 10%;
-					font-size: var(--font-size-5);
+					width: 8%;
+					min-width:var(--size-8);
+					font-size: var(--font-size-3);
 					color: var(--midnight-blue);
 					padding: var(--size-3);
 					text-align: center;
-			
 				}
 			}
 			div:last-child {
@@ -84,20 +84,24 @@
 	h2 {
 		max-inline-size: none;
 		text-wrap: auto;
-		font-weight: 400;
 		& span{
-			font-size: var(--font-size-5);
+			font-size: var(--font-size-7);
+			position:absolute;
+			background:var(--midnight-blue);
+			margin-top:-60px;
+			padding: 0 var(--size-2);
 		}
 	}
 	figure{
 		overflow: hidden;
-		width:90%;
+		width:92%;
 		& img {
 			object-fit: cover;
 			object-position: center;
 			width: 100%;
 			transform: scale(1.05);
 			transition: all 1.5s ease-in-out;
+			min-height: 200px;
 		}
 	}
 	.excerpt {
@@ -113,9 +117,19 @@
 			padding-block-start: var(--size-4);
 			padding-inline-start: 0;
 		}
-
+		article{
+			>article{
+				div:first-child span{
+				font-size: var(--font-size-3);
+			}
+			}
+		}	
 		img {
 			width: 100%;
+		}
+		h2 span{
+			font-size: var(--font-size-5);
+			margin-top: -42px;
 		}
 	}
 </style>
