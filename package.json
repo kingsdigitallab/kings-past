@@ -5,6 +5,8 @@
 	"scripts": {
 		"dev": "vite dev",
 		"build": "vite build",
+		"build:pagefind": "npx -y pagefind --site build",
+		"build:all": "npm run build && npm run build:pagefind",
 		"preview": "vite preview",
 		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
 		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
