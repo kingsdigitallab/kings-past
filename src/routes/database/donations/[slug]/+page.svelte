@@ -24,7 +24,7 @@
 				<h3>People</h3>
 				<ul>
 					{#each donorsPerson as donor}
-						<li><a href="../people/{donor.slug}">{donor.name}</a></li>
+						<li data-pagefind-filter="Person"><a href="../people/{donor.slug}">{donor.name}</a></li>
 					{/each}
 				</ul>
 			{/if}
@@ -32,7 +32,9 @@
 				<h3>Organisations</h3>
 				<ul>
 					{#each donorsOrganisation as donor}
-						<li><a href="../organisations/{donor.slug}">{donor.name}</a></li>
+						<li data-pagefind-filter="Organisation">
+							<a href="../organisations/{donor.slug}">{donor.name}</a>
+						</li>
 					{/each}
 				</ul>
 			{/if}
@@ -45,7 +47,9 @@
 				<h3>People</h3>
 				<ul>
 					{#each recipientsPerson as recipient}
-						<li><a href="../people/{recipient.slug}">{recipient.name}</a></li>
+						<li data-pagefind-filter="Person">
+							<a href="../people/{recipient.slug}">{recipient.name}</a>
+						</li>
 					{/each}
 				</ul>
 			{/if}
@@ -53,7 +57,9 @@
 				<h3>Organisations</h3>
 				<ul>
 					{#each recipientsOrganisation as recipient}
-						<li><a href="../organisations/{recipient.slug}">{recipient.name}</a></li>
+						<li data-pagefind-filter="Organisation">
+							<a href="../organisations/{recipient.slug}">{recipient.name}</a>
+						</li>
 					{/each}
 				</ul>
 			{/if}

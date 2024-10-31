@@ -72,7 +72,7 @@
 			<h2>Moments</h2>
 			<ol>
 				{#each moments as moment}
-					<li class="surface-2">
+					<li class="surface-2" data-pagefind-filter="Moment">
 						<a href="../../moments/{moment.slug}">{moment.title}</a>
 					</li>
 				{/each}
