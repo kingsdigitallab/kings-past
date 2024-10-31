@@ -39,6 +39,7 @@
 			<article class="card">
 				<a href={item.href}>
 					<header>
+						<span>34</span>
 						<h2>{item.title}</h2>
 					</header>
 				</a>
@@ -72,14 +73,21 @@
 			display: block;
 			& header {
 				background-color: var(--midnight-blue);
-				padding: var(--size-4);
+				padding: 0;
 				border-bottom: var(--size-2) solid var(--powder-blue);
 				transition: all 0.5s ease-out;
+				display:flex;
+				& span{
+					display:inline;
+					font-size:var(--font-size-8);
+					padding: 0 0 0 var(--size-4) ;
+					color: white;
+				}
 				& h2 {
 					color: white;
-					font-weight: 400;
 					font-size: var(--font-size-5);
 					transition: all 0.5s ease-out;
+					padding: var(--size-4) var(--size-4) 0 var(--size-4);
 				}
 				&:hover {
 					border-bottom: var(--size-2) solid var(--yellow);
