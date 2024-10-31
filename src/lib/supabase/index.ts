@@ -7,6 +7,7 @@ import type {
 	Organisation,
 	Person,
 	PersonOccupation,
+	Stats,
 	TableNames
 } from '$lib/types';
 import { createClient } from '@supabase/supabase-js';
@@ -54,6 +55,24 @@ export async function getRecordsBy(
 		},
 		{} as Record<string, KPRecord>
 	);
+}
+
+export async function getDatabaseStats(): Promise<Stats> {
+	const stats: Stats = {
+		donationCount: 0,
+		eventCount: 0,
+		organisationCount: 0,
+		personCount: 0,
+		placeCount: 0
+	};
+
+	for (const table of ['donation', 'event', 'organisation', 'person', 'place'] as TableNames[]) {
+		const { count } = await supabase.from(table).select('count', { count: 'exact' }).single();
+
+		stats[`${table}Count` as keyof Stats] = count ?? 0;
+	}
+
+	return stats;
 }
 
 export async function getRecord(source: TableNames, slug: string): Promise<KPRecord> {

@@ -34,3 +34,11 @@ export type PlaceMoment = Tables<'place_moment'>;
 export type Source = Tables<'source'>;
 
 export type KPRecord = Donation | Event | Organisation | Person | Place;
+
+export type Stats = {
+	donationCount: number;
+	eventCount: number;
+	organisationCount: number;
+	personCount: number;
+	placeCount: number;
+};
