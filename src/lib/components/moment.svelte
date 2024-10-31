@@ -154,8 +154,10 @@
 					height: 50%;
 					width: 100%;
 					flex: 1;
+					text-align: center;
 					& > span {
 						font-size: var(--font-size-8);
+						display: block;
 					}
 				}
 				& ol {
