@@ -1,26 +1,92 @@
-# King's Past
+# King's Past Project
 
-[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/kingsdigitallab/kings-past/tree/develop)
+[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/your-username/kings-past)
 
-## Set up
+The King's Past project explores the most important moments that shaped
+[King's College London](https://www.kcl.ac.uk/) and discovers the individuals,
+organisations, and themes that influenced its journey. Through a comprehensive
+digital archive, it connects historical records, people, places, and events.
 
-### Dependencies
+## Technical Overview
 
-- [Node](https://nodejs.org/) 20
+The project is built with modern web technologies focused on performance,
+accessibility, and maintainability:
 
-Install the node packages:
+### Core Technologies
+
+- [SvelteKit](https://kit.svelte.dev/) - Web application framework
+- [Schema.org](https://schema.org/) - Data model for content structure
+- [Supabase](https://supabase.com/) - PostgreSQL database
+
+### UI and Styling
+
+- [Open Props](https://open-props.style/) - CSS custom properties
+- [Lucide](https://lucide.dev/) - Icon set
+- [Unpic](https://unpic.pics/img/svelte/) - Image optimisation
+
+### Content and Data
+
+- [Mdsvex](https://mdsvex.pngwn.io) - Markdown support with Svelte components
+- [Svelte Headless Table](https://svelte-headless-table.bryanmylee.com) - Data tables
+- [MapLibre GL](https://maplibre.org/) - Map visualization
+- [Pagefind](https://pagefind.app/) - Static search indexing
+
+### Deployment
+
+- Static site generation for optimal performance and reduced environmental impact
+- Easy deployment to any static hosting platform
+
+## Project Structure
+
+The project structure is as follows:
+
+```text
+├── .frontmatter/   # Frontmatter content types
+├── frontmaid/      # Small utility to generate ER data models from frontmatter content types
+├── scripts/        # Utility scripts
+├── src/            # Main project source code
+│ ├── lib/          # Utility functions and types
+│ │ └── assets/     # Static assets such as stylesheets and images
+│ ├── components/   # Svelte components
+│ ├── supabase/     # Supabase client, functions and types
+│ │ └── routes/     # SvelteKit routes
+│ └── static/       # Static assets for the production build
+└── supabase/       # Supabase project files
+```
+
+## Development Setup
+
+### Prerequisites
+
+- [Node.js](https://nodejs.org/) version 20 or higher
+- [Supabase CLI](https://supabase.com/docs/guides/cli) (optional, for local development)
+
+### Environment Variables
+
+Create a `.env` file in the root directory with the following variables:
+
+```bash
+SUPABASE_URL=your_supabase_project_url
+SUPABASE_KEY=your_supabase_anon_key
+```
+
+### Installation
+
+1. Install dependencies:
 
 ```bash
 npm install
 ```
 
-Install the git hooks:
+1. Set up git hooks:
 
 ```bash
 npx simple-git-hooks
 ```
 
-## Developing
+### Development Server
+
+1.Start the development server:
 
 ```bash
 npm run dev
@@ -29,15 +95,41 @@ npm run dev
 npm run dev -- --open
 ```
 
-## Building
+1. Generate the search index:
 
-To create a production version of your app:
+```bash
+npm run build:pagefind
+```
+
+## Deployment
+
+### Building for Production
+
+1. Create a production build:
 
 ```bash
 npm run build
 ```
 
-You can preview the production build with `npm run preview`.
+1. Generate the search index:
+
+```bash
+npm run build:pagefind
+```
+
+1. Or run both commands together:
+
+```bash
+npm run build:all
+```
+
+### Preview Production Build
+
+To preview the production build locally:
+
+```bash
+npm run preview
+```
 
 ## Data model
 
