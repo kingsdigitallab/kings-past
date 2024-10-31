@@ -11,7 +11,9 @@
 			<h2>People</h2>
 			<ul>
 				{#each people as person}
-					<li><a href="../people/{person.slug}">{person.name}</a></li>
+					<li data-pagefind-filter="Person">
+						<a href="../people/{person.slug}">{person.name}</a>
+					</li>
 				{/each}
 			</ul>
 		</section>
@@ -21,7 +23,9 @@
 			<h2>Organisations</h2>
 			<ul>
 				{#each organisations as organisation}
-					<li><a href="../organisations/{organisation.slug}">{organisation.name}</a></li>
+					<li data-pagefind-filter="Organisation">
+						<a href="../organisations/{organisation.slug}">{organisation.name}</a>
+					</li>
 				{/each}
 			</ul>
 		</section>

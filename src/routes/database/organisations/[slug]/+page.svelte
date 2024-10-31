@@ -39,7 +39,7 @@
 				<h3>People</h3>
 				<ul>
 					{#each personMembers as person}
-						<li>
+						<li data-pagefind-filter="Person">
 							<a href="../people/{person.slug}">{person.name}</a>
 						</li>
 					{/each}
@@ -49,7 +49,7 @@
 				<h3>Organisations</h3>
 				<ul>
 					{#each organisationMembers as organisation}
-						<li>
+						<li data-pagefind-filter="Organisation">
 							<a href="../organisations/{organisation.slug}">{organisation.name}</a>
 						</li>
 					{/each}
@@ -62,7 +62,7 @@
 			<h2>Member of</h2>
 			<ul>
 				{#each memberOf as organisation}
-					<li>
+					<li data-pagefind-filter="Organisation">
 						<a href="../organisations/{organisation.slug}">{organisation.name}</a>
 					</li>
 				{/each}

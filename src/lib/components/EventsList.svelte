@@ -10,7 +10,7 @@
 		<h2>Events</h2>
 		<ul>
 			{#each events as event}
-				<li>
+				<li data-pagefind-filter="Event">
 					<a href="../events/{event.slug}">{formatEventDate(event)} — {event.name}</a>
 				</li>
 			{/each}

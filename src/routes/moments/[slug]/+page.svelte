@@ -24,7 +24,7 @@
 					<h2>King's lives</h2>
 					<ul>
 						{#each people as person}
-							<li>
+							<li data-pagefind-filter="Person">
 								<a href="../database/people/{person.slug}">{person.name}</a>
 							</li>
 						{/each}
@@ -58,33 +58,33 @@
 		margin-block: var(--size-2);
 		padding-inline-start: var(--size-2);
 	}
-	section.info{
+	section.info {
 		background-color: white;
-		padding:0;
-		margin:var(--size-3);
-		& h2{
+		padding: 0;
+		margin: var(--size-3);
+		& h2 {
 			background-color: var(--powder-blue);
-			margin:0;
-			padding:var(--size-3) var(--size-4);
+			margin: 0;
+			padding: var(--size-3) var(--size-4);
 			font-weight: 200;
-			font-size:var(--font-size-5);
+			font-size: var(--font-size-5);
 			min-width: 100%;
 		}
 		& ul {
 			list-style-type: none;
 			margin-left: -10px;
-			& li a{
-			display: block;
-			text-decoration: none;
-			padding-left: var(--size-3);
-			border-left:var(--size-2) solid var(--surface-1);
-			width: calc(100% - var(--size-2));
-			&:hover{
-				background-color: var(--midnight-blue);
-				border-left:var(--size-2) solid var(--yellow);
-				opacity:1;
-				color:white;
-			}
+			& li a {
+				display: block;
+				text-decoration: none;
+				padding-left: var(--size-3);
+				border-left: var(--size-2) solid var(--surface-1);
+				width: calc(100% - var(--size-2));
+				&:hover {
+					background-color: var(--midnight-blue);
+					border-left: var(--size-2) solid var(--yellow);
+					opacity: 1;
+					color: white;
+				}
 			}
 		}
 	}

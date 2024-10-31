@@ -19,7 +19,7 @@
 		<p class="entity">
 			<strong>{entityType}</strong>
 		</p>
-		<h1>{entity.name}</h1>
+		<h1 data-pagefind-filter={entityType}>{entity.name}</h1>
 	</hgroup>
 
 	<section>
@@ -72,7 +72,7 @@
 			<h2>Moments</h2>
 			<ol>
 				{#each moments as moment}
-					<li class="surface-2">
+					<li class="surface-2" data-pagefind-filter="Moment">
 						<a href="../../moments/{moment.slug}">{moment.title}</a>
 					</li>
 				{/each}

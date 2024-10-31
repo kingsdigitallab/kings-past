@@ -25,7 +25,7 @@
 		<h2>Donations made at {place.name}</h2>
 		<ul>
 			{#each donations as donation}
-				<li>
+				<li data-pagefind-filter="Donation">
 					<a href="../donations/{donation.slug}">{formatDonationDate(donation)} — {donation.name}</a
 					>
 				</li>
@@ -37,7 +37,7 @@
 		<h2>Organisations at {place.name}</h2>
 		<ul>
 			{#each organisations as organisation}
-				<li>
+				<li data-pagefind-filter="Organisation">
 					<a href="../organisations/{organisation.slug}">{organisation.name}</a>
 				</li>
 			{/each}

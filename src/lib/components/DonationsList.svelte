@@ -14,7 +14,7 @@
 				<h3>Made by {entityName}</h3>
 				<ul>
 					{#each donationsAsAgent as donation}
-						<li>
+						<li data-pagefind-filter="Donation">
 							<a href="../donations/{donation.slug}">{donation.name}</a>
 						</li>
 					{/each}
@@ -26,7 +26,7 @@
 				<h3>Received by {entityName}</h3>
 				<ul>
 					{#each donationsAsRecipient as donation}
-						<li>
+						<li data-pagefind-filter="Donation">
 							<a href="../donations/{donation.slug}">{donation.name}</a>
 						</li>
 					{/each}

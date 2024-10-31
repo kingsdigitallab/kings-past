@@ -44,12 +44,11 @@
 				{#each knows as knows}
 					<li>
 						{#if knows.person === person.slug}
-							<a href={knows.knows}>{people[knows.knows].name}</a>
-						{:else}
-							<a href={knows.person}>{people[knows.person].name}</a>
-						{/if}
-						{#if knows.relationship}
-							<span>, {knows.relationship.toLowerCase()}</span>
+							<a href={knows.knows} data-pagefind-filter="Person">{people[knows.knows].name}</a
+							>{:else}
+							<a href={knows.person} data-pagefind-filter="Person">{people[knows.person].name}</a
+							>{/if}{#if knows.relationship},
+							<span data-pagefind-filter="Relationship">{knows.relationship.toLowerCase()}</span>
 						{/if}
 					</li>
 				{/each}
@@ -62,7 +61,7 @@
 			<h2>Member of</h2>
 			<ul>
 				{#each memberOf as organisation}
-					<li>
+					<li data-pagefind-filter="Organisation">
 						<a href="../organisations/{organisation.slug}">{organisation.name}</a>
 					</li>
 				{/each}
@@ -75,7 +74,7 @@
 			<h2>Funded</h2>
 			<ul>
 				{#each funded as organisation}
-					<li>
+					<li data-pagefind-filter="Organisation">
 						<a href="../organisations/{organisation.slug}">{organisation.name}</a>
 					</li>
 				{/each}

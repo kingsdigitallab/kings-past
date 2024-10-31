@@ -35,11 +35,8 @@
 		table.createViewModel(tableColumns);
 	const { pageIndex, pageCount, pageSize, hasNextPage, hasPreviousPage } = pluginStates.pagination;
 
-	function formatValue(item: Record<string, any>, column: TableColumn) {
-		if (column.cell) {
-			return column.cell({ value: item[column.accessor] });
-		}
-		return item[column.accessor] ?? 'N/A';
+	function handlePageChange(event: CustomEvent<{ pageIndex: number }>) {
+		$pageIndex = event.detail.pageIndex;
 	}
 </script>
 
@@ -57,6 +54,7 @@
 		hasNextPage={$hasNextPage}
 		onPrevious={() => $pageIndex--}
 		onNext={() => $pageIndex++}
+		on:pageChange={handlePageChange}
 	/>
 
 	{#if view === 'table'}
