@@ -80,10 +80,10 @@
 			opacity: 0.6;
 			cursor: not-allowed;
 			box-shadow: none;
-
 			&:hover {
 				box-shadow: none;
-				color: unset;
+				border-bottom: var(--size-1) solid var(--powder-blue);
+				color: white;
 			}
 		}
 	}
