@@ -9,8 +9,8 @@
 	const label = 'donations';
 
 	const columns = [
-		dateColumn,
 		nameColumn,
+		dateColumn,
 		locationColumn(placesBySlug),
 		{
 			header: 'Price',

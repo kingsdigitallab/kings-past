@@ -9,8 +9,8 @@
 	const { collection, url, placesBySlug } = data;
 
 	const columns = [
-		dateColumn,
 		nameColumn,
+		dateColumn,
 		{
 			header: 'Type',
 			accessor: 'event_type'
