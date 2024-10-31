@@ -75,9 +75,6 @@
 
 					.title {
 						border-bottom: var(--size-1) solid var(--yellow);
-					  & span{
-						background-color: var(--powder-blue);
-					  }
 					}
 
 					:global(img) {
@@ -111,10 +108,10 @@
 				font-weight:800;
 				position: absolute;
 				top: -25px;
-				background: var(--pearl-grey);
+				background: var(--midnight-blue);
 				padding: 5px 7px 0 7px;
 				line-height: 1.1;
-				color: var(--midnight-blue);
+
 			}
 		}
 	}
