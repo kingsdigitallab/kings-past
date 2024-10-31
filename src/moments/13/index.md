@@ -1,5 +1,5 @@
 ---
-title: 'King's Past / King's Future'
+title: "King's Past / King's Future"
 n: 13
 tags:
   - moment
