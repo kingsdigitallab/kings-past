@@ -75,15 +75,20 @@
 	}
 
 	@keyframes fadeInUp{
-  0%{transform:translate(0px, 100px); opacity: 0;}
-  20%{opacity: 0;}
-  100%{transform:translate(0px, 0); opacity: 1;}
-}
+		0%{transform:translate(0px, 100px); opacity: 0;}
+		20%{opacity: 0;}
+		100%{transform:translate(0px, 0); opacity: 1;}
+	}
 
 	@media (max-width: 768px) {
 		.hero {
 			grid-template-rows: 1fr 1fr;
 			grid-template-columns: 1fr;
+		}
+
+		.hero-welcome{
+			margin: var(--size-6) 0;
+			padding:0;
 		}
 
 		.hero-title {

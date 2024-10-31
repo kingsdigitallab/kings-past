@@ -48,4 +48,11 @@
 		max-inline-size: unset;
 		padding-inline: var(--header-padding-inline);
 	}
+
+
+	@media (max-width: 768px) {
+		.layout{
+			display: block;
+		}
+	}
 </style>
