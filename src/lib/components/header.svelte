@@ -87,10 +87,6 @@
 
 	@media (max-width: 768px) {
 
-		section.hero{
-			margin: var(-size-4) 0;
-		}
-
 		img {
 			height: 4em;
 			margin-top: calc(-1 * var(--size-1));

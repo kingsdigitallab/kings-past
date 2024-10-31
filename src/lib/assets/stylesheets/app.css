@@ -82,6 +82,7 @@ h4,
 h5,
 h6 {
 	font-family: var(--font-headings);
+	font-weight: 400;
 }
 
 ul,

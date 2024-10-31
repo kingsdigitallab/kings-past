@@ -75,6 +75,9 @@
 
 					.title {
 						border-bottom: var(--size-1) solid var(--yellow);
+					  & span{
+						background-color: var(--powder-blue);
+					  }
 					}
 
 					:global(img) {
@@ -103,6 +106,16 @@
 			position: absolute;
 			width: 100%;
 			border-bottom: var(--size-1) solid var(--powder-blue);
+			& span{
+				font-size: var(--font-size-5);
+				font-weight:800;
+				position: absolute;
+				top: -25px;
+				background: var(--pearl-grey);
+				padding: 5px 7px 0 7px;
+				line-height: 1.1;
+				color: var(--midnight-blue);
+			}
 		}
 	}
 
@@ -114,5 +127,25 @@
 		width: 100%;
 		transform: scale(1.1);
 		transition: all 1.5s ease-in-out;
+	}
+
+	@media (max-width: 768px) {
+		#moments {
+			margin-block: var(--size-6);
+			& h2{
+				font-size: var(--font-size-5);
+			}
+			& p{
+				font-size: var(--font-size-3);
+			}
+			& ul{
+				padding-block: var(--size-3);
+			}
+			& .title{
+				font-size: var(--font-size-2);
+			}
+
+		}
+
 	}
 </style>
