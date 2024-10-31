@@ -18,42 +18,52 @@
 <article id="moment">
 	<header class="surface-2">
 		<section>
-			<span class="n">
-			{meta.n}{#if metaExtra}
-						&#160;-&#160;{meta.title}{/if}
-			</span>
+			<span class="n">{meta.n}</span>
 			<section>
-			<h1 data-pagefind-filter="moment">
 				{#if metaExtra}
-					{metaExtra.title}
-				{:else if meta.title.includes(':')}
-					{@const title = splitMomentTitle(meta.title)}
-					<span>{title.year}</span>
-					{title.name}
-				{:else}
-					{meta.title}
-				{/if}
-			</h1>
-			<ol>
-				{#each moments as cur}
-					<li>
-						<a
-							href={`${path}${getMomentN(cur.n)}`}
-							class:active={cur.n === meta.n}
-							title="Moment {cur.n}"
-						>
-							{#if cur.n === meta.n}
-								<RectangleHorizontal />
+					<hgroup>
+						<h1 data-pagefind-filter="moment">{metaExtra.title}</h1>
+						<h2>
+							{#if meta.title.includes(':')}
+								{@const title = splitMomentTitle(meta.title)}
+								<span>{title.year}</span>
+								{title.name}
 							{:else}
-								<RectangleVertical />
+								{meta.title}
 							{/if}
-						</a>
-					</li>
-				{/each}
-			</ol>	
+						</h2>
+					</hgroup>
+				{:else}
+					<h1 data-pagefind-filter="moment">
+						{#if meta.title.includes(':')}
+							{@const title = splitMomentTitle(meta.title)}
+							<span>{title.year}</span>
+							{title.name}
+						{:else}
+							{meta.title}
+						{/if}
+					</h1>
+				{/if}
+				<ol>
+					{#each moments as cur}
+						<li>
+							<a
+								href={`${path}${getMomentN(cur.n)}`}
+								class:active={cur.n === meta.n}
+								title="Moment {cur.n}"
+							>
+								{#if cur.n === meta.n}
+									<RectangleHorizontal />
+								{:else}
+									<RectangleVertical />
+								{/if}
+							</a>
+						</li>
+					{/each}
+				</ol>
 			</section>
 		</section>
-	
+
 		<img
 			src="{base}{meta.feature.image}"
 			alt={meta.feature.description}
@@ -93,8 +103,6 @@
 			max-inline-size: none;
 		}
 
-
-
 		& a rect {
 			fill: var(--pearl-grey);
 			stroke: var(--pearl-grey);
@@ -113,51 +121,50 @@
 
 	header {
 		padding: 0;
-		& > section{  
-			    width : 100%;
-				height : 100%;
-				display:flex;
-				margin:0;
-				justify-content: space-between;
-				align-self: stretch;
-				background-color: var(--midnight-blue);
-				& > span {
-					max-inline-size: none;
-					max-width: var(--size-9);
-					color: var(--midnight-blue);
-					text-align: center;
-					font-size: var(--font-size-4);
-					background-color: var(--powder-blue);
-					flex:1;
-					padding-top:var(--size-10);
-				}
-				& > section{
-					flex : 1;
-					display:flex;
-					flex-direction : column;
-					width:100%;
-					padding: var(--size-4);
-					margin:0;
+		& > section {
+			width: 100%;
+			height: 100%;
+			display: flex;
+			margin: 0;
+			justify-content: space-between;
+			align-self: stretch;
+			background-color: var(--midnight-blue);
+			& > span {
+				max-inline-size: none;
+				max-width: var(--size-9);
+				color: var(--midnight-blue);
+				text-align: center;
+				font-size: var(--font-size-4);
+				background-color: var(--powder-blue);
+				flex: 1;
+				padding-top: var(--size-10);
+			}
+			& > section {
+				flex: 1;
+				display: flex;
+				flex-direction: column;
+				width: 100%;
+				padding: var(--size-4);
+				margin: 0;
 				& h1 {
 					max-inline-size: none;
 					text-wrap: auto;
 					font-weight: 400;
 					font-size: var(--font-size-5);
 					height: 50%;
-					width:100%;
-					flex:1;
+					width: 100%;
+					flex: 1;
 					& > span {
 						font-size: var(--font-size-8);
 					}
 				}
-				& ol{
+				& ol {
 					height: 50%;
-					width:100%;
-					flex:1;
+					width: 100%;
+					flex: 1;
 				}
 			}
-			}
-
+		}
 
 		& img {
 			height: 100%;
