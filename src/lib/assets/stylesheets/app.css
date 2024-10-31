@@ -85,18 +85,18 @@ h6 {
 	font-weight: 400;
 }
 
-h1{
+h1 {
 	font-size: var(--font-size-6);
 }
-h2{
+h2 {
 	font-size: var(--font-size-5);
 }
-h3{
+h3 {
 	font-size: var(--font-size-4);
 }
 
 @media (max-width: 768px) {
-	h1{
+	h1 {
 		font-size: var(--font-size-5);
 	}
 	h2 {
@@ -225,13 +225,13 @@ table {
 	font-size: var(--font-size-2);
 	margin-top: var(--size-7);
 	background-color: var(--powder-blue);
-	& thead{
+	& thead {
 		background-color: var(--midnight-blue);
 	}
 	& th {
 		background-color: var(--midnight-blue);
-		color:white;
-		&:hover{
+		color: white;
+		&:hover {
 			color: var(--yellow);
 		}
 	}
@@ -239,11 +239,4 @@ table {
 
 table tr:hover td {
 	background-color: var(--pearl-grey);
-}
-
-/* Search */
-.pagefind-ui__result-excerpt mark {
-	background-color: var(--yellow);
-	padding: var(--size-1);
-	border-radius: var(--size-1);
 }

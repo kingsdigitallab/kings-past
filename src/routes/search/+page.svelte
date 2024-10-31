@@ -70,3 +70,11 @@
 	</hgroup>
 	<section id="search"></section>
 </article>
+
+<style>
+	:global(.pagefind-ui__result-excerpt mark) {
+		background-color: color-mix(in srgb, var(--yellow) 70%, white);
+		border-radius: var(--size-1);
+		padding: var(--size-1);
+	}
+</style>
