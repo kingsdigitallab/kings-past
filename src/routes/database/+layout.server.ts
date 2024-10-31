@@ -1,10 +1,16 @@
+import { handleLoadError } from '$lib/errorHandling';
 import { getMoments } from '$lib/moments';
-import { getRecordsBy } from '$lib/supabase';
+import { getDatabaseStats, getRecordsBy } from '$lib/supabase';
 import type { LayoutServerLoad } from './$types';
 
 export const load = (async () => {
-	return {
-		moments: await getMoments(),
-		placesBySlug: await getRecordsBy('place', 'slug')
-	};
+	try {
+		return {
+			stats: await getDatabaseStats(),
+			moments: await getMoments(),
+			placesBySlug: await getRecordsBy('place', 'slug')
+		};
+	} catch (error) {
+		handleLoadError('database', error);
+	}
 }) satisfies LayoutServerLoad;
