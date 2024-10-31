@@ -1,8 +1,7 @@
 <script lang="ts">
-	import { browser } from '$app/environment';
+	import { browser, dev } from '$app/environment';
 	import { afterNavigate, pushState } from '$app/navigation';
 	import { base } from '$app/paths';
-	import { page } from '$app/stores';
 	import { PagefindUI } from '@pagefind/default-ui';
 	import { onMount } from 'svelte';
 
@@ -12,11 +11,24 @@
 
 	onMount(() => {
 		if (browser) {
+			console.log('onMount', location.href);
 			pagefind = new PagefindUI({
 				element: '#search',
 				autofocus: true,
 				bundlePath: `${base}/pagefind/`,
-				showEmptyFilters: false
+				showEmptyFilters: false,
+				processResult: (result: any) => {
+					if (dev && result.url) {
+						result.url = result.url.replace(/\.html$/, '');
+					}
+
+					// remove footer images from results
+					if (result.meta.image && result.meta.image.indexOf('assets/footer') >= 0) {
+						result.meta.image = undefined;
+					}
+
+					return result;
+				}
 			});
 
 			const searchInput = document.querySelector('#search input') as HTMLInputElement;
@@ -24,17 +36,26 @@
 				searchInput.addEventListener('input', (event: Event) => {
 					const target = event.target as HTMLInputElement;
 					const url = new URL(window.location.href);
-					url.searchParams.set('q', target.value);
-					pushState(url, '');
+
+					setTimeout(() => {
+						url.searchParams.set('q', target.value);
+						pushState(url, '');
+					}, 500);
 				});
 			}
 
-			pagefind.triggerSearch($page.url.searchParams.get('q'));
+			triggerSearch();
 		}
 	});
 
+	function triggerSearch() {
+		const currentUrl = new URL(window.location.href);
+		const searchValue = currentUrl.searchParams.get('q');
+		pagefind?.triggerSearch(searchValue);
+	}
+
 	afterNavigate(() => {
-		pagefind?.triggerSearch($page.url.searchParams.get('q'));
+		triggerSearch();
 	});
 </script>
 
