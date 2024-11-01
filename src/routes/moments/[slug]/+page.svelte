@@ -97,6 +97,21 @@
 				font-family: var(--font-headings);
 				font-size: var(--font-size-5);
 				font-weight: var(--font-weight-2);
+				list-style: none;
+				padding-left: var(--size-4);
+				position: relative;
+
+				&::after {
+					content: '+';
+					position: absolute;
+					right: var(--size-4);
+					transition: transform 0.2s ease;
+				}
+			}
+
+			&[open] summary::after {
+				content: '-';
+				transform: rotate(180deg);
 			}
 		}
 
