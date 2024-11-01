@@ -29,7 +29,7 @@ If you have any queries about this statement please contact:
 > 57 Waterloo Road
 > SE1 8WA, London
 >
-> email: [jon.wilson@kcl.ac.uk](mailto:jon.wilson@kcl.ac.uk)
+> email: [email needs to be added](mailto:kingspast@kcl.ac.uk)
 
 ## How do we collect information?
 
