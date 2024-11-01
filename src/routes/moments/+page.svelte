@@ -16,7 +16,9 @@
 			<a href="moments/{moment.slug}">
 				<div>
 					<span>{parseInt(moment.slug)}</span>
-					<figure><img src="{base}{moment.feature.image}" alt={moment.feature.description} /></figure>
+					<figure>
+						<img src="{base}{moment.feature.image}" alt={moment.feature.description} />
+					</figure>
 				</div>
 				<div>
 					<h2><span>{title.year}</span> {title.name}</h2>
@@ -42,9 +44,9 @@
 				height: 150px;
 				overflow: hidden;
 				transition: all 0.5s ease-out;
-				& span{
+				& span {
 					width: 8%;
-					min-width:var(--size-8);
+					min-width: var(--size-8);
 					font-size: var(--font-size-3);
 					color: var(--midnight-blue);
 					text-align: center;
@@ -65,11 +67,10 @@
 			text-decoration: none;
 			opacity: 1;
 
-			div:first-child  {
+			div:first-child {
 				background-color: var(--powder-blue);
-		
 			}
-			div:last-child  {
+			div:last-child {
 				color: var(--yellow);
 				border-bottom: var(--size-2) solid var(--yellow);
 			}
@@ -83,17 +84,17 @@
 	h2 {
 		max-inline-size: none;
 		text-wrap: auto;
-		& span{
+		& span {
 			font-size: var(--font-size-7);
-			position:absolute;
-			background:var(--midnight-blue);
-			margin-top:-60px;
+			position: absolute;
+			background: var(--midnight-blue);
+			margin-top: -60px;
 			padding: 0 var(--size-2);
 		}
 	}
-	figure{
+	figure {
 		overflow: hidden;
-		width:92%;
+		width: 92%;
 		& img {
 			object-fit: cover;
 			object-position: center;
@@ -116,17 +117,17 @@
 			padding-block-start: var(--size-4);
 			padding-inline-start: 0;
 		}
-		article{
-			>article{
-				div:first-child span{
-				font-size: var(--font-size-3);
+		article {
+			> article {
+				div:first-child span {
+					font-size: var(--font-size-3);
+				}
 			}
-			}
-		}	
+		}
 		img {
 			width: 100%;
 		}
-		h2 span{
+		h2 span {
 			font-size: var(--font-size-5);
 			margin-top: -42px;
 		}
