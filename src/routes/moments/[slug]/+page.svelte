@@ -8,7 +8,7 @@
 <Moment {meta} {content} {moments}>
 	{#if Object.keys(essaysByCategory).length}
 		<section class="info">
-			<h2>Detailed research</h2>
+			<h2>Research</h2>
 
 			{#each Object.entries(essaysByCategory) as [category, essays]}
 				<section>
