@@ -83,6 +83,7 @@
 </section>
 
 <Pagination
+	label="Pagination at the bottom of the page"
 	pageIndex={$pageIndex}
 	pageCount={$pageCount}
 	hasPreviousPage={$hasPreviousPage}
