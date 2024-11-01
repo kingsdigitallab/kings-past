@@ -9,6 +9,9 @@ import remarkFootnotes from 'remark-footnotes';
 /** @type {import('mdsvex').MdsvexOptions} */
 const mdsvexOptions = {
 	extensions: ['.md'],
+	layout: {
+		_: './src/lib/layouts/MdLayout.svelte'
+	},
 	rehypePlugins: [rehypeSlug, rehypeFigure],
 	remarkPlugins: [remarkFlexibleContainers, remarkFootnotes],
 	smartypants: true
