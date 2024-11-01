@@ -6,6 +6,10 @@ interface MomentTitle {
 }
 
 export function splitMomentTitle(title: string): MomentTitle {
+	if (!title.includes(':')) {
+		return { year: '', name: title };
+	}
+
 	const [year = '', name = ''] = title.split(':').map((part) => part.trim());
 	return { year, name };
 }
