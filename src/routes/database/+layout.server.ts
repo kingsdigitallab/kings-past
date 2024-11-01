@@ -1,3 +1,4 @@
+import { database } from '$lib/config';
 import { handleLoadError } from '$lib/errorHandling';
 import { getMoments } from '$lib/moments';
 import { getDatabaseStats, getRecordsBy } from '$lib/supabase';
@@ -8,8 +9,8 @@ export const load = (async () => {
 		return {
 			_metadata: {
 				title: 'Database',
-				excerpt: "Explore the data that makes up the King's history",
-				tags: 'database, donations, events, organisations, people, places'
+				excerpt: database.excerpt,
+				tags: database.tags
 			},
 			stats: await getDatabaseStats(),
 			moments: await getMoments(),

@@ -1,3 +1,4 @@
+import { database } from '$lib/config';
 import { handleLoadError } from '$lib/errorHandling';
 import { getRecords } from '$lib/supabase';
 
@@ -8,8 +9,8 @@ export async function load() {
 		return {
 			_metadata: {
 				title: 'Donations',
-				excerpt: "Explore the donations that have been made to the King's.",
-				tags: 'database, donations'
+				excerpt: database.donations.excerpt,
+				tags: database.tags
 			},
 			collection: data ?? []
 		};

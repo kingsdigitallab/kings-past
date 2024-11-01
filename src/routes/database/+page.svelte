@@ -1,37 +1,39 @@
 <script lang="ts">
+	import { database } from '$lib/config';
+
 	export let data;
-	const { stats, url } = data;
+	const { _metadata, stats, url } = data;
 
 	const items = [
 		{
 			count: stats.personCount,
 			title: 'People',
-			description: 'Explore the lives of the people who helped shape Kings',
-			href: `${url}/people`
+			description: database.people.excerpt,
+			href: `${url}${database.people.href}`
 		},
 		{
 			count: stats.organisationCount,
 			title: 'Organisations',
-			description: 'Explore the organisations that Kings has been associated with',
-			href: `${url}/organisations`
+			description: database.organisations.excerpt,
+			href: `${url}${database.organisations.href}`
 		},
 		{
 			count: stats.placeCount,
 			title: 'Places',
-			description: 'Explore the places associated with Kings',
-			href: `${url}/places`
+			description: database.places.excerpt,
+			href: `${url}${database.places.href}`
 		},
 		{
 			count: stats.eventCount,
 			title: 'Events',
-			description: 'Explore the events associated with Kings',
-			href: `${url}/events`
+			description: database.events.excerpt,
+			href: `${url}${database.events.href}`
 		},
 		{
 			count: stats.donationCount,
 			title: 'Donations',
-			description: 'Explore the donations made to Kings',
-			href: `${url}/donations`
+			description: database.donations.excerpt,
+			href: `${url}${database.donations.href}`
 		}
 	];
 </script>
@@ -39,7 +41,7 @@
 <article>
 	<hgroup>
 		<h1>Database</h1>
-		<p>Explore the data that makes up the Kings history.</p>
+		<p>{_metadata.excerpt}</p>
 	</hgroup>
 
 	<section class="grid">
