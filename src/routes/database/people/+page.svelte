@@ -12,7 +12,7 @@
 	export let data;
 
 	const label = 'people';
-	const { people, url } = data;
+	const { _metadata, people, url } = data;
 
 	let view: 'table' | 'cards' = 'table';
 
@@ -115,19 +115,11 @@
 		}));
 </script>
 
-<svelte:head>
-	<title>People | {config.title}</title>
-</svelte:head>
-
 <article>
 	<header>
 		<hgroup>
 			<h1>People</h1>
-			<p>
-				This page displays a table of people, with columns for their slug, name, alternative names,
-				gender, nationality, ethnicity, language, description status, and current status. The table
-				is sortable by clicking on column headers.
-			</p>
+			<p>{_metadata.excerpt}</p>
 		</hgroup>
 	</header>
 

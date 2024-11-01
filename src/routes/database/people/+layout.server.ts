@@ -7,6 +7,11 @@ export async function load() {
 		const data = (await getRecords('person')) as Person[];
 
 		return {
+			_metadata: {
+				title: 'People',
+				excerpt: "Explore the people that have shaped the King's.",
+				tags: 'database, people'
+			},
 			people: data ?? [],
 			peopleBySlug: await getRecordsBy('person', 'slug')
 		};

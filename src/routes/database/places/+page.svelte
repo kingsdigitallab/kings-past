@@ -8,7 +8,7 @@
 	export let data;
 
 	const label = 'places';
-	const { collection, url } = data;
+	const { _metadata, collection, url } = data;
 
 	const columns = [
 		nameColumn,
@@ -48,13 +48,12 @@
 	}
 </script>
 
-<svelte:head>
-	<title>Places | {config.title}</title>
-</svelte:head>
-
 <article>
 	<header>
-		<h1>Places</h1>
+		<hgroup>
+			<h1>Places</h1>
+			<p>{_metadata.excerpt}</p>
+		</hgroup>
 	</header>
 
 	<section class="view-toggle">

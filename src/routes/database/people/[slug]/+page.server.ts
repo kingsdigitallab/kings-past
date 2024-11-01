@@ -64,6 +64,11 @@ export async function load({ params, parent }) {
 		);
 
 		return {
+			_metadata: {
+				title: person.name,
+				excerpt: `Explore the person ${person.name}`,
+				tags: 'database, people'
+			},
 			person,
 			title: person.name,
 			meta,

@@ -6,6 +6,11 @@ export async function load() {
 		const data = await getRecords('organisation');
 
 		return {
+			_metadata: {
+				title: 'Organisations',
+				excerpt: "Explore the organisations that have shaped the King's.",
+				tags: 'database, organisations'
+			},
 			collection: data ?? []
 		};
 	} catch (e) {

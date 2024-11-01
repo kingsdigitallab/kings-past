@@ -6,6 +6,11 @@ import type { LayoutServerLoad } from './$types';
 export const load = (async () => {
 	try {
 		return {
+			_metadata: {
+				title: 'Database',
+				excerpt: "Explore the data that makes up the King's history",
+				tags: 'database, donations, events, organisations, people, places'
+			},
 			stats: await getDatabaseStats(),
 			moments: await getMoments(),
 			placesBySlug: await getRecordsBy('place', 'slug')

@@ -11,7 +11,7 @@
 	export let data;
 
 	const label = 'organisations';
-	const { collection, url, placesBySlug } = data;
+	const { _metadata, collection, url, placesBySlug } = data;
 
 	let view: 'table' | 'cards' = 'table';
 
@@ -52,13 +52,12 @@
 	const sortBy = { initialSortKeys: [{ id: 'name', order: 'asc' }] };
 </script>
 
-<svelte:head>
-	<title>Organisations | {config.title}</title>
-</svelte:head>
-
 <article>
 	<header>
-		<h1>Organisations</h1>
+		<hgroup>
+			<h1>Organisations</h1>
+			<p>{_metadata.excerpt}</p>
+		</hgroup>
 	</header>
 
 	<EntityIndex data={collection} {columns} {label} {sortBy} {url} {view} />

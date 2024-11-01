@@ -45,6 +45,11 @@ export async function load({ params, parent }) {
 		);
 
 		return {
+			_metadata: {
+				title: donation.name,
+				excerpt: `Explore the donation ${donation.name}`,
+				tags: 'database, donations'
+			},
 			donation,
 			title: donation.name,
 			meta,

@@ -9,6 +9,11 @@ export async function load({ data, params }) {
 		const essaysByCategory = await getResearch(params.slug);
 
 		return {
+			_metadata: {
+				title: moment.metadata.title,
+				excerpt: moment.metadata.excerpt,
+				tags: moment.metadata.tags
+			},
 			slug: getMomentN(moment.metadata.n),
 			meta: moment.metadata,
 			content: moment.default,

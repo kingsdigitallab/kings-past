@@ -42,6 +42,11 @@ export async function load({ params, parent }) {
 		);
 
 		return {
+			_metadata: {
+				title: place.name,
+				excerpt: `Explore the place ${place.name}`,
+				tags: 'database, places'
+			},
 			place,
 			title: place.name,
 			meta,

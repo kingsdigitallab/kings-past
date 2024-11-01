@@ -53,6 +53,11 @@ export async function load({ params, parent }) {
 		);
 
 		return {
+			_metadata: {
+				title: organisation.name,
+				excerpt: `Explore the organisation ${organisation.name}`,
+				tags: 'database, organisations'
+			},
 			organisation,
 			title: organisation.name,
 			meta,

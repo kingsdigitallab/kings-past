@@ -39,6 +39,11 @@ export async function load({ params, parent }) {
 		);
 
 		return {
+			_metadata: {
+				title: event.name,
+				excerpt: `Explore the event ${event.name}`,
+				tags: 'database, events'
+			},
 			event,
 			title: event.name,
 			meta,

@@ -6,6 +6,11 @@ export async function load() {
 		const data = (await getRecords('place')) as Place[];
 
 		return {
+			_metadata: {
+				title: 'Places',
+				excerpt: "Explore the places related to King's.",
+				tags: 'database, places'
+			},
 			collection: data ?? []
 		};
 	} catch (e) {

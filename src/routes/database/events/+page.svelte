@@ -6,7 +6,7 @@
 	export let data;
 
 	const label = 'events';
-	const { collection, url, placesBySlug } = data;
+	const { _metadata, collection, url, placesBySlug } = data;
 
 	const columns = [
 		nameColumn,
@@ -21,13 +21,12 @@
 	const sortBy = { initialSortKeys: [{ id: 'date', order: 'asc' }] };
 </script>
 
-<svelte:head>
-	<title>Events | {config.title}</title>
-</svelte:head>
-
 <article>
 	<header>
-		<h1>Events</h1>
+		<hgroup>
+			<h1>Events</h1>
+			<p>{_metadata.excerpt}</p>
+		</hgroup>
 	</header>
 
 	<EntityIndex data={collection} {label} {columns} {sortBy} {url} />
