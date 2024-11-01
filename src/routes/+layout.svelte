@@ -1,25 +1,23 @@
 <script lang="ts">
+	import { page } from '$app/stores';
 	import Breadcrumbs from '$lib/components/breadcrumbs.svelte';
 	import Footer from '$lib/components/footer.svelte';
+	import Head from '$lib/components/Head.svelte';
 	import Header from '$lib/components/header.svelte';
 	import PageTransition from '$lib/components/transition.svelte';
-	import * as config from '$lib/config';
 
 	import 'open-props/style';
 	import 'open-props/normalize';
 
 	import '$css/app.css';
-	import { page } from '$app/stores';
 
 	export let data;
+
+	$: metadata = $page.data?._metadata || {};
 </script>
 
 <svelte:head>
-	{#if $page.data.title}
-		<title>{config.title} | {$page.data.title}</title>
-	{:else}
-		<title>{config.title}</title>
-	{/if}
+	<Head {metadata} />
 </svelte:head>
 
 <div class="layout surface-1">
@@ -49,9 +47,8 @@
 		padding-inline: var(--header-padding-inline);
 	}
 
-
 	@media (max-width: 768px) {
-		.layout{
+		.layout {
 			display: block;
 		}
 	}
