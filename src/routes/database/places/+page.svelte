@@ -57,21 +57,11 @@
 	</header>
 
 	<section class="view-toggle">
-		<button
-			on:click={toggleView}
-			class:active={showMap}
-			class="toggle-button"
-			aria-label="Show map view"
-		>
+		<button class:active={showMap} on:click={toggleView} aria-label="Show map view">
 			<LucideMap size={24} />
 			<span>Show map</span>
 		</button>
-		<button
-			on:click={toggleView}
-			class:active={!showMap}
-			class="toggle-button"
-			aria-label="Show table view"
-		>
+		<button class:active={!showMap} on:click={toggleView} aria-label="Show table view">
 			<LucideTable size={24} />
 			<span>Show table</span>
 		</button>
@@ -93,7 +83,7 @@
 		margin-bottom: var(--section-margin-block);
 	}
 
-	.toggle-button {
+	.view-toggle button {
 		color: var(--text-1);
 		background-color: var(--surface-4);
 		display: flex;
@@ -105,12 +95,12 @@
 		transition: background-color 0.3s ease;
 	}
 
-	.toggle-button.active {
+	.view-toggle button.active {
 		background-color: var(--surface-2);
 		color: var(--text-2);
 	}
 
-	.toggle-button span {
+	.view-toggle button span {
 		font-size: var(--font-size-2);
 	}
 </style>
