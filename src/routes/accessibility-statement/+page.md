@@ -1,4 +1,10 @@
-# Accessibility statement for the King's Past project
+---
+title: "Accessibility statement for the King's Past project"
+excerpt: "Learn more about the accessibility statement for the King's Past project"
+tags: accessibility, statement
+---
+
+# { title }
 
 This is a placeholder for the accessibility statement for the King's Past
 project. Once the site is complete and assessed, this page will be updated with

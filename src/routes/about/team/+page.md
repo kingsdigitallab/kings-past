@@ -1,4 +1,10 @@
-# Team
+---
+title: Team
+excerpt: "Learn more about the team behind the King's Past project"
+tags: about, team
+---
+
+# { title }
 
 ## Director
 

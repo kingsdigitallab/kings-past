@@ -1,6 +1,12 @@
-# The Demonumenta project and King's Past
+---
+title: "The Demonumenta project and King's Past"
+excerpt: "Learn about the Demonumenta project and it's relation to King's Past"
+tags: about, demonumenta, colonialism
+---
 
-The demonomenta project....
+# { title }
+
+The demonumenta project....
 
 :::sketchfab
 
