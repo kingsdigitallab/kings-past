@@ -41,11 +41,19 @@
 </script>
 
 <section>
-	<h2>
-		Displaying {$pageIndex * $pageSize + 1} to {Math.min(($pageIndex + 1) * $pageSize, data.length)}
-		of {data.length}
-		{label}
-	</h2>
+	<hgroup>
+		<h2>
+			Displaying {$pageIndex * $pageSize + 1} to {Math.min(
+				($pageIndex + 1) * $pageSize,
+				data.length
+			)}
+			of {data.length}
+			{label}
+		</h2>
+		{#if view === 'table'}
+			<p>The table is sortable by clicking on column headers.</p>
+		{/if}
+	</hgroup>
 
 	<Pagination
 		pageIndex={$pageIndex}
