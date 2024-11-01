@@ -3,10 +3,10 @@
 	import type { Column } from 'svelte-headless-table';
 	import { createTable } from 'svelte-headless-table';
 	import { addPagination, addSortBy } from 'svelte-headless-table/plugins';
-	import { readable, get } from 'svelte/store';
+	import { readable } from 'svelte/store';
 	import TableHeader from './table/TableHeader.svelte';
 	import TableBody from './table/TableBody.svelte';
-	import CardView from './table/IndexCard.svelte';
+	import IndexCard from './table/IndexCard.svelte';
 	import Pagination from './table/Pagination.svelte';
 
 	interface TableColumn extends Column<any> {
@@ -78,7 +78,7 @@
 				<TableHeader {headerRows} />
 			</thead>
 		</table>
-		<CardView {pageRows} {columns} {url} />
+		<IndexCard {pageRows} {columns} {url} />
 	{/if}
 </section>
 
