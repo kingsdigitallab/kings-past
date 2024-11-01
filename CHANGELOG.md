@@ -1,5 +1,46 @@
 
 
+# [0.13.0](https://github.com/kingsdigitallab/kings-past/compare/v0.12.0...v0.13.0) (2024-11-01)
+
+
+### Bug Fixes
+
+* **moments:** check if the title contains a colon ([c251f7f](https://github.com/kingsdigitallab/kings-past/commit/c251f7f789b8021819bdc7e6e40cc403395d4449))
+* **moments:** check if there is research before displaying it ([c0bf5c2](https://github.com/kingsdigitallab/kings-past/commit/c0bf5c2501139f8ac0fc0546e811b122df1c3385))
+* **moments:** wrap title in quotes ([c3c955f](https://github.com/kingsdigitallab/kings-past/commit/c3c955f7ee8f5a5bfe92edfceab861c2ec55cb45))
+* **privacypolicy:** replaced partner email with placeholder ([77d1747](https://github.com/kingsdigitallab/kings-past/commit/77d17474d8cb140e163239e70352e87e68596a21))
+* remove hover styles on disable button ([481dcf1](https://github.com/kingsdigitallab/kings-past/commit/481dcf1b981fe38b4c8a61ec287cbea897db1d9b))
+
+
+### Features
+
+* add placeholder number to Database index title ([111c8e3](https://github.com/kingsdigitallab/kings-past/commit/111c8e33237bd2d442cad0896724a27ff4501ebe))
+* center moment titles ([2dafcb7](https://github.com/kingsdigitallab/kings-past/commit/2dafcb749784c090cc78e8e3808d5d234bb0e501))
+* **database:** display entity counts ([e3bfd74](https://github.com/kingsdigitallab/kings-past/commit/e3bfd74484cfc1b283eaa302f34dd4812259001f))
+* **entityindex:** describe how to sort the table ([61fa9c0](https://github.com/kingsdigitallab/kings-past/commit/61fa9c0664e8aed2ec3598872bc17230b51e9215))
+* **head:** add component to load meta tags ([d2d4025](https://github.com/kingsdigitallab/kings-past/commit/d2d4025a6e78531e38ea0e186c5366fe9ea931dd))
+* **mdsvex:** add a default layout for the markdown files ([beb8068](https://github.com/kingsdigitallab/kings-past/commit/beb8068084120995c1e726267e020c2da8fd6cde))
+* **moment:** for essays, split the moment title from the moment number ([5e8391a](https://github.com/kingsdigitallab/kings-past/commit/5e8391a5c959f51095b0e1720d95c6006285f263))
+* **moments:** add support for different category of moment related essays ([4329708](https://github.com/kingsdigitallab/kings-past/commit/4329708e45907ba842ae3387b370720f87619907))
+* **moments:** move the summary marker after the title ([cd8a8e8](https://github.com/kingsdigitallab/kings-past/commit/cd8a8e8756658619400e37f67b686feaeb5b57b6))
+* **moments:** style the people list using a responsive grid ([e7785e7](https://github.com/kingsdigitallab/kings-past/commit/e7785e7c4de5f2648bcdc7da16818aaefac23fb4))
+* **privacypolicy:** convert to markdown and add initial content ([22efc4c](https://github.com/kingsdigitallab/kings-past/commit/22efc4c57a3f5ff19055c4eb10055dac1a62c189))
+* **search:**  process search results ([6ea660e](https://github.com/kingsdigitallab/kings-past/commit/6ea660e2cedc53defab2a849935f313d809190fd))
+* **search:** add filters to cross-reference entities/moments ([c4dcc63](https://github.com/kingsdigitallab/kings-past/commit/c4dcc636f363177ee749fb026a24e2e48034e916))
+* **search:** enable history ([dac945b](https://github.com/kingsdigitallab/kings-past/commit/dac945bb7800685a5128fad977787dd2c39b7647))
+* **search:** enable search filters ([aac7cb6](https://github.com/kingsdigitallab/kings-past/commit/aac7cb6de3ccb46039e5fc82af14fdebcde8b036))
+* style moment child header ([96effb4](https://github.com/kingsdigitallab/kings-past/commit/96effb4ba017d1f7842584ba0317c01b18631418))
+* style moment header ([5dfba57](https://github.com/kingsdigitallab/kings-past/commit/5dfba57deb22ce03dfb4119ad69a122ba85934ef))
+* style refinements moments sections ([50d0da7](https://github.com/kingsdigitallab/kings-past/commit/50d0da795791bd0dd07b705a07805e017fb92c0e))
+* style tables ([db6add0](https://github.com/kingsdigitallab/kings-past/commit/db6add005a4c716c3adcdc28707439545c7cc26d))
+* **supabase:** add function to get  entity counts ([1d36136](https://github.com/kingsdigitallab/kings-past/commit/1d3613689868ec9cfee613c53a159b58cb52faef))
+
+
+### Performance Improvements
+
+* **moment:** reduce code duplication ([e4595d5](https://github.com/kingsdigitallab/kings-past/commit/e4595d54cee2f8b0eb755e392f3689b30948dc3b))
+* **pagination:** enable history ([90b4aa3](https://github.com/kingsdigitallab/kings-past/commit/90b4aa3267931aa3913309a90208c46278e052e6))
+
 # [0.12.0](https://github.com/kingsdigitallab/kings-past/compare/v0.11.0...v0.12.0) (2024-10-31)
 
 
