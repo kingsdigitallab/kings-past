@@ -6,7 +6,7 @@
 </script>
 
 <Moment {meta} {content} {moments}>
-	{#if essaysByCategory}
+	{#if Object.keys(essaysByCategory).length}
 		<section class="info">
 			<h2>Detailed research</h2>
 
