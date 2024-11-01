@@ -6,7 +6,7 @@
 		{
 			count: stats.personCount,
 			title: 'People',
-			description: 'Explore the lives of the people that helped shape Kings',
+			description: 'Explore the lives of the people who helped shape Kings',
 			href: `${url}/people`
 		},
 		{
