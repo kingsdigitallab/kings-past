@@ -14,8 +14,6 @@
 	const label = 'people';
 	const { _metadata, people, url } = data;
 
-	let view: 'table' | 'cards' = 'table';
-
 	const columns = [
 		{ header: 'Slug', accessor: 'slug' },
 		nameColumn,
@@ -72,6 +70,12 @@
 		statusColumn
 	];
 	const sortBy = { initialSortKeys: [{ id: 'name', order: 'asc' }] };
+
+	let view: 'cards' | 'table' = 'cards';
+
+	function toggleView() {
+		view = view === 'table' ? 'cards' : 'table';
+	}
 
 	$: descriptionCount = people.filter((p) => p.description).length;
 	$: descriptionPercentage = ((descriptionCount / people.length) * 100).toFixed(1);
@@ -166,39 +170,51 @@
 		</p>
 	</section>
 
-	<section>
-		<div class="view-toggle">
-			<button class:active={view === 'table'} on:click={() => (view = 'table')}
-				><LucideTable />Table view</button
-			>
-			<button class:active={view === 'cards'} on:click={() => (view = 'cards')}
-				><LucideLayoutGrid />Card view</button
-			>
-		</div>
-
-		<EntityIndex data={people} {columns} {label} {sortBy} {url} {view} />
+	<section class="view-toggle">
+		<button class:active={view === 'cards'} on:click={toggleView} aria-label="Show card view">
+			<LucideLayoutGrid size={24} />
+			<span>Show cards</span>
+		</button>
+		<button class:active={view === 'table'} on:click={toggleView} aria-label="Show table view">
+			<LucideTable size={24} />
+			<span>Show table</span>
+		</button>
 	</section>
+
+	<EntityIndex data={people} {columns} {label} {sortBy} {url} {view} />
 </article>
 
 <style>
 	section p {
 		max-inline-size: unset;
 	}
+
 	.view-toggle {
-		margin-bottom: 1rem;
+		align-items: center;
+		border-bottom: 1px solid var(--border-light);
+		display: flex;
+		gap: var(--size-2);
+		margin-bottom: var(--section-margin-block);
 	}
 
 	.view-toggle button {
-		padding: 0.5rem 1rem;
-		margin-right: 0.5rem;
-		background-color: #f0f0f0;
+		color: var(--text-1);
+		background-color: var(--surface-4);
+		display: flex;
+		align-items: center;
+		gap: var(--size-2);
+		padding: var(--size-2) var(--size-4);
 		border: none;
-		border-radius: 4px;
 		cursor: pointer;
+		transition: background-color 0.3s ease;
 	}
 
 	.view-toggle button.active {
-		background-color: #007bff;
-		color: white;
+		background-color: var(--surface-2);
+		color: var(--text-2);
+	}
+
+	.view-toggle button span {
+		font-size: var(--font-size-2);
 	}
 </style>
