@@ -109,6 +109,10 @@
 	.card header a {
 		display: flex;
 		text-decoration: none;
+
+		&:hover {
+			opacity: 1;
+		}
 	}
 
 	.card header span {
