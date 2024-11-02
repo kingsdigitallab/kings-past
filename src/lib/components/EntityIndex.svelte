@@ -50,10 +50,17 @@
 		$pageIndex = event.detail.pageIndex;
 	}
 
-	function toggleView() {
-		view = view === 'table' ? 'cards' : 'table';
+	let isSmallScreen = false;
+
+	function handleResize() {
+		isSmallScreen = window.innerWidth < 768;
+		if (isSmallScreen && view === 'table') {
+			view = 'cards';
+		}
 	}
 </script>
+
+<svelte:window on:resize={handleResize} />
 
 <section>
 	<hgroup>
@@ -69,14 +76,16 @@
 
 	<section class="view-toggle">
 		{#each viewOptions as option}
-			<button
-				class:active={view === option.value}
-				on:click={() => (view = option.value)}
-				aria-label={option.label}
-			>
-				<svelte:component this={option.icon} size={24} />
-				<span>{option.label}</span>
-			</button>
+			{#if !(isSmallScreen && option.value === 'table')}
+				<button
+					class:active={view === option.value}
+					on:click={() => (view = option.value)}
+					aria-label={option.label}
+				>
+					<svelte:component this={option.icon} size={24} />
+					<span>{option.label}</span>
+				</button>
+			{/if}
 		{/each}
 	</section>
 
@@ -155,5 +164,21 @@
 
 	.view-toggle button span {
 		font-size: var(--font-size-2);
+	}
+
+	@media (max-width: 768px) {
+		table {
+			display: none;
+		}
+	}
+
+	@media (max-width: 480px) {
+		.view-toggle button {
+			padding: var(--size-2);
+		}
+
+		.view-toggle button span {
+			display: none;
+		}
 	}
 </style>
