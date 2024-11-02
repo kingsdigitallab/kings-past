@@ -8,10 +8,17 @@
 	import TableBody from './table/TableBody.svelte';
 	import IndexCard from './table/IndexCard.svelte';
 	import Pagination from './table/Pagination.svelte';
+	import { LucideTable, LucideLayoutGrid, LucideMap } from 'lucide-svelte';
 
 	interface TableColumn extends Column<any> {
 		accessor: string;
 		cell?: (props: { value: any }) => any;
+	}
+
+	interface ViewOption {
+		value: string;
+		label: string;
+		icon: typeof LucideTable | typeof LucideLayoutGrid | typeof LucideMap;
 	}
 
 	export let data: Record<string, any>[];
@@ -19,7 +26,11 @@
 	export let label: string;
 	export let sortBy = {};
 	export let url: string;
-	export let view: 'table' | 'cards' = 'table';
+	export let view = 'cards';
+	export let viewOptions: ViewOption[] = [
+		{ value: 'cards', label: 'Show cards', icon: LucideLayoutGrid },
+		{ value: 'table', label: 'Show table', icon: LucideTable }
+	];
 
 	const table = createTable(readable(data), {
 		pagination: addPagination({ initialPageSize: 25 }),
@@ -38,6 +49,10 @@
 	function handlePageChange(event: CustomEvent<{ pageIndex: number }>) {
 		$pageIndex = event.detail.pageIndex;
 	}
+
+	function toggleView() {
+		view = view === 'table' ? 'cards' : 'table';
+	}
 </script>
 
 <section>
@@ -50,10 +65,20 @@
 			of {data.length}
 			{label}
 		</h2>
-		{#if view === 'table'}
-			<p>The table is sortable by clicking on column headers.</p>
-		{/if}
 	</hgroup>
+
+	<section class="view-toggle">
+		{#each viewOptions as option}
+			<button
+				class:active={view === option.value}
+				on:click={() => (view = option.value)}
+				aria-label={option.label}
+			>
+				<svelte:component this={option.icon} size={24} />
+				<span>{option.label}</span>
+			</button>
+		{/each}
+	</section>
 
 	<Pagination
 		pageIndex={$pageIndex}
@@ -72,13 +97,15 @@
 			</thead>
 			<TableBody {pageRows} {tableBodyAttrs} {url} />
 		</table>
-	{:else}
+	{:else if view === 'cards'}
 		<table {...$tableAttrs}>
 			<thead>
 				<TableHeader {headerRows} />
 			</thead>
 		</table>
 		<IndexCard {pageRows} {columns} {url} />
+	{:else}
+		<slot name="map-view" />
 	{/if}
 </section>
 
@@ -99,5 +126,34 @@
 
 	table {
 		width: 100%;
+	}
+
+	.view-toggle {
+		align-items: center;
+		border-bottom: 1px solid var(--border-light);
+		display: flex;
+		gap: var(--size-2);
+		margin-bottom: var(--section-margin-block);
+	}
+
+	.view-toggle button {
+		color: var(--text-1);
+		background-color: var(--surface-4);
+		display: flex;
+		align-items: center;
+		gap: var(--size-2);
+		padding: var(--size-2) var(--size-4);
+		border: none;
+		cursor: pointer;
+		transition: background-color 0.3s ease;
+	}
+
+	.view-toggle button.active {
+		background-color: var(--surface-2);
+		color: var(--text-2);
+	}
+
+	.view-toggle button span {
+		font-size: var(--font-size-2);
 	}
 </style>

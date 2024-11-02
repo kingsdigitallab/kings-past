@@ -13,8 +13,6 @@
 	const label = 'organisations';
 	const { _metadata, collection, url, placesBySlug } = data;
 
-	let view: 'table' | 'cards' = 'table';
-
 	const columns = [
 		{ header: 'Slug', accessor: 'slug' },
 		nameColumn,
@@ -60,5 +58,5 @@
 		</hgroup>
 	</header>
 
-	<EntityIndex data={collection} {columns} {label} {sortBy} {url} {view} />
+	<EntityIndex data={collection} {columns} {label} {sortBy} {url} />
 </article>

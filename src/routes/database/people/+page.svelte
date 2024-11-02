@@ -7,7 +7,6 @@
 		statusColumn,
 		hasDescriptionColumn
 	} from '$lib/tableColumns';
-	import { LucideTable, LucideLayoutGrid } from 'lucide-svelte';
 
 	export let data;
 
@@ -72,10 +71,6 @@
 	const sortBy = { initialSortKeys: [{ id: 'name', order: 'asc' }] };
 
 	let view: 'cards' | 'table' = 'cards';
-
-	function toggleView() {
-		view = view === 'table' ? 'cards' : 'table';
-	}
 
 	$: descriptionCount = people.filter((p) => p.description).length;
 	$: descriptionPercentage = ((descriptionCount / people.length) * 100).toFixed(1);
@@ -170,51 +165,11 @@
 		</p>
 	</section>
 
-	<section class="view-toggle">
-		<button class:active={view === 'cards'} on:click={toggleView} aria-label="Show card view">
-			<LucideLayoutGrid size={24} />
-			<span>Show cards</span>
-		</button>
-		<button class:active={view === 'table'} on:click={toggleView} aria-label="Show table view">
-			<LucideTable size={24} />
-			<span>Show table</span>
-		</button>
-	</section>
-
-	<EntityIndex data={people} {columns} {label} {sortBy} {url} {view} />
+	<EntityIndex data={people} {columns} {label} {sortBy} {url} bind:view />
 </article>
 
 <style>
 	section p {
 		max-inline-size: unset;
-	}
-
-	.view-toggle {
-		align-items: center;
-		border-bottom: 1px solid var(--border-light);
-		display: flex;
-		gap: var(--size-2);
-		margin-bottom: var(--section-margin-block);
-	}
-
-	.view-toggle button {
-		color: var(--text-1);
-		background-color: var(--surface-4);
-		display: flex;
-		align-items: center;
-		gap: var(--size-2);
-		padding: var(--size-2) var(--size-4);
-		border: none;
-		cursor: pointer;
-		transition: background-color 0.3s ease;
-	}
-
-	.view-toggle button.active {
-		background-color: var(--surface-2);
-		color: var(--text-2);
-	}
-
-	.view-toggle button span {
-		font-size: var(--font-size-2);
 	}
 </style>
