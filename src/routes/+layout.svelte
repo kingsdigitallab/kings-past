@@ -1,10 +1,10 @@
 <script lang="ts">
 	import { page } from '$app/stores';
-	import Breadcrumbs from '$lib/components/breadcrumbs.svelte';
-	import Footer from '$lib/components/footer.svelte';
+	import Breadcrumbs from '$lib/components/Breadcrumbs.svelte';
+	import Footer from '$lib/components/Footer.svelte';
 	import Head from '$lib/components/Head.svelte';
-	import Header from '$lib/components/header.svelte';
-	import PageTransition from '$lib/components/transition.svelte';
+	import Header from '$lib/components/Header.svelte';
+	import PageTransition from '$lib/components/Transition.svelte';
 
 	import 'open-props/style';
 	import 'open-props/normalize';

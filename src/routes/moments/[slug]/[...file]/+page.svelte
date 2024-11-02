@@ -1,5 +1,5 @@
 <script type="ts">
-	import Moment from '$lib/components/moment.svelte';
+	import Moment from '$lib/components/Moment.svelte';
 
 	export let data;
 </script>
