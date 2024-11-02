@@ -9,11 +9,11 @@ export const dateColumn = {
 		end_date: item.end_date
 	}),
 	cell: ({ value }: { value: { start_date: string; end_date: string } }) =>
-		formatDate(value.start_date, value.end_date),
+		formatDate(value?.start_date, value?.end_date),
 	plugins: {
 		sort: {
 			getSortValue(item: { start_date: string; end_date: string }) {
-				return [item.start_date, item.end_date];
+				return [item?.start_date, item?.end_date];
 			}
 		}
 	}
