@@ -65,12 +65,16 @@
 <section>
 	<hgroup>
 		<h2>
-			Displaying {$pageIndex * $pageSize + 1} to {Math.min(
-				($pageIndex + 1) * $pageSize,
-				data.length
-			)}
-			of {data.length}
-			{label}
+			{#if view === 'map'}
+				Displaying {data.length.toLocaleString()} {label} on the map
+			{:else}
+				Displaying {$pageIndex * $pageSize + 1} to {Math.min(
+					($pageIndex + 1) * $pageSize,
+					data.length
+				)}
+				of {data.length}
+				{label}
+			{/if}
 		</h2>
 	</hgroup>
 
