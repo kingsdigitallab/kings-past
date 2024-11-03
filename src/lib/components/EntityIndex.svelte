@@ -1,14 +1,15 @@
 <script lang="ts">
 	import { dev } from '$app/environment';
+	import { LucideLayoutGrid, LucideMap, LucideTable } from 'lucide-svelte';
 	import type { Column } from 'svelte-headless-table';
 	import { createTable } from 'svelte-headless-table';
 	import { addPagination, addSortBy } from 'svelte-headless-table/plugins';
 	import { readable } from 'svelte/store';
-	import TableHeader from './table/TableHeader.svelte';
-	import TableBody from './table/TableBody.svelte';
+	import CardSort from './table/CardSort.svelte';
 	import IndexCard from './table/IndexCard.svelte';
 	import Pagination from './table/Pagination.svelte';
-	import { LucideTable, LucideLayoutGrid, LucideMap } from 'lucide-svelte';
+	import TableBody from './table/TableBody.svelte';
+	import TableHeader from './table/TableHeader.svelte';
 
 	interface TableColumn extends Column<any> {
 		accessor: string;
@@ -63,6 +64,21 @@
 <svelte:window on:resize={handleResize} />
 
 <section>
+	<section class="view-toggle">
+		{#each viewOptions as option}
+			{#if !(isSmallScreen && option.value === 'table')}
+				<button
+					class:active={view === option.value}
+					on:click={() => (view = option.value)}
+					aria-label={option.label}
+				>
+					<svelte:component this={option.icon} size={24} />
+					<span>{option.label}</span>
+				</button>
+			{/if}
+		{/each}
+	</section>
+
 	<hgroup>
 		<h2>
 			{#if view === 'map'}
@@ -78,20 +94,9 @@
 		</h2>
 	</hgroup>
 
-	<section class="view-toggle">
-		{#each viewOptions as option}
-			{#if !(isSmallScreen && option.value === 'table')}
-				<button
-					class:active={view === option.value}
-					on:click={() => (view = option.value)}
-					aria-label={option.label}
-				>
-					<svelte:component this={option.icon} size={24} />
-					<span>{option.label}</span>
-				</button>
-			{/if}
-		{/each}
-	</section>
+	{#if view === 'cards'}
+		<CardSort {headerRows} {pluginStates} />
+	{/if}
 
 	<Pagination
 		pageIndex={$pageIndex}
@@ -111,11 +116,6 @@
 			<TableBody {pageRows} {tableBodyAttrs} {url} />
 		</table>
 	{:else if view === 'cards'}
-		<table {...$tableAttrs}>
-			<thead>
-				<TableHeader {headerRows} />
-			</thead>
-		</table>
 		<IndexCard {pageRows} {columns} {url} />
 	{:else}
 		<slot name="map-view" />
@@ -142,10 +142,10 @@
 	}
 
 	.view-toggle {
-		align-items: center;
-		border-bottom: 1px solid var(--border-light);
 		display: flex;
 		gap: var(--size-2);
+		align-items: center;
+		border-bottom: 1px solid var(--border-light);
 		margin-bottom: var(--section-margin-block);
 	}
 
@@ -159,6 +159,11 @@
 		border: none;
 		cursor: pointer;
 		transition: background-color 0.3s ease;
+
+		&:hover {
+			background-color: var(--surface-2);
+			color: var(--yellow);
+		}
 	}
 
 	.view-toggle button.active {
