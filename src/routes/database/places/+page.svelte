@@ -59,8 +59,8 @@
 	</header>
 
 	<EntityIndex data={collection} {columns} {label} {sortBy} {url} bind:view {viewOptions}>
-		<div slot="map-view">
+		<section slot="map-view">
 			<PlacesMap places={collection} />
-		</div>
+		</section>
 	</EntityIndex>
 </article>
