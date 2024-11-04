@@ -123,46 +123,61 @@
 	</header>
 
 	<section>
-		<h2>Summary</h2>
-		<p>
-			The database currently contains <strong>{people.length.toLocaleString()}</strong> documented people,
-			with the following characteristics:
-		</p>
+		<hgroup>
+			<h2>Summary</h2>
+			<p>
+				The database currently contains <strong>{people.length.toLocaleString()}</strong> documented
+				people, with the following characteristics:
+			</p>
+		</hgroup>
 
-		<h3>Completeness</h3>
-		<ul>
-			<li>
-				<strong>{descriptionCount.toLocaleString()}</strong>
-				({descriptionPercentage}%) have biographical information
-			</li>
-			<li>
-				<strong>{alternativeNamesCount.toLocaleString()}</strong>
-				({alternativeNamesPercentage}%) have recorded alternative names
-			</li>
-		</ul>
-		<h3>Gender distribution</h3>
-		<ul>
-			{#each genderDistribution as { gender, count, percentage }}
-				<li>
-					<strong>{count.toLocaleString()}</strong> ({percentage}%)
-					<em>{gender}</em>
-				</li>
-			{/each}
-		</ul>
-		<h3>Ethnicity distribution</h3>
-		<ul>
-			{#each ethnicityDistribution as { ethnicity, count, percentage }}
-				<li>
-					<strong>{count.toLocaleString()}</strong> ({percentage}%)
-					<em>{ethnicity}</em>
-				</li>
-			{/each}
-		</ul>
-		<h3>Nationality distribution</h3>
-		<p>
-			The database includes people from <strong>{nationalityCount.toLocaleString()}</strong>
-			distinct nationalities.
-		</p>
+		<div class="summary-grid">
+			<article class="card">
+				<h3>Completeness</h3>
+				<ul>
+					<li>
+						<strong>{descriptionCount.toLocaleString()}</strong>
+						({descriptionPercentage}%) have biographical information
+					</li>
+					<li>
+						<strong>{alternativeNamesCount.toLocaleString()}</strong>
+						({alternativeNamesPercentage}%) have recorded alternative names
+					</li>
+				</ul>
+			</article>
+
+			<article class="card">
+				<h3>Gender distribution</h3>
+				<ul>
+					{#each genderDistribution as { gender, count, percentage }}
+						<li>
+							<strong>{count.toLocaleString()}</strong> ({percentage}%)
+							<em>{gender}</em>
+						</li>
+					{/each}
+				</ul>
+			</article>
+
+			<article class="card">
+				<h3>Ethnicity distribution</h3>
+				<ul>
+					{#each ethnicityDistribution as { ethnicity, count, percentage }}
+						<li>
+							<strong>{count.toLocaleString()}</strong> ({percentage}%)
+							<em>{ethnicity}</em>
+						</li>
+					{/each}
+				</ul>
+			</article>
+
+			<article class="card">
+				<h3>Nationality distribution</h3>
+				<p>
+					The database includes people from <strong>{nationalityCount.toLocaleString()}</strong>
+					distinct nationalities.
+				</p>
+			</article>
+		</div>
 	</section>
 
 	<EntityIndex data={people} {columns} {label} {sortBy} {url} bind:view />
@@ -171,5 +186,34 @@
 <style>
 	section p {
 		max-inline-size: unset;
+	}
+
+	.summary-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+		gap: var(--size-3);
+		margin: var(--size-3) 0;
+	}
+
+	.card {
+		background: var(--surface-1);
+		color: var(--text-1);
+		border: 1px solid var(--border-light);
+		border-radius: var(--radius-2);
+		box-shadow: var(--shadow-2);
+		padding: var(--size-3);
+
+		&:hover {
+			box-shadow: var(--shadow-3);
+		}
+	}
+
+	.card h3 {
+		margin-top: 0;
+	}
+
+	.card ul,
+	p {
+		margin: 0;
 	}
 </style>
