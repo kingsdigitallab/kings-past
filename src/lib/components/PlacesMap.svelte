@@ -78,7 +78,8 @@
 				use:addMarkerAction={place}
 				class="map-marker"
 				class:draft={place.draft}
-				role="complementary"
+				role="img"
+				aria-label={`${place.name} location marker${place.draft ? ' (draft)' : ''}`}
 			>
 				<LucideMapPin size={32} />
 			</div>
