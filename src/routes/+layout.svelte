@@ -20,26 +20,36 @@
 	<Head {metadata} />
 </svelte:head>
 
-<div class="layout surface-1">
-	<Header />
+<div class="layout-container">
+	<div class="layout surface-1">
+		<Header />
 
-	<main>
-		<PageTransition url={data.url}>
-			<Breadcrumbs />
-			<div class="body">
-				<slot />
-			</div>
-		</PageTransition>
-	</main>
+		<main>
+			<PageTransition url={data.url}>
+				<Breadcrumbs />
+				<div class="body">
+					<slot />
+				</div>
+			</PageTransition>
+		</main>
 
-	<Footer />
+		<Footer />
+	</div>
 </div>
 
 <style>
+	.layout-container {
+		background: var(--surface-4);
+		display: flex;
+		justify-content: center;
+		min-height: 100%;
+	}
+
 	.layout {
 		display: grid;
 		grid-template-rows: auto 1fr auto;
-		height: 100%;
+		max-inline-size: var(--size-xl);
+		width: 100%;
 	}
 
 	main {
