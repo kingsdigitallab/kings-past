@@ -1,5 +1,23 @@
 
 
+# [0.14.0](https://github.com/kingsdigitallab/kings-past/compare/v0.13.0...v0.14.0) (2024-11-04)
+
+
+### Bug Fixes
+
+* check date fields are set ([e792a18](https://github.com/kingsdigitallab/kings-past/commit/e792a188098b80bcf6d6697d996de35b6d50f2c2))
+* **database:** do not reduce opacity on link hover ([56107a7](https://github.com/kingsdigitallab/kings-past/commit/56107a7076a9b6f5ccd00cf8d9e22bb29b1a8780))
+* **entityindex:** hide pagination info when displaying map view ([93f090d](https://github.com/kingsdigitallab/kings-past/commit/93f090d6e97e46f260de6cf17428a938d8952506))
+* **entityindex:** hide table view on small screens ([8883f69](https://github.com/kingsdigitallab/kings-past/commit/8883f69e3ef384760bcdd1c59bbab8e8ddba95be))
+* **pagination:** add aria-label to pagination ([ee7c36a](https://github.com/kingsdigitallab/kings-past/commit/ee7c36ae91a6a8af6dbc0e14808d67c95118b181))
+
+
+### Features
+
+* **cardsort:** add card view sorting component ([d8ba71c](https://github.com/kingsdigitallab/kings-past/commit/d8ba71cf40606425e99a2ac4011bc7fcedf5a03e))
+* **database:** add a config to store the database routes excerpts and tags ([738eedc](https://github.com/kingsdigitallab/kings-past/commit/738eedc697aaf4767c361c120c20798ee75d5011))
+* **mdlayout:** add basic styling for support content pages ([f842cb1](https://github.com/kingsdigitallab/kings-past/commit/f842cb10544b6bfb73e7757eaf2ebeb21521ef47))
+
 # [0.13.0](https://github.com/kingsdigitallab/kings-past/compare/v0.12.0...v0.13.0) (2024-11-01)
 
 
