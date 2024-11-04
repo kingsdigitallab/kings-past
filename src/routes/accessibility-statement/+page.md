@@ -10,9 +10,7 @@ tags: accessibility, statement
 
 # { title }
 
-This is a placeholder for the accessibility statement for the King's Past
-project. Once the site is complete and assessed, this page will be updated with
-the actual accessibility statement.
+This is the accessibility statement for the King's Past project.
 
 ## Measures to support accessibility
 
@@ -89,5 +87,5 @@ approaches:
 
 ## Date
 
-This statement was created on DD Month YYYY using the
+This statement was created on 04 November 2024 using the
 [W3C Accessibility Statement Generator Tool](https://www.w3.org/WAI/planning/statements/).
