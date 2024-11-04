@@ -11,7 +11,7 @@
 		<img src={footerImg} alt="King's College London stamp from..." />
 	</picture>
 	<div class="layout surface-2">
-		<section class="links">
+		<section class="links" aria-label="Footer links">
 			<a href={base} class="title">
 				<strong>{config.title}</strong>
 			</a>
@@ -38,7 +38,7 @@
 		</section>
 	</div>
 	<div class="layout surface-3">
-		<section class="kdl">
+		<section class="kdl" aria-label="Attribution">
 			<p>
 				Designed, developed and maintained by <a href="https://kdl.kcl.ac.uk">King's Digital Lab</a>
 			</p>
@@ -85,11 +85,10 @@
 			font-size: var(--font-size-1);
 			gap: var(--size-5);
 		}
-		a{
+		a {
 			text-decoration: none;
 		}
 	}
-
 
 	.links > * {
 		flex: 1 1 auto;
@@ -125,17 +124,17 @@
 		.links ul.project {
 			flex-direction: column;
 			gap: var(--size-2);
-			width:100%;
+			width: 100%;
 			display: flex;
-			margin: var(--size-5) 0 ; 
+			margin: var(--size-5) 0;
 		}
 
-		.links ul.project li{
-			width:100%;
+		.links ul.project li {
+			width: 100%;
 			display: flex;
 			text-align: center;
-			a{
-			width: 100%;
+			a {
+				width: 100%;
 			}
 		}
 	}
