@@ -4,6 +4,10 @@ excerpt: "Learn more about the accessibility statement for the King's Past proje
 tags: accessibility, statement
 ---
 
+<script>
+  import { base } from '$app/paths';
+</script>
+
 # { title }
 
 This is a placeholder for the accessibility statement for the King's Past
@@ -59,7 +63,21 @@ solutions. Please contact us if you observe an issue not listed below.
 
 ### Known limitations for King's Past
 
-These will be updated once the site is complete and assessed.
+#### 3D Model viewer (Sketchfab)
+
+Our site includes embedded 3D models from Sketchfab. These embeds contain
+duplicate ARIA labels on their main elements due to limitations in the
+third-party embedding service. This issue can be observed on our [Demonumenta
+project page]({base}/about/demonumenta) which contains multiple 3D model
+viewers. While this may trigger accessibility warnings, it does not impact the
+actual functionality or accessibility of the content. Each 3D model viewer is
+properly labeled with unique titles and contained within clearly marked
+regions.
+
+We are monitoring this issue and will update our implementation if Sketchfab
+provides a solution in the future. If you encounter any difficulties accessing
+the 3D content, please contact us and we will provide alternative means to view
+the information.
 
 ## Assessment approach
 
