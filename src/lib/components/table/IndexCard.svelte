@@ -44,7 +44,7 @@
 	}
 
 	.card {
-		background-color: #f0f0f0;
+		background-color: var(--surface-4);
 		border-radius: var(--radius-2);
 		padding: var(--size-4);
 		transition: box-shadow 0.3s ease;
