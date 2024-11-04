@@ -11,41 +11,51 @@
 
 	onMount(() => {
 		if (browser) {
-			pagefind = new PagefindUI({
-				element: '#search',
-				autofocus: true,
-				bundlePath: `${base}/pagefind/`,
-				showEmptyFilters: false,
-				processResult: (result: any) => {
-					if (dev && result.url) {
-						result.url = result.url.replace(/\.html$/, '');
-					}
-
-					// remove footer images from results
-					if (result.meta.image && result.meta.image.indexOf('assets/footer') >= 0) {
-						result.meta.image = undefined;
-					}
-
-					return result;
-				}
-			});
-
-			const searchInput = document.querySelector('#search input') as HTMLInputElement;
-			if (searchInput) {
-				searchInput.addEventListener('input', (event: Event) => {
-					const target = event.target as HTMLInputElement;
-					const url = new URL(window.location.href);
-
-					setTimeout(() => {
-						url.searchParams.set('q', target.value);
-						pushState(url, '');
-					}, 500);
-				});
-			}
-
-			triggerSearch();
+			initializeSearch();
 		}
 	});
+
+	function initializeSearch() {
+		if (pagefind) {
+			pagefind.destroy();
+		}
+
+		pagefind = new PagefindUI({
+			element: '#search',
+			autofocus: true,
+			bundlePath: `${base}/pagefind/`,
+			pageSize: 10,
+			processResult: (result: any) => {
+				if (dev && result.url) {
+					result.url = result.url.replace(/\.html$/, '');
+				}
+
+				// remove footer images from results
+				if (result.meta.image && result.meta.image.indexOf('assets/footer') >= 0) {
+					result.meta.image = undefined;
+				}
+
+				return result;
+			},
+			showEmptyFilters: false
+		});
+
+		const searchInput = document.querySelector('#search input') as HTMLInputElement;
+		if (searchInput) {
+			searchInput.setAttribute('aria-label', `Search the site`);
+			searchInput.addEventListener('input', (event: Event) => {
+				const target = event.target as HTMLInputElement;
+				const url = new URL(window.location.href);
+
+				setTimeout(() => {
+					url.searchParams.set('q', target.value);
+					pushState(url, '');
+				}, 500);
+			});
+		}
+
+		triggerSearch();
+	}
 
 	function triggerSearch() {
 		const currentUrl = new URL(window.location.href);
@@ -54,7 +64,9 @@
 	}
 
 	afterNavigate(() => {
-		triggerSearch();
+		if (browser) {
+			initializeSearch();
+		}
 	});
 </script>
 
@@ -71,6 +83,23 @@
 </article>
 
 <style>
+	:global(.pagefind-ui__search-input) {
+		border-radius: unset !important;
+	}
+
+	:global(.pagefind-ui__search-clear) {
+		background-color: var(--surface-4) !important;
+		border-radius: unset !important;
+		color: var(--text-1) !important;
+		font-size: var(--font-size-2) !important;
+		padding-inline: var(--size-4) !important;
+
+		&:hover {
+			background-color: var(--surface-3) !important;
+			border-bottom: unset !important;
+		}
+	}
+
 	:global(.pagefind-ui__result-excerpt mark) {
 		background-color: color-mix(in srgb, var(--yellow) 70%, white);
 		border-radius: var(--size-1);
