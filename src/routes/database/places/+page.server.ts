@@ -1,3 +1,4 @@
+import { database } from '$lib/config';
 import { handleLoadError } from '$lib/errorHandling';
 import { getRecords } from '$lib/supabase';
 import type { Place } from '$lib/types';
@@ -8,8 +9,8 @@ export async function load() {
 		return {
 			_metadata: {
 				title: 'Places',
-				excerpt: "Explore the places related to King's.",
-				tags: 'database, places'
+				excerpt: database.places.excerpt,
+				tags: database.tags
 			},
 			collection: data ?? []
 		};

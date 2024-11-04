@@ -7,14 +7,11 @@
 		statusColumn,
 		hasDescriptionColumn
 	} from '$lib/tableColumns';
-	import { LucideTable, LucideLayoutGrid } from 'lucide-svelte';
 
 	export let data;
 
 	const label = 'people';
 	const { _metadata, people, url } = data;
-
-	let view: 'table' | 'cards' = 'table';
 
 	const columns = [
 		{ header: 'Slug', accessor: 'slug' },
@@ -73,6 +70,8 @@
 	];
 	const sortBy = { initialSortKeys: [{ id: 'name', order: 'asc' }] };
 
+	let view: 'cards' | 'table' = 'cards';
+
 	$: descriptionCount = people.filter((p) => p.description).length;
 	$: descriptionPercentage = ((descriptionCount / people.length) * 100).toFixed(1);
 	$: alternativeNamesCount = people.filter((p) => p.alternative_names).length;
@@ -124,81 +123,97 @@
 	</header>
 
 	<section>
-		<h2>Summary</h2>
-		<p>
-			The database currently contains <strong>{people.length.toLocaleString()}</strong> documented people,
-			with the following characteristics:
-		</p>
+		<hgroup>
+			<h2>Summary</h2>
+			<p>
+				The database currently contains <strong>{people.length.toLocaleString()}</strong> documented
+				people, with the following characteristics:
+			</p>
+		</hgroup>
 
-		<h3>Completeness</h3>
-		<ul>
-			<li>
-				<strong>{descriptionCount.toLocaleString()}</strong>
-				({descriptionPercentage}%) have biographical information
-			</li>
-			<li>
-				<strong>{alternativeNamesCount.toLocaleString()}</strong>
-				({alternativeNamesPercentage}%) have recorded alternative names
-			</li>
-		</ul>
-		<h3>Gender distribution</h3>
-		<ul>
-			{#each genderDistribution as { gender, count, percentage }}
-				<li>
-					<strong>{count.toLocaleString()}</strong> ({percentage}%)
-					<em>{gender}</em>
-				</li>
-			{/each}
-		</ul>
-		<h3>Ethnicity distribution</h3>
-		<ul>
-			{#each ethnicityDistribution as { ethnicity, count, percentage }}
-				<li>
-					<strong>{count.toLocaleString()}</strong> ({percentage}%)
-					<em>{ethnicity}</em>
-				</li>
-			{/each}
-		</ul>
-		<h3>Nationality distribution</h3>
-		<p>
-			The database includes people from <strong>{nationalityCount.toLocaleString()}</strong>
-			distinct nationalities.
-		</p>
-	</section>
+		<div class="summary-grid">
+			<article class="card">
+				<h3>Completeness</h3>
+				<ul>
+					<li>
+						<strong>{descriptionCount.toLocaleString()}</strong>
+						({descriptionPercentage}%) have biographical information
+					</li>
+					<li>
+						<strong>{alternativeNamesCount.toLocaleString()}</strong>
+						({alternativeNamesPercentage}%) have recorded alternative names
+					</li>
+				</ul>
+			</article>
 
-	<section>
-		<div class="view-toggle">
-			<button class:active={view === 'table'} on:click={() => (view = 'table')}
-				><LucideTable />Table view</button
-			>
-			<button class:active={view === 'cards'} on:click={() => (view = 'cards')}
-				><LucideLayoutGrid />Card view</button
-			>
+			<article class="card">
+				<h3>Gender distribution</h3>
+				<ul>
+					{#each genderDistribution as { gender, count, percentage }}
+						<li>
+							<strong>{count.toLocaleString()}</strong> ({percentage}%)
+							<em>{gender}</em>
+						</li>
+					{/each}
+				</ul>
+			</article>
+
+			<article class="card">
+				<h3>Ethnicity distribution</h3>
+				<ul>
+					{#each ethnicityDistribution as { ethnicity, count, percentage }}
+						<li>
+							<strong>{count.toLocaleString()}</strong> ({percentage}%)
+							<em>{ethnicity}</em>
+						</li>
+					{/each}
+				</ul>
+			</article>
+
+			<article class="card">
+				<h3>Nationality distribution</h3>
+				<p>
+					The database includes people from <strong>{nationalityCount.toLocaleString()}</strong>
+					distinct nationalities.
+				</p>
+			</article>
 		</div>
-
-		<EntityIndex data={people} {columns} {label} {sortBy} {url} {view} />
 	</section>
+
+	<EntityIndex data={people} {columns} {label} {sortBy} {url} bind:view />
 </article>
 
 <style>
 	section p {
 		max-inline-size: unset;
 	}
-	.view-toggle {
-		margin-bottom: 1rem;
+
+	.summary-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+		gap: var(--size-3);
+		margin: var(--size-3) 0;
 	}
 
-	.view-toggle button {
-		padding: 0.5rem 1rem;
-		margin-right: 0.5rem;
-		background-color: #f0f0f0;
-		border: none;
-		border-radius: 4px;
-		cursor: pointer;
+	.card {
+		background: var(--surface-1);
+		color: var(--text-1);
+		border: 1px solid var(--border-light);
+		border-radius: var(--radius-2);
+		box-shadow: var(--shadow-2);
+		padding: var(--size-3);
+
+		&:hover {
+			box-shadow: var(--shadow-3);
+		}
 	}
 
-	.view-toggle button.active {
-		background-color: #007bff;
-		color: white;
+	.card h3 {
+		margin-top: 0;
+	}
+
+	.card ul,
+	p {
+		margin: 0;
 	}
 </style>

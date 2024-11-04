@@ -1,5 +1,4 @@
 <script lang="ts">
-	import * as config from '$lib/config';
 	import { dateColumn, nameColumn, locationColumn, statusColumn } from '$lib/tableColumns';
 	import EntityIndex from '$lib/components/EntityIndex.svelte';
 
@@ -29,5 +28,5 @@
 		</hgroup>
 	</header>
 
-	<EntityIndex data={collection} {label} {columns} {sortBy} {url} />
+	<EntityIndex data={collection} {columns} {label} {sortBy} {url} />
 </article>

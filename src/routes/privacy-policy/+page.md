@@ -23,13 +23,13 @@ though KDL’s direct interaction with personal data is less broad.
 
 If you have any queries about this statement please contact:
 
-> Information Compliance team
-> King's College London - Waterloo Campus
-> Room 5.20 James Clerk Maxwell Building
-> 57 Waterloo Road
-> SE1 8WA, London
->
-> email: [email needs to be added](mailto:kingspast@kcl.ac.uk)
+Information Compliance team  
+King's College London - Waterloo Campus  
+Room 5.20 James Clerk Maxwell Building  
+57 Waterloo Road  
+SE1 8WA, London
+
+email: [email needs to be added](mailto:kingspast@kcl.ac.uk)
 
 ## How do we collect information?
 

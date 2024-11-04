@@ -4,6 +4,7 @@
 	import { createEventDispatcher } from 'svelte';
 	import { afterNavigate } from '$app/navigation';
 
+	export let label: string = 'Pagination';
 	export let pageIndex: number;
 	export let pageCount: number;
 	export let hasPreviousPage: boolean;
@@ -48,7 +49,7 @@
 
 {#if hasPreviousPage || hasNextPage}
 	<section>
-		<nav>
+		<nav aria-label={label}>
 			<ol>
 				<li>
 					<button disabled={!hasPreviousPage} on:click={() => handlePageChange('previous')}>

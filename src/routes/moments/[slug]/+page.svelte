@@ -1,5 +1,5 @@
 <script lang="ts">
-	import Moment from '$lib/components/moment.svelte';
+	import Moment from '$lib/components/Moment.svelte';
 
 	export let data;
 	const { slug, meta, content, moments, essaysByCategory, people } = data;

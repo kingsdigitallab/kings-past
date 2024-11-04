@@ -17,12 +17,35 @@ export const hero = {
 		'Explore the most important moments that shaped King’s College  and discover the individuals, organisations, and themes that influenced its journey.'
 };
 
-export const entityTypesMapping: Record<string, string> = {
-	donations: 'donation',
-	events: 'event',
-	organisations: 'organisation',
-	people: 'person',
-	places: 'place'
+export const database = {
+	excerpt:
+		'A comprehensive database of King’s College London’s historical events, artifacts, and significant figures.',
+	tags: 'database, donations, events, organisations, people, places',
+	donations: {
+		href: '/donations',
+		excerpt: 'Explore the donations made to King’s.',
+		tags: 'database, donations'
+	},
+	events: {
+		href: '/events',
+		excerpt: 'Explore the events associated with King’s.',
+		tags: 'database, events'
+	},
+	organisations: {
+		href: '/organisations',
+		excerpt: 'Explore the organisations that King’s has been associated with.',
+		tags: 'database, organisations'
+	},
+	people: {
+		href: '/people',
+		excerpt: 'Explore the lives of the people who helped shape King’s.',
+		tags: 'database, people'
+	},
+	places: {
+		href: '/places',
+		excerpt: 'Explore the places associated with King’s.',
+		tags: 'database, places'
+	}
 };
 
 export const footer = {
