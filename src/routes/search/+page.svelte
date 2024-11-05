@@ -11,11 +11,11 @@
 
 	onMount(() => {
 		if (browser) {
-			initializeSearch();
+			initSearch();
 		}
 	});
 
-	function initializeSearch() {
+	function initSearch() {
 		if (pagefind) {
 			pagefind.destroy();
 		}
@@ -65,7 +65,7 @@
 
 	afterNavigate(() => {
 		if (browser) {
-			initializeSearch();
+			initSearch();
 		}
 	});
 </script>
