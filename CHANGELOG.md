@@ -1,5 +1,24 @@
 
 
+# [0.15.0](https://github.com/kingsdigitallab/kings-past/compare/v0.14.0...v0.15.0) (2024-11-05)
+
+
+### Bug Fixes
+
+* **footer:** add aria labels to the footer sections ([1e7b5aa](https://github.com/kingsdigitallab/kings-past/commit/1e7b5aa14f2154f0c0b4c29114403251dc6cd029))
+* **placesmap:** add an aria-label for each map marker ([1260767](https://github.com/kingsdigitallab/kings-past/commit/12607674675ec5095869a766359d0c65026a949a))
+* **search:** typo ([731612f](https://github.com/kingsdigitallab/kings-past/commit/731612f608d2f261f16dddebc3de3db05b1b7f5f))
+
+
+### Features
+
+* **accessibilitystatement:** add compliance level ([154d470](https://github.com/kingsdigitallab/kings-past/commit/154d47074cc5548d08eb82a1da50994bc1090a13))
+* **accessibilitystatement:** add date and remove placeholder text ([7c327e0](https://github.com/kingsdigitallab/kings-past/commit/7c327e07bb00ac3fce4391e601f8e3cc0657d934))
+* **accessibilitystatement:** add limitation about 3d model viewer ([47a9e62](https://github.com/kingsdigitallab/kings-past/commit/47a9e62d211894fb9bdb64af71b08f0f916c3899))
+* **layout:** set max inline size for the whole content ([c1276df](https://github.com/kingsdigitallab/kings-past/commit/c1276df0f568c9683a8ec4798bbf64e2cb33ebb9))
+* **search:** improvements to the search ([4181095](https://github.com/kingsdigitallab/kings-past/commit/41810950f1d198e05004eb8d87a6d2ec06b0deeb))
+* **sketchfabembed:** add component to embed sketchfab models ([47fc4b2](https://github.com/kingsdigitallab/kings-past/commit/47fc4b277e3f0846304c88bba471a0da70470263))
+
 # [0.14.0](https://github.com/kingsdigitallab/kings-past/compare/v0.13.0...v0.14.0) (2024-11-04)
 
 
