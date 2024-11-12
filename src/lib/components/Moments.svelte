@@ -75,6 +75,10 @@
 
 					.title {
 						border-bottom: var(--size-1) solid var(--yellow);
+						color: white;
+						span {
+							color: var(--yellow);
+						}
 					}
 
 					:global(img) {
@@ -103,15 +107,14 @@
 			position: absolute;
 			width: 100%;
 			border-bottom: var(--size-1) solid var(--powder-blue);
-			& span{
+			& span {
 				font-size: var(--font-size-5);
-				font-weight:800;
+				font-weight: 800;
 				position: absolute;
 				top: -25px;
 				background: var(--midnight-blue);
 				padding: 5px 7px 0 7px;
 				line-height: 1.1;
-
 			}
 		}
 	}
@@ -129,20 +132,18 @@
 	@media (max-width: 768px) {
 		#moments {
 			margin-block: var(--size-6);
-			& h2{
+			& h2 {
 				font-size: var(--font-size-5);
 			}
-			& p{
+			& p {
 				font-size: var(--font-size-3);
 			}
-			& ul{
+			& ul {
 				padding-block: var(--size-3);
 			}
-			& .title{
+			& .title {
 				font-size: var(--font-size-2);
 			}
-
 		}
-
 	}
 </style>
