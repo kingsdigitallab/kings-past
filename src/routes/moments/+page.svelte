@@ -8,128 +8,126 @@
 
 <article>
 	<h1>Moments</h1>
+	<div>
+		{#each moments as moment}
+			{@const title = splitMomentTitle(moment.title)}
 
-	{#each moments as moment}
-		{@const title = splitMomentTitle(moment.title)}
-
-		<article class="surface-1" id="moment-{moment.slug}">
-			<a href="moments/{moment.slug}">
-				<div>
+			<article id="moment-{moment.slug}">
+				<a href="moments/{moment.slug}">
 					<span>{parseInt(moment.slug)}</span>
 					<figure>
 						<img src="{base}{moment.feature.image}" alt={moment.feature.description} />
 					</figure>
-				</div>
-				<div>
 					<h2><span>{title.year}</span> {title.name}</h2>
-					<p class="excerpt">{moment.excerpt}</p>
-				</div>
-			</a>
-		</article>
-	{/each}
+				</a>
+				<p class="excerpt">{moment.excerpt}</p>
+			</article>
+		{/each}
+	</div>
 </article>
 
 <style lang="scss">
 	article {
 		margin-bottom: 2rem;
 		overflow: hidden;
-		> article {
-			background-color: var(--midnight-blue);
-			div:first-child {
-				display: flex;
-				flex-direction: row;
-				justify-content: space-between;
-				align-items: center;
-				background-color: var(--powder-blue);
-				height: 150px;
+		> div {
+			display: grid;
+			grid-template-columns: 1fr;
+			gap: var(--size-4);
+			height: 100%;
+			grid-template-columns: repeat(2, 1fr);
+
+			> article {
 				overflow: hidden;
 				transition: all 0.5s ease-out;
-				& span {
-					width: 8%;
-					min-width: var(--size-8);
-					font-size: var(--font-size-3);
-					color: var(--midnight-blue);
-					text-align: center;
+				a {
+					text-decoration: none;
+
+					&:is(:hover) {
+						text-decoration: none;
+						opacity: 1;
+
+						img {
+							opacity: 1;
+							transform: scale(1.1);
+						}
+						h2 {
+							background: var(--midnight-blue);
+							color: white;
+							transition: all 0.5s ease-out;
+							border-bottom: var(--size-2) solid var(--yellow);
+							> span {
+								color: var(--yellow);
+							}
+						}
+					}
+					& > span {
+						width: var(--size-8);
+						height: var(--size-8);
+						font-size: var(--font-size-3);
+						text-align: center;
+						position: absolute;
+						z-index: 9;
+						line-height: var(--size-8);
+						text-align: center;
+						background-color: rgba(255, 255, 255, 0.8);
+						margin-top: var(--size-5);
+					}
+				}
+				figure {
+					overflow: hidden;
+					width: 100%;
+					& img {
+						object-fit: cover;
+						object-position: center;
+						width: 100%;
+						transform: scale(1.05);
+						transition: all 1.5s ease-in-out;
+						height: 400px;
+					}
+				}
+				h2 {
+					max-inline-size: none;
+					text-wrap: auto;
+					padding: var(--size-7) var(--size-2) var(--size-2) var(--size-2);
+					border-bottom: var(--size-2) solid transparent;
+					& > span {
+						font-size: var(--font-size-7);
+						position: absolute;
+						background: var(--midnight-blue);
+						color: white;
+						margin: -75px 0 0 var(--size-2);
+						padding: var(--size-2) var(--size-2) 0 var(--size-2);
+					}
 				}
 			}
-			div:last-child {
-				padding: var(--size-4);
-				color: white;
-				border-bottom: var(--size-2) solid var(--powder-blue);
-				transition: all 0.5s ease-out;
-			}
-		}
-	}
-	a {
-		display: block;
-		text-decoration: none;
-		&:is(:hover) {
-			text-decoration: none;
-			opacity: 1;
-
-			div:first-child {
-				background-color: var(--powder-blue);
-			}
-			div:last-child {
-				color: var(--yellow);
-				border-bottom: var(--size-2) solid var(--yellow);
-			}
-			img {
-				opacity: 1;
-				transform: scale(1.1);
+			p {
+				padding: 0 var(--size-2) var(--size-2) var(--size-2);
 			}
 		}
 	}
 
-	h2 {
-		max-inline-size: none;
-		text-wrap: auto;
-		& span {
-			font-size: var(--font-size-7);
-			position: absolute;
-			background: var(--midnight-blue);
-			margin-top: -60px;
-			padding: 0 var(--size-2);
-		}
-	}
-	figure {
-		overflow: hidden;
-		width: 92%;
-		& img {
-			object-fit: cover;
-			object-position: center;
-			width: 100%;
-			transform: scale(1.05);
-			transition: all 1.5s ease-in-out;
-			min-height: 200px;
-		}
-	}
 	.excerpt {
 		max-inline-size: none;
 	}
 
 	@media (max-width: 768px) {
-		a {
-			flex-direction: column;
-		}
-
-		div {
-			padding-block-start: var(--size-4);
-			padding-inline-start: 0;
-		}
 		article {
-			> article {
-				div:first-child span {
-					font-size: var(--font-size-3);
+			> div {
+				display: block;
+			}
+			article {
+				a {
+					display: block;
+					> span {
+						margin-top: 0 !important;
+					}
+					h2 span {
+						font-size: var(--font-size-6);
+						margin: -65px 0 0 var(--size-2);
+					}
 				}
 			}
-		}
-		img {
-			width: 100%;
-		}
-		h2 span {
-			font-size: var(--font-size-5);
-			margin-top: -42px;
 		}
 	}
 </style>
