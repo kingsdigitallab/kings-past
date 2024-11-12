@@ -26,7 +26,7 @@
 	{#if people?.length}
 		<section class="info">
 			<details open>
-				<summary>King's lives </summary>
+				<summary>King's lives</summary>
 				<ul>
 					{#each people as person}
 						<li data-pagefind-filter="Person">
