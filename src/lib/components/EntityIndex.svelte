@@ -151,24 +151,31 @@
 
 	.view-toggle button {
 		color: var(--text-1);
-		background-color: var(--surface-4);
+		background-color: var(--surface-1);
+		border-bottom: var(--size-2) solid transparent;
+		opacity: 0.5;
 		display: flex;
 		align-items: center;
 		gap: var(--size-2);
 		padding: var(--size-2) var(--size-4);
-		border: none;
 		cursor: pointer;
 		transition: background-color 0.3s ease;
 
 		&:hover {
-			background-color: var(--surface-2);
-			color: var(--yellow);
+			background-color: var(--surface-1);
+			border-bottom: var(--size-2) solid var(--surface-4);
+			opacity: 1;
+			&.active {
+				opacity: 0.7;
+			}
 		}
 	}
 
 	.view-toggle button.active {
-		background-color: var(--surface-2);
-		color: var(--text-2);
+		background-color: var(--surface-1);
+		border-bottom: var(--size-2) solid var(--surface-2);
+		color: var(--text-1);
+		opacity: 1;
 	}
 
 	.view-toggle button span {

@@ -199,21 +199,24 @@
 		background: var(--surface-1);
 		color: var(--text-1);
 		border: 1px solid var(--border-light);
-		border-radius: var(--radius-2);
-		box-shadow: var(--shadow-2);
-		padding: var(--size-3);
-
-		&:hover {
-			box-shadow: var(--shadow-3);
-		}
+		box-shadow: var(--shadow-1);
 	}
 
 	.card h3 {
 		margin-top: 0;
+		margin-bottom: var(--size-3);
+		border-bottom: 2px solid var(--pearl-grey);
+		padding: var(--size-3) var(--size-3) var(--size-2) var(--size-3);
+		color: var(--midnight-blue);
+		max-inline-size: none;
 	}
 
 	.card ul,
-	p {
+	.card p {
 		margin: 0;
+		padding: var(--size-3);
+	}
+	.card li {
+		padding-bottom: var(--size-2);
 	}
 </style>

@@ -44,14 +44,10 @@
 	}
 
 	.card {
-		background-color: var(--surface-4);
-		border-radius: var(--radius-2);
+		background-color: var(--surface-1);
 		padding: var(--size-4);
 		transition: box-shadow 0.3s ease;
-	}
-
-	.card:hover {
-		box-shadow: var(--shadow-3);
+		border: 1px solid var(--surface-4);
 	}
 
 	.card h2 {
@@ -73,9 +69,9 @@
 	}
 
 	dt {
-		font-weight: bold;
-		font-size: var(--font-size-1);
-		color: var(--color-text-muted);
+		font-size: 12px;
+		opacity: 0.5;
+		text-transform: uppercase;
 	}
 
 	dd {
