@@ -25,7 +25,7 @@
 
 	{#if people?.length}
 		<section class="info">
-			<details>
+			<details open>
 				<summary>King's lives </summary>
 				<ul>
 					{#each people as person}
