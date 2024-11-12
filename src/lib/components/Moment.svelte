@@ -123,16 +123,14 @@
 		& > section {
 			width: 100%;
 			height: 100%;
-			padding: var(--size-5);
+			padding: var(--size-5) var(--size-5) 0 var(--size-5);
 			margin: 0;
 			& h1 {
 				max-inline-size: none;
-				padding: var(--size-2);
 			}
 			& h2 {
 				max-inline-size: none;
-				margin-top: var(--size-2);
-				padding-top: var(--size-5);
+				margin-top: var(--size-5);
 			}
 			& ol {
 				& span {
@@ -143,7 +141,6 @@
 				gap: var(--size-1);
 				align-items: center;
 				/*justify-content: center;*/
-				padding-top: var(--size-4);
 			}
 		}
 
