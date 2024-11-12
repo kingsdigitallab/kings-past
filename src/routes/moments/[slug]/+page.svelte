@@ -63,7 +63,7 @@
 
 		& ul {
 			list-style-type: none;
-			margin-left: var(--size-000);
+			margin-left: -28px;
 			padding-left: var(--size-5);
 		}
 
@@ -82,7 +82,7 @@
 
 				&:hover {
 					background-color: var(--midnight-blue);
-					border-left: var(--size-2) solid var(--yellow);
+					border-left: var(--size-2) solid var(--pearl-grey);
 					color: white;
 					opacity: 1;
 				}
