@@ -8,10 +8,14 @@
 	export let url: string;
 
 	function formatValue(item: Record<string, any>, column: Column<any>) {
+		const value =
+			typeof column.accessor === 'function' ? column.accessor(item) : item[column.accessor];
+
 		if (column.cell) {
-			return column.cell({ value: item[column.accessor] });
+			return column.cell({ value });
 		}
-		return item[column.accessor] ?? 'N/A';
+
+		return value ?? 'N/A';
 	}
 </script>
 
