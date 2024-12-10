@@ -1,5 +1,25 @@
 
 
+# [0.16.0](https://github.com/kingsdigitallab/kings-past/compare/v0.15.0...v0.16.0) (2024-12-10)
+
+
+### Bug Fixes
+
+* **indexcard:** check if column accessor is a function ([d7f4bf0](https://github.com/kingsdigitallab/kings-past/commit/d7f4bf03e4e51091f32fd0edabe12f964178819b))
+
+
+### Features
+
+* entity card styles ([81cf2f2](https://github.com/kingsdigitallab/kings-past/commit/81cf2f2a7bc25109833726269dc6050980dbf3c8))
+* homepage change hover title to white ([2533191](https://github.com/kingsdigitallab/kings-past/commit/2533191c809748f03e4755d20c6ad1e34da69379))
+* **layout:** add analytics via goatcounter ([9c879fe](https://github.com/kingsdigitallab/kings-past/commit/9c879fe90b37245be734aec5cb2f9e8fdd47abbc))
+* **moment:** open the king's lives section by default ([8050cde](https://github.com/kingsdigitallab/kings-past/commit/8050cde03a46034e52b069ec5cd4ac3d949e9afb))
+* **moment:** open the king's lives section by default ([4e52b26](https://github.com/kingsdigitallab/kings-past/commit/4e52b26bfe7472a1d1b7101f270e194c52c96dd6))
+* reduce padding of moment header ([16cbeba](https://github.com/kingsdigitallab/kings-past/commit/16cbeba3ddcf3791599940934a3c08b3d98b14b9))
+* reduce ul left margin ([2058759](https://github.com/kingsdigitallab/kings-past/commit/2058759115b5abb8b192c4b951c4e1cbc842ba14))
+* restyle moments index to 2 col, 1col for small screens ([f8c1d07](https://github.com/kingsdigitallab/kings-past/commit/f8c1d0756ac718a242db83388776e6fb70e13fe8))
+* revert moment titles styles similar original designs ([fc8bd9f](https://github.com/kingsdigitallab/kings-past/commit/fc8bd9fa7251a2f3830acd54e56ff10e23818e50))
+
 # [0.15.0](https://github.com/kingsdigitallab/kings-past/compare/v0.14.0...v0.15.0) (2024-11-05)
 
 
