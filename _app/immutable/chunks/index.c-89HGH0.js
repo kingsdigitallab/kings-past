@@ -1,1 +1,0 @@
-function f(r){return m(r==null?void 0:r.start_date,r==null?void 0:r.end_date)}function m(r,a,t="en-GB"){return r===a?new Intl.DateTimeFormat(t).format(new Date(r)):`${new Intl.DateTimeFormat(t).format(new Date(r))}–${new Intl.DateTimeFormat(t).format(new Date(a))}`}function e(r){return m(r==null?void 0:r.start_date,r==null?void 0:r.end_date)}export{e as a,m as b,f};
