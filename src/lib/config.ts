@@ -2,26 +2,50 @@ import { dev } from '$app/environment';
 
 export const title = "King's Past";
 export const description = "King's Past description";
-export const url = dev ? 'https://localhost:5173/' : 'https://kings-past.kcl.ac.uk/';
+export const url = dev ? 'https://localhost:5173/' : 'https://kingspast.kcl.ac.uk/';
 
 export const nav = [
 	{ title: 'About', url: '/about' },
 	{ title: 'Moments', url: '/moments' },
-	{ title: 'Database', url: '/database' }
+	{ title: 'Database', url: '/database' },
+	{ title: 'Search', url: '/search' }
 ];
 
 export const hero = {
-	title: ['Discover the Hidden History of', "King's College London Over", '190 Years'],
+	title: "Discover the past of King's College London to help shape the future",
 	message:
 		'Explore the most important moments that shaped King’s College  and discover the individuals, organisations, and themes that influenced its journey.'
 };
 
-export const entityTypesMapping: Record<string, string> = {
-	donations: 'donation',
-	events: 'event',
-	organisations: 'organisation',
-	people: 'person',
-	places: 'place'
+export const database = {
+	excerpt:
+		'A comprehensive database of King’s College London’s historical events, artifacts, and significant figures.',
+	tags: 'database, donations, events, organisations, people, places',
+	donations: {
+		href: '/donations',
+		excerpt: 'Explore the donations made to King’s.',
+		tags: 'database, donations'
+	},
+	events: {
+		href: '/events',
+		excerpt: 'Explore the events associated with King’s.',
+		tags: 'database, events'
+	},
+	organisations: {
+		href: '/organisations',
+		excerpt: 'Explore the organisations that King’s has been associated with.',
+		tags: 'database, organisations'
+	},
+	people: {
+		href: '/people',
+		excerpt: 'Explore the lives of the people who helped shape King’s.',
+		tags: 'database, people'
+	},
+	places: {
+		href: '/places',
+		excerpt: 'Explore the places associated with King’s.',
+		tags: 'database, places'
+	}
 };
 
 export const footer = {
@@ -45,3 +69,5 @@ export const footer = {
 		}
 	]
 };
+
+export const EMPTY_PLACEHOLDER = 'Unknown';

@@ -1,128 +1,127 @@
 <script lang="ts">
-  import { getMomentN } from "$lib/moments";
-  import { RectangleHorizontal, RectangleVertical } from "lucide-svelte";
-  import { base } from "$app/paths";
+	import Moment from '$lib/components/Moment.svelte';
 
-  export let data;
-
-  let prev = data.meta.n > 1 ? data.moments[data.meta.n - 2] : null;
-  let next =
-    data.meta.n < data.moments.length - 1 ? data.moments[data.meta.n] : null;
+	export let data;
+	const { slug, meta, content, moments, essaysByCategory, people } = data;
 </script>
 
-<svelte:head>
-  <title>{data.meta.title}</title>
-  <meta property="og:title" content={data.meta.title} />
-  <meta property="og:type" content="article" />
-</svelte:head>
+<Moment {meta} {content} {moments}>
+	{#if Object.keys(essaysByCategory).length}
+		<section class="info">
+			<h2>Research</h2>
 
-<article id="moment">
-  <p class="n">
-    <strong>Moment {data.meta.n}</strong>
-  </p>
+			{#each Object.entries(essaysByCategory) as [category, essays]}
+				<section>
+					<h3>{category.charAt(0).toUpperCase() + category.slice(1)}</h3>
+					<ul>
+						{#each essays as essay}
+							<li><a href="{slug}/{essay.slug}">{essay.title}</a></li>
+						{/each}
+					</ul>
+				</section>
+			{/each}
+		</section>
+	{/if}
 
-  <header class="surface-2">
-    <h1>{data.meta.title}</h1>
-    <ol>
-      {#each data.moments as moment}
-        <li>
-          <a
-            href={getMomentN(moment.n)}
-            class:active={moment.n === data.meta.n}
-            title="Moment {moment.n}"
-          >
-            {#if moment.n === data.meta.n}
-              <RectangleHorizontal />
-            {:else}
-              <RectangleVertical />
-            {/if}
-          </a>
-        </li>
-      {/each}
-    </ol>
-    <img
-      src="{base}{data.meta.feature.image}"
-      alt={data.meta.feature.description}
-      title={data.meta.feature.title}
-    />
-  </header>
-
-  <article class="content">
-    <div class="md">
-      <svelte:component this={data.content} />
-    </div>
-  </article>
-  <nav class="surface-1">
-    <ol>
-      {#if prev}
-        <li><a href={getMomentN(prev.n)}>&lt;&lt; {prev.title}</a></li>
-      {/if}
-      {#if next}
-        <li><a href={getMomentN(next.n)}>{next.title} &gt;&gt;</a></li>
-      {/if}
-    </ol>
-  </nav>
-</article>
+	{#if people?.length}
+		<section class="info">
+			<details open>
+				<summary>King's lives</summary>
+				<ul>
+					{#each people as person}
+						<li data-pagefind-filter="Person">
+							<a href="../database/people/{person.slug}">{person.name}</a>
+						</li>
+					{/each}
+				</ul>
+			</details>
+		</section>
+	{/if}
+</Moment>
 
 <style>
-  #moment {
-    margin-block: var(--section-margin);
+	section.info {
+		max-width: 50rem;
+		width: 100%;
 
-    & > p {
-      font-family: var(--font-headings);
-      font-size: var(--font-size-5);
-      padding-inline: var(--header-padding-inline);
-    }
-  }
+		background-color: white;
+		padding-inline: var(--size-4);
+		padding: 0;
 
-  header {
-    padding-top: var(--size-8);
+		& h2 {
+			background-color: var(--powder-blue);
+			font-size: var(--font-size-5);
+			font-weight: 200;
+			margin: 0;
+			min-width: 100%;
+			padding: var(--size-3) var(--size-4);
+		}
 
-    & h1 {
-      max-inline-size: none;
-      padding-inline: var(--header-padding-inline);
-      text-wrap: auto;
-    }
+		& section {
+			padding-left: var(--size-4);
+		}
 
-    & img {
-      height: 100%;
-      object-fit: cover;
-      object-position: center;
-      width: 100%;
-    }
+		& ul {
+			list-style-type: none;
+			margin-left: -28px;
+			padding-left: var(--size-5);
+		}
 
-    & ol {
-      display: flex;
-      gap: var(--size-5);
-      padding-block: var(--size-4);
-      padding-inline: var(--header-padding-inline);
-    }
-  }
+		& ul li {
+			break-inside: avoid;
+			font-size: var(--font-size-3);
+			margin-block: var(--size-2);
+			padding-inline-start: var(--size-2);
 
-  .content {
-    background: var(--background);
-    display: grid;
-    font-family: var(--font-serif);
-    margin-inline: auto;
-    margin-top: calc(-1 * var(--size-11));
-    max-inline-size: var(--size-lg);
-    place-items: center;
-    position: relative;
-  }
+			& a {
+				border-left: var(--size-2) solid var(--surface-1);
+				display: block;
+				padding-left: var(--size-3);
+				text-decoration: none;
+				width: calc(100% - var(--size-2));
 
-  nav {
-    margin-top: var(--section-margin);
-  }
-  nav ol {
-    display: flex;
-    justify-content: space-between;
-    margin-right: var(--size-5);
-    width: 100%;
+				&:hover {
+					background-color: var(--midnight-blue);
+					border-left: var(--size-2) solid var(--pearl-grey);
+					color: white;
+					opacity: 1;
+				}
+			}
+		}
 
-    & > li,
-    & a {
-      margin-inline: auto;
-      max-inline-size: none;
-    }
-  }
+		& details {
+			background-color: inherit;
+
+			& summary {
+				border-radius: 0;
+				font-family: var(--font-headings);
+				font-size: var(--font-size-5);
+				font-weight: var(--font-weight-2);
+				list-style: none;
+				padding-left: var(--size-4);
+				position: relative;
+
+				&::after {
+					content: '+';
+					position: absolute;
+					right: var(--size-4);
+					transition: transform 0.2s ease;
+				}
+			}
+
+			&[open] summary::after {
+				content: '-';
+				transform: rotate(180deg);
+			}
+		}
+
+		& details ul {
+			display: grid;
+			grid-template-columns: repeat(2, 1fr);
+
+			@media (max-width: 768px) {
+				grid-template-columns: 1fr;
+			}
+		}
+	}
 </style>

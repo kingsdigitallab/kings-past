@@ -1,47 +1,54 @@
 <script lang="ts">
+	import Entity from '$lib/components/EntityDetails.svelte';
+	import DonationsList from '$lib/components/DonationsList.svelte';
+	import EventsList from '$lib/components/EventsList.svelte';
+
 	export let data;
+
+	const {
+		person,
+		meta,
+		description,
+		donationsAsAgent,
+		donationsAsRecipient,
+		events,
+		feature,
+		funded,
+		knows,
+		memberOf,
+		moments,
+		sources,
+		sameAs,
+		urls,
+		people
+	} = data;
 </script>
 
-<article>
-	<h1>{data.person.name}</h1>
+<Entity
+	entity={person}
+	entityType="Person"
+	{meta}
+	{feature}
+	{description}
+	{moments}
+	{sameAs}
+	{sources}
+	{urls}
+>
+	<EventsList {events} />
 
-	<section>
-		<h2>Metadata</h2>
-		<dl>
-			<dt>Alternative names</dt>
-			<dd>
-				{data.person.alternative_names || null}
-			</dd>
-			<dt>Gender</dt>
-			<dd>{data.person.gender}</dd>
-			<dt>Nationality</dt>
-			<dd>{data.person.nationality}</dd>
-			<dt>Ethnicity</dt>
-			<dd>{data.person.ethnicity}</dd>
-			<dt>Languages</dt>
-			<dd>{data.person.languages || null}</dd>
-		</dl>
-	</section>
-
-	{#if data.person.description}
+	{#if knows && knows.length}
 		<section>
-			<p>{data.person.description}</p>
-		</section>
-	{/if}
-
-	{#if data.knows}
-		<section>
-			<h2>Relationships</h2>
+			<h2>Knows</h2>
 			<ul>
-				{#each data.knows as knows}
+				{#each knows as knows}
 					<li>
-						{#if knows.person === data.person.slug}
-							<a href={knows.knows}>{data.people[knows.knows].name}</a>
-						{:else}
-							<a href={knows.person}>{data.people[knows.person].name}</a>
-						{/if}
-						{#if knows.relationship}
-							<span>, {knows.relationship.toLowerCase()}</span>
+						{#if knows.person === person.slug}
+							<a href={knows.knows} data-pagefind-filter="Person">{people[knows.knows].name}</a
+							>{:else}
+							<a href={knows.person} data-pagefind-filter="Person">{people[knows.person].name}</a
+							>{/if}{#if knows.relationship},
+							<span data-pagefind-filter="Relationship">{knows.relationship.toLowerCase()}</span>
 						{/if}
 					</li>
 				{/each}
@@ -49,25 +56,31 @@
 		</section>
 	{/if}
 
-	{#if data.memberOf}
+	{#if memberOf && memberOf.length}
 		<section>
 			<h2>Member of</h2>
 			<ul>
-				{#each data.memberOf as member}
-					<li>
-						<a href="../organisations/{member.organisation}"
-							>{data.organisations[member.organisation].name}</a
-						>
+				{#each memberOf as organisation}
+					<li data-pagefind-filter="Organisation">
+						<a href="../organisations/{organisation.slug}">{organisation.name}</a>
 					</li>
 				{/each}
 			</ul>
 		</section>
 	{/if}
-</article>
 
-<style>
-	li {
-		display: flex;
-		align-items: baseline;
-	}
-</style>
+	{#if funded && funded.length}
+		<section>
+			<h2>Funded</h2>
+			<ul>
+				{#each funded as organisation}
+					<li data-pagefind-filter="Organisation">
+						<a href="../organisations/{organisation.slug}">{organisation.name}</a>
+					</li>
+				{/each}
+			</ul>
+		</section>
+	{/if}
+
+	<DonationsList entityName={person.name} {donationsAsAgent} {donationsAsRecipient} />
+</Entity>

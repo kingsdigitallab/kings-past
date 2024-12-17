@@ -1,37 +1,101 @@
-import { getRecord, getRecords, supabase } from '$lib/supabase';
-import { error } from '@sveltejs/kit';
+import { EMPTY_PLACEHOLDER } from '$lib/config';
+import { handleLoadError } from '$lib/errorHandling';
+import {
+	getRecord,
+	getRecordDonations,
+	getRecordEvents,
+	getRecordFeature,
+	getRecordFunded,
+	getRecordKnows,
+	getRecordLanguages,
+	getPersonMemberOf,
+	getRecordMoments,
+	getRecordOccupations,
+	getRecords,
+	getRecordSameAs,
+	getRecordSources,
+	getRecordUrls
+} from '$lib/supabase';
+import type { Moment, Person, PersonMoment } from '$lib/types';
+import { compile } from 'mdsvex';
 
 export async function load({ params, parent }) {
+	const { slug } = params;
+
 	try {
-		const person = await getRecord('person', params.slug);
+		const source = 'person';
+		const person = (await getRecord(source, slug)) as Person;
 
-		const knows = await supabase
-			.from('person_knows')
-			.select('')
-			.or(`person.eq.${params.slug},knows.eq.${params.slug}`)
-			.order('knows,person');
+		const recordLanguages = await getRecordLanguages(source, slug);
+		const languages =
+			recordLanguages && recordLanguages.length
+				? recordLanguages.map((l) => l.name)
+				: [person?.language || EMPTY_PLACEHOLDER];
 
-		const memberOf = await supabase
-			.from('person_member_of')
-			.select('')
-			.eq('person', params.slug)
-			.order('organisation');
+		const occupations = await getRecordOccupations(source, slug);
 
-		const organisations = await getRecords('organisation');
+		const meta = {
+			'Alternative names': person?.alternative_names || EMPTY_PLACEHOLDER,
+			Gender: person?.gender || EMPTY_PLACEHOLDER,
+			Nationality: person?.nationality || EMPTY_PLACEHOLDER,
+			Ethnicity: person?.ethnicity || EMPTY_PLACEHOLDER,
+			Languages: languages?.join(', ') || EMPTY_PLACEHOLDER,
+			Occupations: occupations?.map((po) => po.occupation).join(', ') || EMPTY_PLACEHOLDER
+		};
 
+		const description = await compile(person?.description || '');
+		const donationsAsAgent = await getRecordDonations(source, slug, 'agent');
+		const donationsAsRecipient = await getRecordDonations(source, slug, 'recipient');
+		const events = await getRecordEvents(source, slug);
+		const feature = await getRecordFeature(source, slug);
+		const funded = await getRecordFunded(source, slug);
+		const knows = await getRecordKnows(slug);
+		const memberOf = await getPersonMemberOf('organisation', source, slug);
+		const sameAs = await getRecordSameAs(source, slug);
+		const sources = await getRecordSources(source, slug);
+		const urls = await getRecordUrls(source, slug);
+
+		const personMoments = (await getRecordMoments(source, slug)) as PersonMoment[];
 		const parentData = await parent();
+		const parentMoments = parentData.moments;
+
+		const moments = parentMoments.filter((moment: Moment) =>
+			personMoments?.some((pm) => parseInt(pm.moment) === moment.n)
+		);
 
 		return {
+			_metadata: {
+				title: person.name,
+				excerpt: `Explore the person ${person.name}`,
+				tags: 'database, people'
+			},
 			person,
-			knows: knows.data,
-			memberOf: memberOf.data,
-			people: parentData.peopleBySlug,
-			organisations: organisations?.reduce((acc, org) => {
-				acc[org.slug] = org;
-				return acc;
-			}, {})
+			title: person.name,
+			meta,
+			description: description?.code,
+			donationsAsAgent,
+			donationsAsRecipient,
+			events,
+			feature,
+			funded,
+			knows,
+			memberOf,
+			moments,
+			sameAs,
+			sources,
+			urls,
+			people: parentData.peopleBySlug
 		};
 	} catch (e) {
-		error(404, `Could not find ${params.slug}`);
+		handleLoadError(slug, e);
 	}
+}
+
+export async function entries() {
+	const data = await getRecords('person');
+	if (!data) return [];
+
+	const entries = data.filter((person) => person.slug).map((person) => ({ slug: person.slug }));
+
+	return entries;
 }

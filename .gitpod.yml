@@ -1,11 +1,11 @@
 # See https://www.gitpod.io/docs/config-gitpod-file
 tasks:
-  - name: "Set up and run frontend"
+  - name: 'Set up and run frontend'
     init: npm install && npx simple-git-hooks
     command: npm run dev
 
 ports:
-  - port: 8080
+  - port: 5174
     onOpen: open-browser
     visibility: private
 

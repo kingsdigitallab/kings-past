@@ -1,30 +1,32 @@
-#moment {
-	& a rect {
-		fill: var(--text-2);
-
-		&:hover {
-			fill: var(--yellow);
-		}
-	}
-
-	& a.active rect {
-		fill: var(--yellow);
-	}
+.md {
+	align-items: center;
+	display: flex;
+	flex-direction: column;
+	padding-top: var(--size-3);
+	width: 100%;
 }
 
-.md {
-	margin-inline: auto;
-	margin-top: var(--size-3);
+.md > * {
+	max-width: 50rem;
+	width: 100%;
 }
 
 .md > *:not(:is(h2, h3, h4, h5, h6)) {
 	margin-inline: auto;
 }
 
-.md::first-letter {
-	color: var(--text-1);
-	initial-letter: 2;
-	-webkit-initial-letter: 2;
+.md p:first-of-type:not(blockquote)::first-letter {
+	float: left;
+	font-size: 4rem;
+	padding-right: 0.1rem;
+	padding-top: 0.5rem;
+}
+
+@supports (initial-letter: 2) or (-webkit-initial-letter: 2) {
+	.md p:first-of-type::first-letter {
+		initial-letter: 2;
+		-webkit-initial-letter: 2;
+	}
 }
 
 .md :is(h2, h3, h4, h5, h6) {
@@ -36,14 +38,25 @@
 	margin-top: var(--size-7);
 }
 
-.md :is(ol, ul) {
+.md :is(figure) {
+	max-width: 100%;
+}
+
+.md :is(ol) {
+	list-style-type: decimal;
+	padding-left: var(--size-5);
+}
+
+.md :is(ul) {
 	list-style-type: disc;
 	padding-left: var(--size-5);
 }
 
 .md :is(ol, ul) li {
+	font-size: var(--font-size-2);
 	margin-block: var(--size-2);
-	padding-inline-start: var(--size-2);
+	max-inline-size: var(--size-content-3);
+	margin-inline: auto;
 }
 
 .md :is(p) {
@@ -52,4 +65,35 @@
 
 .md figure:not(:is(h2, h3, h4, h5, h6) + figure) {
 	margin-top: var(--size-7);
+}
+
+.md section.question {
+	margin-top: var(--size-10);
+	background-color: var(--pearl-grey);
+	/*border-top: var(--size-2) solid var(--powder-blue);*/
+	padding: var(--size-7);
+	& h2 {
+		margin: 0 0 var(--size-4) 0;
+	}
+}
+
+.md blockquote {
+	max-inline-size: var(--size-content-3);
+}
+
+.md a:not(.footnote-ref):not(.footnote-backref) {
+	text-decoration: underline;
+	text-decoration-color: inherit;
+}
+
+.md sup {
+	font-size: var(--font-size-0);
+}
+
+.md hr {
+	height: var(--border-size-1);
+}
+
+.md .footnotes li {
+	max-inline-size: none;
 }

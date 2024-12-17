@@ -30,9 +30,11 @@ jobs:
           echo SUPABASE_KEY=${{ secrets.SUPABASE_KEY }} >> .env
 
       - name: Install dependencies and build
+        env:
+          GITHUB_ACTIONS_BUILD: true
         run: |
           npm ci
-          npm run build
+          npm run build:all
 
       - name: Deploy to GitHub pages
         uses: peaceiris/actions-gh-pages@v3

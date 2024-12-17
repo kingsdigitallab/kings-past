@@ -1,17 +1,34 @@
 <script lang="ts">
-  export let data;
+	import EntityIndex from '$lib/components/EntityIndex.svelte';
+	import { dateColumn, nameColumn, locationColumn, statusColumn } from '$lib/tableColumns';
+
+	export let data;
+
+	const { _metadata, collection, url, placesBySlug } = data;
+	const label = 'donations';
+
+	const columns = [
+		nameColumn,
+		dateColumn,
+		locationColumn(placesBySlug),
+		{
+			header: 'Price',
+			accessor: 'price',
+			cell: ({ value }: { value: number }) => `${value.toLocaleString()}`
+		},
+		{ header: 'Currency', accessor: 'currency' },
+		statusColumn
+	];
+	const sortBy = { initialSortKeys: [{ id: 'date', order: 'asc' }] };
 </script>
 
 <article>
-  <header>
-    <h1>Donations</h1>
-  </header>
+	<header>
+		<hgroup>
+			<h1>Donations</h1>
+			<p>{_metadata.excerpt}</p>
+		</hgroup>
+	</header>
 
-  <section>
-    <ul>
-      {#each data.collection as item}
-        <li><a href="{data.url}/{item.slug}">{item.name}</a></li>
-      {/each}
-    </ul>
-  </section>
+	<EntityIndex data={collection} {label} {columns} {sortBy} {url} />
 </article>

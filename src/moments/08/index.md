@@ -1,14 +1,19 @@
 ---
-title: Women’s education
+title: "1900: King's and the Staffing of empire"
 n: 8
 tags:
   - moment
 excerpt: ''
 feature:
-  image: /assets/images/moments/8.jpg
+  image: /assets/images/moments/8.webp
   title: The image title
   description: Placeholder image for moments
 type: moment
+slug: 1900-king-staffing-empire
 ---
 
-King’s Ladies Department opened in 1885 with the aim of providing female students ‘with a castle of their own’. Its foundation came at a moment at which the expansion of women’s higher education was accelerating within leading universities, but which remained highly unequal to that available to men. King’s Ladies Department created a space to expand not only women’s access to higher education, but one in which the fraught gender politics of the late-nineteenth century accelerated. Many King’s graduates became active members of the suffrage movement, as well as taking up professional careers in the institutions of a nascent welfare state, as teachers, nurses, hygienists. Others went on to build celebrated academic careers. Mixed undergraduate teaching arrived in 1915, when women started to attend the Strand campus. This research will explore what the emergence of first women’s and then co-education looked like in King’s, charting both new opportunities and ongoing systemic barriers to full inclusion. It will examine debates around women’s education at King’s to shed new light on the college’s transition to a fully co-educational institution in the first half of the twentieth century.
+By the 1850s King’s had established a close relationship to the East India Company. This provided both employment for former students and opportunities to expand the university’s teaching. Engineering, Military Studies, Oriental Languages, and Law all had close connections to the EIC. In terms of teaching, they were structured to provide training and generate new knowledge for those contemplating careers in India and the wider empire, while several of the fellowship transferred directly from working for the expanding imperial state to teaching in Higher Education (and vice versa). The EIC made a donation to King’s upon its founding and continued support into the 1850s. King’s continued to supply officials to various branches of the Indian Civil Service throughout the second half of the nineteenth century and a growing number to the Colonial Service during the twentieth century. Involvement in the training and supply of imperial recruits allowed King’s to expand its academic portfolio. As part of the University of London, the college continued to deliver pre-deployment training and used this commitment to appoint new chairs and lecturers in History and Asian languages.
+
+## So what question...
+
+Questions around relationship with wider organisations and power: Careers paths – how does King’s direct and facilitate access to different types of careers. Does the university have an ethical responsibility to direct students towards certain careers?

@@ -1,16 +1,20 @@
 ---
-title: Race, Civilization and Culture
+title: "1885: Women's education"
 n: 7
 tags:
   - moment
 excerpt: ''
 feature:
-  image: /assets/images/moments/7.jpg
+  image: /assets/images/moments/7.webp
   title: The image title
   description: Placeholder image for moments
 type: moment
 ---
 
-Britain’s imperial power depended as much on forms of cultural dominance as it did military control. Central to this were discourses of race and civilization that at once positioned the British as indelibly superior to those they governed, while at the same time promising paternalistic tutelage towards national self-realisation; empire was to be both a civilizing force and a force of civilization. Racial hierarchies became pivotal in this construction of dominance, but the category of race did not remain stable across the nineteenth and twentieth centuries. Throughout the period multiple and competing understandings were deployed to serve different ends.
+King’s was a trailblazer for the education of women. The University of London awarded degrees to women from the 1870s, much earlier than Oxford or Cambridge, and King’s Ladies Department opened in 1885. It became a beacon and a haven for many of the first women in England to gain a degree and become academics, such as Caroline Spurgeon, Shakespeare scholar, and Helen Fraser, Professor of Botany at Birkbeck as well as Commandant of the Women’s Royal Air Force in World War 1. Lilian Faithful, Head of the Ladies Department in 1894-1907, and also the first woman Justice of the Peace in England, said the joy of College life was to provide women with ‘a castle of their own’, and indeed Virginia Woolf and her sister Vanessa Bell both studied at King’s. Many students went on to take up professional careers in the institutions of the nascent welfare state, for example as teachers, nurses, and hygienists, and were caught up in politics locally and globally in various ways. The fight for a woman’s right to education was one of the burning aims of the women’s movement, and many graduates became active suffragettes, such as Edith Morley, literary scholar and first woman professor at a British university. Sarojini Naidu, known as the ‘Nightingale of India’ for her poetry, studied at King’s when she was 16 in 1895, went on to try and persuade the British government to give Indian woman the vote, and then to campaign for Indian independence and women’s access to education, which she described as essential, like the air we breathe.
 
-Knowledge production has always been central to universities’ raison d’etre and was often put to service in underpinning claims to imperial power. Scholars across the arts and sciences contributed to an ever-growing corpus of research into racial identity and difference. From post-Darwinist evolutionary theories to historians’ accounts of the British race’s imperial expansion, or the science of eugenics to anthropologists’ examination of ‘primitive cultures’, universities functioned as key sites of ‘racial theorising’. King’s was no different to other institutions in this regard: King’s Historians, including F. J. C. Hearnshaw, A. P. Newton, and Sidney Low, celebrated the natural virtues of the British race; the research of King’s linguists, theologians, and law scholars into Asiatic languages, religions, laws, and cultures was used by the colonial state to underpin British control in South Asia; Scientists, such as Reginald Gates, argued that race was a scientific category premised upon essential and irreconcilable difference; while even into the 1970s, Hans Eysenck was undertaking psychological research into differences in natural intelligence between ethnicities. This research will examine the contributions made by King’s scholars to racial science and discourse across this period, examining how ideas were framed and the ways in which they were deployed beyond the university.
+This research will explore the emancipatory power of King’s for women, as well as the systemic inequalities it instituted and perpetuated. It will examine the debates around the inclusion of women in education and the College’s transition to a fully co-educational institution, and situate these debates in the wider contexts of feminism and democratic reform.
+
+## So what question...
+
+While gendered inequalities have levelled out over the last generation, there remain serious discrepancies for women in Higher Education, for both students and staff, in relation for example to pay and power. This research will shed light on the struggles of the past and the ways in which their legacies continue to inform the structures and culture of life at King’s today. It will reflect on the tight link between education and women’s liberation, and the ongoing intransigencies within the sector and with regard to the very idea of women’s intelligence.

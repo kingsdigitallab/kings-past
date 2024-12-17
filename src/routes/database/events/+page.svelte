@@ -1,17 +1,32 @@
 <script lang="ts">
-  export let data;
+	import { dateColumn, nameColumn, locationColumn, statusColumn } from '$lib/tableColumns';
+	import EntityIndex from '$lib/components/EntityIndex.svelte';
+
+	export let data;
+
+	const label = 'events';
+	const { _metadata, collection, url, placesBySlug } = data;
+
+	const columns = [
+		nameColumn,
+		dateColumn,
+		{
+			header: 'Type',
+			accessor: 'event_type'
+		},
+		locationColumn(placesBySlug),
+		statusColumn
+	];
+	const sortBy = { initialSortKeys: [{ id: 'date', order: 'asc' }] };
 </script>
 
 <article>
-  <header>
-    <h1>Events</h1>
-  </header>
+	<header>
+		<hgroup>
+			<h1>Events</h1>
+			<p>{_metadata.excerpt}</p>
+		</hgroup>
+	</header>
 
-  <section>
-    <ul>
-      {#each data.collection as item}
-        <li><a href="{data.url}/{item.slug}">{item.name}</a></li>
-      {/each}
-    </ul>
-  </section>
+	<EntityIndex data={collection} {columns} {label} {sortBy} {url} />
 </article>
