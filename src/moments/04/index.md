@@ -17,7 +17,10 @@ Throughout this period, King’s fellows, research students, and archivists expa
 
 :::question{section}
 
-## So what question...
+## King’s Future. The military in university life now
 
-Links to MoD; teaching commitment at Defence Academy, Shrivenham. Implications for modern warfare – sense of how this is changing, place of universities within research landscape. Shock of Ukraine invasion and rising geopolitical tensions.
-:::
+King’s past relationship with the British military has left strong links between the university and military now; part of King’s broader, long-standing relationship with the British state. Most prominently this involves the Defence Studies Department which provides Professional Military Education for the services; but also research about and sometimes with the armed forces elsewhere in King’s. 
+
+Universities are public institutions partly funded based on national priorities; but they are also academic communities which rely on academic freedom. The tension between state direction and academic freedom is intrinsic to all university life. But it is potentially particularly stark with the military, which achieves state goals through violence, and takes position on geopolitics that members of a mixed academic community have different ideas about. 
+
+How should King’s navigate its relationship with military force? Are there themes from the complexity of its past it can draw from in doing so?
