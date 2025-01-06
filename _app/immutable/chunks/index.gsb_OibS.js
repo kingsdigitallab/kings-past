@@ -1,1 +1,0 @@
-function f(r){return t(r==null?void 0:r.start_date,r==null?void 0:r.end_date)}function t(r,a){return r!==a?`${new Date(r).toLocaleDateString()}–${new Date(a).toLocaleDateString()}`:new Date(r).toLocaleDateString()}function D(r){return t(r==null?void 0:r.start_date,r==null?void 0:r.end_date)}export{D as a,t as b,f};
