@@ -20,9 +20,19 @@
 
 <style>
 	.support-content {
+		align-items: flex-start;
+
+		& :is(h1, h2, h3, h4, h5, h6) {
+			max-inline-size: unset;
+		}
+
 		& :is(h2, h3, h4, h5, h6) {
 			margin-top: var(--size-4);
 			margin-bottom: var(--size-2);
+		}
+
+		& :not(:is(h2, h3, h4, h5, h6)) {
+			margin-inline: unset;
 		}
 
 		& p,
