@@ -15,4 +15,4 @@ King’s 150th anniversary came at the end of a tumultuous decade. Over the prev
 
 ## King's Futures. The changing configuration of student life
 
-How does the university articulate its mission and ethos in the run-up to the bicentenary. Is this a chance to take stock or innovate in new ways?
+Students' experiences of university are changing fast now; but they have changed quickly in the past, too. Can we draw on the past configuration of student life to think about students' experiences now? What forces drove changes in student life; are similar forces in play now?
