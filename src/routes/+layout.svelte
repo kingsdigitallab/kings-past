@@ -42,6 +42,8 @@
 	});
 
 	$: metadata = $page.data?._metadata || {};
+	$: replaceLast = $page.data?.essay || false;
+	$: breadcrumbTitle = $page.data?.meta?.title;
 </script>
 
 <svelte:head>
@@ -54,7 +56,7 @@
 
 		<main>
 			<PageTransition url={data.url}>
-				<Breadcrumbs />
+				<Breadcrumbs title={breadcrumbTitle} {replaceLast} />
 				<div class="body">
 					<slot />
 				</div>
