@@ -56,9 +56,6 @@
 				<div class="content">
 					<p>{item.description}</p>
 				</div>
-				<footer>
-					<p>More stats could be added here</p>
-				</footer>
 			</article>
 		{/each}
 	</section>
