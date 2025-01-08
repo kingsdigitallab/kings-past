@@ -8,7 +8,7 @@
 
 <header>
 	<div class="layout surface-2">
-		<nav>
+		<nav aria-label="Main navigation">
 			<a href="{base}/" class="title">
 				{config.title}
 			</a>
@@ -86,7 +86,6 @@
 	}
 
 	@media (max-width: 768px) {
-
 		img {
 			height: 4em;
 			margin-top: calc(-1 * var(--size-1));
