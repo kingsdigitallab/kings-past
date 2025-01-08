@@ -1,7 +1,6 @@
 <script lang="ts">
 	import type { Moment } from '$lib/types';
 	import { getMomentN, splitMomentTitle } from '$lib/moments';
-	import { RectangleHorizontal, RectangleVertical } from 'lucide-svelte';
 	import { base } from '$app/paths';
 
 	export let meta: Record<string, any>;
@@ -44,19 +43,20 @@
 			{/if}
 
 			<ol>
-				<span class="n">{meta.n}</span>
-				{#each moments as cur}
+				{#each moments as cur, idx}
 					<li>
 						<a
 							href={`${path}${getMomentN(cur.n)}`}
 							class:active={cur.n === meta.n}
 							title="Moment {cur.n}"
 						>
-							{#if cur.n === meta.n}
-								<RectangleHorizontal />
-							{:else}
-								<RectangleVertical />
-							{/if}
+							<img
+								src="{base}{moments[idx].feature.image}"
+								class="moment-icon"
+								class:active={cur.n === meta.n}
+								alt={moments[idx].feature.description}
+								title={moments[idx].feature.title}
+							/>
 						</a>
 					</li>
 				{/each}
@@ -116,6 +116,14 @@
 			fill: var(--yellow);
 			stroke: var(--yellow);
 		}
+	}
+
+	.moment-icon {
+		height: var(--size-fluid-2);
+		max-height: var(--size-fluid-2);
+		max-width: var(--size-fluid-2);
+		object-fit: cover;
+		width: var(--size-fluid-2);
 	}
 
 	header {
