@@ -2,6 +2,9 @@
 	import { base } from '$app/paths';
 	import { page } from '$app/stores';
 
+	export let title: string | undefined;
+	export let replaceLast: boolean = false;
+
 	let breadcrumbs: Array<{ label: string; href: string }> = [];
 
 	$: {
@@ -20,6 +23,10 @@
 					href: currentPath
 				};
 			});
+
+			if (title && replaceLast) {
+				breadcrumbs[breadcrumbs.length - 2].label = title;
+			}
 
 			breadcrumbs.unshift({ label: 'Home', href: `${base}/` });
 		}
@@ -51,6 +58,10 @@
 			align-items: center;
 			display: inline-flex;
 			gap: 0.5rem;
+
+			& li {
+				max-inline-size: unset;
+			}
 
 			& li:not(:last-child)::after {
 				content: '>';
