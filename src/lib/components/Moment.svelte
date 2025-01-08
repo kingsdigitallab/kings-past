@@ -21,15 +21,16 @@
 		<section class="surface-2">
 			{#if metaExtra}
 				<hgroup>
-					<h1 data-pagefind-filter="moment">{metaExtra.title}</h1>
-					<h2>
+					<h3>
 						{#if title}
 							<span>{title.year}</span>
 							{title.name}
 						{:else}
 							{meta.title}
 						{/if}
-					</h2>
+					</h3>
+					<p class="research">Research</p>
+					<h1 data-pagefind-filter="moment">{metaExtra.title}</h1>
 				</hgroup>
 			{:else}
 				<h1 data-pagefind-filter="moment">
@@ -126,6 +127,12 @@
 		width: var(--size-fluid-2);
 	}
 
+	.research {
+		font-family: var(--font-headings);
+		font-size: var(--font-size-5);
+		max-inline-size: none;
+	}
+
 	header {
 		padding: 0;
 		& > section {
@@ -136,9 +143,9 @@
 			& h1 {
 				max-inline-size: none;
 			}
-			& h2 {
+			& h3 {
 				max-inline-size: none;
-				margin-top: var(--size-5);
+				margin-bottom: var(--size-5);
 			}
 			& ol {
 				& span {
