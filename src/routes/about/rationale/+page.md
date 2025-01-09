@@ -19,16 +19,8 @@ King's Past draws from the range of work and enthusiasm which already existed ar
 
 ![image](https://github.com/user-attachments/assets/9c774ead-6f81-4469-ae77-19472321d448)
 
-
-
-
 ![image](https://github.com/user-attachments/assets/0ae39c27-693a-499e-9d7d-62fc9dfb5a72)
-
-
-
 
 ![image](https://github.com/user-attachments/assets/02bb2a30-0e86-4c30-9c6e-4858251db723)
 
-
-
-King’s Past brings together the history of King’s College in 13 moments. Each represents a theme, which was particularly significant at a particular moment in time. The moments provide focus for research into the details of King’s past. But they also provide a way for us to reflect on the relation between the past and future. Each moment poses a question for King’s and its community now, helping reflection on King’s past to shape our collective future. ![image](https://github.com/user-attachments/assets/5343afd0-0d9e-4898-a8d2-3e7c581ba930)
+![image](https://github.com/user-attachments/assets/5343afd0-0d9e-4898-a8d2-3e7c581ba930)
