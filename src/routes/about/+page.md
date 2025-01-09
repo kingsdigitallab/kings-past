@@ -4,7 +4,7 @@ excerpt: Learn more about the King's Past project
 tags: about, history, team, demonumenta
 ---
 
-# {title}
+# {About King's Past}
 
 The King's Past project explores the most important moments that shaped
 King’s College and discovers the individuals, organisations, and themes that
@@ -18,7 +18,8 @@ For the rationale behind the thirteen moments, see
 For more information about the Demonumenta project, see
 [Demonumenta](about/demonumenta).
 
-# What is King's Past?
+
+# What
 
 The ethos of King’s College London is knowledge with purpose. King’s aspires to be an inclusive civic institution, where the pursuit of learning is animated by a sense of relationships and responsibilities beyond the academy. But the history of King’s College London is complex. 
 
