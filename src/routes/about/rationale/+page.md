@@ -20,6 +20,6 @@ King's Past draws from the range of work and enthusiasm which already existed ar
 
 - [efforts led by KCLSU and academics to ‘liberate the curriculum’](https://www.kclsu.org/news/article/6015/Liberate-our-Education-Launch/)
 
-- [Strandlines project, into the history of life around King’s site on the Strand] (https://www.strandlines.london/)
+- [Strandlines project, into the history of life around King’s site on the Strand](https://www.strandlines.london/)
 
 - [research by historians and others into the history of empire, and British public institutions in the Empires and Decolonisation research hub](https://www.kcl.ac.uk/research/empires-and-decolonizations-research-hub)
