@@ -97,7 +97,7 @@
 				<ul>
 					<li>
 						<strong>{descriptionCount.toLocaleString()}</strong>
-						({descriptionPercentage}%) have biographical information
+						({descriptionPercentage}%) have descriptions
 					</li>
 					<li>
 						<strong>{alternativeNamesCount.toLocaleString()}</strong>
