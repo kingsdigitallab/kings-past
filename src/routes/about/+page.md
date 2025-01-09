@@ -1,5 +1,5 @@
 ---
-title: About
+title: About King's Past
 excerpt: Learn more about the King's Past project
 tags: about, history, team, demonumenta
 ---
@@ -27,12 +27,12 @@ The project is a platform for that process of research and communication. It bri
 
 The project does not offer a single vision of King’s history. There is certainly not a single official moral narrative. Instead, it provides a resource to allow anyone interested to navigate their own way through King’s past. We hope an initial engagement inspires users of the web resource - staff, students, alumni - to become producers, and research King’s Past themselves.
 
-The projects aims are to:
+The project aims are to:
 
-(a)	strengthen King's sense of purpose, through research and shared reflection on the past; 
+* strengthen King's sense of purpose, through research and shared reflection on the past; 
 
-(b)	support all students and staff developing a sense the university is for them, through work on King’s connection from diverse places and backgrounds
+* support all students and staff developing a sense the university is for them, through work on King’s connection from diverse places and backgrounds
 
-(c)	increase historical knowledge about our own institution, which – as scholars – we just think is an intrinsically good thing.
+* increase historical knowledge about our own institution, which – as scholars – we just think is an intrinsically good thing.
 
-(d)	research and communicate King’s Past in a scholarly, rigorous way, while facilitating  conversation between multiple different present-day perspectives
+* research and communicate King’s Past in a scholarly, rigorous way, while facilitating  conversation between multiple different present-day perspectives
