@@ -15,6 +15,8 @@ King’s was a trailblazer for the education of women. The University of London 
 
 This research will explore the emancipatory power of King’s for women, as well as the systemic inequalities it instituted and perpetuated. It will examine the debates around the inclusion of women in education and the College’s transition to a fully co-educational institution, and situate these debates in the wider contexts of feminism and democratic reform.
 
-## So what question...
+:::question{section}
+
+## King's Future. Gender equality in the past and present
 
 While gendered inequalities have levelled out over the last generation, there remain serious discrepancies for women in Higher Education, for both students and staff, in relation for example to pay and power. This research will shed light on the struggles of the past and the ways in which their legacies continue to inform the structures and culture of life at King’s today. It will reflect on the tight link between education and women’s liberation, and the ongoing intransigencies within the sector and with regard to the very idea of women’s intelligence.
