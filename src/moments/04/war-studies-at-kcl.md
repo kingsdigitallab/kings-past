@@ -5,6 +5,8 @@ tags:
   - essay
 ---
 
+**Joseph A. Maiolo** is Professor of International History in the Department of War Studies
+
 > This article surveys the origins and development of War Studies at King’s College London from the mid-nineteenth century to the present. While in the nineteenth and early twentieth centuries the growth of military studies at King’s was sporadic, the two world wars, the Cold War and post-cold war conflicts drove the rapid expansion of War Studies. This article describes how the department has changed from one focused on military history and strategic studies to one that tackles a range of contemporary security issues from many analytical perspectives and methodological approaches. It concludes with some personal observations about the challenges faced by the Department of War Studies as a scholarly community and as a collective research effort.
 
 King’s College London is unique among leading research universities in hosting the world’s largest faculty devoted to the study of war. There are of course other prestigious institutions that host big departments of international relations and global affairs, but what makes War Studies King’s distinct is that the inter-disciplinary study of war is the defining purpose. The development of War Studies is the topic of this paper. My goal is to provide readers with an overview of how the college obtained its standing in the field. That history reflects the larger pattern of change in the character of armed conflict from the mid-nineteenth century to the early twenty first century: from a period of improvisation and sporadic developments to one of scholarly professionalization and permanent and expanding academic faculties.
