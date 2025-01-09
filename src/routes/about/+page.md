@@ -1,10 +1,10 @@
 ---
-title: About
+title: About King's past
 excerpt: Learn more about the King's Past project
 tags: about, history, team, demonumenta
 ---
 
-# {About King's Past}
+# {title}
 
 The King's Past project explores the most important moments that shaped
 King’s College and discovers the individuals, organisations, and themes that
