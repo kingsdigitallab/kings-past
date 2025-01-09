@@ -12,8 +12,14 @@ Taking such an approach, we quickly recognised there could be no single seamless
 
 King's Past draws from the range of work and enthusiasm which already existed around the investigation of King’s past. It pulls in a range of existing work including: 
 
-• King’s Colonial Past module, taught in the history department 
-• research into Sir Robert Clayton and Sir Thomas Guy, commissioned by Guys and St Thomas’ Trust 
-• efforts led by KCLSU and academics to ‘liberate the curriculum’ 
-• Strandlines project, into the history of life around King’s site on the Strand 
-• research by historians and others into the history of empire, and British public institutions
+- [work by King's archives, to catalogue and publish material on the history of King's](https://intouch-archive.kcl.ac.uk/into-the-archives/)
+
+- [Investigating the King’s Colonial Past module, taught in the history department but available to all King's students](https://www.kcl.ac.uk/abroad/module-options/investigating-the-colonial-past-of-kings-college-london)
+
+- [research into Sir Robert Clayton and Sir Thomas Guy, commissioned by Guys and St Thomas’ Trust ](https://gsttfoundation.org.uk/our-work/arts-and-heritage/our-collection/statues/)
+
+- [efforts led by KCLSU and academics to ‘liberate the curriculum’](https://www.kclsu.org/news/article/6015/Liberate-our-Education-Launch/)
+
+- [Strandlines project, into the history of life around King’s site on the Strand] (https://www.strandlines.london/)
+
+- [research by historians and others into the history of empire, and British public institutions in the Empires and Decolonisation research hub](https://www.kcl.ac.uk/research/empires-and-decolonizations-research-hub)
