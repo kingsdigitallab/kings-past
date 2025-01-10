@@ -3,7 +3,7 @@ title: '1853: The crisis of Anglicanism in the mid-nineteenth-century'
 n: 3
 tags:
   - moment
-excerpt: 'King’s College was founded as an Anglican university, with a clear religious identity, and its later history shaped and has been shaped by religious debate in Britain and beyond'
+excerpt: "King’s College was founded as an Anglican university, with a clear religious identity, and its later history shaped and has been shaped by religious debate in Britain and beyond"
 feature:
   image: /assets/images/moments/3.webp
   title: The image title
