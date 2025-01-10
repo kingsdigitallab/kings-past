@@ -37,6 +37,8 @@
 
 		& li {
 			margin-inline: var(--size-4);
+			list-style-type: circle;
+			font-size: var(--font-size-3);
 		}
 
 		& p:first-of-type::first-letter {
