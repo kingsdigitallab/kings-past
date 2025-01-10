@@ -3,7 +3,7 @@ title: "1900: King's and the Staffing of empire"
 n: 8
 tags:
   - moment
-excerpt: 'Through the nineteenth and early twentieth century, King's was an important conduit for staffing the British empire'
+excerpt: "Through the nineteenth and early twentieth century, King's was an important conduit for staffing the British empire"
 feature:
   image: /assets/images/moments/8.webp
   title: The image title
