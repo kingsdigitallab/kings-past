@@ -61,16 +61,26 @@ While one of our great strengths is that we are close to governments and we have
 ## Sources
 
 Freedman, L. _The Official History of the Falklands Campaign_ 2 vols. (London, 2007).
+
 Goodman, M. and Omand, D., 'What Analysts Need to Understand: The King's Intelligence Studies Programme’, _Studies in Intelligence_ 52(4) (2008), pp. 1-12
+
 Hearnshaw, F.J.C., _The Centenary History of King's College, London, 1828-1928_ (London, 1929).
+
 Huelin, G., _King’s College London, 1828-1978_ (London, 1978)
+
 Howard, M., _Captain Professor: The Memoirs of Sir Michael Howard_ (London, 2006)
+
 Lambert, A.D., _The Foundations of Naval History: John Knox Laughton, the Royal Navy and the Historical Profession_ (London, 1998)
+
 Maher, S., _Salafi-Jihadism: The History of an Idea_ (London, 2016)
+
 Neumann, P., _Radicalized: New Jihadists and the Threat to the West_ (London, 2016)
+
 Omand, D., _Securing the State_ (London, 2012)
+
 Paskins, B., and Dockrill, M.L., _Ethics of War_ (London, 1979)
-Holden Reid, B., 'Michael Howard and the Evolution of Modern War Studies’, _The Journal of Military History_, 73(3) (2009), pp. 869-904.
+
+Holden Reid, B., 'Michael Howard and the Evolution of Modern War Studies’, _The Journal of Military History_, 73(3) (2009), 869-904.
 
 **Joseph A. Maiolo** is Professor of International History in the Department of War Studies at King’s College London and Visiting Research Professor at the Norwegian Defence Intelligence School, Oslo. He is author of _Cry Havoc: How the Arms Race Drove the World to War, 1931–1941_ (New York, 2010), co-author of _An International History of the Twentieth Century_ (London, 2014), and co-editor of Volume II of _The Cambridge History of the Second World War_ (Cambridge, 2015). He is co-editor of _The Journal of Strategic Studies_.
 
