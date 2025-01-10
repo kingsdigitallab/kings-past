@@ -3,7 +3,7 @@ title: "1885: Women's education"
 n: 7
 tags:
   - moment
-excerpt: ''
+excerpt: 'King’s was a trailblazer for the education of women, with the University of London awarding degrees to women from the 1870s, and King’s Ladies Department opening in 1885'
 feature:
   image: /assets/images/moments/7.webp
   title: The image title
