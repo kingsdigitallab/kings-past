@@ -108,9 +108,7 @@
 			article {
 				a {
 					display: block;
-					> span {
-						margin-top: 0 !important;
-					}
+
 					h2 span {
 						font-size: var(--font-size-6);
 						margin: -65px 0 0 var(--size-2);
