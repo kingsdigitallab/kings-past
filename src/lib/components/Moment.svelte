@@ -21,15 +21,7 @@
 		<section class="surface-2">
 			{#if metaExtra}
 				<hgroup>
-					<h3>
-						{#if title}
-							<span>{title.year}</span>
-							{title.name}
-						{:else}
-							{meta.title}
-						{/if}
-					</h3>
-					<p class="research">Research</p>
+					<span class="research">Research</span>
 					<h1 data-pagefind-filter="moment">{metaExtra.title}</h1>
 				</hgroup>
 			{:else}
@@ -127,10 +119,12 @@
 		width: var(--size-fluid-2);
 	}
 
-	.research {
+	span.research {
 		font-family: var(--font-headings);
-		font-size: var(--font-size-5);
+		font-size: var(--font-size-2);
 		max-inline-size: none;
+		text-transform: uppercase;
+		color: var(--yellow);
 	}
 
 	header {
