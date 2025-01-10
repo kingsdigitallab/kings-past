@@ -16,7 +16,7 @@ By the 1850s King’s had established a close relationship to the East India Com
 
 :::question{section}
 
-## King's future; King's careers
+## King's future. King's careers
 
 King's has had long connection to powerful institutions, in central London and elsewhere. It has, historically, helped sustain a political and administrative elite, but has also been a route for students from non-elite backgrounds into elite careers, in spheres from finance to the civil service. How should the university now guide and supports students on their career paths? How can it encourage graduates to exercise the roles they hold with a sense of responsibility? Should the university take responsibility for directing students towards certain careers?
 :::
