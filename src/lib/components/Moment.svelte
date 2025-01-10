@@ -88,37 +88,6 @@
 </article>
 
 <style>
-	#moment {
-		& > p {
-			font-family: var(--font-headings);
-			font-size: var(--font-size-4);
-			max-inline-size: none;
-		}
-
-		& a rect {
-			fill: var(--pearl-grey);
-			stroke: var(--pearl-grey);
-			transform: scale(0.7);
-			&:hover {
-				fill: white;
-				stroke: white;
-			}
-		}
-
-		& a.active rect {
-			fill: var(--yellow);
-			stroke: var(--yellow);
-		}
-	}
-
-	.moment-icon {
-		height: var(--size-fluid-2);
-		max-height: var(--size-fluid-2);
-		max-width: var(--size-fluid-2);
-		object-fit: cover;
-		width: var(--size-fluid-2);
-	}
-
 	span.research {
 		font-family: var(--font-headings);
 		font-size: var(--font-size-2);
@@ -142,26 +111,33 @@
 				margin-bottom: var(--size-5);
 			}
 			& ol {
-				& span {
-					margin: -4px 30px 0 0;
-					color: var(--yellow);
+				& li {
+					width: 100%;
+					& a {
+						border: none;
+						& img.moment-icon {
+							height: 5vw;
+							object-fit: cover;
+							width: 100%;
+							object-fit: cover;
+							object-position: center;
+							width: 100%;
+							opacity: 0.4;
+							&:hover {
+								opacity: 1;
+							}
+							&.active {
+								border-bottom: 1vw solid var(--yellow);
+								opacity: 1;
+							}
+						}
+					}
 				}
 				display: flex;
-				gap: var(--size-1);
 				align-items: center;
+				gap: var(--size-1);
 				/*justify-content: center;*/
 			}
-		}
-
-		& img {
-			height: 100%;
-			object-fit: cover;
-			object-position: center;
-			width: 100%;
-		}
-
-		& a.active {
-			border: none;
 		}
 	}
 
