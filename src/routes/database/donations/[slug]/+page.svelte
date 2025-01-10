@@ -19,9 +19,9 @@
 <Entity entity={donation} entityType="Donation" {meta} {description} {moments} {sources} {urls}>
 	{#if donorsPerson?.length || donorsOrganisation?.length}
 		<section>
-			<h2>Donors</h2>
+			<h3>Donors</h3>
 			{#if donorsPerson?.length}
-				<h3>People</h3>
+				<h4>People</h4>
 				<ul>
 					{#each donorsPerson as donor}
 						<li data-pagefind-filter="Person"><a href="../people/{donor.slug}">{donor.name}</a></li>
@@ -29,7 +29,7 @@
 				</ul>
 			{/if}
 			{#if donorsOrganisation?.length}
-				<h3>Organisations</h3>
+				<h4>Organisations</h4>
 				<ul>
 					{#each donorsOrganisation as donor}
 						<li data-pagefind-filter="Organisation">
@@ -42,9 +42,9 @@
 	{/if}
 	{#if recipientsPerson?.length || recipientsOrganisation?.length}
 		<section>
-			<h2>Recipients</h2>
+			<h3>Recipients</h3>
 			{#if recipientsPerson?.length}
-				<h3>People</h3>
+				<h4>People</h4>
 				<ul>
 					{#each recipientsPerson as recipient}
 						<li data-pagefind-filter="Person">
@@ -54,7 +54,7 @@
 				</ul>
 			{/if}
 			{#if recipientsOrganisation?.length}
-				<h3>Organisations</h3>
+				<h4>Organisations</h4>
 				<ul>
 					{#each recipientsOrganisation as recipient}
 						<li data-pagefind-filter="Organisation">

@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { EMPTY_PLACEHOLDER } from '$lib/config';
+	import PlacesMap from '$lib/components/PlacesMap.svelte';
 	import type { Donation, Event, Moment, Organisation, Person, Place } from '$lib/types';
 	import { LucideExternalLink } from 'lucide-svelte';
 
@@ -66,7 +67,16 @@
 			{@html description}
 		</section>
 	{/if}
+
 	<section class="info">
+		{#if entityType === 'Place'}
+			{#if entity.longitude && entity.latitude}
+				<section class="map">
+					<PlacesMap places={[entity]} />
+				</section>
+			{/if}
+		{/if}
+
 		<h2>Related information</h2>
 		{#if moments && moments.length}
 			<section>
@@ -164,7 +174,7 @@
 		max-width: 50rem;
 		width: 100%;
 		margin: 0 auto;
-		padding-top: var(--size-10);
+		padding-top: var(--size-6);
 
 		& h2 {
 			border-bottom: 1px solid var(--midnight-blue);
@@ -184,9 +194,6 @@
 			font-family: var(--font-sans);
 			margin: 0;
 			padding: var(--size-1) var(--size-4) var(--size-1) var(--size-4);
-		}
-
-		& section {
 		}
 
 		& ul {
@@ -212,5 +219,9 @@
 				font-size: var(--font-size-3);
 			}
 		}
+	}
+
+	section.map {
+		padding-bottom: var(--size-10);
 	}
 </style>

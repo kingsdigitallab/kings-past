@@ -1,4 +1,5 @@
 <script lang="ts">
+	import * as config from '$lib/config';
 	import type { Moment } from '$lib/types';
 	import { base } from '$app/paths';
 	import { Image } from '@unpic/svelte';
@@ -9,8 +10,8 @@
 
 <section id="moments">
 	<hgroup>
-		<h2>The 13 Moments</h2>
-		<p>Explore the pivotal moments in King's College history</p>
+		<h2>{config.momentsHeader.title}</h2>
+		<p>{config.momentsHeader.message}</p>
 	</hgroup>
 	<ul class="moments">
 		{#each moments as moment}

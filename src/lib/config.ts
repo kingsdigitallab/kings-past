@@ -17,6 +17,11 @@ export const hero = {
 		'Explore the most important moments that shaped King’s College  and discover the individuals, organisations, and themes that influenced its journey.'
 };
 
+export const momentsHeader = {
+	title: 'The 13 Moments',
+	message: 'Explore the pivotal moments in King’s College history'
+};
+
 export const database = {
 	excerpt:
 		'A comprehensive database of King’s College London’s historical events, artifacts, and significant figures.',

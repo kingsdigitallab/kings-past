@@ -95,5 +95,6 @@
 }
 
 .md .footnotes li {
+	list-style: decimal !important;
 	max-inline-size: none;
 }
