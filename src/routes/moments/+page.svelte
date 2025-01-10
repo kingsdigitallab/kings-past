@@ -14,7 +14,6 @@
 
 			<article id="moment-{moment.slug}">
 				<a href="moments/{moment.slug}">
-					<span>{parseInt(moment.slug)}</span>
 					<figure>
 						<img src="{base}{moment.feature.image}" alt={moment.feature.description} />
 					</figure>
@@ -61,18 +60,6 @@
 							}
 						}
 					}
-					& > span {
-						width: var(--size-8);
-						height: var(--size-8);
-						font-size: var(--font-size-3);
-						text-align: center;
-						position: absolute;
-						z-index: 9;
-						line-height: var(--size-8);
-						text-align: center;
-						background-color: rgba(255, 255, 255, 0.8);
-						margin-top: var(--size-5);
-					}
 				}
 				figure {
 					overflow: hidden;
@@ -91,6 +78,8 @@
 					text-wrap: auto;
 					padding: var(--size-7) var(--size-2) var(--size-2) var(--size-2);
 					border-bottom: var(--size-2) solid transparent;
+					background: var(--midnight-blue);
+					color: white;
 					& > span {
 						font-size: var(--font-size-7);
 						position: absolute;
