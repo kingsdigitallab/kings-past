@@ -17,7 +17,8 @@ This is an accessibility statement from King's Digital Lab.
 King's Digital Lab assessed the accessibility of this website using the following
 approaches:
 
-- Self-evaluation using [Axe accessibility tools](https://www.deque.com/axe/)
+- Self-evaluation using [Webval](https://github.com/kingsdigitallab/webval), a web application that uses [Pa11y](https://pa11y.org/), [HTML_CodeSniffer](https://squizlabs.github.io/HTML_CodeSniffer/) and [Axe accessibility tools](https://www.deque.com/axe/) to report and validate accessibility
+- [Evaluation report](https://kingsdigitallab.github.io/webval/docs/?project=kings-past&levels=%7CA%7CAA%7C&resolutions=open&depth=issue&tab=issues&tagSlug=manual.htmlcs&issueId=&isOffline=false)
 - Manual testing of the site by the King's Digital Lab team
 
 ## Limitations and alternatives
@@ -42,9 +43,11 @@ solutions. Please contact us if you observe an issue not listed below.
    the 3D content, please contact us and we will provide alternative means to view
    the information.
 
-2. **Content** : Content is added regularly by project partners and may not have yet been tested for accessibility. When we run an accessibility tool on the content we will notify project partners to fix any issues.
+2. **Content** : Content is added regularly by project partners and may not have
+   yet been tested for accessibility. When we run an accessibility tool on the
+   content we will notify project partners to fix any issues.
 
-  ## Feedback
+## Feedback
 
 We welcome your feedback on the accessibility of King's Past. Please let us know
 if you encounter barriers to accessibility and we will investigate how to address these:
@@ -65,7 +68,8 @@ King's Digital Lab takes the following measures to ensure accessibility:
 
 ## Conformance status
 
-The Web Content Accessibility Guidelines (WCAG) defines requirements to improve accessibility for people with disabilities.
+The Web Content Accessibility Guidelines (WCAG) defines requirements to improve
+accessibility for people with disabilities.
 It defines three levels of conformance: Level A, Level AA, and Level AAA.
 The project is partially conformant with WCAG 2.1 level AA. Partially conformant
 means that some parts of the content do not fully conform to the accessibility
