@@ -53,8 +53,8 @@ standards used.
 
 ## Limitations and alternatives
 
-Despite our best efforts to ensure the accessibility, there may
-be areas where accessibility may be limited. Below is a description of known issues, and potential
+Despite our best efforts to ensure accessibility, there may
+be areas where accessibility is limited. Below is a description of known issues, and potential
 solutions. Please contact us if you observe an issue not listed below.
 
 ### Known limitations for King's Past
