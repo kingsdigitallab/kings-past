@@ -66,56 +66,57 @@
 			{@html description}
 		</section>
 	{/if}
+	<section class="info">
+		{#if moments && moments.length}
+			<section class="moments">
+				<h2>Moments</h2>
+				<ol>
+					{#each moments as moment}
+						<li class="surface-2" data-pagefind-filter="Moment">
+							<a href="../../moments/{moment.slug}">{moment.title}</a>
+						</li>
+					{/each}
+				</ol>
+			</section>
+		{/if}
 
-	{#if moments && moments.length}
-		<section class="moments">
-			<h2>Moments</h2>
-			<ol>
-				{#each moments as moment}
-					<li class="surface-2" data-pagefind-filter="Moment">
-						<a href="../../moments/{moment.slug}">{moment.title}</a>
-					</li>
-				{/each}
-			</ol>
-		</section>
-	{/if}
+		<slot />
 
-	<slot />
-
-	{#if sources && sources.length}
-		<section>
-			<h2>Sources</h2>
-			<ul>
-				{#each sources as source}
-					<li>
-						<p>
-							{#if source.url}
-								<a href={source.url}>{source.name}</a>
-							{:else}
-								{source.name}
+		{#if sources && sources.length}
+			<section>
+				<h2>Sources</h2>
+				<ul>
+					{#each sources as source}
+						<li>
+							<p>
+								{#if source.url}
+									<a href={source.url}>{source.name}</a>
+								{:else}
+									{source.name}
+								{/if}
+							</p>
+							{#if source.description}
+								<p>{source.description}</p>
 							{/if}
-						</p>
-						{#if source.description}
-							<p>{source.description}</p>
-						{/if}
-					</li>
-				{/each}
-			</ul>
-		</section>
-	{/if}
+						</li>
+					{/each}
+				</ul>
+			</section>
+		{/if}
 
-	{#if urls && urls.length}
-		<section>
-			<h2>External links</h2>
-			<ul>
-				{#each urls as url}
-					<li>
-						<a href={url.url}>{url.name}</a>
-					</li>
-				{/each}
-			</ul>
-		</section>
-	{/if}
+		{#if urls && urls.length}
+			<section>
+				<h2>External links</h2>
+				<ul>
+					{#each urls as url}
+						<li>
+							<a href={url.url}>{url.name}</a>
+						</li>
+					{/each}
+				</ul>
+			</section>
+		{/if}
+	</section>
 </article>
 
 <style>
@@ -189,5 +190,54 @@
 	.moments ol li:hover {
 		color: var(--yellow);
 		box-shadow: var(--size-1) var(--size-1) var(--yellow);
+	}
+
+	section.info {
+		max-width: 50rem;
+		width: 100%;
+		margin: 0 auto;
+		padding-inline: var(--size-4);
+		padding: 0;
+		& h2 {
+			background-color: var(--powder-blue);
+			font-size: var(--font-size-5);
+			font-weight: 200;
+			margin: 0;
+			min-width: 100%;
+			padding: var(--size-3) var(--size-4);
+		}
+
+		& section {
+			padding-left: var(--size-4);
+			background: white;
+		}
+
+		& ul {
+			list-style-type: none;
+			margin-left: -28px;
+			padding-left: var(--size-5);
+		}
+
+		& ul li {
+			break-inside: avoid;
+			font-size: var(--font-size-3);
+			margin-block: var(--size-2);
+			padding-inline-start: var(--size-2);
+
+			& a {
+				border-left: var(--size-2) solid var(--surface-1);
+				display: block;
+				padding-left: var(--size-3);
+				text-decoration: none;
+				width: calc(100% - var(--size-2));
+
+				&:hover {
+					background-color: var(--midnight-blue);
+					border-left: var(--size-2) solid var(--pearl-grey);
+					color: white;
+					opacity: 1;
+				}
+			}
+		}
 	}
 </style>
