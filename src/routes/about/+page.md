@@ -32,3 +32,5 @@ The project aims are to:
 - support all students and staff developing a sense the university is for them, through work on King’s connection from diverse places and backgrounds
 - increase historical knowledge about our own institution, which – as scholars – we just think is an intrinsically good thing.
 - research and communicate King’s Past in a scholarly, rigorous way, while facilitating conversation between multiple different present-day perspectives
+
+King's Past is a platform to research and present the multiple histories of King's College London. A project about King's developed by the King's community, it represents the interests of the King's students and staff who've got involved with it. If you think something's missing, or would like to tell a different aspect of the King's story [please email the project.](kingspast@kcl.ac.uk)
