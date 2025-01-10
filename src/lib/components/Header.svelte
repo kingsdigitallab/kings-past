@@ -80,22 +80,27 @@
 	}
 
 	@media (max-width: 992px) {
+		img {
+			height: 6.5rem;
+		}
+
 		.title {
 			font-size: var(--font-size-4);
 		}
 	}
 
 	@media (max-width: 768px) {
-		img {
-			height: 4em;
-			margin-top: calc(-1 * var(--size-1));
-			position: absolute;
-			right: 0;
-			top: 0;
-		}
 		nav {
 			display: block;
 			z-index: 1;
+		}
+
+		img {
+			height: var(--size-10);
+			margin-top: calc(-1 * var(--size-1));
+			position: absolute;
+			right: var(--size-2);
+			top: 0;
 		}
 
 		/* menu */
@@ -125,7 +130,7 @@
 			display: inline-block;
 			padding: 28px 20px;
 			position: absolute;
-			right: 85px;
+			right: 105px;
 			top: -5px;
 			user-select: none;
 		}
