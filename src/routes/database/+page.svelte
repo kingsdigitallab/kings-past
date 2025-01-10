@@ -56,9 +56,6 @@
 				<div class="content">
 					<p>{item.description}</p>
 				</div>
-				<footer>
-					<p>More stats could be added here</p>
-				</footer>
 			</article>
 		{/each}
 	</section>
@@ -142,13 +139,5 @@
 		background-color: white;
 		margin: 0 var(--size-1) var(--size-1) var(--size-1);
 		padding: var(--size-3);
-	}
-
-	.card footer {
-		display: flex;
-		flex-direction: column;
-		margin-top: auto;
-		padding: var(--size-3);
-		width: 100%;
 	}
 </style>

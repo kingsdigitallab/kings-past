@@ -1,5 +1,4 @@
 <script lang="ts">
-	import * as config from '$lib/config';
 	import EntityIndex from '$lib/components/EntityIndex.svelte';
 	import { dateColumn, nameColumn, locationColumn, statusColumn } from '$lib/tableColumns';
 

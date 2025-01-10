@@ -28,24 +28,29 @@ tags: about, team
 - Ruth Craggs (Geography)
 - Richard Drayton (History)
 - Javed Majeed (English)
-- Shuangyu Li (Cultural Competency Unit)
-- Jean Smith (Liberal Arts)
-- Jim Biork (History)
+- Shuangyu Li (Interdisciplinary Humanities)
+- Jean Smith (Interdisciplinary Humanities)
+- Jim Bjork (History)
 - Sarah Limb (History)
+- Joe Maiolo (War Studies)
 - Toby Green (History)
 - Hannah Murphy (History)
 - Niall O’Flaherty (History)
 - Gabriel Mesevage (History)
 - David Edgerton (History)
+- Hannah Dawson (History)
 
 ## Research Assistants: UG Internship
 
-- Siani Senthil Kumar (2023)
-- Ama Blain (2023)
-- Natasha Kee (2023)
-- Paul-Alexis Nkwedjang (2023)
-- Wendy Agutu (2023)
-- Savina Kataria (2024)
+- Siani Senthil Kumar (Business Management, BA, 2023)
+- Ama Blain (History, 2023)
+- Gian Ghatora (English BA, 2024)
+- Abiofa Dan-Abia (Politics, Philosophy and Law, LLB, 2024)
+- Sadie Mansfield (Liberal Arts BA, 2024)
+- Natasha Kee (Early Modern English Literature: Text and Transmission MA, 2023)
+- Paul-Alexis Nkwedjang (Modern Languages, BA, 2023)
+- Wendy Agutu (Politics, Philosophy and Law, LLB, 2023)
+- Savina Kataria (Religion, Politics and Society BA, 2024)
 
 ## King's Digital Lab
 

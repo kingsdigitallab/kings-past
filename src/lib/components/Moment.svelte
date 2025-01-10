@@ -1,7 +1,6 @@
 <script lang="ts">
 	import type { Moment } from '$lib/types';
 	import { getMomentN, splitMomentTitle } from '$lib/moments';
-	import { RectangleHorizontal, RectangleVertical } from 'lucide-svelte';
 	import { base } from '$app/paths';
 
 	export let meta: Record<string, any>;
@@ -22,15 +21,16 @@
 		<section class="surface-2">
 			{#if metaExtra}
 				<hgroup>
-					<h1 data-pagefind-filter="moment">{metaExtra.title}</h1>
-					<h2>
+					<h3>
 						{#if title}
 							<span>{title.year}</span>
 							{title.name}
 						{:else}
 							{meta.title}
 						{/if}
-					</h2>
+					</h3>
+					<p class="research">Research</p>
+					<h1 data-pagefind-filter="moment">{metaExtra.title}</h1>
 				</hgroup>
 			{:else}
 				<h1 data-pagefind-filter="moment">
@@ -44,19 +44,20 @@
 			{/if}
 
 			<ol>
-				<span class="n">{meta.n}</span>
-				{#each moments as cur}
+				{#each moments as cur, idx}
 					<li>
 						<a
 							href={`${path}${getMomentN(cur.n)}`}
 							class:active={cur.n === meta.n}
 							title="Moment {cur.n}"
 						>
-							{#if cur.n === meta.n}
-								<RectangleHorizontal />
-							{:else}
-								<RectangleVertical />
-							{/if}
+							<img
+								src="{base}{moments[idx].feature.image}"
+								class="moment-icon"
+								class:active={cur.n === meta.n}
+								alt={moments[idx].feature.description}
+								title={moments[idx].feature.title}
+							/>
 						</a>
 					</li>
 				{/each}
@@ -118,6 +119,20 @@
 		}
 	}
 
+	.moment-icon {
+		height: var(--size-fluid-2);
+		max-height: var(--size-fluid-2);
+		max-width: var(--size-fluid-2);
+		object-fit: cover;
+		width: var(--size-fluid-2);
+	}
+
+	.research {
+		font-family: var(--font-headings);
+		font-size: var(--font-size-5);
+		max-inline-size: none;
+	}
+
 	header {
 		padding: 0;
 		& > section {
@@ -128,9 +143,9 @@
 			& h1 {
 				max-inline-size: none;
 			}
-			& h2 {
+			& h3 {
 				max-inline-size: none;
-				margin-top: var(--size-5);
+				margin-bottom: var(--size-5);
 			}
 			& ol {
 				& span {
