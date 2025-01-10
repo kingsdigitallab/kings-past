@@ -14,7 +14,7 @@ export const nav = [
 export const hero = {
 	title: "Discover the past of King's College London to help shape the future",
 	message:
-		"Explore the multiple histories of King's College London, and their complex connections to life in London, Britain and across the world."
+		"Explore the multiple histories of King's College London and their complex connections to life in London, Britain and across the world."
 };
 
 export const momentsHeader = {
