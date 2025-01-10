@@ -35,11 +35,6 @@
 			margin-inline: unset;
 		}
 
-		& p,
-		& li {
-			font-size: var(--font-size-2);
-		}
-
 		& li {
 			margin-inline: var(--size-4);
 		}
