@@ -22,7 +22,7 @@
 	<EventsList {events} />
 
 	{#if donations?.length}
-		<h2>Donations made at {place.name}</h2>
+		<h3>Donations made at {place.name}</h3>
 		<ul>
 			{#each donations as donation}
 				<li data-pagefind-filter="Donation">
