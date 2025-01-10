@@ -8,7 +8,7 @@ export async function load({ fetch }) {
 	return {
 		_metadata: {
 			title: 'Moments',
-			excerpt: "Explore the moments that have shaped the King's",
+			excerpt: "Explore the many-side history of King's College London moments through thirteen moments, which help trace the connection between King's and the world beyond, and pose questions for us now.",
 			tags: 'database, moments'
 		},
 		moments
