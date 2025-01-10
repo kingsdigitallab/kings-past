@@ -3,7 +3,7 @@ title: '1882: Race, Civilisation and Culture'
 n: 6
 tags:
   - moment
-excerpt: "From the late nineteenth to mid twentieth century, King's was host to important strands of research on human diversity, with many scholars in both humanities and sciences central to the propagation of ideas about racial or civilizational hierarchies"
+excerpt: "From the late nineteenth to mid twentieth century, King's was host to important strands of research on human diversity, with many scholars in both humanities and sciences central to the propagation of ideas about racial or civilizational hierarchy"
 feature:
   image: /assets/images/moments/6.webp
   title: The image title
