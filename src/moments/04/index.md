@@ -1,5 +1,5 @@
 ---
-title: '1857: War, nineteenth-century empire and Conservative empire'
+title: '1857: War, nineteenth-century empire and conservative empire'
 n: 4
 tags:
   - moment
