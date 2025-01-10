@@ -78,6 +78,8 @@
 					text-wrap: auto;
 					padding: var(--size-7) var(--size-2) var(--size-2) var(--size-2);
 					border-bottom: var(--size-2) solid transparent;
+					background: var(--midnight-blue);
+					color: white;
 					& > span {
 						font-size: var(--font-size-7);
 						position: absolute;
