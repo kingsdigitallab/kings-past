@@ -83,7 +83,7 @@ approaches:
 
 ## Date
 
-This statement was updated 10 January 2025. 
+This statement was updated 10 January 2025.
 
 This statement was created on 04 November 2024 using the
 [W3C Accessibility Statement Generator Tool](https://www.w3.org/WAI/planning/statements/).

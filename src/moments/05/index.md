@@ -20,3 +20,4 @@ King’s trained medics, engineers and scientists who spread innovative techniqu
 ## King’s Future. Science and the practical world
 
 The relationship between academic knowledge and the world of power and practice outside the university is a theme through every areas of King’s work. How does the history of science and technology at King’s help the university navigate this relationship now? What should the relationship between scientists, and powerful institutions like business or government be? What kind of role should scientific, technical and medical education train students for? Should it be for national or global roles, and what should the balance be between each?
+:::
