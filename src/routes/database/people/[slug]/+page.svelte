@@ -20,7 +20,8 @@
 		sources,
 		sameAs,
 		urls,
-		people
+		people,
+		placesBySlug
 	} = data;
 </script>
 
@@ -35,7 +36,7 @@
 	{sources}
 	{urls}
 >
-	<EventsList {events} />
+	<EventsList {events} {placesBySlug} />
 
 	{#if knows && knows.length}
 		<section>

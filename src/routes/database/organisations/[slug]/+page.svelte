@@ -18,7 +18,8 @@
 		moments,
 		sameAs,
 		sources,
-		urls
+		urls,
+		placesBySlug
 	} = data;
 </script>
 
@@ -34,9 +35,9 @@
 >
 	{#if personMembers?.length || organisationMembers?.length}
 		<section>
-			<h2>Members</h2>
+			<h3>Members</h3>
 			{#if personMembers?.length}
-				<h3>People</h3>
+				<h4>People</h4>
 				<ul>
 					{#each personMembers as person}
 						<li data-pagefind-filter="Person">
@@ -46,7 +47,7 @@
 				</ul>
 			{/if}
 			{#if organisationMembers?.length}
-				<h3>Organisations</h3>
+				<h4>Organisations</h4>
 				<ul>
 					{#each organisationMembers as organisation}
 						<li data-pagefind-filter="Organisation">
@@ -59,7 +60,7 @@
 	{/if}
 	{#if memberOf?.length}
 		<section>
-			<h2>Member of</h2>
+			<h3>Member of</h3>
 			<ul>
 				{#each memberOf as organisation}
 					<li data-pagefind-filter="Organisation">
@@ -70,7 +71,7 @@
 		</section>
 	{/if}
 
-	<EventsList {events} />
+	<EventsList {events} {placesBySlug} />
 
 	<DonationsList entityName={organisation.name} {donationsAsAgent} {donationsAsRecipient} />
 </Entity>
