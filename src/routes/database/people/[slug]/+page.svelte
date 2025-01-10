@@ -39,7 +39,7 @@
 
 	{#if knows && knows.length}
 		<section>
-			<h2>Knows</h2>
+			<h3>Knows</h3>
 			<ul>
 				{#each knows as knows}
 					<li>
@@ -58,7 +58,7 @@
 
 	{#if memberOf && memberOf.length}
 		<section>
-			<h2>Member of</h2>
+			<h3>Member of</h3>
 			<ul>
 				{#each memberOf as organisation}
 					<li data-pagefind-filter="Organisation">
@@ -71,7 +71,7 @@
 
 	{#if funded && funded.length}
 		<section>
-			<h2>Funded</h2>
+			<h3>Funded</h3>
 			<ul>
 				{#each funded as organisation}
 					<li data-pagefind-filter="Organisation">

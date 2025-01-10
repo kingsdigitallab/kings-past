@@ -7,11 +7,11 @@
 
 {#if events?.length}
 	<section>
-		<h2>Events</h2>
+		<h3>Events</h3>
 		<ul>
 			{#each events as event}
 				<li data-pagefind-filter="Event">
-					<a href="../events/{event.slug}">{formatEventDate(event)} — {event.name}</a>
+					<a href="../events/{event.slug}">{event.name}, <span>{formatEventDate(event)} </span></a>
 				</li>
 			{/each}
 		</ul>

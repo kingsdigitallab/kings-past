@@ -67,16 +67,17 @@
 		</section>
 	{/if}
 	<section class="info">
+		<h2>Related information</h2>
 		{#if moments && moments.length}
-			<section class="moments">
-				<h2>Moments</h2>
-				<ol>
+			<section>
+				<h3>Moments</h3>
+				<ul>
 					{#each moments as moment}
-						<li class="surface-2" data-pagefind-filter="Moment">
+						<li data-pagefind-filter="Moment">
 							<a href="../../moments/{moment.slug}">{moment.title}</a>
 						</li>
 					{/each}
-				</ol>
+				</ul>
 			</section>
 		{/if}
 
@@ -84,7 +85,7 @@
 
 		{#if sources && sources.length}
 			<section>
-				<h2>Sources</h2>
+				<h3>Sources</h3>
 				<ul>
 					{#each sources as source}
 						<li>
@@ -106,7 +107,7 @@
 
 		{#if urls && urls.length}
 			<section>
-				<h2>External links</h2>
+				<h3>External links</h3>
 				<ul>
 					{#each urls as url}
 						<li>
@@ -159,62 +160,37 @@
 		height: 50vh;
 	}
 
-	.moments ol {
-		display: flex;
-		flex-direction: row;
-		flex-wrap: wrap;
-		gap: var(--size-4);
-		justify-content: space-between;
-		padding-inline-start: 0;
-	}
-
-	.moments ol li {
-		border-radius: var(--radius-1);
-		box-shadow: var(--shadow-2);
-		flex-basis: 95%;
-		padding: var(--size-fluid-3);
-
-		@media (--motionOK) {
-			animation: var(--animation-fade-in);
-		}
-
-		@media (min-width: 640px) {
-			flex-basis: 45%;
-		}
-
-		@media (min-width: 1024px) {
-			flex-basis: 30%;
-		}
-	}
-
-	.moments ol li:hover {
-		color: var(--yellow);
-		box-shadow: var(--size-1) var(--size-1) var(--yellow);
-	}
-
 	section.info {
 		max-width: 50rem;
 		width: 100%;
 		margin: 0 auto;
-		padding-inline: var(--size-4);
-		padding: 0;
+		padding-top: var(--size-10);
+
 		& h2 {
-			background-color: var(--powder-blue);
+			border-bottom: 1px solid var(--midnight-blue);
+			max-inline-size: none;
+			font-size: var(--font-size-6);
+		}
+		& h3 {
 			font-size: var(--font-size-5);
 			font-weight: 200;
 			margin: 0;
 			min-width: 100%;
-			padding: var(--size-3) var(--size-4);
+			padding: var(--size-3) var(--size-4) var(--size-1) var(--size-4);
+		}
+
+		& h4 {
+			font-size: var(--font-size-3);
+			font-family: var(--font-sans);
+			margin: 0;
+			padding: var(--size-1) var(--size-4) var(--size-1) var(--size-4);
 		}
 
 		& section {
-			padding-left: var(--size-4);
-			background: white;
 		}
 
 		& ul {
-			list-style-type: none;
-			margin-left: -28px;
+			margin-left: 15px;
 			padding-left: var(--size-5);
 		}
 
@@ -223,20 +199,17 @@
 			font-size: var(--font-size-3);
 			margin-block: var(--size-2);
 			padding-inline-start: var(--size-2);
-
+			max-inline-size: none;
+			list-style-type: circle;
 			& a {
-				border-left: var(--size-2) solid var(--surface-1);
-				display: block;
-				padding-left: var(--size-3);
-				text-decoration: none;
 				width: calc(100% - var(--size-2));
+				text-decoration: underline;
 
 				&:hover {
-					background-color: var(--midnight-blue);
-					border-left: var(--size-2) solid var(--pearl-grey);
-					color: white;
-					opacity: 1;
 				}
+			}
+			& p {
+				font-size: var(--font-size-3);
 			}
 		}
 	}

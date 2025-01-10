@@ -8,10 +8,10 @@
 
 {#if donationsAsAgent?.length || donationsAsRecipient?.length}
 	<section>
-		<h2>Donations</h2>
+		<h3>Donations</h3>
 		{#if donationsAsAgent?.length}
 			<section>
-				<h3>Made by {entityName}</h3>
+				<h4>Made by {entityName}</h4>
 				<ul>
 					{#each donationsAsAgent as donation}
 						<li data-pagefind-filter="Donation">
@@ -23,7 +23,7 @@
 		{/if}
 		{#if donationsAsRecipient?.length}
 			<section>
-				<h3>Received by {entityName}</h3>
+				<h4>Received by {entityName}</h4>
 				<ul>
 					{#each donationsAsRecipient as donation}
 						<li data-pagefind-filter="Donation">
