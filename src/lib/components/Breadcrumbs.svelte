@@ -52,7 +52,7 @@
 		align-content: center;
 		height: calc(var(--header-height) / 2);
 		margin-right: calc(-50vw + 50%);
-		margin-top: 4.5vw;
+		margin-top: var(--size-2);
 		width: 100%;
 
 		& ol {
