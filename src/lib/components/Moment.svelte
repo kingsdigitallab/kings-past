@@ -116,7 +116,7 @@
 					& a {
 						border: none;
 						& img.moment-icon {
-							height: var(--size-fluid-5);
+							height: 5vw;
 							object-fit: cover;
 							width: 100%;
 							object-fit: cover;
@@ -127,7 +127,7 @@
 								opacity: 1;
 							}
 							&.active {
-								border-bottom: var(--size-2) solid var(--yellow);
+								border-bottom: 1vw solid var(--yellow);
 								opacity: 1;
 							}
 						}
