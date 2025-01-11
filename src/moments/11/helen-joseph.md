@@ -1,5 +1,5 @@
 ---
-title: 'Helen Joseph: "From King's College to the Anti-Apartheid Frontlines"'
+title: Helen Joseph, from King's College to the Anti-Apartheid Frontlines
 tags:
   - moment
   - essay
@@ -17,7 +17,7 @@ Joseph’s illnesses would prevent her from completing the course, but in 1975 H
 
 In some ways Joseph was the perfect revolutionary for a historically conservative institution like King’s. While she gave her life to fighting apartheid, she never viewed the segregation she was fighting as an evolution of imperialist ideology and law. Nelson Mandela remarked of Joseph at her 1993 funeral: ‘When Helen was cross examined and asked what she thought about British Imperialism, she answered that there was no such thing, because the British had spread out to bring civilisation to all the countries they went to. Helen was a South African Revolutionary, but a Lady of the British Empire. A contradiction in the eyes of many, but to Helen her own reality'.[^11] While fights for divestment and boycotts dominated student protest, the support, and fellowship of Helen Joseph presents a powerful instance of academic and intellectual solidarity, a protest which not only encouraged one of the University’s alumni, but allowed its staff to join in political action without the risk of overt disruption to the status quo.
 
-**Sources**
+## Sources
 
 Kings College London Archives, Helen Hudson Papers, K/PP12.
 
