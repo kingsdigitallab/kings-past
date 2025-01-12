@@ -1,5 +1,5 @@
 ---
-title: '"The Anti-apartheid movement and King’s"'
+title: 'The Anti-apartheid movement and King’s'
 tags:
   - moment
   - essay
@@ -17,7 +17,7 @@ The pushback to this action against Barclays was swift, with a law student descr
 
 These boycotts occurred because the Conservative Thatcher Government's refusal to apply economic sanctions on South Africa forced activists into creating their own sanctions. Apartheid laws, many of which were adapted from laws enacted during Britain’s occupation of the country, were technically enforced by another government, leaving room for British political and educational institutions to distance themselves from the regime. It’s this dissonance that allowed Margaret Thatcher to write in a 1987 letter to AAM’s leader that ‘apartheid is an utterly repulsive and detestable system which must go’, before clarifying, ‘It is absurd to suggest that because the British Government oppose punitive sanctions we ‘stand by’ apartheid’.[^11] Beyond applying economic pressure to private firms, these boycotts also challenged the assertion that decolonisation gave Britain the ability to wash its hands of the issues arising in its former colonies. They were a refutation to the postcolonial ambivalence that allowed governments and institutions to speak against apartheid whilst simultaneously profiting from it.
 
-**Sources**
+## Sources
 
 Anti-apartheid Movement Archives: 
 The Boycott Movement – grassroots stories, https://www.aamarchives.org/blog/the-boycott-movement-%E2%80%93-grassroots-stories.html (Accessed 25 June, 2024).
