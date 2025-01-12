@@ -25,7 +25,7 @@ Maurice’s notorious reputation as ‘one of the most controversial figures in 
 
 Maurice’s approach to English literature is a telling illustration of the College’s early educational philosophy, which saw all subjects as connected with religion. Though Dale’s teaching was also informed by his Christian faith, he was concerned chiefly with shielding his students from inappropriate reading matter and instilling moral values. For Maurice, literature becomes a window not just into bygone ages, but also – crucially – into the transcendental divine order. 
 
-**Sources**
+## Sources
 
 Bacon, Alan, ‘English Literature Becomes a University Subject: King’s College, London as Pioneer’, _Victorian Studies_ 29,4 (1978), 591-612.
 
