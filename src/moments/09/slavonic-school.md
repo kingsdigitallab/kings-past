@@ -23,7 +23,7 @@ The potential implications of Masaryk’s lecture for the British empire and oth
 
 Few of those in the audience for Masaryk’s 1915 lecture would have imagined that they were listening to a call for the dissolution not only of the empires against which Britain was fighting but also of the empires with which Britain was allied and perhaps of the British empire itself. The Czech professor was, as we have seen, very careful not to suggest any such implications at the time. But big ideas have unruly lives of their own. The notion that ‘small’ nations have a right to self-determination would reverberate in locations far from King’s College London through the next century. 
 
-**Sources**
+## Sources
 
 Anon., ‘Prof. Masaryk on Small Nations’, _The Times_, (20 October 1915), 10. 
 
@@ -36,6 +36,7 @@ Masaryk, T.G., ‘The Problem of Small Nations in the Crisis of Europe', _The Ne
 Roberts, I.W., _History of the School of Slavonic and East European Studies_ (London,1991). 
 
 Wolff, Larry, _Woodrow Wilson and the Reimagining of Eastern Europe_ (Palo Alto, CA, 2020).  
+
 
 **Jim Bjork** is Professor of Modern European History at King's College London. His research is focused on the relationships between religious and national belonging in East-Central Europe. He is the author of _Neither German nor Pole: Catholicism and National Indifference in a Central European Borderland_ (Ann Arbor, MI, 2008) and co-editor of _Creating Nationality in Central Europe, 1880-1950_ (London, 2016).
 
