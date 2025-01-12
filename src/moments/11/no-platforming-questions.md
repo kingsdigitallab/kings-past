@@ -13,7 +13,7 @@ This debate on whether an institution lends credibility to harmful ideology by h
 
 While it is not the intention here to advocate for or against no platforming or boycotting as a form of activism, this project as a whole should and can interrogate the ways in which King’s has lent academic credibility to Empire and imperial ideologies. Guests speaking behind a lectern with the King’s crest on it are afforded a certain degree of legitimacy and respect, and while they may not speak on the University’s behalf, their reach and credibility is certainly extended by it. Similarly, as long as the University continues to fund itself through private sector investments, the moral, ethical, and political implications of these investments will be the subject of protest, and perhaps still ambivalence, between King’s students and faculty and the institution itself.
 
-**Sources**
+## Sources
 
 Aftab Ali, ‘Boris Johnson "no platformed" by King’s College London students over Barack Obama comments', _The Independent_, (29 April, 2016).
 
