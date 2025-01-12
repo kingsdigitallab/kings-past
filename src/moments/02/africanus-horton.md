@@ -32,12 +32,21 @@ James Africanus Horton’s legacy of profound complexity still rings true today:
 ## Sources
 
 King, Anthony, 'Decolonizing the British Army: a preliminary response', _International Affairs_, 97, 2, (2021), 443–461.
+
 Campbell, G., 'On the Races of India as Traced in Existing Tribes and Castes', _The Journal of the Ethnological Society of London (1869-1870), 1(2), (1869), 128–140.
+
 Horton, J. A. B., _West African Countries and Peoples, British and Native: And a Vindication of the African Race_ (Cambridge: Cambridge University Press, 2011).
+
 Imperial War Museum, 'The Black British Soldiers Who Were Deliberately Forgotten'. 
-The University of Edinburgh, 'James “africanus” Beale Horton'. https://global.ed.ac.uk/uncovered/1800-1859/james-africanus-beale-horton 
+
+The University of Edinburgh, 'James “africanus” Beale Horton' <https://global.ed.ac.uk/uncovered/1800-1859/james-africanus-beale-horton> 
+
 King’s College London Calendar 1858-1859. (1858–1859). King’s College London Calendars. King’s College London. 
+
 King’s College London, 'Africanus Horton'. https://www.kcl.ac.uk/people/africanus-horton 
+
 Kuklick, Henrika, _The Savage Within: The Social History of British Anthropology, 1885-1945_, (Cambridge University Press: Cambridge, 1992). 
+
 Martin, G. _African political thought_ (Palgrave Macmillan, 2012).
-Wellcome Collection, ‘The secret lives of Britain’s first black physicians’,  https://wellcomecollection.org/articles/YxDHJBEAACIAdasV 
+
+Wellcome Collection, ‘The secret lives of Britain’s first black physicians’ <https://wellcomecollection.org/articles/YxDHJBEAACIAdasV> 
