@@ -5,7 +5,7 @@ tags:
   - essay
 category: student
 ---
-**Seamus Branch** is a third-year Culture, Media, and Creative Industries student
+**Seamus Branch** is a graduated from a BA in Culture, Media and Creative Industries
 
 King’s was much more conservative than its University of London sister institutions, and the history of campus protest at King’s is far less prolific than say its neighbour the London School of Economics, whose Indian South African students in exile formed the South Africa Freedom Association in 1955, which would rename itself the Anti Apartheid Movement (AAM) in 1960 and would play a leading role in anti apartheid activism in the United Kingdom.[^1] A poll published by a University of London newspaper suggested that in 1974 43 percent of KCL students believed there was no ‘discrimination of coloured races in Britain’, while only 16 percent of University of London students at large took the same view.[^2] Even those who viewed discrimination as an issue in Britain, such as student Thain Hatherly writing an editorial for the King’s College Review, Lucifer, could not necessarily be classified as allies of their classmates of colour. Hatherly writes: ‘I think racial discrimination here is as bad as apartheid’, before clarifying: ‘I cannot claim complete impartiality, for I am against mixed marriages.’[^3]   King’s too held a real stake in South African economic activities. In 1977 the University of London, of which King’s was and is a member institution, held over £1.1 million worth of investments in companies with subsidiaries in South Africa, compromising over half of its total investments.[^4]
 
