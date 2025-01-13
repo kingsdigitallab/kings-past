@@ -5,7 +5,7 @@ tags:
   - essay
 category: student
 ---
-**Fiza Meeraj** is a third-year History student
+**Fiza Meeraj** is a graduated from a BA in History
 
 King’s College London was traditionally viewed as more conservative, especially in its activism, compared to the more radical movements seen at UCL and LSE during the 1960s. This reputation, rooted in its historical ties to the Church of England and its focus on traditional disciplines such as medicine and law, set it apart from the more politically charged environments at UCL and LSE. LSE students were involved in radical protests, such as the ‘destruction of security gates’ during ‘sit-ins against U.S. involvement in Vietnam’ as reported by a _Daily Telegraph_ article on 25 January 1969, while UCL students participated in decolonisation efforts, including the International Student Conference in Ceylon, which brought together representatives from 40 non-Western nations to express solidarity with students in colonial territories.[^1] While King’s activism was comparatively smaller in scale and scope than the large-scale protests at UCL and LSE, it still reflected a growing awareness and concern for global issues among students, marking an important shift in the college’s student culture.
 
