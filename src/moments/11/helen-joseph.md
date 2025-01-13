@@ -5,7 +5,7 @@ tags:
   - essay
 category: student
 ---
-**Seamus Branch** is a third-year Culture, Media, and Creative Industries student
+**Seamus Branch** is graduated from a BA in Culture, Media and Creative Industries
 
 After growing up in a suburb of London, Helen Joseph began an English degree at King’s College in 1923. In her memoir she remembers in 1926 relocating to a relative’s in South London so that she could walk to the University in solidarity with the striking transportation workers, and with a retrospective shame that while she would drink coffee with her classmates of colour, ‘I had been amongst those who thought we ought not to go as far as dancing with our few fellow Black students'.[^1] In 1927 she graduated with what she described as ‘a not very distinguished second class honours degree,’ and after leaving King’s decided to pursue teaching abroad as she could do so without receiving a teacher’s training certificate.[^2] At twenty two she secured a teaching post in India, a country which she knew little about, and boarded an ocean liner to Bombay. Joseph wrote about her time in India with fondness for its people and the ways in which it transformed her understanding of the world outside of England. While remaining relatively apolitical during the three years she spent teaching in Hyderabad, she seems to have operated within mostly Indian social circles, expressing concern that the teaching position she had accepted in Durban, South Africa would limit her ability to socialise with non-white South Africans: ‘Just prior to leaving I had been staying in Bombay with Indian friends, a most natural thing for me, not fully comprehending that this would be forbidden in South Africa’.[^3]
 
