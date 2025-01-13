@@ -5,7 +5,7 @@ tags:
   - essay
 category: student
 ---
-**Zahrah Ali** is a third-year History and International Relations student
+**Zahrah Ali** is a graduated from a BA in History and International Relations 
 
 One of these instances was the debate over the appointment of art lecturer Vicat Cole over King’s College London’s other internal art teachers. The _History of Queen Elizabeth College_ by Neville Marsh provides us with an extremely detailed history of the Queen Elizabeth College (QEC) which originated as an offshoot of the _Ladies’ Department of King’s College London_ (1885) (later _Women’s Department_) called the _King’s College of Household and Social Science_, eventually in 1953 receiving a royal charter and changing its name formally. Marsh notes in relation to this debate that it was a key instance in which the ladies committee voiced that it 'is not always the case that the lecturer who is the most useful with young men should be the most suitable for lecturing to ladies' (Neville Marsh, 22). Whilst little is known beyond the scribblings of minute books which vaguely gloss over the incident, these small initial fragmentations and disagreements over appointments did prelude a general dissatisfaction with being part of the male-focused and catered university, leading for calls for greater autonomy on the part of the faculty seen in the transitionary paperwork and structure of the _King’s Women’s Department and Department of Social and Household Sciences_.
 
