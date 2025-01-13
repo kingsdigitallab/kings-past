@@ -6,7 +6,7 @@ tags:
 category: student
 ---
 
-**Sadie Mansfield** is a third-year Liberal Arts student
+**Sadie Mansfield** is graduated from a BA in Liberal Arts
 
 Constructed by renowned Flemish sculptor Peter Schneemaker and unveiled in 1734, this statue commemorates Thomas Guy as the founder of Guy’s Hospital. Schneemaker constructed the statue from brass and raised it above pedestrians upon a marble pedestal. The statue is accompanied by the inscription ‘THOMAS GUY SOLE FOUNDER OF THIS HOSPITAL IN HIS LIFETIME’, perhaps an attempt to refute the false accusations Guy faced after his death that he had not donated within his lifetime and only left money in his will.
 
