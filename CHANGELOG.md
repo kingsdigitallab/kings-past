@@ -1,5 +1,53 @@
 
 
+# [0.17.0](https://github.com/kingsdigitallab/kings-past/compare/v0.16.0...v0.17.0) (2025-01-14)
+
+
+### Bug Fixes
+
+* **database:** reduce sub-heading level ([8a5080c](https://github.com/kingsdigitallab/kings-past/commit/8a5080cbdacf5a5294a9061d8aa759e7523fbd09))
+* **database:** remove unused css selector ([a1f69e3](https://github.com/kingsdigitallab/kings-past/commit/a1f69e320ed21b0b2834e5747fea9fb9a17a46e5))
+* **donations:** reduce headings for related information ([1e3abd2](https://github.com/kingsdigitallab/kings-past/commit/1e3abd2c3bb70d7f3531e535746452a67988509e))
+* ensure md is well formatted ([eaec0ff](https://github.com/kingsdigitallab/kings-past/commit/eaec0ff21677b2bbf7b65250bde0768bc94e9183))
+* **header:** add aria label to nav ([09fe216](https://github.com/kingsdigitallab/kings-past/commit/09fe21674cea72a96812f16b53b6ad8837e8f1cd))
+* increase breadcrumb top margin ([630ba3b](https://github.com/kingsdigitallab/kings-past/commit/630ba3b309181856883a610fa9ee5383338e657e))
+* **index:** pass time when creating dates ([195e818](https://github.com/kingsdigitallab/kings-past/commit/195e8183d1151e3890a162e1cb0236681fc8839b))
+* **index:** set locale of format date ([7e5a1aa](https://github.com/kingsdigitallab/kings-past/commit/7e5a1aaeae2a6e3e7f1648c2b46867a23156ddca))
+* **markdown:** ensure footnotes lists display numbers ([e6c20ba](https://github.com/kingsdigitallab/kings-past/commit/e6c20bab0256e18f43882a07d257d26ffe5eba60))
+* **mdlayout:** do not center the content of the support pages ([00d615e](https://github.com/kingsdigitallab/kings-past/commit/00d615ecd38d70127d0ad5b5e3f51a3458fc686d))
+* **moment:** ensure hero is full width ([5e130dc](https://github.com/kingsdigitallab/kings-past/commit/5e130dc7989c3c6a3100400e796dd852634372df))
+* **moment:** remove unused css ([30c0e67](https://github.com/kingsdigitallab/kings-past/commit/30c0e67f9ae3e23beb77904794c926162753d901))
+* **moments:** add blank line after long footnote ([c6d915d](https://github.com/kingsdigitallab/kings-past/commit/c6d915dc9f40ef8c246ace61ecc801e49b46dda0))
+* **moments:** correct md issues ([8569f7f](https://github.com/kingsdigitallab/kings-past/commit/8569f7f5a67aa65cfac90905ab6d6023beb31495))
+* **moments:** remove test student essay ([3d9bfe7](https://github.com/kingsdigitallab/kings-past/commit/3d9bfe76d50da3dcc3a1cbcc91229f1f24802946))
+* **moments:** restore container markers ([b2ea685](https://github.com/kingsdigitallab/kings-past/commit/b2ea68592a5df2f60b1cea99ff5ca9bae2b2a35d))
+* more reponsive styles ([da4cc05](https://github.com/kingsdigitallab/kings-past/commit/da4cc05853cace12984e35e19fe0c49803502126))
+* **organisations:** replace biographical information with description ([db254a3](https://github.com/kingsdigitallab/kings-past/commit/db254a33dac38751446d0574bf7929aa09d1a7f7))
+* **places:** reduce headings for related information ([d7ff854](https://github.com/kingsdigitallab/kings-past/commit/d7ff854627b5a1df670fcfa5b6a31f6f379273b3))
+* style teaks to alig with others ([9caa83c](https://github.com/kingsdigitallab/kings-past/commit/9caa83cab277f270921f4f29bc00c395359dcb7b))
+* **williamgladstone:** remove spaces inside links ([7384c11](https://github.com/kingsdigitallab/kings-past/commit/7384c1154de5479b171d4b17d3ba970885426921))
+
+
+### Features
+
+* **breadcrumbs:** add props to add a custom title for the last crumb ([5858bea](https://github.com/kingsdigitallab/kings-past/commit/5858beacc598300ed229f3f6396a9d9ced60c501))
+* **breadcrumbs:** reduce the top margin ([38f75a7](https://github.com/kingsdigitallab/kings-past/commit/38f75a73707190525a2dc91f0f1c67fc8bab7215))
+* centering entity details info section ([ee2410c](https://github.com/kingsdigitallab/kings-past/commit/ee2410cc8d67554a0b67cbff4ce01bc108926f4b))
+* **config:** add setting to store moments header description ([f97efa6](https://github.com/kingsdigitallab/kings-past/commit/f97efa6a47dac46879e6c02bb9ba162903fcf6fa))
+* **database:** display the place the event took place in ([9ff58e7](https://github.com/kingsdigitallab/kings-past/commit/9ff58e723f27f5d5b443bd915076ebdbf2871ae9))
+* **entitydetails:** add map section ([6df09d5](https://github.com/kingsdigitallab/kings-past/commit/6df09d55ce2a50d5ce38c8801657ac33b19f60f1))
+* **events:** add data summary cards ([aec9832](https://github.com/kingsdigitallab/kings-past/commit/aec9832497654ef7b6336cf357470f2496e8d1a4))
+* **eventslist:** display the place the event took place in ([41d827b](https://github.com/kingsdigitallab/kings-past/commit/41d827b2219a4d7c06ff4fbcda49a56b92dc4215))
+* **header:** adjust kcl logo size according to media queries ([42928e8](https://github.com/kingsdigitallab/kings-past/commit/42928e840cc7df8c7dfca8645dfd897fb7a928c1))
+* **layout:** disply custom crumb for essays ([d440353](https://github.com/kingsdigitallab/kings-past/commit/d440353c90e4c1259043ac3fb7af99433a5e0d62))
+* **organisations:** add data summary cards ([b770f1c](https://github.com/kingsdigitallab/kings-past/commit/b770f1caca8cbd00ecb0128011852b6aa1f75b5c))
+* remove h3 and styled Research label ([1fe9b23](https://github.com/kingsdigitallab/kings-past/commit/1fe9b2330a59f7aedc21b03a4abf5825a9610298))
+* Remove Moment numbers ([51cdf30](https://github.com/kingsdigitallab/kings-past/commit/51cdf30b262a1354ed449b183cc7f1a451089d9a))
+* remove research p styling to increase font size ([14aac34](https://github.com/kingsdigitallab/kings-past/commit/14aac34b7c5f053d1c8d07672392de24c320d144))
+* style Entity related info section ([3636707](https://github.com/kingsdigitallab/kings-past/commit/363670710c71c7dcd4f8f77ab2598012c8550220))
+* style image navigation ([6b9d31f](https://github.com/kingsdigitallab/kings-past/commit/6b9d31fac95ec300553808cedd8df7e8143cbde1))
+* Style Moments header same as homepage ([6d7b2d1](https://github.com/kingsdigitallab/kings-past/commit/6d7b2d13fd6d66a77f3419b7477f34ade711dd15))
+
 # [0.16.0](https://github.com/kingsdigitallab/kings-past/compare/v0.15.0...v0.16.0) (2024-12-10)
 
 
