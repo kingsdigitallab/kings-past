@@ -1,5 +1,12 @@
 
 
+## [0.17.1](https://github.com/kingsdigitallab/kings-past/compare/v0.17.0...v0.17.1) (2025-01-14)
+
+
+### Bug Fixes
+
+* **moments:** remove duplicate word ([25460ed](https://github.com/kingsdigitallab/kings-past/commit/25460ed9dc27270e636690348e15e9c483b00e55))
+
 # [0.17.0](https://github.com/kingsdigitallab/kings-past/compare/v0.16.0...v0.17.0) (2025-01-14)
 
 
