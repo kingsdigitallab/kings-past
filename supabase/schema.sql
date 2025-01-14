@@ -590,7 +590,8 @@ CREATE TABLE IF NOT EXISTS "public"."moment" (
     "id" bigint NOT NULL,
     "name" "text" NOT NULL,
     "created_at" timestamp with time zone DEFAULT "now"() NOT NULL,
-    "added_by" "text"
+    "added_by" "text",
+    "slug" "text"
 );
 
 ALTER TABLE "public"."moment" OWNER TO "postgres";
@@ -1305,7 +1306,8 @@ CREATE TABLE IF NOT EXISTS "public"."source" (
     "slug" "text" NOT NULL,
     "description" "text",
     "created_at" timestamp with time zone DEFAULT "now"() NOT NULL,
-    "added_by" "text"
+    "added_by" "text",
+    "url" "text"
 );
 
 ALTER TABLE "public"."source" OWNER TO "postgres";
@@ -1653,6 +1655,9 @@ ALTER TABLE ONLY "public"."country"
 
 ALTER TABLE ONLY "public"."currency"
     ADD CONSTRAINT "currency_added_by_fkey" FOREIGN KEY ("added_by") REFERENCES "public"."researcher"("name");
+
+ALTER TABLE ONLY "public"."donation"
+    ADD CONSTRAINT "donation_added_by_fkey" FOREIGN KEY ("added_by") REFERENCES "public"."researcher"("name");
 
 ALTER TABLE ONLY "public"."donation_source"
     ADD CONSTRAINT "donation_source_added_by_fkey" FOREIGN KEY ("added_by") REFERENCES "public"."researcher"("name");
@@ -2102,21 +2107,77 @@ CREATE POLICY "Enable read access for all users" ON "public"."country" FOR SELEC
 
 CREATE POLICY "Enable read access for all users" ON "public"."donation" FOR SELECT TO "anon" USING (true);
 
+CREATE POLICY "Enable read access for all users" ON "public"."donation_agent_organisation" FOR SELECT USING (true);
+
+CREATE POLICY "Enable read access for all users" ON "public"."donation_agent_person" FOR SELECT USING (true);
+
+CREATE POLICY "Enable read access for all users" ON "public"."donation_moment" FOR SELECT USING (true);
+
+CREATE POLICY "Enable read access for all users" ON "public"."donation_recipient_organisation" FOR SELECT USING (true);
+
+CREATE POLICY "Enable read access for all users" ON "public"."donation_recipient_person" FOR SELECT USING (true);
+
+CREATE POLICY "Enable read access for all users" ON "public"."donation_source" FOR SELECT USING (true);
+
 CREATE POLICY "Enable read access for all users" ON "public"."event" FOR SELECT USING (true);
 
+CREATE POLICY "Enable read access for all users" ON "public"."event_organisation" FOR SELECT USING (true);
+
+CREATE POLICY "Enable read access for all users" ON "public"."event_person" FOR SELECT USING (true);
+
+CREATE POLICY "Enable read access for all users" ON "public"."event_source" FOR SELECT USING (true);
+
+CREATE POLICY "Enable read access for all users" ON "public"."event_url" FOR SELECT USING (true);
+
+CREATE POLICY "Enable read access for all users" ON "public"."language" FOR SELECT USING (true);
+
+CREATE POLICY "Enable read access for all users" ON "public"."occupation" FOR SELECT USING (true);
+
 CREATE POLICY "Enable read access for all users" ON "public"."organisation" FOR SELECT TO "anon" USING (true);
+
+CREATE POLICY "Enable read access for all users" ON "public"."organisation_language" FOR SELECT USING (true);
+
+CREATE POLICY "Enable read access for all users" ON "public"."organisation_member_of" FOR SELECT USING (true);
+
+CREATE POLICY "Enable read access for all users" ON "public"."organisation_moment" FOR SELECT USING (true);
+
+CREATE POLICY "Enable read access for all users" ON "public"."organisation_same_as" FOR SELECT USING (true);
+
+CREATE POLICY "Enable read access for all users" ON "public"."organisation_url" FOR SELECT USING (true);
 
 CREATE POLICY "Enable read access for all users" ON "public"."person" FOR SELECT TO "anon" USING (true);
 
 CREATE POLICY "Enable read access for all users" ON "public"."person_feature" FOR SELECT TO "anon" USING (true);
 
+CREATE POLICY "Enable read access for all users" ON "public"."person_funder" FOR SELECT USING (true);
+
 CREATE POLICY "Enable read access for all users" ON "public"."person_knows" FOR SELECT TO "anon" USING (true);
+
+CREATE POLICY "Enable read access for all users" ON "public"."person_language" FOR SELECT USING (true);
 
 CREATE POLICY "Enable read access for all users" ON "public"."person_member_of" FOR SELECT TO "anon" USING (true);
 
 CREATE POLICY "Enable read access for all users" ON "public"."person_moment" FOR SELECT TO "anon" USING (true);
 
+CREATE POLICY "Enable read access for all users" ON "public"."person_occupation" FOR SELECT USING (true);
+
+CREATE POLICY "Enable read access for all users" ON "public"."person_same_as" FOR SELECT USING (true);
+
+CREATE POLICY "Enable read access for all users" ON "public"."person_source" FOR SELECT USING (true);
+
+CREATE POLICY "Enable read access for all users" ON "public"."person_url" FOR SELECT USING (true);
+
 CREATE POLICY "Enable read access for all users" ON "public"."place" FOR SELECT TO "anon" USING (true);
+
+CREATE POLICY "Enable read access for all users" ON "public"."place_feature" FOR SELECT USING (true);
+
+CREATE POLICY "Enable read access for all users" ON "public"."place_moment" FOR SELECT USING (true);
+
+CREATE POLICY "Enable read access for all users" ON "public"."place_source" FOR SELECT USING (true);
+
+CREATE POLICY "Enable read access for all users" ON "public"."place_url" FOR SELECT USING (true);
+
+CREATE POLICY "Enable read access for all users" ON "public"."source" FOR SELECT USING (true);
 
 ALTER TABLE "public"."country" ENABLE ROW LEVEL SECURITY;
 
