@@ -105,5 +105,3 @@ King's College London.
 - Kate O’Brien (Archives Collections Manager)
 - Clare Stephens (Archives Services Manager)
 - Cathy Williams (Head of Archives & Research Collections)
-
-
