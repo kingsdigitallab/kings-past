@@ -35,6 +35,10 @@
 			margin-inline: unset;
 		}
 
+		& a {
+			padding-inline: unset;
+		}
+
 		& li {
 			margin-inline: var(--size-4);
 			list-style-type: circle;
