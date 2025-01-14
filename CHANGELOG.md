@@ -1,5 +1,17 @@
 
 
+# [0.18.0](https://github.com/kingsdigitallab/kings-past/compare/v0.17.1...v0.18.0) (2025-01-14)
+
+
+### Bug Fixes
+
+* **about:** move full stop outside link ([dba38f3](https://github.com/kingsdigitallab/kings-past/commit/dba38f33ff1423367007a051a94625c346adb057))
+
+
+### Features
+
+* **mdlayout:** remove padding inline from links ([e43043f](https://github.com/kingsdigitallab/kings-past/commit/e43043fa2405157594da6994d03f224cad3602c0))
+
 ## [0.17.1](https://github.com/kingsdigitallab/kings-past/compare/v0.17.0...v0.17.1) (2025-01-14)
 
 
