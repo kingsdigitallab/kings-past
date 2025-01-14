@@ -8,7 +8,7 @@
 <Entity entity={event} entityType="Event" {meta} {description} {moments} {sources} {urls}>
 	{#if people?.length}
 		<section>
-			<h2>People</h2>
+			<h3>People</h3>
 			<ul>
 				{#each people as person}
 					<li data-pagefind-filter="Person">
@@ -20,7 +20,7 @@
 	{/if}
 	{#if organisations?.length}
 		<section>
-			<h2>Organisations</h2>
+			<h3>Organisations</h3>
 			<ul>
 				{#each organisations as organisation}
 					<li data-pagefind-filter="Organisation">

@@ -34,7 +34,7 @@
 	{/if}
 
 	{#if organisations?.length}
-		<h2>Organisations at {place.name}</h2>
+		<h3>Organisations at {place.name}</h3>
 		<ul>
 			{#each organisations as organisation}
 				<li data-pagefind-filter="Organisation">
