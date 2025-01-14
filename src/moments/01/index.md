@@ -5,7 +5,7 @@ tags:
   - moment
 themes:
   - trans-atlantic-slave-trade
-excerpt: The oldest institutions which now make up King's were founded from City of London networks, whose wealth came from global trade, including trade in enslaved people. 
+excerpt: The oldest institutions which now make up King's were founded from City of London networks, whose wealth came from global trade, including trade in enslaved people
 feature:
   image: /assets/images/moments/1.webp
   title: The image title
