@@ -35,7 +35,7 @@ jobs:
         run: |
           npm ci
           npm run build:all
-
+          npm run postbuild
       - name: Deploy to GitHub pages
         uses: peaceiris/actions-gh-pages@v3
         with:
