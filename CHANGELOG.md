@@ -1,5 +1,18 @@
 
 
+# [0.19.0](https://github.com/kingsdigitallab/kings-past/compare/v0.18.1...v0.19.0) (2025-01-15)
+
+
+### Bug Fixes
+
+* **search:** remove .html from search result links ([2632896](https://github.com/kingsdigitallab/kings-past/commit/263289686c8e170a315c74cc0c2503fb7adcce8d))
+* **search:** remove unused import ([f410893](https://github.com/kingsdigitallab/kings-past/commit/f410893d1aca9032cc0f1a609bea95a8c7789115))
+
+
+### Features
+
+* add robots ([fe7d802](https://github.com/kingsdigitallab/kings-past/commit/fe7d802a78b8c0cc3212c020cfce428b0583fd40))
+
 ## [0.18.1](https://github.com/kingsdigitallab/kings-past/compare/v0.18.0...v0.18.1) (2025-01-14)
 
 # [0.18.0](https://github.com/kingsdigitallab/kings-past/compare/v0.17.1...v0.18.0) (2025-01-14)
