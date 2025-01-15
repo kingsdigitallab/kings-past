@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { browser, dev } from '$app/environment';
+	import { browser } from '$app/environment';
 	import { afterNavigate, pushState } from '$app/navigation';
 	import { base } from '$app/paths';
 	import { PagefindUI } from '@pagefind/default-ui';
