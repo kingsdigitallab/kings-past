@@ -26,7 +26,7 @@
 			bundlePath: `${base}/pagefind/`,
 			pageSize: 10,
 			processResult: (result: any) => {
-				if (dev && result.url) {
+				if (result.url) {
 					result.url = result.url.replace(/\.html$/, '');
 				}
 
