@@ -29,7 +29,7 @@ Room 5.20 James Clerk Maxwell Building
 57 Waterloo Road  
 SE1 8WA, London
 
-email: [email needs to be added](mailto:kingspast@kcl.ac.uk)
+email: [kingspast@kcl.ac.uk](mailto:kingspast@kcl.ac.uk)
 
 ## How do we collect information?
 

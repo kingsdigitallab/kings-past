@@ -17,7 +17,11 @@ This is an accessibility statement from King's Digital Lab.
 King's Digital Lab assessed the accessibility of this website using the following
 approaches:
 
-- Self-evaluation using [Webval](https://github.com/kingsdigitallab/webval), a web application that uses [Pa11y](https://pa11y.org/), [HTML_CodeSniffer](https://squizlabs.github.io/HTML_CodeSniffer/) and [Axe accessibility tools](https://www.deque.com/axe/) to report and validate accessibility
+- Self-evaluation using [Webval](https://github.com/kingsdigitallab/webval),
+  a web application that uses [Pa11y](https://pa11y.org/),
+  [HTML_CodeSniffer](https://squizlabs.github.io/HTML_CodeSniffer/) and
+  [Axe accessibility tools](https://www.deque.com/axe/) to report and
+  validate accessibility
 - [Evaluation report](https://kingsdigitallab.github.io/webval/docs/?project=kings-past&levels=%7CA%7CAA%7C&resolutions=open&depth=issue&tab=issues&tagSlug=manual.htmlcs&issueId=&isOffline=false)
 - Manual testing of the site by the King's Digital Lab team
 
@@ -53,7 +57,7 @@ We welcome your feedback on the accessibility of King's Past. Please let us know
 if you encounter barriers to accessibility and we will investigate how to address these:
 
 - [Issue reporting form](https://kdl.kcl.ac.uk/report-issue/)
-- E-mail: [kdl-info@kcl.ac.uk](mailto:kdl-info@kcl.ac.uk)
+- E-mail: [kingspast@kcl.ac.uk](mailto:kingspast@kcl.ac.uk)
 
 ## Measures to support accessibility
 
