@@ -1,5 +1,7 @@
 
 
+## [0.19.1](https://github.com/kingsdigitallab/kings-past/compare/v0.19.0...v0.19.1) (2025-01-16)
+
 # [0.19.0](https://github.com/kingsdigitallab/kings-past/compare/v0.18.1...v0.19.0) (2025-01-15)
 
 
