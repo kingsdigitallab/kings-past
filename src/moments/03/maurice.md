@@ -6,7 +6,7 @@ tags:
 category: student
 ---
 
-**Agnieszka Serdynska** is a master student at the Department of English Language & Literature 
+**Agnieszka Serdynska** is a PhD student at the Department of English Language & Literature 
 
 
 King’s College London was the second higher education institution in England to include English literature in its curriculum, over half a century before the subject gained academic legitimacy through admission to the ancient universities of Oxford and Cambridge. This article will provide an overview of the early stages of the teaching of English literature at King’s and show in what ways it reflected the College’s founding principles through the work of F. D. Maurice, who occupied the Professorship of English Literature and History in the years 1840-1853. 
