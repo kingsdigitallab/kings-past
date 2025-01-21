@@ -57,7 +57,8 @@ export const footer = {
 	links: [
 		{ title: 'Department of History', url: 'https://www.kcl.ac.uk/history' },
 		{ title: 'Accessibility statement', url: '/accessibility-statement' },
-		{ title: 'Privacy policy', url: '/privacy-policy' }
+		{ title: 'Privacy policy', url: '/privacy-policy' },
+		{ title: 'Copyright', url: '/copyright' }
 	],
 	social: [
 		{
