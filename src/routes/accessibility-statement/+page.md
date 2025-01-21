@@ -51,6 +51,8 @@ solutions. Please contact us if you observe an issue not listed below.
    yet been tested for accessibility. When we run an accessibility tool on the
    content we will notify project partners to fix any issues.
 
+3. **Font** : The use of serif typefaces for body text may not be the most accessible choice for users with dyslexia or other neurodivergent conditions as such fonts can present challenges in readability. If you experience difficulties with the fonts used, check if you can change them via your browser or device settings as some allow customisation; e.g. the [Firefox](https://support.mozilla.org/en-US/kb/change-fonts-and-colors-websites-use#w_changing-font) browser.
+
 ## Feedback
 
 We welcome your feedback on the accessibility of King's Past. Please let us know
@@ -95,7 +97,7 @@ standards used.
 
 ## Preparation of this accessibility statement
 
-This statement was updated 10 January 2025.
+This statement was updated 20 January 2025.
 
 This statement was created on 04 November 2024 using the
 [W3C Accessibility Statement Generator Tool](https://www.w3.org/WAI/planning/statements/).
