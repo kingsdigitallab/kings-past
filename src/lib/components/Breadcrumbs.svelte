@@ -36,11 +36,9 @@
 {#if $page.url.pathname !== '/' && $page.url.pathname !== '/kings-past/'}
 	<nav aria-label="Breadcrumb" class="surface-1">
 		<ol>
-			{#each breadcrumbs as crumb, index}
+			{#each breadcrumbs.slice(0, -1) as crumb, index}
 				<li>
-					{#if index < breadcrumbs.length - 1}
-						<a href={crumb.href}>{crumb.label}</a>
-					{/if}
+					<a href={crumb.href}>{crumb.label}</a>
 				</li>
 			{/each}
 		</ol>
@@ -50,23 +48,38 @@
 <style>
 	nav {
 		align-content: center;
-		height: calc(var(--header-height) / 2);
+		min-height: calc(var(--header-height) / 2);
 		margin-right: calc(-50vw + 50%);
 		margin-top: var(--size-2);
-		width: 100%;
+		width: 80%;
+	}
 
-		& ol {
-			align-items: center;
-			display: inline-flex;
-			gap: 0.5rem;
+	nav ol {
+		align-items: center;
+		display: flex;
+		gap: var(--size-2);
+	}
 
-			& li {
-				max-inline-size: unset;
-			}
+	nav ol li {
+		align-items: baseline;
+		display: flex;
+		max-inline-size: unset;
+		gap: var(--size-2);
+	}
 
-			& li:not(:last-child)::after {
-				content: '>';
-			}
+	nav ol li:not(:last-child)::after {
+		content: '>';
+	}
+
+	@media (max-width: 640px) {
+		nav {
+			margin-right: 0;
+			padding-top: var(--size-3);
+		}
+
+		nav ol {
+			flex-direction: column;
+			align-items: flex-start;
 		}
 	}
 </style>
