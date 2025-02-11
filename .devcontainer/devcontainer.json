@@ -4,6 +4,7 @@
 	"customizations": {
 		"vscode": {
 			"extensions": [
+				"bierner.markdown-mermaid",
 				"1YiB.svelte-bundle",
 				"DavidAnson.vscode-markdownlint",
 				"dbaeumer.vscode-eslint",
@@ -12,13 +13,89 @@
 				"eliostruyf.vscode-front-matter",
 				"esbenp.prettier-vscode",
 				"johnpapa.vscode-peacock",
+				"JonathanHarty.gruvbox-material-icon-theme",
 				"mvllow.rose-pine",
+				"phoenisx.cssvar",
+				"PKief.material-product-icons",
+				"redhat.vscode-xml",
 				"vitest.explorer",
 				"vscodevim.vim",
 				"YoavBls.pretty-ts-errors"
 			],
 			"settings": {
-				"workbench.colorTheme": "Rosé Pine"
+				"editor.formatOnPaste": true,
+				"editor.formatOnSave": true,
+				"editor.minimap.enabled": false,
+				"editor.renderWhitespace": "trailing",
+				"editor.rulers": [80, 120],
+				"editor.fontFamily": "'JetBrainsMono Nerd Font Propo', Menlo, Monaco, 'Courier New', monospace",
+				"editor.fontLigatures": true,
+				"editor.fontSize": 14,
+				"explorer.compactFolders": false,
+				"explorer.confirmDragAndDrop": false,
+				"explorer.sortOrder": "filesFirst",
+				"files.autoSave": "onWindowChange",
+				"git.autofetch": true,
+				"svelte.enable-ts-plugin": true,
+				"window.autoDetectColorScheme": true,
+				"workbench.activityBar.location": "hidden",
+				"workbench.colorTheme": "Rosé Pine Moon",
+				"workbench.editorAssociations": {
+					"*.json": "default"
+				},
+				"workbench.editor.labelFormat": "short",
+				"workbench.iconTheme": "gruvbox-material-icon-theme",
+				"workbench.preferredDarkColorTheme": "Rosé Pine Moon",
+				"workbench.preferredLightColorTheme": "Rosé Pine Dawn",
+				"workbench.productIconTheme": "material-product-icons",
+				"workbench.sideBar.location": "right",
+				"workbench.tree.indent": 16,
+				"vim.hlsearch": true,
+				"vim.leader": " ",
+				"vim.smartRelativeLine": true,
+				"vim.useSystemClipboard": true,
+				"vim.normalModeKeyBindingsNonRecursive": [
+					{
+						"before": ["<leader>", " "],
+						"commands": ["workbench.action.quickOpen"]
+					},
+					{
+						"before": ["<leader>", "c", "f"],
+						"commands": ["editor.action.formatDocument"]
+					},
+					{
+						"before": ["<leader>", "e"],
+						"commands": ["workbench.action.toggleSidebarVisibility"]
+					},
+					{
+						"before": ["<leader>", "g", "g"],
+						"commands": ["workbench.view.scm"]
+					}
+				],
+				"[css]": {
+					"editor.defaultFormatter": "esbenp.prettier-vscode"
+				},
+				"[html]": {
+					"editor.defaultFormatter": "esbenp.prettier-vscode"
+				},
+				"[javascript]": {
+					"editor.defaultFormatter": "esbenp.prettier-vscode"
+				},
+				"[json]": {
+					"editor.defaultFormatter": "esbenp.prettier-vscode"
+				},
+				"[jsonc]": {
+					"editor.defaultFormatter": "esbenp.prettier-vscode"
+				},
+				"[markdown]": {
+					"editor.defaultFormatter": "esbenp.prettier-vscode"
+				},
+				"[svelte]": {
+					"editor.defaultFormatter": "svelte.svelte-vscode"
+				},
+				"[typescript]": {
+					"editor.defaultFormatter": "esbenp.prettier-vscode"
+				}
 			}
 		}
 	},
