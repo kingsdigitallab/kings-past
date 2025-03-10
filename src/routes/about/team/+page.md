@@ -92,11 +92,11 @@ The website was created by [King's Digital Lab](https://kdl.kcl.ac.uk/),
 a research software engineering team in the Faculty of Arts and Humanities at
 King's College London.
 
-- Alessandra Esposito (Research Software Project Manager)
-- Miguel Vieira (Principal Research Software Engineer)
 - Samantha Callaghan (Research Software Analyst)
-- Tiffany Ong (Senior Research Software UI/UX Designer)
+- Alessandra Esposito (Research Software Project Manager)
 - Lucie Mingmei Hao (pre-Research Software UI/UX Designer, 2024)
+- Tiffany Ong (Senior Research Software UI/UX Designer)
+- Miguel Vieira (Principal Research Software Engineer)
 
 ## King's College Archive
 
