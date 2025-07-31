@@ -8,17 +8,21 @@ tags: about, team
 
 ## Director
 
-- Jon Wilson
+- Hannah Dawson 
+- Jon Wilson (2022 - 2025)
+
+## Associate Director 
+
+- Érika Melek Delgado
 
 ## Coordinator
 
-- Érika Melek Delgado
 - Christopher Jeppesen (2022 – 2023)
 
 ## Executive Committee
 
-- Sundeep Lidher
-- Vincent Hiribarren
+- Sundeep Lidher (2024)
+- Vincent Hiribarren (2024)
 - Gillian Lamb (2024)
 - Jonah Miller (2024)
 
@@ -49,6 +53,10 @@ tags: about, team
 - Sarah Limb (History)
 - Francisco Bettencourt (History)
 - Agnieszka Serdynska (English)
+
+## Research Assistants:
+
+- Calyx Palmer (History, final year PhD student, 2025) 
 
 ## Research Assistants: UG Internship
 
@@ -92,11 +100,11 @@ The website was created by [King's Digital Lab](https://kdl.kcl.ac.uk/),
 a research software engineering team in the Faculty of Arts and Humanities at
 King's College London.
 
-- Alessandra Esposito (Research Software Project Manager)
-- Miguel Vieira (Principal Research Software Engineer)
 - Samantha Callaghan (Research Software Analyst)
-- Tiffany Ong (Senior Research Software UI/UX Designer)
+- Alessandra Esposito (Research Software Project Manager)
 - Lucie Mingmei Hao (pre-Research Software UI/UX Designer, 2024)
+- Tiffany Ong (Senior Research Software UI/UX Designer)
+- Miguel Vieira (Principal Research Software Engineer)
 
 ## King's College Archive
 
