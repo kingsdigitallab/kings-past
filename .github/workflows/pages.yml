@@ -6,6 +6,13 @@ on:
       - develop
       - main
       - research
+  pull_request:
+    branches:
+      - develop
+      - main
+      - research
+  schedule:
+    - cron: '0 */4 * * *'
 
 jobs:
   build:
