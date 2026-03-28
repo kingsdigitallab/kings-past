@@ -1,6 +1,11 @@
 # King's Past Project
 
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/your-username/kings-past)
+[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/kingsdigitallab/kings-past/kings-past)
+
+[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/kingsdigitallab/kings-past/kings-past)
+
+[![Open in Codeanywhere](https://codeanywhere.com/img/open-in-codeanywhere-btn.svg)](https://app.codeanywhere.com/#https://github.com/kingsdigitallab/kings-past/kings-past)
+
 
 The King's Past project explores the most important moments that shaped
 [King's College London](https://www.kcl.ac.uk/) and discovers the individuals,
