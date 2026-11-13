@@ -24,16 +24,50 @@ export async function load({ params, parent }) {
 
 	try {
 		const source = 'person';
-		const person = (await getRecord(source, slug)) as Person;
 
-		const recordLanguages = await getRecordLanguages(source, slug);
+		const [
+			person,
+			parentData,
+			recordLanguages,
+			occupations,
+			donationsAsAgent,
+			donationsAsRecipient,
+			events,
+			feature,
+			funded,
+			knows,
+			memberOf,
+			sameAs,
+			sources,
+			urls,
+			personMoments
+		] = await Promise.all([
+			getRecord(source, slug) as Promise<Person>,
+			parent(),
+			getRecordLanguages(source, slug),
+			getRecordOccupations(source, slug),
+			getRecordDonations(source, slug, 'agent'),
+			getRecordDonations(source, slug, 'recipient'),
+			getRecordEvents(source, slug),
+			getRecordFeature(source, slug),
+			getRecordFunded(source, slug),
+			getRecordKnows(slug),
+			getPersonMemberOf('organisation', source, slug),
+			getRecordSameAs(source, slug),
+			getRecordSources(source, slug),
+			getRecordUrls(source, slug),
+			getRecordMoments(source, slug) as Promise<PersonMoment[]>
+		]);
+		const description = await compile(person?.description || '');
 		const languages =
 			recordLanguages && recordLanguages.length
 				? recordLanguages.map((l) => l.name)
 				: [person?.language || EMPTY_PLACEHOLDER];
+		const parentMoments = parentData.moments;
 
-		const occupations = await getRecordOccupations(source, slug);
-
+		const moments = parentMoments.filter((moment: Moment) =>
+			personMoments?.some((pm) => parseInt(pm.moment) === moment.n)
+		);
 		const meta = {
 			'Alternative names': person?.alternative_names || EMPTY_PLACEHOLDER,
 			Gender: person?.gender || EMPTY_PLACEHOLDER,
@@ -42,27 +76,6 @@ export async function load({ params, parent }) {
 			Languages: languages?.join(', ') || EMPTY_PLACEHOLDER,
 			Occupations: occupations?.map((po) => po.occupation).join(', ') || EMPTY_PLACEHOLDER
 		};
-
-		const description = await compile(person?.description || '');
-		const donationsAsAgent = await getRecordDonations(source, slug, 'agent');
-		const donationsAsRecipient = await getRecordDonations(source, slug, 'recipient');
-		const events = await getRecordEvents(source, slug);
-		const feature = await getRecordFeature(source, slug);
-		const funded = await getRecordFunded(source, slug);
-		const knows = await getRecordKnows(slug);
-		const memberOf = await getPersonMemberOf('organisation', source, slug);
-		const sameAs = await getRecordSameAs(source, slug);
-		const sources = await getRecordSources(source, slug);
-		const urls = await getRecordUrls(source, slug);
-
-		const personMoments = (await getRecordMoments(source, slug)) as PersonMoment[];
-		const parentData = await parent();
-		const parentMoments = parentData.moments;
-
-		const moments = parentMoments.filter((moment: Moment) =>
-			personMoments?.some((pm) => parseInt(pm.moment) === moment.n)
-		);
-
 		return {
 			_metadata: {
 				title: person.name,

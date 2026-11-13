@@ -33,12 +33,18 @@ export async function getRecords(
 	return data as KPRecord[];
 }
 
-export async function getRecordsBy(
-	source: TableNames,
-	field: string,
-	orderBy?: string
-): Promise<Record<string, KPRecord>> {
-	const records = await getRecords(source, orderBy);
+export async function getRecordsBy({
+	source,
+	field,
+	orderBy,
+	_records
+}: {
+	source: TableNames;
+	field: string;
+	orderBy?: string;
+	_records?: KPRecord[];
+}): Promise<Record<string, KPRecord>> {
+	const records = _records ?? (await getRecords(source, orderBy));
 
 	if (!records) {
 		return {};
