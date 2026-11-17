@@ -31,7 +31,7 @@ accessibility, and maintainability:
 - [MapLibre GL](https://maplibre.org/) - Map visualization
 - [Pagefind](https://pagefind.app/) - Static search indexing
 
-### Deployment
+### Deployment setup
 
 - Static site generation for optimal performance and reduced environmental impact
 - Easy deployment to any static hosting platform
@@ -86,7 +86,47 @@ npx simple-git-hooks
 
 ### Development Server
 
-1.Start the development server:
+#### Local supabase
+
+1. Authenticate with supabase
+
+```bash
+npx supabase login
+```
+
+2. Link to the project
+
+```bash
+npx supabase link
+```
+
+3. Get the updated seed file
+
+```bash
+npx supabase db dump --data-only --remove > supabase/seed.sql
+```
+
+4. Start the server
+
+```bash
+npx supabase start
+```
+
+#### Frontend
+
+1. Create an .env file at the root of the repository with the following variables
+
+```bash
+
+SUPABASE_URL=<the project url>
+SUPABASE_KEY=<the publishable key>
+```
+
+> [!NOTE]
+> You get these variables after running 'npx supabase start'
+
+
+1. Start the development server:
 
 ```bash
 npm run dev
@@ -95,7 +135,7 @@ npm run dev
 npm run dev -- --open
 ```
 
-1. Generate the search index:
+2. Generate the search index:
 
 ```bash
 npm run build:pagefind
