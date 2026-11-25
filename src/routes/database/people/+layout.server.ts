@@ -14,7 +14,7 @@ export async function load() {
 				tags: database.tags
 			},
 			people: data ?? [],
-			peopleBySlug: await getRecordsBy('person', 'slug')
+			peopleBySlug: await getRecordsBy({ source: 'person', field: 'slug', _records: data })
 		};
 	} catch (e) {
 		handleLoadError('people', e);

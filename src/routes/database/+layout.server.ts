@@ -14,7 +14,7 @@ export const load = (async () => {
 			},
 			stats: await getDatabaseStats(),
 			moments: await getMoments(),
-			placesBySlug: await getRecordsBy('place', 'slug')
+			placesBySlug: await getRecordsBy({ source: 'place', field: 'slug' })
 		};
 	} catch (error) {
 		handleLoadError('database', error);
