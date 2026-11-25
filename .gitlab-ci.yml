@@ -1,4 +1,0 @@
-include:
-  - project: 'kdl_projects/gitlab-ci-components'
-    ref: main
-    file: '/projects/kings-past.yml'
